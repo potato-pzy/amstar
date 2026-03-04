@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Optilux - Eye Clinic Optometrist and Optical Store</title>
+    <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Optilux - Eye Clinic Optometrist and Optical Store HTML Template" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="author">
+    <!-- CSS Files
+    ================================================== -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/coloring.css" rel="stylesheet" type="text/css">
+    <!-- color scheme -->
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+
+    <style>
+        /* Section-specific variables and styles */
+        #pump-applications-section {
+            --primary-blue: #004a99;
+            --bg-light-blue: #ebf5fb;
+            --heading-dark: #1a365d;
+            --text-muted: #5a7184;
+
+            padding: 100px 0;
+            background-color: var(--bg-light-blue);
+            font-family: 'Alan Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        #pump-applications-section .uptitle {
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        #pump-applications-section h2.main-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--heading-dark);
+            line-height: 1.2;
+            max-width: 600px;
+        }
+
+        /* Square Navigation Buttons */
+        #pump-applications-section .de-custom-nav {
+            gap: 10px;
+        }
+
+        #pump-applications-section .nav-square {
+            width: 45px;
+            height: 45px;
+            background-color: var(--primary-blue);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #pump-applications-section .nav-square:hover {
+            background-color: #003366;
+        }
+
+        #pump-applications-section .nav-square svg {
+            width: 20px;
+            height: 20px;
+            stroke: white;
+            stroke-width: 2.5;
+            fill: none;
+        }
+
+        /* Service Card Styles */
+        #pump-applications-section .item {
+            padding: 0 10px;
+        }
+
+        #pump-applications-section .service-card {
+            position: relative;
+            height: 540px;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        #pump-applications-section .service-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+            transition: transform 0.6s ease;
+        }
+
+        #pump-applications-section .service-card:hover img {
+            transform: scale(1.05);
+        }
+
+        #pump-applications-section .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px;
+            background: linear-gradient(0deg, rgba(0, 74, 153, 0.95) 0%, rgba(0, 74, 153, 0.4) 40%, rgba(0, 0, 0, 0) 100%);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        #pump-applications-section .card-overlay .category {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        #pump-applications-section .card-overlay h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        #pump-applications-section .owl-carousel .owl-stage,
+        #testimonials-section .owl-carousel .owl-stage {
+            display: flex;
+            align-items: stretch;
+        }
+
+        /* ---- Premium Navbar ---- */
+        .pm-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #fff;
+            box-shadow: 0 2px 16px rgba(15, 76, 151, 0.10);
+            padding: 0 0;
+        }
+
+        .pm-nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+        }
+
+        .pm-nav-logo img {
+            height: 40px;
+            display: block;
+        }
+
+        .pm-nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .pm-nav-menu a {
+            font-family: 'Alan Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            color: #1a2e4a;
+            text-decoration: none;
+            letter-spacing: 0.01em;
+            transition: color .2s;
+        }
+
+        .pm-nav-menu a:hover {
+            color: #0f4c97;
+        }
+
+        .pm-nav-cta {
+            font-family: 'Alan Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff !important;
+            background: #0f4c97;
+            border: none;
+            padding: 11px 26px;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+            transition: background .2s, box-shadow .2s;
+            box-shadow: 0 2px 12px rgba(15, 76, 151, 0.18);
+        }
+
+        .pm-nav-cta:hover {
+            background: #0d3f82;
+            color: #fff !important;
+        }
+
+        /* ---- Premium Hero ---- */
+        .pm-hero {
+            position: relative;
+            min-height: 540px;
+            display: flex;
+            align-items: stretch;
+            overflow: hidden;
+        }
+
+        .pm-hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('images/background/6.webp');
+            background-size: cover;
+            background-position: center right;
+            z-index: 0;
+        }
+
+        /* Left gradient: solid deep blue -> transparent over ~60% width */
+        .pm-hero-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right,
+                    #0f4c97 0%,
+                    #0f4c97 38%,
+                    rgba(15, 76, 151, 0.82) 52%,
+                    rgba(15, 76, 151, 0.30) 67%,
+                    rgba(15, 76, 151, 0.00) 80%);
+            z-index: 1;
+        }
+
+        .pm-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 100%;
+            margin: 0;
+            padding: 200px 148px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .pm-hero-text {
+            max-width: 520px;
+        }
+
+        .pm-hero-tagline {
+            font-family: 'Alan Sans', sans-serif;
+            font-size: 13.5px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.80);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .pm-hero-headline {
+            font-family: 'Alan Sans', sans-serif;
+            font-size: clamp(2.4rem, 4.2vw, 5.4rem);
+            font-weight: 400;
+            width: 100%;
+            color: #E0FFFF;
+            line-height: 1.12;
+            letter-spacing: -0.01em;
+            margin-bottom: 22px;
+            min-width: 40rem;
+        }
+
+        .pm-hero-desc {
+            font-family: 'Alan Sans', sans-serif;
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.80);
+            margin-bottom: 36px;
+            max-width: 400px;
+        }
+
+        .pm-hero-btn {
+            display: inline-block;
+            font-family: 'Alan Sans', sans-serif;
+            font-size: 14.5px;
+            font-weight: 600;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            padding: 12px 30px;
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            transition: background .2s, color .2s, border-color .2s;
+            background: transparent;
+        }
+
+        .pm-hero-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: #fff;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .pm-nav-menu {
+                display: none;
+            }
+
+            .pm-hero-content {
+                padding: 60px 20px;
+            }
+
+            .pm-hero-gradient {
+                background: linear-gradient(to right, #0f4c97 0%, #0f4c97 60%, rgba(15, 76, 151, 0.10) 100%);
+            }
+        }
+
+        /* ---- Custom Card Styles ---- */
+        .card-container {
+            width: 100%;
+            height: 100%;
+            /* Stretch to grid track height */
+            position: relative;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-container:hover .image-section img {
+            transform: scale(1.05);
+        }
+
+        .card-container:hover .arrow-button {
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-container:hover .arrow-button svg {
+            transform: translate(2px, -2px);
+        }
+
+        .image-section {
+            border-radius: 0;
+            overflow: hidden;
+            height: 300px;
+            /* Reduced from 400px */
+            flex-shrink: 0;
+            /* Keep image fixed height */
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            z-index: 0;
+        }
+
+        .image-section::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+            mix-blend-mode: multiply;
+            z-index: 10;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.75);
+            transition: transform 0.7s ease-in-out;
+            z-index: 1;
+        }
+
+        .content-section {
+            background-color: #0f4c97;
+            color: white;
+            padding: 36px 32px;
+            width: 86%;
+            margin: -80px auto 0;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            box-sizing: border-box;
+            text-align: left;
+            z-index: 20;
+            flex-grow: 1;
+            /* Stretch remaining space to match tallest card */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .arrow-button {
+            position: absolute;
+            top: -28px;
+            right: 32px;
+            width: 56px;
+            height: 56px;
+            background-color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .arrow-button svg {
+            width: 24px;
+            height: 24px;
+            color: #0f4c97;
+            transition: transform 0.3s ease;
+        }
+
+        .content-section h2 {
+            margin: 0 0 16px 0;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 1.15;
+            color: #fff;
+            letter-spacing: -0.02em;
+        }
+
+        .content-section p {
+            margin: 0;
+            font-size: 14.5px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+        }
+
+        /* Media queries cannot be applied via inline style attributes */
+        @media (max-width: 991px) {
+            #main-nav {
+                width: 95% !important;
+                padding: 15px 20px !important;
+                top: 20px !important;
+            }
+
+            .nav-links {
+                display: none !important;
+            }
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <a href="#" id="back-to-top"></a>
+
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+
+        <!-- ============================================================ -->
+        <!-- PREMIUM WHITE NAVBAR                                          -->
+        <!-- ============================================================ -->
+        <nav id="main-nav"
+            style="position: fixed; top: 40px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1300px; background-color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; z-index: 1000; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border-radius: 4px;">
+            <!-- Logo -->
+            <a href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+                <!-- SVG recreating the Amstar 3-petal logo -->
+                <svg viewBox="0 0 100 100" style="width: 45px; height: 45px; fill: #004fb1;">
+                    <path d="M48,15 C45,25 45,35 55,42 C60,32 60,20 48,15 Z" />
+                    <path d="M25,60 C32,55 42,55 48,65 C40,72 28,70 25,60 Z" />
+                    <path d="M75,60 C68,55 58,55 52,65 C60,72 72,70 75,60 Z" />
+                    <circle cx="50" cy="55" r="8" fill="#ffffff" />
+                </svg>
+                <div
+                    style="font-size: 22px; font-weight: 800; color: #003366; line-height: 1.1; text-transform: capitalize; display: flex; flex-direction: column;">
+                    <span>Amstar</span>
+                    <span>Pumps</span>
+                </div>
+            </a>
+
+            <!-- Links and Button -->
+            <div class="nav-links" style="display: flex; align-items: center; gap: 35px;">
+                <a href="#"
+                    style="text-decoration: none; color: #1a2b4c; font-weight: 500; font-size: 15.5px; transition: color 0.3s ease;"
+                    onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Home</a>
+                <a href="#"
+                    style="text-decoration: none; color: #1a2b4c; font-weight: 500; font-size: 15.5px; transition: color 0.3s ease;"
+                    onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Products</a>
+                <a href="#"
+                    style="text-decoration: none; color: #1a2b4c; font-weight: 500; font-size: 15.5px; transition: color 0.3s ease;"
+                    onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Latest</a>
+                <a href="./contact.html"
+                    style="text-decoration: none; color: #1a2b4c; font-weight: 500; font-size: 15.5px; transition: color 0.3s ease;"
+                    onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Contact</a>
+                <a href="#"
+                    style="background-color: #003366; color: #ffffff; padding: 10px 24px; border-radius: 2px; font-weight: 500; transition: background-color 0.3s ease; text-decoration: none;"
+                    onmouseover="this.style.backgroundColor='#004fb1'"
+                    onmouseout="this.style.backgroundColor='#003366'">Book a Call</a>
+            </div>
+        </nav>
+        <!-- navbar close -->
+
+        <!-- ============================================================ -->
+        <!-- PREMIUM HERO SECTION                                          -->
+        <!-- ============================================================ -->
+        <div class="pm-hero">
+            <div class="pm-hero-bg"></div>
+            <div class="pm-hero-gradient"></div>
+            <div class="pm-hero-content">
+                <div class="pm-hero-text">
+                    <p class="pm-hero-tagline">Engineered in India. Trusted Worldwide.</p>
+                    <h1 class="pm-hero-headline">Powering<br>water solutions<br>worldwide</h1>
+                    <p class="pm-hero-desc">We design and manufacture high-performance pump solutions that deliver
+                        reliability, efficiency and long-lasting value across applications.</p>
+                    <a href="contact.html" class="pm-hero-btn">Book a Call</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- content begin -->
+        <main>
+            <div id="top"></div>
+
+
+
+
+            <!-- ============================================================ -->
+            <!-- SECTION 3: About Us – Global Strength                        -->
+            <!-- ============================================================ -->
+            <section style="padding: 0; margin: 0;">
+
+                <!-- Blue top panel -->
+                <div style="background: #0f4c97; padding: 144px 148px;">
+                    <div style="display:flex; align-items:flex-start; gap:60px; flex-wrap:wrap;">
+                        <!-- Left -->
+                        <div style="flex:1 1 340px; min-width:260px;">
+                            <div
+                                style="font-family: 'Alan Sans', sans-serif; font-size:13px; font-weight:600; color:rgba(255,255,255,0.70); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:14px;">
+                                About Us</div>
+                            <h2
+                                style="font-family: 'Alan Sans', sans-serif; font-size:clamp(1.8rem,3.2vw,2.6rem); font-weight:400; color:#fff; line-height:1.15; margin:0 0 20px; letter-spacing:-0.01em;">
+                                Global strength. Local trust.</h2>
+                            <p
+                                style="font-family: 'Alan Sans', sans-serif; font-size:15px; line-height:1.75; color:rgba(255,255,255,0.78); margin:0; max-width:600px;">
+                                Founded in 2023, Amstar was built with a clear purpose, to deliver uncompromised pump
+                                quality at an accessible price point. Backed by years of industry experience, we design
+                                and manufacture a wide range of submersible, monoblock, open well and booster pumps
+                                using superior components and rigorous quality control.
+                            </p>
+                        </div>
+                        <!-- Right: stats -->
+                        <div
+                            style="flex:1 1 380px; display:flex; align-items:flex-start; gap:180px; flex-wrap:wrap; padding-top:36px;">
+                            <div>
+                                <div
+                                    style="font-family: 'Alan Sans', sans-serif; font-size:clamp(2.4rem,4vw,3.4rem); font-weight:400; color:#fff; line-height:1; margin-bottom:10px;">
+                                    2<span style="color: #E0FFFF;">+</span></div>
+                                <div
+                                    style="font-family: 'Alan Sans', sans-serif; font-size:13.5px; color:rgba(255,255,255,0.72); line-height:1.45;">
+                                    Years of<br>Manufacturing Excellence</div>
+                            </div>
+                            <div>
+                                <div
+                                    style="font-family: 'Alan Sans', sans-serif; font-size:clamp(2.4rem,4vw,3.4rem); font-weight:400; color:#fff; line-height:1; margin-bottom:10px;">
+                                    20<span style="color: #E0FFFF;">+</span></div>
+                                <div
+                                    style="font-family: 'Alan Sans', sans-serif; font-size:13.5px; color:rgba(255,255,255,0.72); line-height:1.45;">
+                                    <br>Countries
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    style="font-family: 'Alan Sans', sans-serif; font-size:clamp(2.4rem,4vw,3.4rem); font-weight:400; color:#fff; line-height:1; margin-bottom:10px;">
+                                    1000<span style="color: #E0FFFF;">+</span></div>
+                                <div
+                                    style="font-family: 'Alan Sans', sans-serif; font-size:13.5px; color:rgba(255,255,255,0.72); line-height:1.45;">
+                                    Pumps &amp; Motors<br>Installed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Image strip -->
+                <div style="display:flex; width:100%; overflow:hidden; line-height:0;">
+                    <div style="flex:1; overflow:hidden;">
+                        <img src="images/services/1.webp" alt="Product 1"
+                            style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"
+                            onmouseover="this.style.transform='scale(1.06)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                    </div>
+                    <div style="flex:1; overflow:hidden;">
+                        <img src="images/services/2.webp" alt="Product 2"
+                            style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"
+                            onmouseover="this.style.transform='scale(1.06)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                    </div>
+                    <div style="flex:1; overflow:hidden;">
+                        <img src="images/services/3.webp" alt="Product 3"
+                            style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"
+                            onmouseover="this.style.transform='scale(1.06)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                    </div>
+                    <div style="flex:1; overflow:hidden;">
+                        <img src="images/services/4.webp" alt="Product 4"
+                            style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"
+                            onmouseover="this.style.transform='scale(1.06)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                    </div>
+                    <div style="flex:1; overflow:hidden;">
+                        <img src="images/services/5.webp" alt="Product 5"
+                            style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"
+                            onmouseover="this.style.transform='scale(1.06)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- SECTION 3b: Our Services – Product Range                     -->
+            <!-- ============================================================ -->
+            <section style="padding: 72px 0 80px; background: #fff;">
+                <div style="max-width: 860px; margin: 0 auto; text-align: center; padding: 0 24px 52px;">
+                    <div <div
+                        style="font-family: 'Alan Sans', sans-serif; font-size:13px; font-weight:600; color:#0f4c97; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:18px;">
+                        Our Product Range</div>
+                    <h2
+                        style="font-family: 'Alan Sans', sans-serif; font-size:1.9rem; font-weight:300; color:#0f4c97; line-height:1.35; margin:0;">
+                        A comprehensive portfolio of pumps engineered<br>to perform across residential, agricultural,
+                        commercial and<br>industrial environments.</h2>
+                </div>
+
+                <!-- Give the container up to 1400px so cards can stretch wider -->
+                <div style="max-width:1400px; margin:0 auto; padding:0 32px;">
+                    <!-- Row 1: 3 cards -->
+                    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:40px; margin-bottom:40px;">
+
+                        <!-- Card 1 -->
+                        <a href="service-single.html" class="card-container">
+                            <div class="image-section">
+                                <img src="images/services/1.webp" alt="Submersible Pumps">
+                            </div>
+                            <div class="content-section">
+                                <button class="arrow-button" aria-label="Learn more">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 19L19 5M19 5V18.3333M19 5H5.66667" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <h2>Submersible<br>Pumps</h2>
+                                <p>High-efficiency pumps engineered for dependable deep-water performance &amp;
+                                    delivering consistent flow.</p>
+                            </div>
+                        </a>
+
+                        <!-- Card 2 -->
+                        <a href="service-single.html" class="card-container">
+                            <div class="image-section">
+                                <img src="images/services/2.webp" alt="Self-Priming Pumps">
+                            </div>
+                            <div class="content-section">
+                                <button class="arrow-button" aria-label="Learn more">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 19L19 5M19 5V18.3333M19 5H5.66667" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <h2>Self-Priming<br>Pumps</h2>
+                                <p>Quick-start pumping designed for smooth and efficient water transfer, even in low
+                                    suction conditions.</p>
+                            </div>
+                        </a>
+
+                        <!-- Card 3 -->
+                        <a href="service-single.html" class="card-container">
+                            <div class="image-section">
+                                <img src="images/services/3.webp" alt="Open-Well Pumps">
+                            </div>
+                            <div class="content-section">
+                                <button class="arrow-button" aria-label="Learn more">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 19L19 5M19 5V18.3333M19 5H5.66667" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <h2>Open-Well<br>Pumps</h2>
+                                <p>Efficient and durable pumps designed for shallow water sources, delivering consistent
+                                    performance.</p>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <!-- Row 2: 2 cards centered -->
+                    <!-- Also matching the gap logic here while expanding max-width for 2 cols -->
+                    <div
+                        style="display:grid; grid-template-columns:repeat(2,1fr); gap:40px; max-width:960px; margin:0 auto;">
+
+                        <!-- Card 4 -->
+                        <a href="service-single.html" class="card-container">
+                            <div class="image-section">
+                                <img src="images/services/4.webp" alt="PVC Pipes">
+                            </div>
+                            <div class="content-section">
+                                <button class="arrow-button" aria-label="Learn more">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 19L19 5M19 5V18.3333M19 5H5.66667" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <h2>PVC<br>Pipes</h2>
+                                <p>High-quality PVC pipes engineered for reliable water flow, corrosion resistance, and
+                                    long-term durability.</p>
+                            </div>
+                        </a>
+
+                        <!-- Card 5 -->
+                        <a href="service-single.html" class="card-container">
+                            <div class="image-section">
+                                <img src="images/services/5.webp" alt="Control Panel &amp; Accessories">
+                            </div>
+                            <div class="content-section">
+                                <button class="arrow-button" aria-label="Learn more">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 19L19 5M19 5V18.3333M19 5H5.66667" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <h2>Control Panel<br>&amp; Accessories</h2>
+                                <p>Smart control solutions and essential accessories that ensure safe operation, system
+                                    stability, and extended pump life.</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- SECTION 5: Our Manufacturing Process                         -->
+            <!-- ============================================================ -->
+            <style>
+                .process-timeline {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    position: relative;
+                    margin-top: 60px;
+                    flex-wrap: nowrap;
+                    overflow-x: auto;
+                    padding-bottom: 20px;
+                    scrollbar-width: none;
+                    -ms-overflow-style: none;
+                }
+
+                .process-timeline::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .process-step {
+                    flex: 1;
+                    text-align: center;
+                    position: relative;
+                    min-width: 130px;
+                    padding: 0 10px;
+                }
+
+                .process-icon {
+                    width: 86px;
+                    height: 86px;
+                    background-color: white;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto 24px;
+                    color: #0f4c97;
+                    font-size: 32px;
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                    position: relative;
+                    z-index: 2;
+                }
+
+                .process-arrow {
+                    position: absolute;
+                    top: 43px;
+                    right: -12px;
+                    width: 24px;
+                    height: 24px;
+                    transform: translateY(-50%);
+                    color: rgba(255, 255, 255, 0.8);
+                    z-index: 1;
+                }
+
+                .process-stage {
+                    font-size: 15px;
+                    color: #8db4e2;
+                    margin-bottom: 6px;
+                    font-family: 'Alan Sans', sans-serif;
+                }
+
+                .process-title {
+                    font-size: 17px;
+                    color: white;
+                    font-weight: 600;
+                    line-height: 1.3;
+                    font-family: 'Alan Sans', sans-serif;
+                }
+
+                .process-section {
+                    padding: 100px 0;
+                }
+
+                .process-overlay {
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(to right, rgba(15, 76, 151, 0.95), rgba(15, 76, 151, 0.85));
+                    z-index: 1;
+                }
+
+                @media (max-width: 991px) {
+                    .process-timeline {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 30px;
+                    }
+
+                    .process-step {
+                        flex: 0 0 25%;
+                    }
+
+                    .process-arrow {
+                        display: none;
+                    }
+                }
+
+                @media (max-width: 767px) {
+                    .process-step {
+                        flex: 0 0 45%;
+                    }
+                }
+            </style>
+
+            <section class="relative text-light process-section jarallax">
+                <img src="images/background/2.webp" class="jarallax-img" alt="Manufacturing Process Background">
+                <div class="process-overlay"></div>
+
+                <div class="container relative z-2" style="max-width: 1400px;">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <div class="subtitle s2 mb-2 wow fadeInUp"
+                                style="color: #fff; letter-spacing: 0.05em; border-color: transparent;">Our
+                                Manufacturing Process</div>
+                            <h2 class="split mb-3" data-wow-delay=".2s" style="font-size: 3.5rem; font-weight: 500;">
+                                From Design to Product</h2>
+                            <p class="mb-0 fs-18 wow fadeInUp" data-wow-delay=".4s"
+                                style="color: rgba(255,255,255,0.9);">
+                                Every AM Star pump goes through a rigorous 7-stage journey, from concept to your hands
+                                ensuring uncompromised quality at every step.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="process-timeline mt-5">
+
+                        <div class="process-step wow fadeInUp" data-wow-delay="0s">
+                            <div class="process-icon">
+                                <i class="fas fa-pencil-alt"></i>
+                            </div>
+                            <svg viewBox="0 0 24 24" fill="none" class="process-arrow">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div class="process-stage">Stage 1</div>
+                            <div class="process-title">Design<br>Process</div>
+                        </div>
+
+                        <div class="process-step wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="process-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <svg viewBox="0 0 24 24" fill="none" class="process-arrow">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div class="process-stage">Stage 2</div>
+                            <div class="process-title">Compliance<br>Verification</div>
+                        </div>
+
+                        <div class="process-step wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="process-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <svg viewBox="0 0 24 24" fill="none" class="process-arrow">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div class="process-stage">Stage 3</div>
+                            <div class="process-title">Pattern<br>(Mold)</div>
+                        </div>
+
+                        <div class="process-step wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="process-icon">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <svg viewBox="0 0 24 24" fill="none" class="process-arrow">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div class="process-stage">Stage 4</div>
+                            <div class="process-title">Pilot<br>Batch</div>
+                        </div>
+
+                        <div class="process-step wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="process-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <svg viewBox="0 0 24 24" fill="none" class="process-arrow">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div class="process-stage">Stage 5</div>
+                            <div class="process-title">Product<br>Test</div>
+                        </div>
+
+                        <div class="process-step wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="process-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <svg viewBox="0 0 24 24" fill="none" class="process-arrow">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div class="process-stage">Stage 6</div>
+                            <div class="process-title">Quality<br>Assurance</div>
+                        </div>
+
+                        <div class="process-step wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="process-icon">
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="process-stage">Stage 7</div>
+                            <div class="process-title">Final<br>Product</div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section id="pump-applications-section">
+                <div class="container">
+                    <!-- Header Row -->
+                    <div class="row align-items-end mb-5">
+                        <div class="col-lg-8">
+                            <span class="uptitle">Application</span>
+                            <h2 class="main-title">Precision-engineered pumps for every application</h2>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-lg-end justify-content-start pb-2">
+                            <div class="de-custom-nav d-flex">
+                                <button class="nav-square" id="custom-prev">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M15 18l-6-6 6-6" />
+                                    </svg>
+                                </button>
+                                <button class="nav-square" id="custom-next">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel -->
+                    <div id="pump-carousel" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="service-card">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80"
+                                    alt="Agriculture">
+                                <div class="card-overlay">
+                                    <span class="category">Agriculture &</span>
+                                    <h3>Irrigation Systems</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="service-card">
+                                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80"
+                                    alt="Residential">
+                                <div class="card-overlay">
+                                    <span class="category">Residential &</span>
+                                    <h3>Housing Complexes</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="service-card">
+                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
+                                    alt="Industrial">
+                                <div class="card-overlay">
+                                    <span class="category">Industrial &</span>
+                                    <h3>Manufacturing Plants</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="service-card">
+                                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&w=1200&q=80"
+                                    alt="Construction">
+                                <div class="card-overlay">
+                                    <span class="category">Construction &</span>
+                                    <h3>Dewatering Projects</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="testimonials-section"
+                style="background-color: #004fb1; padding: 100px 0; color: #ffffff; font-family: 'Alan Sans', sans-serif; overflow-x: hidden;">
+                <div class="container">
+                    <!-- Header with Title and Navigation -->
+                    <div class="row align-items-end mb-5">
+                        <div class="col-lg-8">
+                            <h2
+                                style="font-size: 42px; font-weight: 700; margin-bottom: 20px; line-height: 1.1; color: #ffffff;">
+                                Trusted by customers<br>across markets</h2>
+                            <p
+                                style="font-size: 16px; color: rgba(255, 255, 255, 0.8); max-width: 500px; margin-bottom: 40px;">
+                                From domestic installations to large-scale industrial projects, AM Star pumps deliver
+                                performance that earns long-term trust.</p>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-lg-end justify-content-start pb-2">
+                            <div class="d-flex" style="gap: 10px;">
+                                <button id="testi-prev"
+                                    style="width: 45px; height: 45px; background-color: #ffffff; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background-color 0.3s ease;">
+                                    <svg viewBox="0 0 24 24"
+                                        style="width: 20px; height: 20px; stroke: #004fb1; stroke-width: 2.5; fill: none;">
+                                        <path d="M15 18l-6-6 6-6" />
+                                    </svg>
+                                </button>
+                                <button id="testi-next"
+                                    style="width: 45px; height: 45px; background-color: #ffffff; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background-color 0.3s ease;">
+                                    <svg viewBox="0 0 24 24"
+                                        style="width: 20px; height: 20px; stroke: #004fb1; stroke-width: 2.5; fill: none;">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel -->
+                    <div id="testi-carousel" class="owl-carousel owl-theme">
+                        <!-- Card 1 -->
+                        <div class="item" style="width: 100%; display: flex; padding: 0 15px; height: 100%;">
+                            <div class="testimonial-card"
+                                style="background-color: #f1f1f1; padding: 40px; border-radius: 0; color: #333333; width: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                                <div>
+                                    <div
+                                        style="font-size: 60px; color: #004fb1; line-height: 1; margin-bottom: 10px; font-family: 'Alan Sans', sans-serif; opacity: 0.9;">
+                                        “</div>
+                                    <p style="font-size: 15px; line-height: 1.6; color: #555; margin-bottom: 25px;">
+                                        “Amstar pumps have shown excellent performance and reliability in continuous
+                                        operation. The build quality and efficiency meet international standards, making
+                                        them suitable for demanding applications.”</p>
+                                </div>
+                                <div>
+                                    <div style="color: #fbbd08; margin-bottom: 15px; font-size: 18px;">★★★★★</div>
+                                    <div style="font-weight: 700; color: #004fb1; font-size: 14px;">Project Engineer,
+                                    </div>
+                                    <div style="font-size: 14px; color: #1a365d; font-weight: 500;">Industrial Water
+                                        Systems</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="item" style="width: 100%; display: flex; padding: 0 15px; height: 100%;">
+                            <div class="testimonial-card"
+                                style="background-color: #f1f1f1; padding: 40px; border-radius: 0; color: #333333; width: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                                <div>
+                                    <div
+                                        style="font-size: 60px; color: #004fb1; line-height: 1; margin-bottom: 10px; font-family: 'Alan Sans', sans-serif; opacity: 0.9;">
+                                        “</div>
+                                    <p style="font-size: 15px; line-height: 1.6; color: #555; margin-bottom: 25px;">“We
+                                        have installed Amstar submersible pumps across multiple sites and the results
+                                        have been consistent. Dependable output and low maintenance.”</p>
+                                </div>
+                                <div>
+                                    <div style="color: #fbbd08; margin-bottom: 15px; font-size: 18px;">★★★★★</div>
+                                    <div style="font-weight: 700; color: #004fb1; font-size: 14px;">Procurement Manager,
+                                    </div>
+                                    <div style="font-size: 14px; color: #1a365d; font-weight: 500;">Infrastructure
+                                        Contractor</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="item" style="width: 100%; display: flex; padding: 0 15px; height: 100%;">
+                            <div class="testimonial-card"
+                                style="background-color: #f1f1f1; padding: 40px; border-radius: 0; color: #333333; width: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                                <div>
+                                    <div
+                                        style="font-size: 60px; color: #004fb1; line-height: 1; margin-bottom: 10px; font-family: 'Alan Sans', sans-serif; opacity: 0.9;">
+                                        “</div>
+                                    <p style="font-size: 15px; line-height: 1.6; color: #555; margin-bottom: 25px;">“The
+                                        customer support and technical guidance provided alongside the pump delivery
+                                        were exceptional. A reliable partner for our large-scale projects.”</p>
+                                </div>
+                                <div>
+                                    <div style="color: #fbbd08; margin-bottom: 15px; font-size: 18px;">★★★★★</div>
+                                    <div style="font-weight: 700; color: #004fb1; font-size: 14px;">Operations Lead,
+                                    </div>
+                                    <div style="font-size: 14px; color: #1a365d; font-weight: 500;">Agricultural
+                                        Services</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="cta-footer" style="background-color: #ebf5fb; padding: 50px 0; position: relative; overflow:
+            hidden; font-family: 'Alan Sans', sans-serif;">
+                <!-- Watermark background effect: Only top and bottom rows -->
+                <div
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; user-select: none; display: flex; flex-direction: column; justify-content: space-between; opacity: 0.04;">
+                    <div
+                        style="font-size: 100px; font-weight: 900; color: #004a99; white-space: nowrap; line-height: 0.8; letter-spacing: 15px; transform: translateX(-5%);">
+                        AMSTAR AMSTAR AMSTAR AMSTAR AMSTAR AMSTAR
+                    </div>
+                    <div
+                        style="font-size: 100px; font-weight: 900; color: #004a99; white-space: nowrap; line-height: 0.8; letter-spacing: 15px; transform: translateX(-8%);">
+                        AMSTAR AMSTAR AMSTAR AMSTAR AMSTAR AMSTAR
+                    </div>
+                </div>
+
+                <div class="container" style="position: relative; z-index: 1;">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7">
+                            <h2 style="font-size: 38px; font-weight: 700; color: #1a365d; margin: 0; line-height: 1.2;">
+                                Looking for reliable<br>pump solutions?</h2>
+                        </div>
+                        <div class="col-lg-5 mt-4 mt-lg-0">
+                            <div style="display: flex; flex-direction: column; gap: 15px;">
+                                <p
+                                    style="color: #1a365d; font-size: 15px; margin: 0; line-height: 1.5; max-width: 450px;">
+                                    Get in touch with our team to find the right pump for your application or to discuss
+                                    distribution and export opportunities.</p>
+                                <div>
+                                    <a href="#"
+                                        style="display: inline-block; padding: 12px 35px; border: 1.5px solid #1a365d; color: #1a365d; text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.3s ease; background: transparent;">Contact
+                                        Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+        <!-- content close -->
+
+        <!-- ============================================================ -->
+        <!-- CUSTOM FOOTER                                                 -->
+        <!-- ============================================================ -->
+        <footer id="main-footer"
+            style="background-color: #004fb1; padding: 80px 0 30px 0; color: #ffffff; font-family: 'Alan Sans', sans-serif;">
+            <div class="container">
+                <div class="row">
+                    <!-- Branding and Certifications -->
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <div style="margin-bottom: 40px; display: flex; align-items: center; gap: 15px;">
+                            <div style="width: 50px; height: 50px; display: flex; flex-wrap: wrap; gap: 4px;">
+                                <div
+                                    style="width: 20px; height: 20px; background: white; border-radius: 50% 50% 0 50%;">
+                                </div>
+                                <div
+                                    style="width: 20px; height: 20px; background: white; border-radius: 50% 50% 50% 0;">
+                                </div>
+                                <div
+                                    style="width: 20px; height: 20px; background: white; border-radius: 50% 0 50% 50%;">
+                                </div>
+                            </div>
+                            <h2
+                                style="font-size: 32px; font-weight: 800; margin: 0; text-transform: uppercase; line-height: 1;">
+                                Amstar<br><span style="font-size: 40px;">Pumps</span></h2>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 20px; opacity: 0.9;">
+                            <div style="text-align: center;">
+                                <div
+                                    style="border: 2px solid white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: bold;">
+                                    ISO</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div
+                                    style="border: 2px solid white; width: 45px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: bold;">
+                                    IEC</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <svg viewBox="0 0 100 60" style="width: 70px; height: auto; fill: white;">
+                                    <path d="M10 30 Q 30 10, 50 30 T 90 30" stroke="white" stroke-width="2"
+                                        fill="none" />
+                                    <text x="15" y="45" font-size="8" fill="white" font-weight="bold">MAKE IN
+                                        INDIA</text>
+                                </svg>
+                            </div>
+                            <div style="font-size: 24px; font-weight: 700; letter-spacing: -2px;">CE</div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2;">
+                            <li><a href="#"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8;">About</a>
+                            </li>
+                            <li><a href="#"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8;">Products</a>
+                            </li>
+                            <li><a href="#"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8;">Gallery</a>
+                            </li>
+                            <li><a href="#"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8;">Blogs</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2;">
+                            <li><a href="#"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8;">Contact
+                                    Us</a></li>
+                            <li><a href="#"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8;">Company
+                                    Profile</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div class="col-lg-3 col-md-4">
+                        <div style="display: flex; gap: 12px; margin-bottom: 20px;">
+                            <svg viewBox="0 0 24 24"
+                                style="width: 20px; height: 20px; stroke: white; fill: none; stroke-width: 2; flex-shrink: 0; margin-top: 4px;">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <p style="margin: 0; font-size: 14px; opacity: 0.8; line-height: 1.5;">Amstar Pumps<br>Door
+                                No. 214, Lenin Street, Vilankurichi,<br>Coimbatore, Tamil Nadu<br>641035, India</p>
+                        </div>
+                        <div style="display: flex; gap: 12px; margin-bottom: 20px;">
+                            <svg viewBox="0 0 24 24"
+                                style="width: 20px; height: 20px; stroke: white; fill: none; stroke-width: 2; flex-shrink: 0;">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                            </svg>
+                            <p style="margin: 0; font-size: 14px; opacity: 0.8;">+91 95001 84003 | +91 95001 36003</p>
+                        </div>
+                        <div style="display: flex; gap: 12px;">
+                            <svg viewBox="0 0 24 24"
+                                style="width: 20px; height: 20px; stroke: white; fill: none; stroke-width: 2; flex-shrink: 0;">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <path d="M22 6l-10 7L2 6" />
+                            </svg>
+                            <p style="margin: 0; font-size: 14px; opacity: 0.8; line-height: 1.5;">
+                                amstarpumps@gmail.com<br>sales@amstar-pumps.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    style="margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.2); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                    <p style="margin: 0; font-size: 13px; opacity: 0.6;">©Amstar-2026 all rights reserved</p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer close -->
+
+    </div>
+
+    <!-- JavaScript Files
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/designesia.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jarallax.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var owl = $("#pump-carousel");
+
+            owl.owlCarousel({
+                items: 1.6,
+                loop: true,
+                margin: 5,
+                nav: false,
+                dots: false,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 1.3 },
+                    1200: { items: 1.6 }
+                }
+            });
+
+            $('#custom-next').click(function () {
+                owl.trigger('next.owl.carousel');
+            });
+            $('#custom-prev').click(function () {
+                owl.trigger('prev.owl.carousel');
+            });
+        });
+        $(document).ready(function () {
+            var testiOwl = $("#testi-carousel");
+
+            testiOwl.owlCarousel({
+                items: 2,
+                loop: true,
+                margin: 0,
+                nav: false,
+                dots: false,
+                responsive: {
+                    0: { items: 1 },
+                    992: { items: 2 }
+                }
+            });
+
+            $('#testi-next').click(function () {
+                testiOwl.trigger('next.owl.carousel');
+            });
+            $('#testi-prev').click(function () {
+                testiOwl.trigger('prev.owl.carousel');
+            });
+        });
+        // Navbar scroll behavior matching index-2.html template
+        (function () {
+            var navbar = document.getElementById("main-nav");
+            if (!navbar) return;
+
+            var lastScrollY = 0;
+            var ticking = false;
+
+            function setNavbarStyle(scrollY, direction) {
+                if (scrollY < 5) {
+                    // Top of page: floating pill
+                    navbar.style.top = "40px";
+                    navbar.style.left = "50%";
+                    navbar.style.transform = "translateX(-50%)";
+                    navbar.style.width = "90%";
+                    navbar.style.maxWidth = "1300px";
+                    navbar.style.borderRadius = "4px";
+                    navbar.style.padding = "15px 40px";
+                    navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.08)";
+                    navbar.style.opacity = "1";
+                    navbar.style.pointerEvents = "";
+                } else {
+                    // Scrolled: full-width sticky
+                    if (navbar.style.left !== "0px" && navbar.style.left !== "0") {
+                        navbar.style.left = "0";
+                        navbar.style.transform = "none";
+                        navbar.style.width = "100%";
+                        navbar.style.maxWidth = "100%";
+                        navbar.style.borderRadius = "0";
+                        navbar.style.padding = "12px 5%";
+                        navbar.style.boxShadow = "0 4px 15px rgba(0,0,0,0.1)";
+                    }
+                    if (direction === "down") {
+                        navbar.style.top = "-90px";
+                        navbar.style.opacity = "0";
+                        navbar.style.pointerEvents = "none";
+                    } else {
+                        navbar.style.top = "0";
+                        navbar.style.opacity = "1";
+                        navbar.style.pointerEvents = "";
+                    }
+                }
+            }
+
+            window.addEventListener("scroll", function () {
+                var currentScrollY = window.scrollY || window.pageYOffset;
+                var direction = currentScrollY > lastScrollY ? "down" : "up";
+                if (!ticking) {
+                    window.requestAnimationFrame(function () {
+                        setNavbarStyle(currentScrollY, direction);
+                        lastScrollY = currentScrollY;
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            setNavbarStyle(0, "up");
+        })();
+    </script>
+
+</body>
+
+</html>
