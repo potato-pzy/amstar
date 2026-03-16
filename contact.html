@@ -11,8 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
+        * {
+            font-family: 'Alan Sans', sans-serif !important;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #ffffff;
@@ -20,29 +23,28 @@
 
         @media (min-width: 992px) {
             .container {
-                max-width: 1820px !important;
+                max-width: 1600px !important;
             }
         }
 
         /* Top Header Area for Contact */
         .contact-page-header {
-            background-color: #f2f9fa;
-            /* Light cyan/blue background from the design */
-            padding: 80px 0;
+            background-color: #ebfafd;
+            padding: 120px 0 80px;
             text-align: center;
         }
 
         .contact-page-header h1 {
             color: #1a365d;
-            /* Dark blue matching the navbar and branding */
-            font-size: 42px;
-            font-weight: 500;
+            font-size: 48px;
+            font-weight: 400;
             margin: 0;
         }
 
         /* Main Contact Content Area */
         .contact-content-section {
             padding: 80px 0;
+            background-color: #ffffff;
         }
 
         /* Contact Details (Left Column) */
@@ -52,9 +54,8 @@
 
         .contact-info-block h4 {
             color: #004fb1;
-            /* Brand blue for headings */
             font-size: 18px;
-            font-weight: 500;
+            font-weight: 400;
             margin-bottom: 12px;
         }
 
@@ -72,58 +73,54 @@
             color: #004fb1;
         }
 
-        /* Map Image (Middle Column) */
+        /* Map (Middle Column) */
         .contact-map-container {
             width: 100%;
-            height: 100%;
-            min-height: 350px;
-            border-radius: 4px;
+            aspect-ratio: 16 / 8;
+            border-radius: 0;
             overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
         }
 
-        .contact-map-container img {
+        .contact-map-container iframe {
             width: 100%;
             height: 100%;
-            object-fit: cover;
         }
 
         /* Contact Form (Right Column) */
         .contact-form .form-control {
-            background-color: #f8f9fa;
-            /* Very light grey */
+            background-color: #f7f7f7;
             border: none;
-            border-radius: 2px;
-            padding: 16px 20px;
+            border-radius: 0;
+            padding: 14px 20px;
             font-size: 14px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: #333;
         }
 
         .contact-form .form-control::placeholder {
-            color: #a0a0a0;
+            color: #999;
         }
 
         .contact-form .form-control:focus {
             box-shadow: none;
-            background-color: #f1f3f5;
-            outline: 1px solid #004fb1;
+            background-color: #f0f0f0;
         }
 
         textarea.form-control {
-            min-height: 140px;
+            min-height: 100px;
             resize: none;
         }
 
         .btn-submit {
             background-color: #004fb1;
-            /* Dark blue button */
             color: #ffffff;
             border: none;
             width: 100%;
-            padding: 16px;
-            font-weight: 500;
-            font-size: 15px;
-            border-radius: 2px;
+            padding: 14px;
+            font-weight: 400;
+            font-size: 14px;
+            border-radius: 0;
             transition: background-color 0.3s ease;
         }
 
@@ -191,19 +188,19 @@
         <!-- Links and Button -->
         <div class="nav-links" style="display: flex; align-items: center; gap: 35px;">
             <a href="./master.html"
-                style="text-decoration: none; color: #1a2b4c; font-weight: 500; font-size: 15.5px; transition: color 0.3s ease; font-family: 'Alan Sans', sans-serif;"
+                style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15.5px; transition: color 0.3s ease; font-family: 'Alan Sans', sans-serif;"
                 onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Home</a>
             <a href="#"
-                style="text-decoration: none; color: #1a2b4c; font-weight: 500; font-size: 15.5px; transition: color 0.3s ease; font-family: 'Alan Sans', sans-serif;"
+                style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15.5px; transition: color 0.3s ease; font-family: 'Alan Sans', sans-serif;"
                 onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Products</a>
             <a href="#"
-                style="text-decoration: none; color: #1a2b4c; font-weight: 500; font-size: 15.5px; transition: color 0.3s ease; font-family: 'Alan Sans', sans-serif;"
+                style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15.5px; transition: color 0.3s ease; font-family: 'Alan Sans', sans-serif;"
                 onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Latest</a>
             <a href="./contact.html"
-                style="text-decoration: none; color: #004fb1; font-weight: 600; font-size: 15.5px; transition: color 0.3s ease; font-family: 'Alan Sans', sans-serif;"
+                style="text-decoration: none; color: #004fb1; font-weight: 400; font-size: 15.5px; transition: color 0.3s ease; font-family: 'Alan Sans', sans-serif;"
                 onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#004fb1'">Contact</a>
             <a href="./contact.html"
-                style="background-color: #0f4c97; color: #ffffff; padding: 10px 24px; border-radius: 2px; font-weight: 500; transition: background-color 0.3s ease; text-decoration: none; font-family: 'Alan Sans', sans-serif;"
+                style="background-color: #0f4c97; color: #ffffff; padding: 10px 24px; border-radius: 2px; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-family: 'Alan Sans', sans-serif;"
                 onmouseover="this.style.backgroundColor='#004fb1'"
                 onmouseout="this.style.backgroundColor='#0f4c97'">Book a Call</a>
         </div>
@@ -220,10 +217,10 @@
     <!-- Contact Content Layout -->
     <section class="contact-content-section">
         <div class="container">
-            <div class="row gx-5">
+            <div class="row gx-5 align-items-center">
 
                 <!-- Left Column: Contact Details -->
-                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0" style="left: 5rem; top: 1rem; position: relative;">
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
                     <div class="contact-info-block">
                         <h4>Address</h4>
                         <p>Amstar Pumps</p>
@@ -246,7 +243,7 @@
                 </div>
 
                 <!-- Middle Column: Map Placeholder -->
-                <div class="col-lg-5 col-md-6 mb-5 mb-lg-0">
+                <div class="col-lg-7 col-md-6 mb-5 mb-lg-0">
                     <div class="contact-map-container">
                         <iframe
                             src="https://maps.google.com/maps?width=100%25&height=100%25&hl=en&q=Lenin%20Street,%20Vilankurichi,%20Coimbatore,%20Tamil%20Nadu%20641035+(Amstar%20Pumps)&t=&z=15&ie=UTF8&iwloc=B&output=embed"
@@ -256,7 +253,7 @@
                 </div>
 
                 <!-- Right Column: Contact Form -->
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <form class="contact-form">
                         <input type="text" class="form-control" placeholder="Your Name" required>
                         <input type="email" class="form-control" placeholder="Your Email" required>

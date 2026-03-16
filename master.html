@@ -19,10 +19,14 @@
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
 
     <style>
+        * {
+            font-family: 'Alan Sans', sans-serif !important;
+        }
+
         /* Section-specific variables and styles */
         #pump-applications-section {
             --primary-blue: #004a99;
-            --bg-light-blue: #ebf5fb;
+            --bg-light-blue: #ebfafd;
             --heading-dark: #1a365d;
             --text-muted: #5a7184;
 
@@ -34,7 +38,7 @@
 
         #pump-applications-section .uptitle {
             color: var(--primary-blue);
-            font-weight: 600;
+            font-weight: 400;
             font-size: 15px;
             margin-bottom: 15px;
             display: block;
@@ -42,7 +46,7 @@
 
         #pump-applications-section h2.main-title {
             font-size: 48px;
-            font-weight: 700;
+            font-weight: 400;
             color: var(--heading-dark);
             line-height: 1.2;
             max-width: 600px;
@@ -79,14 +83,15 @@
 
         /* Service Card Styles */
         #pump-applications-section .item {
-            padding: 0 10px;
+            padding: 0;
         }
 
         #pump-applications-section .service-card {
             position: relative;
-            height: 540px;
+            height: 360px;
             overflow: hidden;
             background-color: #333;
+            border-radius: 12px;
         }
 
         #pump-applications-section .service-card img {
@@ -116,14 +121,15 @@
 
         #pump-applications-section .card-overlay .category {
             color: rgba(255, 255, 255, 0.9);
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 4px;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 2px;
+            display: block;
         }
 
         #pump-applications-section .card-overlay h3 {
-            font-size: 22px;
-            font-weight: 600;
+            font-size: 16px;
+            font-weight: 400;
             color: #ffffff;
             margin: 0;
             line-height: 1.3;
@@ -175,7 +181,7 @@
         .pm-nav-menu a {
             font-family: 'Alan Sans', sans-serif;
             font-size: 15px;
-            font-weight: 500;
+            font-weight: 400;
             color: #1a2e4a;
             text-decoration: none;
             letter-spacing: 0.01em;
@@ -189,7 +195,7 @@
         .pm-nav-cta {
             font-family: 'Alan Sans', sans-serif;
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 400;
             color: #fff !important;
             background: #0f4c97;
             border: none;
@@ -216,11 +222,18 @@
         }
 
         .pm-hero-bg {
+            --hero-bg-size: 85%;
+            --hero-bg-pos: right 0 top 0rem;
+            --hero-bg-repeat: no-repeat;
+            background-color: #0f4c97;
+            /* To fill empty space if any */
+
             position: absolute;
             inset: 0;
-            background-image: url('images/background/6.webp');
-            background-size: cover;
-            background-position: center right;
+            background-image: url('images/background/homepage-hero.jpeg');
+            background-size: var(--hero-bg-size);
+            background-position: var(--hero-bg-pos);
+            background-repeat: var(--hero-bg-repeat);
             z-index: 0;
         }
 
@@ -228,12 +241,19 @@
         .pm-hero-gradient {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to right,
+            background:
+                linear-gradient(to right,
                     #0f4c97 0%,
-                    #0f4c97 38%,
-                    rgba(15, 76, 151, 0.82) 52%,
-                    rgba(15, 76, 151, 0.30) 67%,
-                    rgba(15, 76, 151, 0.00) 80%);
+                    #0f4c97 12%,
+                    rgba(15, 76, 151, 0.95) 20%,
+                    rgba(15, 76, 151, 0.8) 32%,
+                    rgba(15, 76, 151, 0.4) 48%,
+                    rgba(15, 76, 151, 0.1) 62%,
+                    transparent 75%),
+                linear-gradient(to left,
+                    #0f4c97 0%,
+                    rgba(15, 76, 151, 0.5) 8%,
+                    transparent 20%);
             z-index: 1;
         }
 
@@ -244,6 +264,7 @@
             margin: 0;
             padding: 200px 148px;
             width: 100%;
+            height: 100vh;
             display: flex;
             align-items: center;
         }
@@ -255,8 +276,8 @@
         .pm-hero-tagline {
             font-family: 'Alan Sans', sans-serif;
             font-size: 13.5px;
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.80);
+            font-weight: 400;
+            color: #eeeeee;
             letter-spacing: 0.06em;
             text-transform: uppercase;
             margin-bottom: 18px;
@@ -277,9 +298,10 @@
         .pm-hero-desc {
             font-family: 'Alan Sans', sans-serif;
             font-size: 15px;
+            font-weight: 400;
             line-height: 1.7;
-            color: rgba(255, 255, 255, 0.80);
-            margin-bottom: 36px;
+            color: #eeeeee;
+            margin-bottom: 20px;
             max-width: 400px;
         }
 
@@ -290,7 +312,7 @@
             font-weight: 600;
             color: #fff;
             border: 2px solid rgba(255, 255, 255, 0.85);
-            padding: 12px 30px;
+            padding: 6px 30px;
             text-decoration: none;
             letter-spacing: 0.03em;
             transition: background .2s, color .2s, border-color .2s;
@@ -415,6 +437,7 @@
         .content-section h2 {
             margin: 0 0 16px 0;
             font-size: 1.8rem;
+            font-family: 'Alan Sans', sans-serif;
             font-weight: 500;
             line-height: 1.15;
             color: #fff;
@@ -423,10 +446,11 @@
 
         .content-section p {
             margin: 0;
-            font-size: 14.5px;
+            font-family: 'Alan Sans', sans-serif;
+            font-size: 0.7rem;
             line-height: 1.6;
             color: rgba(255, 255, 255, 0.9);
-            font-weight: 300;
+            font-weight: 400;
         }
 
         /* Media queries cannot be applied via inline style attributes */
@@ -461,37 +485,25 @@
         <nav id="main-nav"
             style="position: fixed; top: 40px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1300px; background-color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; z-index: 1000; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border-radius: 4px;">
             <!-- Logo -->
-            <a href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-                <!-- SVG recreating the Amstar 3-petal logo -->
-                <svg viewBox="0 0 100 100" style="width: 45px; height: 45px; fill: #004fb1;">
-                    <path d="M48,15 C45,25 45,35 55,42 C60,32 60,20 48,15 Z" />
-                    <path d="M25,60 C32,55 42,55 48,65 C40,72 28,70 25,60 Z" />
-                    <path d="M75,60 C68,55 58,55 52,65 C60,72 72,70 75,60 Z" />
-                    <circle cx="50" cy="55" r="8" fill="#ffffff" />
-                </svg>
-                <div
-                    style="font-size: 22px; font-weight: 800; color: #003366; line-height: 1.1; text-transform: capitalize; display: flex; flex-direction: column;">
-                    <span>Amstar</span>
-                    <span>Pumps</span>
-                </div>
+            <a href="#" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="images /Footer/Asset 2.svg" alt="Amstar Pumps" style="height: 55px; width: auto;">
             </a>
 
-            <!-- Links and Button -->
-            <div class="nav-links" style="display: flex; align-items: center; gap: 35px;">
-                <a href="#"
-                    style="text-decoration: none; color: #1a2b4c; font-weight: 500; font-size: 15.5px; transition: color 0.3s ease;"
-                    onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Home</a>
-                <a href="#"
-                    style="text-decoration: none; color: #1a2b4c; font-weight: 500; font-size: 15.5px; transition: color 0.3s ease;"
-                    onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Products</a>
-                <a href="#"
-                    style="text-decoration: none; color: #1a2b4c; font-weight: 500; font-size: 15.5px; transition: color 0.3s ease;"
-                    onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Latest</a>
-                <a href="./contact.html"
-                    style="text-decoration: none; color: #1a2b4c; font-weight: 500; font-size: 15.5px; transition: color 0.3s ease;"
-                    onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Contact</a>
-                <a href="#"
-                    style="background-color: #003366; color: #ffffff; padding: 10px 24px; border-radius: 2px; font-weight: 500; transition: background-color 0.3s ease; text-decoration: none;"
+            <!-- Links and Button Group -->
+            <div style="display: flex; align-items: center; gap: 50px;">
+                <div class="nav-links" style="display: flex; align-items: center; gap: 30px;">
+                    <a href="#"
+                        style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Home</a>
+                    <a href="#"
+                        style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Products</a>
+                    <a href="#"
+                        style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Latest</a>
+                </div>
+                <a href="contact.html"
+                    style="background-color: #003366; color: #ffffff; padding: 12px 28px; border-radius: 2px; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-size: 14.5px;"
                     onmouseover="this.style.backgroundColor='#004fb1'"
                     onmouseout="this.style.backgroundColor='#003366'">Book a Call</a>
             </div>
@@ -510,7 +522,10 @@
                     <h1 class="pm-hero-headline">Powering<br>water solutions<br>worldwide</h1>
                     <p class="pm-hero-desc">We design and manufacture high-performance pump solutions that deliver
                         reliability, efficiency and long-lasting value across applications.</p>
-                    <a href="contact.html" class="pm-hero-btn">Book a Call</a>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="contact.html" class="pm-hero-btn pm-btn-primary">Book a Call</a>
+                        <a href="#" class="pm-hero-btn pm-btn-outline">Product Range</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -536,13 +551,13 @@
                         <!-- Left -->
                         <div style="flex:1 1 340px; min-width:260px;">
                             <div
-                                style="font-family: 'Alan Sans', sans-serif; font-size:13px; font-weight:600; color:rgba(255,255,255,0.70); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:14px;">
+                                style="font-family: 'Alan Sans', sans-serif; font-size:16px; font-weight:600; color:#9fe6ed; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:14px;">
                                 About Us</div>
                             <h2
-                                style="font-family: 'Alan Sans', sans-serif; font-size:clamp(1.8rem,3.2vw,2.6rem); font-weight:400; color:#fff; line-height:1.15; margin:0 0 20px; letter-spacing:-0.01em;">
+                                style="font-family: 'Alan Sans', sans-serif; font-size:clamp(1.8rem, 3.2vw, 3.6rem); font-weight:400; color:#fff; line-height:1.15; margin:0 0 20px; letter-spacing:-0.01em;">
                                 Global strength. Local trust.</h2>
                             <p
-                                style="font-family: 'Alan Sans', sans-serif; font-size:15px; line-height:1.75; color:rgba(255,255,255,0.78); margin:0; max-width:600px;">
+                                style="font-family: 'Alan Sans', sans-serif; font-size:1.1rem; line-height:1.75; color:#eeeeee; margin:0; max-width:724px; font-weight:300;">
                                 Founded in 2023, Amstar was built with a clear purpose, to deliver uncompromised pump
                                 quality at an accessible price point. Backed by years of industry experience, we design
                                 and manufacture a wide range of submersible, monoblock, open well and booster pumps
@@ -551,30 +566,30 @@
                         </div>
                         <!-- Right: stats -->
                         <div
-                            style="flex:1 1 380px; display:flex; align-items:flex-start; gap:180px; flex-wrap:wrap; padding-top:36px;">
+                            style="flex:1 1 380px; display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:nowrap; padding-top:36px;">
                             <div>
                                 <div
-                                    style="font-family: 'Alan Sans', sans-serif; font-size:clamp(2.4rem,4vw,3.4rem); font-weight:400; color:#fff; line-height:1; margin-bottom:10px;">
-                                    2<span style="color: #E0FFFF;">+</span></div>
+                                    style="font-family: 'Alan Sans', sans-serif; font-size:clamp(2.4rem, 7vw, 4.9rem); font-weight:400; color:#fff; line-height:1; margin-bottom:10px;">
+                                    2<span style="color: #9fe6ed;">+</span></div>
                                 <div
-                                    style="font-family: 'Alan Sans', sans-serif; font-size:13.5px; color:rgba(255,255,255,0.72); line-height:1.45;">
+                                    style="font-family: 'Alan Sans', sans-serif; font-size:14.5px; color:#9fe6ed; line-height:1.45;">
                                     Years of<br>Manufacturing Excellence</div>
                             </div>
                             <div>
                                 <div
-                                    style="font-family: 'Alan Sans', sans-serif; font-size:clamp(2.4rem,4vw,3.4rem); font-weight:400; color:#fff; line-height:1; margin-bottom:10px;">
-                                    20<span style="color: #E0FFFF;">+</span></div>
+                                    style="font-family: 'Alan Sans', sans-serif; font-size:clamp(2.4rem, 7vw, 4.9rem); font-weight:400; color:#fff; line-height:1; margin-bottom:10px;">
+                                    20<span style="color: #9fe6ed;">+</span></div>
                                 <div
-                                    style="font-family: 'Alan Sans', sans-serif; font-size:13.5px; color:rgba(255,255,255,0.72); line-height:1.45;">
+                                    style="font-family: 'Alan Sans', sans-serif; font-size:14.5px; color:#9fe6ed; line-height:1.45;">
                                     <br>Countries
                                 </div>
                             </div>
                             <div>
                                 <div
-                                    style="font-family: 'Alan Sans', sans-serif; font-size:clamp(2.4rem,4vw,3.4rem); font-weight:400; color:#fff; line-height:1; margin-bottom:10px;">
-                                    1000<span style="color: #E0FFFF;">+</span></div>
+                                    style="font-family: 'Alan Sans', sans-serif; font-size:clamp(2.4rem, 7vw, 4.9rem); font-weight:400; color:#fff; line-height:1; margin-bottom:10px;">
+                                    1000<span style="color: #9fe6ed;">+</span></div>
                                 <div
-                                    style="font-family: 'Alan Sans', sans-serif; font-size:13.5px; color:rgba(255,255,255,0.72); line-height:1.45;">
+                                    style="font-family: 'Alan Sans', sans-serif; font-size:14.5px; color:#9fe6ed; line-height:1.45;">
                                     Pumps &amp; Motors<br>Installed</div>
                             </div>
                         </div>
@@ -585,31 +600,31 @@
                 <!-- Image strip -->
                 <div style="display:flex; width:100%; overflow:hidden; line-height:0;">
                     <div style="flex:1; overflow:hidden;">
-                        <img src="images/services/1.webp" alt="Product 1"
+                        <img src="images /about /Asset 3.webp" alt="Product 1"
                             style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"
                             onmouseover="this.style.transform='scale(1.06)'"
                             onmouseout="this.style.transform='scale(1)'">
                     </div>
                     <div style="flex:1; overflow:hidden;">
-                        <img src="images/services/2.webp" alt="Product 2"
+                        <img src="images /about /Asset 4.webp" alt="Product 2"
                             style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"
                             onmouseover="this.style.transform='scale(1.06)'"
                             onmouseout="this.style.transform='scale(1)'">
                     </div>
                     <div style="flex:1; overflow:hidden;">
-                        <img src="images/services/3.webp" alt="Product 3"
+                        <img src="images /about /Asset 5.webp" alt="Product 3"
                             style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"
                             onmouseover="this.style.transform='scale(1.06)'"
                             onmouseout="this.style.transform='scale(1)'">
                     </div>
                     <div style="flex:1; overflow:hidden;">
-                        <img src="images/services/4.webp" alt="Product 4"
+                        <img src="images /about /Asset 6.webp" alt="Product 4"
                             style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"
                             onmouseover="this.style.transform='scale(1.06)'"
                             onmouseout="this.style.transform='scale(1)'">
                     </div>
                     <div style="flex:1; overflow:hidden;">
-                        <img src="images/services/5.webp" alt="Product 5"
+                        <img src="images /about /Asset 7.webp" alt="Product 5"
                             style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"
                             onmouseover="this.style.transform='scale(1.06)'"
                             onmouseout="this.style.transform='scale(1)'">
@@ -621,13 +636,13 @@
             <!-- ============================================================ -->
             <!-- SECTION 3b: Our Services – Product Range                     -->
             <!-- ============================================================ -->
-            <section style="padding: 72px 0 80px; background: #fff;">
+            <section style="padding: 72px 0 80px; background: #ebfafd;">
                 <div style="max-width: 860px; margin: 0 auto; text-align: center; padding: 0 24px 52px;">
-                    <div <div
-                        style="font-family: 'Alan Sans', sans-serif; font-size:13px; font-weight:600; color:#0f4c97; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:18px;">
+                    <div
+                        style="font-family: 'Alan Sans', sans-serif; font-size:13px; font-weight:400; color:#0f4c97; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:18px;">
                         Our Product Range</div>
                     <h2
-                        style="font-family: 'Alan Sans', sans-serif; font-size:1.9rem; font-weight:300; color:#0f4c97; line-height:1.35; margin:0;">
+                        style="font-family: 'Alan Sans', sans-serif; font-size:1.9rem; font-weight:400; color:#0f4c97; line-height:1.35; margin:0;">
                         A comprehensive portfolio of pumps engineered<br>to perform across residential, agricultural,
                         commercial and<br>industrial environments.</h2>
                 </div>
@@ -640,7 +655,7 @@
                         <!-- Card 1 -->
                         <a href="service-single.html" class="card-container">
                             <div class="image-section">
-                                <img src="images/services/1.webp" alt="Submersible Pumps">
+                                <img src="images /product /Asset 8.webp" alt="Submersible Pumps">
                             </div>
                             <div class="content-section">
                                 <button class="arrow-button" aria-label="Learn more">
@@ -658,7 +673,7 @@
                         <!-- Card 2 -->
                         <a href="service-single.html" class="card-container">
                             <div class="image-section">
-                                <img src="images/services/2.webp" alt="Self-Priming Pumps">
+                                <img src="images /product /Asset 9.webp" alt="Self-Priming Pumps">
                             </div>
                             <div class="content-section">
                                 <button class="arrow-button" aria-label="Learn more">
@@ -676,7 +691,7 @@
                         <!-- Card 3 -->
                         <a href="service-single.html" class="card-container">
                             <div class="image-section">
-                                <img src="images/services/3.webp" alt="Open-Well Pumps">
+                                <img src=" images /product /Asset 10.webp" alt="Open-Well Pumps">
                             </div>
                             <div class="content-section">
                                 <button class="arrow-button" aria-label="Learn more">
@@ -701,7 +716,7 @@
                         <!-- Card 4 -->
                         <a href="service-single.html" class="card-container">
                             <div class="image-section">
-                                <img src="images/services/4.webp" alt="PVC Pipes">
+                                <img src="images /product /Asset 11.webp" alt="PVC Pipes">
                             </div>
                             <div class="content-section">
                                 <button class="arrow-button" aria-label="Learn more">
@@ -719,7 +734,7 @@
                         <!-- Card 5 -->
                         <a href="service-single.html" class="card-container">
                             <div class="image-section">
-                                <img src="images/services/5.webp" alt="Control Panel &amp; Accessories">
+                                <img src="images /product /Asset 12.webp" alt="Control Panel &amp; Accessories">
                             </div>
                             <div class="content-section">
                                 <button class="arrow-button" aria-label="Learn more">
@@ -816,7 +831,8 @@
                 .process-overlay {
                     position: absolute;
                     inset: 0;
-                    background: linear-gradient(to right, rgba(15, 76, 151, 0.95), rgba(15, 76, 151, 0.85));
+                    background: rgba(0, 72, 158, 0.9);
+                    /* #00489e with opacity */
                     z-index: 1;
                 }
 
@@ -843,20 +859,23 @@
                 }
             </style>
 
-            <section class="relative text-light process-section jarallax">
-                <img src="images/background/2.webp" class="jarallax-img" alt="Manufacturing Process Background">
+            <section class="relative text-light process-section jarallax"
+                style="font-family: 'Alan Sans', sans-serif; font-weight: 400;">
+                <img src="images /manufacture/Asset 2.webp" class="jarallax-img" alt="Manufacturing Process Background">
                 <div class="process-overlay"></div>
 
                 <div class="container relative z-2" style="max-width: 1400px;">
                     <div class="row g-4 justify-content-center">
                         <div class="col-lg-8 text-center">
                             <div class="subtitle s2 mb-2 wow fadeInUp"
-                                style="color: #fff; letter-spacing: 0.05em; border-color: transparent;">Our
+                                style="color: #fff; letter-spacing: 0.05em; border-color: transparent; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
+                                Our
                                 Manufacturing Process</div>
-                            <h2 class="split mb-3" data-wow-delay=".2s" style="font-size: 3.5rem; font-weight: 500;">
+                            <h2 class="split mb-3" data-wow-delay=".2s"
+                                style="font-size: 3.5rem; font-weight: 400; font-family: 'Alan Sans', sans-serif;">
                                 From Design to Product</h2>
                             <p class="mb-0 fs-18 wow fadeInUp" data-wow-delay=".4s"
-                                style="color: rgba(255,255,255,0.9);">
+                                style="color: rgba(255,255,255,0.9); font-family: 'Alan Sans', sans-serif; font-weight: 400;">
                                 Every AM Star pump goes through a rigorous 7-stage journey, from concept to your hands
                                 ensuring uncompromised quality at every step.
                             </p>
@@ -867,7 +886,8 @@
 
                         <div class="process-step wow fadeInUp" data-wow-delay="0s">
                             <div class="process-icon">
-                                <i class="fas fa-pencil-alt"></i>
+                                <img src="images /manufacture/Stage 1 .svg" alt="Stage 1"
+                                    style="width: 44px; height: 44px;">
                             </div>
                             <svg viewBox="0 0 24 24" fill="none" class="process-arrow">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
@@ -879,7 +899,8 @@
 
                         <div class="process-step wow fadeInUp" data-wow-delay="0.1s">
                             <div class="process-icon">
-                                <i class="fas fa-file-contract"></i>
+                                <img src="images /manufacture/Stage 2.svg" alt="Stage 2"
+                                    style="width: 44px; height: 44px;">
                             </div>
                             <svg viewBox="0 0 24 24" fill="none" class="process-arrow">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
@@ -891,7 +912,8 @@
 
                         <div class="process-step wow fadeInUp" data-wow-delay="0.2s">
                             <div class="process-icon">
-                                <i class="fas fa-layer-group"></i>
+                                <img src="images /manufacture/Stage 3.svg" alt="Stage 3"
+                                    style="width: 44px; height: 44px;">
                             </div>
                             <svg viewBox="0 0 24 24" fill="none" class="process-arrow">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
@@ -903,7 +925,8 @@
 
                         <div class="process-step wow fadeInUp" data-wow-delay="0.3s">
                             <div class="process-icon">
-                                <i class="fas fa-cube"></i>
+                                <img src="images /manufacture/Stage 4.svg" alt="Stage 4"
+                                    style="width: 44px; height: 44px;">
                             </div>
                             <svg viewBox="0 0 24 24" fill="none" class="process-arrow">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
@@ -915,7 +938,8 @@
 
                         <div class="process-step wow fadeInUp" data-wow-delay="0.4s">
                             <div class="process-icon">
-                                <i class="fas fa-flask"></i>
+                                <img src="images /manufacture/Stage 5.svg" alt="Stage 5"
+                                    style="width: 44px; height: 44px;">
                             </div>
                             <svg viewBox="0 0 24 24" fill="none" class="process-arrow">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
@@ -927,7 +951,8 @@
 
                         <div class="process-step wow fadeInUp" data-wow-delay="0.5s">
                             <div class="process-icon">
-                                <i class="fas fa-shield-alt"></i>
+                                <img src="images /manufacture/Stage 6.svg" alt="Stage 6"
+                                    style="width: 44px; height: 44px;">
                             </div>
                             <svg viewBox="0 0 24 24" fill="none" class="process-arrow">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
@@ -939,7 +964,8 @@
 
                         <div class="process-step wow fadeInUp" data-wow-delay="0.6s">
                             <div class="process-icon">
-                                <i class="far fa-star"></i>
+                                <img src="images /manufacture/Stage 7.svg" alt="Stage 7"
+                                    style="width: 44px; height: 44px;">
                             </div>
                             <div class="process-stage">Stage 7</div>
                             <div class="process-title">Final<br>Product</div>
@@ -971,8 +997,10 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Carousel -->
+                <!-- Carousel -->
+                <div class="container-fluid px-0" style="padding-left: 20px !important;">
                     <div id="pump-carousel" class="owl-carousel owl-theme">
                         <div class="item">
                             <div class="service-card">
@@ -1027,10 +1055,10 @@
                     <div class="row align-items-end mb-5">
                         <div class="col-lg-8">
                             <h2
-                                style="font-size: 42px; font-weight: 700; margin-bottom: 20px; line-height: 1.1; color: #ffffff;">
+                                style="font-size: 42px; font-weight: 400; font-family: 'Alan Sans', sans-serif; margin-bottom: 20px; line-height: 1.1; color: #eeeeee;">
                                 Trusted by customers<br>across markets</h2>
                             <p
-                                style="font-size: 16px; color: rgba(255, 255, 255, 0.8); max-width: 500px; margin-bottom: 40px;">
+                                style="font-size: 16px; font-weight: 300; font-family: 'Alan Sans', sans-serif; color: #eeeeee; max-width: 500px; margin-bottom: 40px;">
                                 From domestic installations to large-scale industrial projects, AM Star pumps deliver
                                 performance that earns long-term trust.</p>
                         </div>
@@ -1064,16 +1092,21 @@
                                     <div
                                         style="font-size: 60px; color: #004fb1; line-height: 1; margin-bottom: 10px; font-family: 'Alan Sans', sans-serif; opacity: 0.9;">
                                         “</div>
-                                    <p style="font-size: 15px; line-height: 1.6; color: #555; margin-bottom: 25px;">
+                                    <p
+                                        style="font-size: 15px; line-height: 1.6; color: #565656; font-family: 'Alan Sans', sans-serif; font-weight: 400; margin-bottom: 25px;">
                                         “Amstar pumps have shown excellent performance and reliability in continuous
                                         operation. The build quality and efficiency meet international standards, making
                                         them suitable for demanding applications.”</p>
                                 </div>
                                 <div>
                                     <div style="color: #fbbd08; margin-bottom: 15px; font-size: 18px;">★★★★★</div>
-                                    <div style="font-weight: 700; color: #004fb1; font-size: 14px;">Project Engineer,
+                                    <div class="testi-designation"
+                                        style="font-weight: 500; font-family: 'Alan Sans', sans-serif; color: #00489e; font-size: 16px;">
+                                        Project Engineer,
                                     </div>
-                                    <div style="font-size: 14px; color: #1a365d; font-weight: 500;">Industrial Water
+                                    <div class="testi-designation"
+                                        style="font-size: 16px; font-family: 'Alan Sans', sans-serif; color: #00489e; font-weight: 500;">
+                                        Industrial Water
                                         Systems</div>
                                 </div>
                             </div>
@@ -1087,15 +1120,21 @@
                                     <div
                                         style="font-size: 60px; color: #004fb1; line-height: 1; margin-bottom: 10px; font-family: 'Alan Sans', sans-serif; opacity: 0.9;">
                                         “</div>
-                                    <p style="font-size: 15px; line-height: 1.6; color: #555; margin-bottom: 25px;">“We
+                                    <p
+                                        style="font-size: 15px; line-height: 1.6; color: #565656; font-family: 'Alan Sans', sans-serif; font-weight: 400; margin-bottom: 25px;">
+                                        “We
                                         have installed Amstar submersible pumps across multiple sites and the results
                                         have been consistent. Dependable output and low maintenance.”</p>
                                 </div>
                                 <div>
                                     <div style="color: #fbbd08; margin-bottom: 15px; font-size: 18px;">★★★★★</div>
-                                    <div style="font-weight: 700; color: #004fb1; font-size: 14px;">Procurement Manager,
+                                    <div class="testi-designation"
+                                        style="font-weight: 500; font-family: 'Alan Sans', sans-serif; color: #00489e; font-size: 16px;">
+                                        Procurement Manager,
                                     </div>
-                                    <div style="font-size: 14px; color: #1a365d; font-weight: 500;">Infrastructure
+                                    <div class="testi-designation"
+                                        style="font-size: 16px; font-family: 'Alan Sans', sans-serif; color: #00489e; font-weight: 500;">
+                                        Infrastructure
                                         Contractor</div>
                                 </div>
                             </div>
@@ -1109,15 +1148,21 @@
                                     <div
                                         style="font-size: 60px; color: #004fb1; line-height: 1; margin-bottom: 10px; font-family: 'Alan Sans', sans-serif; opacity: 0.9;">
                                         “</div>
-                                    <p style="font-size: 15px; line-height: 1.6; color: #555; margin-bottom: 25px;">“The
+                                    <p
+                                        style="font-size: 15px; line-height: 1.6; color: #565656; font-family: 'Alan Sans', sans-serif; font-weight: 400; margin-bottom: 25px;">
+                                        “The
                                         customer support and technical guidance provided alongside the pump delivery
                                         were exceptional. A reliable partner for our large-scale projects.”</p>
                                 </div>
                                 <div>
                                     <div style="color: #fbbd08; margin-bottom: 15px; font-size: 18px;">★★★★★</div>
-                                    <div style="font-weight: 700; color: #004fb1; font-size: 14px;">Operations Lead,
+                                    <div class="testi-designation"
+                                        style="font-weight: 500; font-family: 'Alan Sans', sans-serif; color: #00489e; font-size: 16px;">
+                                        Operations Lead,
                                     </div>
-                                    <div style="font-size: 14px; color: #1a365d; font-weight: 500;">Agricultural
+                                    <div class="testi-designation"
+                                        style="font-size: 16px; font-family: 'Alan Sans', sans-serif; color: #00489e; font-weight: 500;">
+                                        Agricultural
                                         Services</div>
                                 </div>
                             </div>
@@ -1127,44 +1172,161 @@
             </section>
 
 
-            <section id="cta-footer" style="background-color: #ebf5fb; padding: 50px 0; position: relative; overflow:
-            hidden; font-family: 'Alan Sans', sans-serif;">
-                <!-- Watermark background effect: Only top and bottom rows -->
-                <div
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; user-select: none; display: flex; flex-direction: column; justify-content: space-between; opacity: 0.04;">
-                    <div
-                        style="font-size: 100px; font-weight: 900; color: #004a99; white-space: nowrap; line-height: 0.8; letter-spacing: 15px; transform: translateX(-5%);">
-                        AMSTAR AMSTAR AMSTAR AMSTAR AMSTAR AMSTAR
+
+
+
+
+            <!-- ============================================================ -->
+            <!-- SECTION 7: New Call to Action                                -->
+            <!-- ============================================================ -->
+            <style>
+                .cta-banner {
+                    position: relative;
+                    width: 100%;
+                    background-color: #eef8f9;
+                    padding: 100px 0;
+                    overflow: hidden;
+                    font-family: 'Alan Sans', sans-serif;
+                }
+
+                .cta-watermark {
+                    position: absolute;
+                    inset: 0;
+                    z-index: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    pointer-events: none;
+                    user-select: none;
+                    overflow: hidden;
+                }
+
+                .cta-watermark-row {
+
+                    display: flex;
+                    white-space: nowrap;
+                    color: #e4f4f6;
+                    font-size: clamp(4rem, 8vw, 10rem);
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 0.1em;
+                    line-height: 0.8;
+                }
+
+                .cta-watermark-row.row-1 {
+                    margin-left: -5%;
+                    margin-bottom: 40px;
+                }
+
+                .cta-watermark-row.row-2 {
+                    margin-left: -15%;
+                    margin-top: 40px;
+                }
+
+                .cta-watermark-row span {
+                    margin-right: 60px;
+                }
+
+                .cta-content {
+                    position: relative;
+                    z-index: 10;
+                    width: 100%;
+                    max-width: 1300px;
+                    margin: 0 auto;
+                    padding: 0 40px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 40px;
+                }
+
+                @media (min-width: 992px) {
+                    .cta-content {
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 150px;
+                        padding: 0 100px;
+                    }
+
+                    .cta-banner {
+                        padding: 100px 0;
+                    }
+                }
+
+                .cta-heading {
+                    flex: 1.2;
+                }
+
+                .cta-heading h2 {
+                    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+                    font-weight: 500;
+                    color: #1a3968;
+                    line-height: 1.1;
+                    margin: 0;
+                    letter-spacing: -0.02em;
+                }
+
+                .cta-details {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .cta-details p {
+                    color: #1a3968;
+                    font-size: 17px;
+                    line-height: 1.5;
+                    margin-bottom: 25px;
+                    max-width: 480px;
+                    font-weight: 500;
+                }
+
+                .cta-button {
+                    border: 1.5px solid #15426e;
+                    color: #15426e;
+                    background-color: transparent;
+                    padding: 12px 15px;
+                    font-size: 20px;
+                    font-weight: 400;
+                    text-decoration: none;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    cursor: pointer;
+                    border-radius: 2px;
+                    font-family: 'Alan Sans', sans-serif;
+                }
+
+                .cta-button:hover {
+                    background-color: #15426e;
+                    color: #ffffff;
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(21, 66, 110, 0.15);
+                }
+            </style>
+
+            <section class="cta-banner">
+                <!-- Background Watermark -->
+                <div class="cta-watermark" aria-hidden="true">
+                    <div class="cta-watermark-row row-1">
+                        <span>AMSTAR</span><span>AMSTAR</span><span>AMSTAR</span><span>AMSTAR</span>
                     </div>
-                    <div
-                        style="font-size: 100px; font-weight: 900; color: #004a99; white-space: nowrap; line-height: 0.8; letter-spacing: 15px; transform: translateX(-8%);">
-                        AMSTAR AMSTAR AMSTAR AMSTAR AMSTAR AMSTAR
+                    <div class="cta-watermark-row row-2">
+                        <span>AMSTAR</span><span>AMSTAR</span><span>AMSTAR</span><span>AMSTAR</span>
                     </div>
                 </div>
 
-                <div class="container" style="position: relative; z-index: 1;">
-                    <div class="row align-items-center">
-                        <div class="col-lg-7">
-                            <h2 style="font-size: 38px; font-weight: 700; color: #1a365d; margin: 0; line-height: 1.2;">
-                                Looking for reliable<br>pump solutions?</h2>
-                        </div>
-                        <div class="col-lg-5 mt-4 mt-lg-0">
-                            <div style="display: flex; flex-direction: column; gap: 15px;">
-                                <p
-                                    style="color: #1a365d; font-size: 15px; margin: 0; line-height: 1.5; max-width: 450px;">
-                                    Get in touch with our team to find the right pump for your application or to discuss
-                                    distribution and export opportunities.</p>
-                                <div>
-                                    <a href="#"
-                                        style="display: inline-block; padding: 12px 35px; border: 1.5px solid #1a365d; color: #1a365d; text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.3s ease; background: transparent;">Contact
-                                        Us</a>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Content -->
+                <div class="cta-content">
+                    <div class="cta-heading">
+                        <h2>Looking for reliable<br>pump solutions?</h2>
+                    </div>
+                    <div class="cta-details">
+                        <p>Get in touch with our team to find the right pump for your application or to discuss
+                            distribution and export opportunities.</p>
+                        <a href="contact.html" class="cta-button">Contact Us</a>
                     </div>
                 </div>
             </section>
-
 
         </main>
         <!-- content close -->
@@ -1179,70 +1341,42 @@
                     <!-- Branding and Certifications -->
                     <div class="col-lg-5 mb-5 mb-lg-0">
                         <div style="margin-bottom: 40px; display: flex; align-items: center; gap: 15px;">
-                            <div style="width: 50px; height: 50px; display: flex; flex-wrap: wrap; gap: 4px;">
-                                <div
-                                    style="width: 20px; height: 20px; background: white; border-radius: 50% 50% 0 50%;">
-                                </div>
-                                <div
-                                    style="width: 20px; height: 20px; background: white; border-radius: 50% 50% 50% 0;">
-                                </div>
-                                <div
-                                    style="width: 20px; height: 20px; background: white; border-radius: 50% 0 50% 50%;">
-                                </div>
-                            </div>
-                            <h2
-                                style="font-size: 32px; font-weight: 800; margin: 0; text-transform: uppercase; line-height: 1;">
-                                Amstar<br><span style="font-size: 40px;">Pumps</span></h2>
+                            <img src="images /Footer/Asset 2.svg" alt="Amstar Pumps" style="height: 80px; width: auto;">
                         </div>
 
-                        <div style="display: flex; align-items: center; gap: 20px; opacity: 0.9;">
-                            <div style="text-align: center;">
-                                <div
-                                    style="border: 2px solid white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: bold;">
-                                    ISO</div>
-                            </div>
-                            <div style="text-align: center;">
-                                <div
-                                    style="border: 2px solid white; width: 45px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: bold;">
-                                    IEC</div>
-                            </div>
-                            <div style="text-align: center;">
-                                <svg viewBox="0 0 100 60" style="width: 70px; height: auto; fill: white;">
-                                    <path d="M10 30 Q 30 10, 50 30 T 90 30" stroke="white" stroke-width="2"
-                                        fill="none" />
-                                    <text x="15" y="45" font-size="8" fill="white" font-weight="bold">MAKE IN
-                                        INDIA</text>
-                                </svg>
-                            </div>
-                            <div style="font-size: 24px; font-weight: 700; letter-spacing: -2px;">CE</div>
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                            <img src="images /Footer/Certification logos.png" alt="Certifications"
+                                style="height: 37px; width: auto; opacity: 0.9;">
                         </div>
                     </div>
 
                     <!-- Quick Links -->
                     <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-                        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2;">
-                            <li><a href="#"
-                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8;">About</a>
+                        <ul
+                            style="list-style: none; padding: 0; margin: 0; line-height: 2.2; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
+                            <li><a href="about.html"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">About</a>
                             </li>
-                            <li><a href="#"
-                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8;">Products</a>
+                            <li><a href="services.html"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">Products</a>
                             </li>
-                            <li><a href="#"
-                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8;">Gallery</a>
+                            <li><a href="gallery.html"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">Gallery</a>
                             </li>
-                            <li><a href="#"
-                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8;">Blogs</a>
+                            <li><a href="blog.html"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">Blogs</a>
                             </li>
                         </ul>
                     </div>
 
                     <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-                        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2;">
-                            <li><a href="#"
-                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8;">Contact
+                        <ul
+                            style="list-style: none; padding: 0; margin: 0; line-height: 2.2; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
+                            <li><a href="contact.html"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">Contact
                                     Us</a></li>
-                            <li><a href="#"
-                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8;">Company
+                            <li><a href="about.html"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">Company
                                     Profile</a></li>
                         </ul>
                     </div>
@@ -1250,29 +1384,25 @@
                     <!-- Contact Details -->
                     <div class="col-lg-3 col-md-4">
                         <div style="display: flex; gap: 12px; margin-bottom: 20px;">
-                            <svg viewBox="0 0 24 24"
-                                style="width: 20px; height: 20px; stroke: white; fill: none; stroke-width: 2; flex-shrink: 0; margin-top: 4px;">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                                <circle cx="12" cy="10" r="3" />
-                            </svg>
-                            <p style="margin: 0; font-size: 14px; opacity: 0.8; line-height: 1.5;">Amstar Pumps<br>Door
+                            <img src="images /Footer/Location icon.svg" alt="Location"
+                                style="width: 20px; height: 20px; flex-shrink: 0; margin-top: 4px;">
+                            <p
+                                style="margin: 0; font-size: 14px; opacity: 0.8; line-height: 1.5; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
+                                Amstar Pumps<br>Door
                                 No. 214, Lenin Street, Vilankurichi,<br>Coimbatore, Tamil Nadu<br>641035, India</p>
                         </div>
                         <div style="display: flex; gap: 12px; margin-bottom: 20px;">
-                            <svg viewBox="0 0 24 24"
-                                style="width: 20px; height: 20px; stroke: white; fill: none; stroke-width: 2; flex-shrink: 0;">
-                                <path
-                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
-                            </svg>
-                            <p style="margin: 0; font-size: 14px; opacity: 0.8;">+91 95001 84003 | +91 95001 36003</p>
+                            <img src="images /Footer/Phone Icon.svg" alt="Phone"
+                                style="width: 20px; height: 20px; flex-shrink: 0;">
+                            <p
+                                style="margin: 0; font-size: 14px; opacity: 0.8; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
+                                +91 95001 84003 | +91 95001 36003</p>
                         </div>
                         <div style="display: flex; gap: 12px;">
-                            <svg viewBox="0 0 24 24"
-                                style="width: 20px; height: 20px; stroke: white; fill: none; stroke-width: 2; flex-shrink: 0;">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                                <path d="M22 6l-10 7L2 6" />
-                            </svg>
-                            <p style="margin: 0; font-size: 14px; opacity: 0.8; line-height: 1.5;">
+                            <img src="images /Footer/Mail Icon.svg" alt="Mail"
+                                style="width: 20px; height: 20px; flex-shrink: 0;">
+                            <p
+                                style="margin: 0; font-size: 14px; opacity: 0.8; line-height: 1.5; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
                                 amstarpumps@gmail.com<br>sales@amstar-pumps.com</p>
                         </div>
                     </div>
@@ -1302,15 +1432,16 @@
             var owl = $("#pump-carousel");
 
             owl.owlCarousel({
-                items: 1.6,
+                items: 2.2,
                 loop: true,
-                margin: 5,
+                margin: 24,
                 nav: false,
                 dots: false,
                 responsive: {
-                    0: { items: 1 },
-                    768: { items: 1.3 },
-                    1200: { items: 1.6 }
+                    0: { items: 1.1 },
+                    768: { items: 1.5 },
+                    1024: { items: 2.2 },
+                    1400: { items: 2.5 }
                 }
             });
 
