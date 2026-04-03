@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4" Submersible Motor - Product Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            min-height: 100vh;
+            background-color: white;
+            color: #374151;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1152px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Hero Header Section */
+        .hero-header {
+            background-color: #0b4c93;
+            /* Added industrial machinery background with a strong blue overlay */
+            background-image: linear-gradient(rgba(11, 76, 147, 0.75), rgba(11, 76, 147, 0.95)), url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 40px 16px 120px 16px;
+            width: 100%;
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        .hero-title {
+            color: white;
+            font-size: 2.75rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Product Detail Section */
+        .product-section {
+            padding: 64px 32px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 64px;
+        }
+
+        @media (min-width: 1024px) {
+            .product-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-header {
+                padding: 16px 16px 48px 16px;
+            }
+        }
+
+        .product-image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image-border {
+            border: 2px solid #d1d5db;
+            border-radius: 8px;
+            padding: 32px;
+            background-color: white;
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            max-width: 384px;
+        }
+
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .product-title {
+            font-size: 2.25rem;
+            color: #003d7a;
+            margin-bottom: 12px;
+        }
+
+        .product-code {
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+
+        .product-code-value {
+            font-weight: 600;
+        }
+
+        .product-description {
+            color: #374151;
+            line-height: 1.625;
+        }
+
+        .section-label {
+            font-size: 0.875rem;
+            color: #111827;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .applications-container {
+            display: flex;
+            gap: 12px;
+        }
+
+        .application-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: #004a99;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .application-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .variants-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .variant-button {
+            padding: 8px 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            background-color: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .variant-button:hover {
+            background-color: #e5e7eb;
+        }
+
+        .variant-button.active {
+            background-color: #004a99;
+            color: white;
+            border-color: #004a99;
+        }
+
+        .cycle-container {
+            display: flex;
+            gap: 8px;
+        }
+
+        .cycle-button {
+            padding: 8px 24px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            background-color: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .cycle-button:hover {
+            background-color: #e5e7eb;
+        }
+
+        .cycle-button.active {
+            background-color: #004a99;
+            color: white;
+            border-color: #004a99;
+        }
+
+        .quote-button {
+            width: 100%;
+            background-color: #004a99;
+            color: white;
+            padding: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 16px;
+        }
+
+        .quote-button:hover {
+            background-color: #003d7a;
+        }
+
+        /* Tabs Section */
+        .tabs-section {
+            padding: 64px 32px;
+        }
+
+        .tabs-header {
+            border-top: 2px solid #004a99;
+            display: flex;
+            overflow-x: auto;
+            background-color: #f4f5f7;
+        }
+
+        .tab-button {
+            flex: 1;
+            min-width: 120px;
+            padding: 16px;
+            text-align: center;
+            background-color: transparent;
+            border: none;
+            color: #003d7a;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .tab-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid #004a99;
+        }
+
+        .tab-button:hover {
+            background-color: #e5e7eb;
+        }
+
+        .tab-button.active {
+            background-color: white;
+        }
+
+        .tab-content {
+            margin-top: 32px;
+        }
+
+        .tab-panel {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .spec-table {
+            max-width: 600px;
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .spec-table tr {
+            border-bottom: 1px solid #d1d5db;
+        }
+
+        .spec-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .spec-table td {
+            padding: 14px 20px;
+            color: #374151;
+        }
+
+        .spec-table td:first-child {
+            border-right: 1px solid #d1d5db;
+            background-color: #f9fafb;
+            font-weight: 600;
+            width: 40%;
+        }
+
+        .features-list {
+            list-style: disc;
+            padding-left: 20px;
+            color: #374151;
+        }
+
+        .features-list li {
+            margin-bottom: 12px;
+        }
+
+        .info-text {
+            color: #374151;
+            margin-bottom: 16px;
+        }
+
+        .info-list {
+            list-style: disc;
+            padding-left: 20px;
+            color: #374151;
+        }
+
+        .info-list li {
+            margin-bottom: 12px;
+        }
+
+        /* Related Products Section */
+        .related-section {
+            padding: 64px 32px;
+            border-top: 1px solid #e5e7eb;
+            background-color: #f9fafb;
+        }
+
+        .related-title {
+            font-size: 1.875rem;
+            color: #003d7a;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .related-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .related-product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .related-product-image-container {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 24px;
+            background-color: white;
+            margin-bottom: 16px;
+            width: 100%;
+            transition: all 0.2s;
+        }
+
+        .related-product:hover .related-product-image-container {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-color: #004a99;
+        }
+
+        .related-product-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .related-product-title {
+            font-size: 1.125rem;
+            color: #003d7a;
+            margin-bottom: 4px;
+        }
+
+        .related-product-code {
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+
+        /* Custom Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 32px;
+            border-radius: 8px;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-title {
+            color: #003d7a;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+
+        .modal-body {
+            color: #4b5563;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+
+        .modal-close-btn {
+            width: 100%;
+            background-color: #004a99;
+            color: white;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: 500;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .modal-close-btn:hover {
+            background-color: #003d7a;
+        }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        #main-nav {
+            width: 90% !important;
+            padding: 15px 40px !important;
+            top: 40px !important;
+        }
+
+        #main-nav .nav-links {
+            display: flex !important;
+        }
+
+        #main-nav a {
+            font-size: 15px !important;
+        }
+
+        @media (max-width: 991px) {
+            #main-nav {
+                width: 95% !important;
+                padding: 15px 20px !important;
+                top: 20px !important;
+            }
+
+            .nav-links {
+                display: none !important;
+            }
+        }
+    </style>
+
+<style>
+                .cta-banner {
+                    position: relative;
+                    width: 100%;
+                    background-color: #eef8f9;
+                    padding: 100px 0;
+                    overflow: hidden;
+                    font-family: 'Alan Sans', sans-serif;
+                }
+
+                .cta-watermark {
+                    position: absolute;
+                    inset: 0;
+                    z-index: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    pointer-events: none;
+                    user-select: none;
+                    overflow: hidden;
+                }
+
+                .cta-watermark-row {
+
+                    display: flex;
+                    white-space: nowrap;
+                    color: #e4f4f6;
+                    font-size: clamp(4rem, 8vw, 10rem);
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 0.1em;
+                    line-height: 0.8;
+                }
+
+                .cta-watermark-row.row-1 {
+                    margin-left: -5%;
+                    margin-bottom: 40px;
+                }
+
+                .cta-watermark-row.row-2 {
+                    margin-left: -15%;
+                    margin-top: 40px;
+                }
+
+                .cta-watermark-row span {
+                    margin-right: 60px;
+                }
+
+                .cta-content {
+                    position: relative;
+                    z-index: 10;
+                    width: 100%;
+                    max-width: 1300px;
+                    margin: 0 auto;
+                    padding: 0 40px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 40px;
+                }
+
+                @media (min-width: 992px) {
+                    .cta-content {
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 150px;
+                        padding: 0 100px;
+                    }
+
+                    .cta-banner {
+                        padding: 100px 0;
+                    }
+                }
+
+                .cta-heading {
+                    flex: 1.2;
+                }
+
+                .cta-heading h2 {
+                    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+                    font-weight: 500;
+                    color: #1a3968;
+                    line-height: 1.1;
+                    margin: 0;
+                    letter-spacing: -0.02em;
+                }
+
+                .cta-details {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .cta-details p {
+                    color: #1a3968;
+                    font-size: 17px;
+                    line-height: 1.5;
+                    margin-bottom: 25px;
+                    max-width: 480px;
+                    font-weight: 500;
+                }
+
+                .cta-button {
+                    border: 1.5px solid #15426e;
+                    color: #15426e;
+                    background-color: transparent;
+                    padding: 12px 15px;
+                    font-size: 20px;
+                    font-weight: 400;
+                    text-decoration: none;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    cursor: pointer;
+                    border-radius: 2px;
+                    font-family: 'Alan Sans', sans-serif;
+                }
+
+                .cta-button:hover {
+                    background-color: #15426e;
+                    color: #ffffff;
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(21, 66, 110, 0.15);
+                }
+            </style>
+</head>
+<body>
+<!-- ============================================================ -->
+        <!-- PREMIUM WHITE NAVBAR                                          -->
+        <!-- ============================================================ -->
+        <nav id="main-nav"
+            style="position: fixed; top: 40px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1300px; background-color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; z-index: 1000; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border-radius: 4px;">
+            <!-- Logo -->
+            <a href="#" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="images /Footer/Asset 2.svg" alt="Amstar Pumps" style="height: 55px; width: auto;">
+            </a>
+
+            <!-- Links and Button Group -->
+            <div style="display: flex; align-items: center; gap: 50px;">
+                <div class="nav-links" style="display: flex; align-items: center; gap: 30px;">
+                    <a href="#"
+                        style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Home</a>
+                    <a href="products.html"
+                        style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Products</a>
+                    <a href="#"
+                        style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Latest</a>
+                </div>
+                <a href="contact.html"
+                    style="background-color: #003366; color: #ffffff; padding: 12px 28px; border-radius: 2px; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-size: 14.5px;"
+                    onmouseover="this.style.backgroundColor='#004fb1'"
+                    onmouseout="this.style.backgroundColor='#003366'">Book a Call</a>
+            </div>
+        </nav>
+        <!-- navbar close -->
+<br><br><br><br>
+    <!-- Hero Header Section -->
+    <header class="hero-header">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Submersible System</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Product Detail Section -->
+        <div class="product-section">
+            <div class="product-grid">
+                <!-- Left side - Product Image -->
+                <div class="product-image-container">
+                    <div class="product-image-border">
+                        <img 
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='600' viewBox='0 0 400 600'%3E%3Crect fill='%23f0f0f0' width='400' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='24' fill='%23999'%3E4%22 Submersible Motor%3C/text%3E%3C/svg%3E" 
+                            alt="4 inch Submersible Motor" 
+                            class="product-image"
+                        />
+                    </div>
+                </div>
+
+                <!-- Right side - Product Details -->
+                <div class="product-details">
+                    <div>
+                        <h1 class="product-title">4" Submersible Motor</h1>
+                        <p class="product-code">
+                            Product: <span class="product-code-value">763782bsv</span>
+                        </p>
+                    </div>
+
+                    <p class="product-description">
+                        The Amstar 4" Water-Filled Submersible Motor is designed to deliver reliable, efficient, 
+                        and long-lasting performance for borewell and submersible pump applications. 
+                        Engineered for continuous operation, it provides stable output even under demanding 
+                        working conditions.
+                    </p>
+
+                    <!-- Applications -->
+                    <div>
+                        <p class="section-label">Applications:</p>
+                        <div class="applications-container">
+                            <div class="application-icon" title="Residential">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                            </div>
+                            <div class="application-icon" title="Industrial">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                </svg>
+                            </div>
+                            <div class="application-icon" title="Water Systems">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                            </div>
+                            <div class="application-icon" title="Irrigation">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Variants Available -->
+                    <div>
+                        <p class="section-label">Variants Available (HP):</p>
+                        <div class="variants-container" id="variants-container">
+                            <button class="variant-button" data-variant="0.75">0.75</button>
+                            <button class="variant-button active" data-variant="1.0">1.0</button>
+                            <button class="variant-button" data-variant="1.5">1.5</button>
+                            <button class="variant-button" data-variant="2.0">2.0</button>
+                            <button class="variant-button" data-variant="3.0">3.0</button>
+                            <button class="variant-button" data-variant="5.0">5.0</button>
+                            <button class="variant-button" data-variant="7.5">7.5</button>
+                        </div>
+                    </div>
+
+                    <!-- Choose Cycle -->
+                    <div>
+                        <p class="section-label">Choose Cycle</p>
+                        <div class="cycle-container" id="cycle-container">
+                            <button class="cycle-button active" data-cycle="40 Hz">40 Hz</button>
+                            <button class="cycle-button" data-cycle="50 Hz">50 Hz</button>
+                        </div>
+                    </div>
+
+                    <!-- Request for Quote Button -->
+                    <button class="quote-button" onclick="requestQuote()">Request for Quote</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs Section -->
+        <div class="tabs-section">
+            <!-- Tab Headers -->
+            <div class="tabs-header">
+                <button class="tab-button active" data-tab="specification">Specification</button>
+                <button class="tab-button" data-tab="features">Features</button>
+                <button class="tab-button" data-tab="shipping">Shipping</button>
+                <button class="tab-button" data-tab="warranty">Warranty</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <div class="tab-panel active" id="specification">
+                    <table class="spec-table">
+                        <tbody>
+                            <tr>
+                                <td>Phase</td>
+                                <td>Single/Three Phase</td>
+                            </tr>
+                            <tr>
+                                <td>Voltage</td>
+                                <td>240 / 380 / 415</td>
+                            </tr>
+                            <tr>
+                                <td>Material</td>
+                                <td>SS302 / SS&CI</td>
+                            </tr>
+                            <tr>
+                                <td>Coolant</td>
+                                <td>2800</td>
+                            </tr>
+                            <tr>
+                                <td>RPM</td>
+                                <td>Class B</td>
+                            </tr>
+                            <tr>
+                                <td>Insulation Class</td>
+                                <td>IP68</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tab-panel" id="features">
+                    <ul class="features-list">
+                        <li>Corrosion-resistant construction with SS302/SS&CI materials</li>
+                        <li>IP68 rating ensures complete protection against water ingress</li>
+                        <li>Water-filled cooling system for efficient heat dissipation</li>
+                        <li>Compatible with single and three-phase power supply</li>
+                        <li>Class B insulation for enhanced durability</li>
+                        <li>Suitable for continuous operation in demanding conditions</li>
+                    </ul>
+                </div>
+
+                <div class="tab-panel" id="shipping">
+                    <p class="info-text">
+                        We offer reliable shipping options to ensure your submersible motor arrives safely and on time.
+                    </p>
+                    <ul class="info-list">
+                        <li><strong>Standard Delivery:</strong> 5-7 business days</li>
+                        <li><strong>Express Delivery:</strong> 2-3 business days</li>
+                        <li><strong>Packaging:</strong> Industrial-grade packaging with protective cushioning</li>
+                        <li><strong>Tracking:</strong> Real-time tracking information provided</li>
+                        <li><strong>Insurance:</strong> All shipments are fully insured</li>
+                    </ul>
+                </div>
+
+                <div class="tab-panel" id="warranty">
+                    <p class="info-text">
+                        We stand behind the quality of our products with comprehensive warranty coverage.
+                    </p>
+                    <ul class="info-list">
+                        <li><strong>Standard Warranty:</strong> 18 months from date of purchase</li>
+                        <li><strong>Coverage:</strong> Manufacturing defects and material faults</li>
+                        <li><strong>Extended Warranty:</strong> Available for purchase</li>
+                        <li><strong>Support:</strong> 24/7 technical support hotline</li>
+                        <li><strong>Repair/Replacement:</strong> Free repair or replacement during warranty period</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products Section -->
+        <div class="related-section">
+            <h2 class="related-title">Related Products</h2>
+            <div class="related-grid">
+                <div class="related-product">
+                    <div class="related-product-image-container">
+                        <img 
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='400' viewBox='0 0 300 400'%3E%3Crect fill='%23f0f0f0' width='300' height='400'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%23999'%3E6%22 Submersible Pump%3C/text%3E%3C/svg%3E" 
+                            alt="6 Submersible Pump" 
+                            class="related-product-image"
+                        />
+                    </div>
+                    <h3 class="related-product-title">6" Submersible Pump</h3>
+                    <p class="related-product-code">763782bsv</p>
+                </div>
+                <div class="related-product">
+                    <div class="related-product-image-container">
+                        <img 
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='400' viewBox='0 0 300 400'%3E%3Crect fill='%23f0f0f0' width='300' height='400'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%23999'%3E6%22 Submersible Pump%3C/text%3E%3C/svg%3E" 
+                            alt="6 Submersible Pump" 
+                            class="related-product-image"
+                        />
+                    </div>
+                    <h3 class="related-product-title">6" Submersible Pump</h3>
+                    <p class="related-product-code">763782bsv</p>
+                </div>
+                <div class="related-product">
+                    <div class="related-product-image-container">
+                        <img 
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='400' viewBox='0 0 300 400'%3E%3Crect fill='%23f0f0f0' width='300' height='400'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%23999'%3E6%22 Submersible Pump%3C/text%3E%3C/svg%3E" 
+                            alt="6 Submersible Pump" 
+                            class="related-product-image"
+                        />
+                    </div>
+                    <h3 class="related-product-title">6" Submersible Pump</h3>
+                    <p class="related-product-code">763782bsv</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Modal for Alerts -->
+    <div id="quoteModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 class="modal-title">Quote Requested</h2>
+            <div class="modal-body" id="modalMessage">
+                <!-- Message injected via JS -->
+            </div>
+            <button class="modal-close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+<section class="cta-banner">
+                <!-- Background Watermark -->
+                <div class="cta-watermark" aria-hidden="true">
+                    <div class="cta-watermark-row row-1">
+                        <span>AMSTAR</span><span>AMSTAR</span><span>AMSTAR</span><span>AMSTAR</span>
+                    </div>
+                    <div class="cta-watermark-row row-2">
+                        <span>AMSTAR</span><span>AMSTAR</span><span>AMSTAR</span><span>AMSTAR</span>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="cta-content">
+                    <div class="cta-heading">
+                        <h2>Looking for reliable<br>pump solutions?</h2>
+                    </div>
+                    <div class="cta-details">
+                        <p>Get in touch with our team to find the right pump for your application or to discuss
+                            distribution and export opportunities.</p>
+                        <a href="contact.html" class="cta-button">Contact Us</a>
+                    </div>
+                </div>
+            </section>
+<!-- ============================================================ -->
+        <!-- CUSTOM FOOTER                                                 -->
+        <!-- ============================================================ -->
+        <footer id="main-footer"
+            style="background-color: #004fb1; padding: 80px 0 30px 0; color: #ffffff; font-family: 'Alan Sans', sans-serif;">
+            <div class="container">
+                <div class="row">
+                    <!-- Branding and Certifications -->
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <div style="margin-bottom: 40px; display: flex; align-items: center; gap: 15px;">
+                            <img src="images /Footer/Asset 2.svg" alt="Amstar Pumps" style="height: 80px; width: auto;">
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                            <img src="images /Footer/Certification logos.png" alt="Certifications"
+                                style="height: 37px; width: auto; opacity: 0.9;">
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                        <ul
+                            style="list-style: none; padding: 0; margin: 0; line-height: 2.2; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
+                            <li><a href="about.html"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">About</a>
+                            </li>
+                            <li><a href="products.html"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">Products</a>
+                            </li>
+                            <li><a href="gallery.html"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">Gallery</a>
+                            </li>
+                            <li><a href="blog.html"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">Blogs</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                        <ul
+                            style="list-style: none; padding: 0; margin: 0; line-height: 2.2; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
+                            <li><a href="contact.html"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">Contact
+                                    Us</a></li>
+                            <li><a href="about.html"
+                                    style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">Company
+                                    Profile</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div class="col-lg-3 col-md-4">
+                        <div style="display: flex; gap: 12px; margin-bottom: 20px;">
+                            <img src="images /Footer/Location icon.svg" alt="Location"
+                                style="width: 20px; height: 20px; flex-shrink: 0; margin-top: 4px;">
+                            <p
+                                style="margin: 0; font-size: 14px; opacity: 0.8; line-height: 1.5; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
+                                Amstar Pumps<br>Door
+                                No. 214, Lenin Street, Vilankurichi,<br>Coimbatore, Tamil Nadu<br>641035, India</p>
+                        </div>
+                        <div style="display: flex; gap: 12px; margin-bottom: 20px;">
+                            <img src="images /Footer/Phone Icon.svg" alt="Phone"
+                                style="width: 20px; height: 20px; flex-shrink: 0;">
+                            <p
+                                style="margin: 0; font-size: 14px; opacity: 0.8; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
+                                +91 95001 84003 | +91 95001 36003</p>
+                        </div>
+                        <div style="display: flex; gap: 12px;">
+                            <img src="images /Footer/Mail Icon.svg" alt="Mail"
+                                style="width: 20px; height: 20px; flex-shrink: 0;">
+                            <p
+                                style="margin: 0; font-size: 14px; opacity: 0.8; line-height: 1.5; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
+                                amstarpumps@gmail.com<br>sales@amstar-pumps.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    style="margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.2); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                    <p style="margin: 0; font-size: 13px; opacity: 0.6;">©Amstar-2026 all rights reserved</p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer close -->
+    <!-- JavaScript Files
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/designesia.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jarallax.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        // Variant selection
+        const variantButtons = document.querySelectorAll('.variant-button');
+        variantButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                variantButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Cycle selection
+        const cycleButtons = document.querySelectorAll('.cycle-button');
+        cycleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                cycleButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Tab navigation
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const tabId = this.dataset.tab;
+                
+                // Remove active class from all buttons and panels
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanels.forEach(panel => panel.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding panel
+                this.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Custom Modal Logic
+        function requestQuote() {
+            const selectedVariant = document.querySelector('.variant-button.active').dataset.variant;
+            const selectedCycle = document.querySelector('.cycle-button.active').dataset.cycle;
+            
+            const message = `You have successfully requested a quote for the <strong>4" Submersible Motor</strong>.<br><br><strong>Variant:</strong> ${selectedVariant} HP<br><strong>Cycle:</strong> ${selectedCycle}`;
+            
+            document.getElementById('modalMessage').innerHTML = message;
+            document.getElementById('quoteModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('quoteModal').classList.remove('active');
+        }
+
+        // Close modal when clicking outside of it
+        document.getElementById('quoteModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
