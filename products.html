@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Alan Sans', sans-serif;
             min-height: 100vh;
             background-color: white;
             color: #374151;
@@ -28,11 +28,19 @@
         /* Hero Header Section */
         .hero-header {
             background-color: #0b4c93;
-            /* Added industrial machinery background with a strong blue overlay */
-            background-image: linear-gradient(rgba(11, 76, 147, 0.75), rgba(11, 76, 147, 0.95)), url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1920&q=80');
+            /* Keep machinery visible while preserving Amstar blue look */
+            background-image: linear-gradient(rgba(11, 76, 147, 0.48), rgba(11, 76, 147, 0.72)), url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            padding: 40px 16px 120px 16px;
+            background-repeat: no-repeat;
+            min-height: 300px;
+            padding: 120px 16px 72px 16px;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .hero-header .container {
             width: 100%;
         }
 
@@ -158,7 +166,7 @@
             background-color: #f3f4f6;
             color: #374151;
             border: 1px solid #d1d5db;
-            border-radius: 4px;
+            border-radius: 0;
             cursor: pointer;
             transition: all 0.2s;
         }
@@ -185,7 +193,7 @@
             background-color: #f3f4f6;
             color: #374151;
             border: 1px solid #d1d5db;
-            border-radius: 4px;
+            border-radius: 0;
             cursor: pointer;
             transition: all 0.2s;
         }
@@ -208,7 +216,7 @@
             font-size: 1rem;
             font-weight: 600;
             border: none;
-            border-radius: 6px;
+            border-radius: 0;
             cursor: pointer;
             transition: background-color 0.2s;
             margin-top: 16px;
@@ -239,9 +247,11 @@
             border: none;
             color: #003d7a;
             font-weight: 500;
+            font-size: 1.05rem;
             cursor: pointer;
             position: relative;
             transition: background-color 0.2s;
+            border-radius: 0;
         }
 
         .tab-button::before {
@@ -339,7 +349,7 @@
         .related-section {
             padding: 64px 32px;
             border-top: 1px solid #e5e7eb;
-            background-color: #f9fafb;
+     
         }
 
         .related-title {
@@ -385,7 +395,8 @@
         }
 
         .related-product-image {
-            width: 100%;
+            width: 65%;
+            max-width: 150px;
             height: auto;
         }
 
@@ -457,7 +468,7 @@
             font-size: 1rem;
             font-weight: 500;
             border: none;
-            border-radius: 6px;
+            border-radius: 0;
             cursor: pointer;
             transition: background-color 0.2s;
         }
@@ -609,7 +620,7 @@
                     text-decoration: none;
                     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                     cursor: pointer;
-                    border-radius: 2px;
+                    border-radius: 0;
                     font-family: 'Alan Sans', sans-serif;
                 }
 
@@ -646,13 +657,12 @@
                         onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Latest</a>
                 </div>
                 <a href="contact.html"
-                    style="background-color: #003366; color: #ffffff; padding: 12px 28px; border-radius: 2px; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-size: 14.5px;"
+                    style="background-color: #003366; color: #ffffff; padding: 12px 28px; border-radius: 0; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-size: 14.5px;"
                     onmouseover="this.style.backgroundColor='#004fb1'"
                     onmouseout="this.style.backgroundColor='#003366'">Book a Call</a>
             </div>
         </nav>
         <!-- navbar close -->
-<br><br><br><br>
     <!-- Hero Header Section -->
     <header class="hero-header">
         <div class="container">
@@ -670,7 +680,7 @@
                 <div class="product-image-container">
                     <div class="product-image-border">
                         <img 
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='600' viewBox='0 0 400 600'%3E%3Crect fill='%23f0f0f0' width='400' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='24' fill='%23999'%3E4%22 Submersible Motor%3C/text%3E%3C/svg%3E" 
+                            src="images /product /Asset 2@3x-100.jpg.jpeg"
                             alt="4 inch Submersible Motor" 
                             class="product-image"
                         />
@@ -838,7 +848,7 @@
                 <div class="related-product">
                     <div class="related-product-image-container">
                         <img 
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='400' viewBox='0 0 300 400'%3E%3Crect fill='%23f0f0f0' width='300' height='400'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%23999'%3E6%22 Submersible Pump%3C/text%3E%3C/svg%3E" 
+                            src="images /product /Asset 2@3x-100.jpg.jpeg"
                             alt="6 Submersible Pump" 
                             class="related-product-image"
                         />
@@ -849,7 +859,7 @@
                 <div class="related-product">
                     <div class="related-product-image-container">
                         <img 
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='400' viewBox='0 0 300 400'%3E%3Crect fill='%23f0f0f0' width='300' height='400'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%23999'%3E6%22 Submersible Pump%3C/text%3E%3C/svg%3E" 
+                            src="images /product /Asset 2@3x-100.jpg.jpeg"
                             alt="6 Submersible Pump" 
                             class="related-product-image"
                         />
@@ -860,7 +870,7 @@
                 <div class="related-product">
                     <div class="related-product-image-container">
                         <img 
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='400' viewBox='0 0 300 400'%3E%3Crect fill='%23f0f0f0' width='300' height='400'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%23999'%3E6%22 Submersible Pump%3C/text%3E%3C/svg%3E" 
+                            src="images /product /Asset 2@3x-100.jpg.jpeg"
                             alt="6 Submersible Pump" 
                             class="related-product-image"
                         />
