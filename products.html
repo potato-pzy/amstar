@@ -558,7 +558,7 @@
                     position: relative;
                     z-index: 10;
                     width: 100%;
-                    max-width: 1300px;
+                    max-width: 1560px;
                     margin: 0 auto;
                     padding: 0 40px;
                     display: flex;
@@ -631,30 +631,78 @@
                 }
             </style>
 <style>
-        * { font-family: 'Alan Sans', sans-serif !important; border-radius: 0 !important; }
-        .product-title, .product-image, .hero-title { transition: opacity 0.3s ease; opacity: 0; }
         #de-loader { background-color: #ffffff; }
-    </style></head>
+
+        /* Product page loading overlay */
+        #product-page-loader {
+            position: fixed;
+            inset: 0;
+            background: #ffffff;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            transition: opacity 0.4s ease;
+        }
+        #product-page-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        #product-page-loader .loader-logo {
+            height: 52px;
+            width: auto;
+            opacity: 0.85;
+        }
+        #product-page-loader .loader-spinner {
+            width: 44px;
+            height: 44px;
+            border: 3px solid #e5e7eb;
+            border-top-color: #004a99;
+            border-radius: 50%;
+            animation: spin 0.75s linear infinite;
+        }
+        #product-page-loader .loader-text {
+            font-size: 13px;
+            color: #9ca3af;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-family: 'Alan Sans', sans-serif;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Hide main content until loader is done */
+        #product-page-content { visibility: hidden; }
+    </style>
+    <style>
+        /* 120% Zoom Layout Override */
+        @media (min-width: 1200px) {
+            .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+                max-width: 1368px !important;
+            }
+        }
+        @media (min-width: 1400px) {
+            .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+                max-width: 1584px !important;
+            }
+        }
+    </style>
+</head>
 <body><div id="de-loader"></div>
 
-<section id="subheader" style="background: url('images/background/subheader.webp') top / cover; padding: 180px 0 80px 0; margin-bottom: 50px;">
-<div class="container">
-<h1 class="hero-title" style="color: #ffffff; font-size: 48px; font-weight: 400; margin: 0;">Submersible System</h1>
+<!-- Product page loading overlay -->
+<div id="product-page-loader">
+    <img alt="Amstar Pumps" class="loader-logo" src="images /Footer/Asset 2.svg"/>
+    <div class="loader-spinner"></div>
+    <span class="loader-text">Loading product&hellip;</span>
 </div>
-</section>
-<nav id="main-nav" style="position: fixed; top: 40px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1300px; background-color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; z-index: 1000; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border-radius: 4px;">
-<a href="master.html" style="display: flex; align-items: center; text-decoration: none;">
-<img alt="Amstar Pumps" src="images /Footer/Asset 2.svg" style="height: 55px; width: auto;"/>
-</a>
-<div style="display: flex; align-items: center; gap: 50px;">
-<div class="nav-links" style="display: flex; align-items: center; gap: 30px;">
-<a href="master.html" onmouseout="this.style.color='#1a2b4c'" onmouseover="this.style.color='#004fb1'" style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;">Home</a>
-<a href="shop.html" onmouseout="this.style.color='#1a2b4c'" onmouseover="this.style.color='#004fb1'" style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;">Products</a>
-<a href="#" onmouseout="this.style.color='#1a2b4c'" onmouseover="this.style.color='#004fb1'" style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;">Latest</a>
-</div>
-<a href="contact.html" onmouseout="this.style.backgroundColor='#003366'" onmouseover="this.style.backgroundColor='#004fb1'" style="background-color: #003366; color: #ffffff; padding: 12px 28px; border-radius: 0; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-size: 14.5px;">Book a Call</a>
-</div>
-</nav>
+
+
+
+
+
+<div id="product-page-content">
 
 <!-- ============================================================ -->
 <!-- PREMIUM WHITE NAVBAR                                          -->
@@ -663,76 +711,39 @@
 <!-- navbar close -->
 <!-- Hero Header Section -->
 
-<div class="container">
+<div class="container" style="margin-top: 100px;">
 <!-- Product Detail Section -->
 <div class="product-section">
 <div class="product-grid">
 <!-- Left side - Product Image -->
 <div class="product-image-container">
 <div class="product-image-border">
-<img alt='4" Submersible Motor' class="product-image" src="images /product /Asset 2@3x-100.jpg.jpeg"/>
+<img alt="Product" class="product-image" id="main-product-image" src=""/>
 </div>
 </div>
 <!-- Right side - Product Details -->
 <div class="product-details">
 <div>
-<h1 class="product-title">4" Submersible Motor</h1>
+<h1 class="product-title" id="product-title-text"></h1>
 <p class="product-code">
-                            Product: <span class="product-code-value">763782bsv</span>
+Product: <span class="product-code-value" id="product-code-text"></span>
 </p>
 </div>
-<p class="product-description">
-                        The Amstar 4" Water-Filled Submersible Motor is designed to deliver reliable, efficient, 
-                        and long-lasting performance for borewell and submersible pump applications. 
-                        Engineered for continuous operation, it provides stable output even under demanding 
-                        working conditions.
-                    </p>
+<p class="product-description" id="product-description-text"></p>
 <!-- Applications -->
 <div>
 <p class="section-label">Applications:</p>
-<div class="applications-container">
-<div class="application-icon" title="Residential">
-<svg fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</div>
-<div class="application-icon" title="Industrial">
-<svg fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</div>
-<div class="application-icon" title="Water Systems">
-<svg fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</div>
-<div class="application-icon" title="Irrigation">
-<svg fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</div>
-</div>
+<div class="applications-container" id="applications-container"></div>
 </div>
 <!-- Variants Available -->
-<div>
-<p class="section-label">Variants Available (HP):</p>
-<div class="variants-container" id="variants-container">
-<button class="variant-button" data-variant="0.75">0.75</button>
-<button class="variant-button active" data-variant="1.0">1.0</button>
-<button class="variant-button" data-variant="1.5">1.5</button>
-<button class="variant-button" data-variant="2.0">2.0</button>
-<button class="variant-button" data-variant="3.0">3.0</button>
-<button class="variant-button" data-variant="5.0">5.0</button>
-<button class="variant-button" data-variant="7.5">7.5</button>
-</div>
+<div id="variants-section">
+<p class="section-label" id="variants-label">Variants Available (HP):</p>
+<div class="variants-container" id="variants-container"></div>
 </div>
 <!-- Choose Cycle -->
-<div>
+<div id="cycle-section">
 <p class="section-label">Choose Cycle</p>
-<div class="cycle-container" id="cycle-container">
-<button class="cycle-button active" data-cycle="40 Hz">40 Hz</button>
-<button class="cycle-button" data-cycle="50 Hz">50 Hz</button>
-</div>
+<div class="cycle-container" id="cycle-container"></div>
 </div>
 <!-- Request for Quote Button -->
 <button class="quote-button" onclick="requestQuote()">Request for Quote</button>
@@ -751,97 +762,25 @@
 <!-- Tab Content -->
 <div class="tab-content">
 <div class="tab-panel active" id="specification">
-<table class="spec-table">
-<tbody>
-<tr>
-<td>Phase</td>
-<td>Single/Three Phase</td>
-</tr>
-<tr>
-<td>Voltage</td>
-<td>240 / 380 / 415</td>
-</tr>
-<tr>
-<td>Material</td>
-<td>SS302 / SS&amp;CI</td>
-</tr>
-<tr>
-<td>Coolant</td>
-<td>2800</td>
-</tr>
-<tr>
-<td>RPM</td>
-<td>Class B</td>
-</tr>
-<tr>
-<td>Insulation Class</td>
-<td>IP68</td>
-</tr>
-</tbody>
+<table class="spec-table" id="spec-table-body">
+<tbody id="spec-tbody"></tbody>
 </table>
 </div>
 <div class="tab-panel" id="features">
-<ul class="features-list">
-<li>Corrosion-resistant construction with SS302/SS&amp;CI materials</li>
-<li>IP68 rating ensures complete protection against water ingress</li>
-<li>Water-filled cooling system for efficient heat dissipation</li>
-<li>Compatible with single and three-phase power supply</li>
-<li>Class B insulation for enhanced durability</li>
-<li>Suitable for continuous operation in demanding conditions</li>
-</ul>
+<ul class="features-list" id="features-list"></ul>
 </div>
 <div class="tab-panel" id="shipping">
-<p class="info-text">
-                        We offer reliable shipping options to ensure your submersible motor arrives safely and on time.
-                    </p>
-<ul class="info-list">
-<li><strong>Standard Delivery:</strong> 5-7 business days</li>
-<li><strong>Express Delivery:</strong> 2-3 business days</li>
-<li><strong>Packaging:</strong> Industrial-grade packaging with protective cushioning</li>
-<li><strong>Tracking:</strong> Real-time tracking information provided</li>
-<li><strong>Insurance:</strong> All shipments are fully insured</li>
-</ul>
+<p class="info-text" id="shipping-text"></p>
 </div>
 <div class="tab-panel" id="warranty">
-<p class="info-text">
-                        We stand behind the quality of our products with comprehensive warranty coverage.
-                    </p>
-<ul class="info-list">
-<li><strong>Standard Warranty:</strong> 18 months from date of purchase</li>
-<li><strong>Coverage:</strong> Manufacturing defects and material faults</li>
-<li><strong>Extended Warranty:</strong> Available for purchase</li>
-<li><strong>Support:</strong> 24/7 technical support hotline</li>
-<li><strong>Repair/Replacement:</strong> Free repair or replacement during warranty period</li>
-</ul>
+<p class="info-text" id="warranty-text"></p>
 </div>
 </div>
 </div>
 <!-- Related Products Section -->
 <div class="related-section">
 <h2 class="related-title">Related Products</h2>
-<div class="related-grid">
-<div class="related-product">
-<div class="related-product-image-container">
-<img alt="6 Submersible Pump" class="related-product-image" src="images /product /Asset 2@3x-100.jpg.jpeg"/>
-</div>
-<h3 class="related-product-title">6" Submersible Pump</h3>
-<p class="related-product-code">763782bsv</p>
-</div>
-<div class="related-product">
-<div class="related-product-image-container">
-<img alt="6 Submersible Pump" class="related-product-image" src="images /product /Asset 2@3x-100.jpg.jpeg"/>
-</div>
-<h3 class="related-product-title">6" Submersible Pump</h3>
-<p class="related-product-code">763782bsv</p>
-</div>
-<div class="related-product">
-<div class="related-product-image-container">
-<img alt="6 Submersible Pump" class="related-product-image" src="images /product /Asset 2@3x-100.jpg.jpeg"/>
-</div>
-<h3 class="related-product-title">6" Submersible Pump</h3>
-<p class="related-product-code">763782bsv</p>
-</div>
-</div>
+<div class="related-grid" id="related-products-grid"></div>
 </div>
 </div>
 <!-- Custom Modal for Alerts -->
@@ -879,164 +818,309 @@
 <!-- ============================================================ -->
 <!-- CUSTOM FOOTER                                                 -->
 <!-- ============================================================ -->
-<footer id="main-footer" style="background-color: #004fb1; padding: 80px 0 30px 0; color: #ffffff; font-family: 'Alan Sans', sans-serif;">
-<div class="container">
-<div class="row">
-<!-- Branding and Certifications -->
-<div class="col-lg-5 mb-5 mb-lg-0">
-<div style="margin-bottom: 40px; display: flex; align-items: center; gap: 15px;">
-<img alt="Amstar Pumps" src="images /Footer/Asset 2.svg" style="height: 80px; width: auto;"/>
-</div>
-<div style="display: flex; align-items: center; gap: 20px;">
-<img alt="Certifications" src="images /Footer/Certification logos.png" style="height: 37px; width: auto; opacity: 0.9;"/>
-</div>
-</div>
-<!-- Quick Links -->
-<div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-<ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
-<li><a href="about.html" style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">About</a>
-</li>
-<li><a href="shop.html" style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">Products</a>
-</li>
-<li><a href="gallery.html" style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">Gallery</a>
-</li>
-<li><a href="blog.html" style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">Blogs</a>
-</li>
-</ul>
-</div>
-<div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-<ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
-<li><a href="contact.html" style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">Contact
-                                    Us</a></li>
-<li><a href="about.html" style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">Company
-                                    Profile</a></li>
-</ul>
-</div>
-<!-- Contact Details -->
-<div class="col-lg-3 col-md-4">
-<div style="display: flex; gap: 12px; margin-bottom: 20px;">
-<img alt="Location" src="images /Footer/Location icon.svg" style="width: 20px; height: 20px; flex-shrink: 0; margin-top: 4px;"/>
-<p style="margin: 0; font-size: 14px; opacity: 0.8; line-height: 1.5; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
-                                Amstar Pumps<br/>Door
-                                No. 214, Lenin Street, Vilankurichi,<br/>Coimbatore, Tamil Nadu<br/>641035, India</p>
-</div>
-<div style="display: flex; gap: 12px; margin-bottom: 20px;">
-<img alt="Phone" src="images /Footer/Phone Icon.svg" style="width: 20px; height: 20px; flex-shrink: 0;"/>
-<p style="margin: 0; font-size: 14px; opacity: 0.8; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
-                                +91 95001 84003 | +91 95001 36003</p>
-</div>
-<div style="display: flex; gap: 12px;">
-<img alt="Mail" src="images /Footer/Mail Icon.svg" style="width: 20px; height: 20px; flex-shrink: 0;"/>
-<p style="margin: 0; font-size: 14px; opacity: 0.8; line-height: 1.5; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
-                                amstarpumps@gmail.com<br/>sales@amstar-pumps.com</p>
-</div>
-</div>
-</div>
-<div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.2); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-<p style="margin: 0; font-size: 13px; opacity: 0.6;">©Amstar-2026 all rights reserved</p>
-</div>
-</div>
+<!-- ============================================================ -->
+<!-- CUSTOM FOOTER (FLEXBOX)                                       -->
+<!-- ============================================================ -->
+<footer id="main-footer" style="background-color: #004fb1; padding: 80px 0 30px 0; color: #ffffff; font-family: 'Alan Sans', sans-serif; overflow: hidden;">
+    <div style="max-width: 1560px; margin: 0 auto; padding: 0 15px; width: 100%;">
+        <div style="display: flex; flex-wrap: wrap; margin: 0 -15px;">
+            
+            <!-- Branding and Certifications -->
+            <div style="flex: 0 0 auto; width: 41.66666667%; padding: 0 15px; margin-bottom: 3rem;">
+                <div style="margin-bottom: 30px;">
+                    <img alt="Amstar Pumps" src="images /Footer/Asset 2.svg" style="height: 100px; width: auto;"/>
+                </div>
+                <div style="display: flex; align-items: center; gap: 20px;">
+                    <img alt="Certifications" src="images /Footer/Certification logos.png" style="height: 45px; width: auto;"/>
+                </div>
+            </div>
+
+            <!-- Links Col 1 -->
+            <div style="flex: 0 0 auto; width: 16.66666667%; padding: 0 15px; margin-bottom: 1.5rem;">
+                <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
+                    <li><a href="about.html" style="color: #ffffff; text-decoration: none;">About</a></li>
+                    <li><a href="shop.html" style="color: #ffffff; text-decoration: none;">Products</a></li>
+                    <li><a href="gallery.html" style="color: #ffffff; text-decoration: none;">Gallery</a></li>
+                    <li><a href="blog.html" style="color: #ffffff; text-decoration: none;">Blogs</a></li>
+                </ul>
+            </div>
+
+            <!-- Links Col 2 -->
+            <div style="flex: 0 0 auto; width: 16.66666667%; padding: 0 15px; margin-bottom: 1.5rem;">
+                <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
+                    <li><a href="contact.html" style="color: #ffffff; text-decoration: none;">Contact Us</a></li>
+                    <li><a href="about.html#profile" style="color: #ffffff; text-decoration: none;">Company Profile</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Details -->
+            <div style="flex: 0 0 auto; width: 25%; padding: 0 15px;">
+                <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                    <img alt="Location" src="images /Footer/Location icon.svg" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);"/>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
+                        Amstar Pumps<br/>
+                        Door No. 214, Lenin Street, Vilankurichi,<br/>
+                        Coimbatore, Tamil Nadu<br/>
+                        641035, India
+                    </p>
+                </div>
+                <div style="display: flex; gap: 15px; margin-bottom: 20px; align-items: center;">
+                    <img alt="Phone" src="images /Footer/Phone Icon.svg" style="width: 18px; height: 18px; flex-shrink: 0; filter: brightness(0) invert(1);"/>
+                    <p style="margin: 0; font-size: 14px; opacity: 0.9;">
+                        +91 95001 84003 | +91 95001 36003
+                    </p>
+                </div>
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                    <img alt="Mail" src="images /Footer/Mail Icon.svg" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);"/>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
+                        amstarpumps@gmail.com<br/>
+                        sales@amstar-pumps.com
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.3);">
+            <p style="margin: 0; font-size: 14px; opacity: 0.8;">
+                ©Amstar-2026 all rights reserved
+            </p>
+        </div>
+    </div>
+    
+    <!-- Mobile responsiveness style -->
+    <style>
+        @media (max-width: 991px) {
+            #main-footer > div > div > div {
+                width: 100% !important;
+            }
+        }
+    </style>
 </footer>
 <!-- footer close -->
-<!-- JavaScript Files
-    ================================================== -->
+<!-- JavaScript Files ================================================== -->
+<script src="js/product-data.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/designesia.js"></script>
-<script src="js/jquery.form.js"></script>
-<script src="js/jarallax.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script>
-        // Variant selection
-        const variantButtons = document.querySelectorAll('.variant-button');
-        variantButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                variantButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
+(function() {
+    const APP_ICONS = {
+        "Home": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>',
+        "Factory": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>',
+        "Farms": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>',
+        "Residential Building": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>',
+        "Irrigation": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>',
+        "Mining": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>',
+        "Garden": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>',
+        "Residential Buildings": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>',
+        "default": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>'
+    };
 
-        // Cycle selection
-        const cycleButtons = document.querySelectorAll('.cycle-button');
-        cycleButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                cycleButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
+    function getIcon(appName) {
+        return APP_ICONS[appName] || APP_ICONS["default"];
+    }
 
-        // Tab navigation
-        const tabButtons = document.querySelectorAll('.tab-button');
-        const tabPanels = document.querySelectorAll('.tab-panel');
-        
-        tabButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const tabId = this.dataset.tab;
-                
-                // Remove active class from all buttons and panels
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                tabPanels.forEach(panel => panel.classList.remove('active'));
-                
-                // Add active class to clicked button and corresponding panel
-                this.classList.add('active');
-                document.getElementById(tabId).classList.add('active');
-            });
-        });
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get('id');
+    const fallbackName = params.get('name');
+    const fallbackImg = params.get('img');
 
-        // Custom Modal Logic
-        function requestQuote() {
-            const selectedVariant = document.querySelector('.variant-button.active').dataset.variant;
-            const selectedCycle = document.querySelector('.cycle-button.active').dataset.cycle;
-            
-            const message = `You have successfully requested a quote for the <strong>4" Submersible Motor</strong>.<br><br><strong>Variant:</strong> ${selectedVariant} HP<br><strong>Cycle:</strong> ${selectedCycle}`;
-            
-            document.getElementById('modalMessage').innerHTML = message;
-            document.getElementById('quoteModal').classList.add('active');
-        }
+    let product = null;
+    let currentCycleKey = null;
 
-        function closeModal() {
-            document.getElementById('quoteModal').classList.remove('active');
-        }
-
-        // Close modal when clicking outside of it
-        document.getElementById('quoteModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal();
+    // Try to find product by ID first, then by name match
+    if (productId && window.PRODUCT_DATA[productId]) {
+        product = window.PRODUCT_DATA[productId];
+    } else if (fallbackName) {
+        for (const [key, p] of Object.entries(window.PRODUCT_DATA)) {
+            if (p.name === fallbackName || p.name.replace(/[\u201C\u201D""]/g, '"') === fallbackName.replace(/[\u201C\u201D""]/g, '"')) {
+                product = p;
+                break;
             }
+        }
+    }
+
+    function getActiveCycleKey() {
+        if (!product) return 'default';
+        if (product.cycles && product.cycles.length > 0) return currentCycleKey || product.cycles[0];
+        return 'default';
+    }
+
+    function renderSpecs() {
+        const key = getActiveCycleKey();
+        const specs = product.specifications[key] || product.specifications['default'] || {};
+        const tbody = document.getElementById('spec-tbody');
+        tbody.innerHTML = '';
+        for (const [label, value] of Object.entries(specs)) {
+            const tr = document.createElement('tr');
+            tr.innerHTML = '<td>' + label + '</td><td>' + value + '</td>';
+            tbody.appendChild(tr);
+        }
+    }
+
+    function renderFeatures() {
+        const key = getActiveCycleKey();
+        const features = product.features[key] || product.features['default'] || [];
+        const list = document.getElementById('features-list');
+        list.innerHTML = '';
+        features.forEach(f => {
+            const li = document.createElement('li');
+            li.textContent = f;
+            list.appendChild(li);
         });
-    </script>
-<script>
-    (function() {
-        const params = new URLSearchParams(window.location.search);
-        const name = params.get('name');
-        const img = params.get('img');
-        
-        function updateDOM() {
-            const productTitle = document.querySelector('.product-title');
-            const mainImage = document.querySelector('.product-image');
-            const heroTitle = document.querySelector('.hero-title');
-            const pageTitle = document.querySelector('title');
+    }
 
-            if (name && img) {
-                if (mainImage) mainImage.src = img;
-                if (productTitle) productTitle.innerText = name;
-                if (heroTitle) heroTitle.innerText = name;
-                if (pageTitle) pageTitle.innerText = name + " - Product Details";
-            } else {
-                if (productTitle) productTitle.innerText = '4" Submersible Motor';
-                if (mainImage) mainImage.src = 'images /product /Asset 2@3x-100.jpg.jpeg';
-            }
-            // Reveal content
-            setTimeout(() => {
-                document.querySelectorAll('.product-title, .product-image, .hero-title').forEach(el => el.style.opacity = '1');
-            }, 100);
-        }
+    function renderVariants() {
+        const key = getActiveCycleKey();
+        const variants = product.variants[key] || product.variants['default'] || [];
+        const container = document.getElementById('variants-container');
+        container.innerHTML = '';
+        variants.forEach((v, i) => {
+            const btn = document.createElement('button');
+            btn.className = 'variant-button' + (i === 0 ? ' active' : '');
+            btn.dataset.variant = v;
+            btn.textContent = v;
+            btn.addEventListener('click', function() {
+                container.querySelectorAll('.variant-button').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+            container.appendChild(btn);
+        });
+    }
 
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', updateDOM);
-        } else {
-            updateDOM();
+    function renderCycles() {
+        const cycleContainer = document.getElementById('cycle-container');
+        const cycleSection = document.getElementById('cycle-section');
+        cycleContainer.innerHTML = '';
+        if (!product.cycles || product.cycles.length === 0) {
+            cycleSection.style.display = 'none';
+            return;
         }
-    })();
-    </script><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><script src="js/plugins.js"></script><script src="js/designesia.js"></script></body>
+        cycleSection.style.display = 'block';
+        product.cycles.forEach((c, i) => {
+            const btn = document.createElement('button');
+            btn.className = 'cycle-button' + (i === 0 ? ' active' : '');
+            btn.dataset.cycle = c;
+            btn.textContent = c;
+            btn.addEventListener('click', function() {
+                cycleContainer.querySelectorAll('.cycle-button').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentCycleKey = c;
+                renderSpecs();
+                renderFeatures();
+                renderVariants();
+            });
+            cycleContainer.appendChild(btn);
+        });
+    }
+
+    function renderApplications() {
+        const container = document.getElementById('applications-container');
+        container.innerHTML = '';
+        (product.applications || []).forEach(app => {
+            const div = document.createElement('div');
+            div.className = 'application-icon';
+            div.title = app;
+            div.innerHTML = getIcon(app);
+            container.appendChild(div);
+        });
+    }
+
+    function renderRelatedProducts() {
+        const grid = document.getElementById('related-products-grid');
+        grid.innerHTML = '';
+        const related = Object.entries(window.PRODUCT_DATA)
+            .filter(([key, p]) => p.category === product.category && p.name !== product.name)
+            .slice(0, 3);
+        if (related.length === 0) {
+            const others = Object.entries(window.PRODUCT_DATA).filter(([k,p]) => p.name !== product.name).slice(0,3);
+            related.push(...others);
+        }
+        related.forEach(([key, p]) => {
+            const div = document.createElement('div');
+            div.className = 'related-product';
+            div.onclick = () => window.location.href = 'products.html?id=' + key;
+            div.innerHTML = '<div class="related-product-image-container"><img alt="' + p.name + '" class="related-product-image" src="images /product /Asset 2@3x-100.jpg.jpeg"/></div><h3 class="related-product-title">' + p.name + '</h3>';
+            grid.appendChild(div);
+        });
+    }
+
+    function populatePage() {
+        if (!product) {
+            document.getElementById('product-title-text').textContent = fallbackName || 'Product Not Found';
+            if (fallbackImg) document.getElementById('main-product-image').src = fallbackImg;
+            return;
+        }
+        currentCycleKey = product.cycles && product.cycles.length > 0 ? product.cycles[0] : 'default';
+        // Basic info
+        document.querySelector('title').textContent = product.name + ' - Product Details';
+        document.getElementById('product-title-text').textContent = product.name;
+        const heroTitle = document.querySelector('.hero-title');
+        if (heroTitle) heroTitle.textContent = product.heroTitle || product.name;
+        document.getElementById('product-description-text').textContent = product.description;
+        document.getElementById('variants-label').textContent = product.variantLabel || 'Variants Available (HP):';
+        // Image
+        if (fallbackImg) document.getElementById('main-product-image').src = fallbackImg;
+        // Shipping & Warranty
+        document.getElementById('shipping-text').textContent = product.shipping;
+        document.getElementById('warranty-text').textContent = product.warranty;
+        // Dynamic sections
+        renderCycles();
+        renderVariants();
+        renderSpecs();
+        renderFeatures();
+        renderApplications();
+        renderRelatedProducts();
+        // Reveal content and hide loader
+        const loader = document.getElementById('product-page-loader');
+        const content = document.getElementById('product-page-content');
+        setTimeout(() => {
+            content.style.visibility = 'visible';
+            loader.classList.add('hidden');
+            setTimeout(() => { loader.style.display = 'none'; }, 420);
+        }, 80);
+    }
+
+    // Tab navigation
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', function() {
+            document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+            this.classList.add('active');
+            document.getElementById(this.dataset.tab).classList.add('active');
+        });
+    });
+
+    // Quote modal
+    window.requestQuote = function() {
+        const selVariant = document.querySelector('.variant-button.active');
+        const selCycle = document.querySelector('.cycle-button.active');
+        const vText = selVariant ? selVariant.dataset.variant : 'N/A';
+        const cText = selCycle ? selCycle.dataset.cycle : 'N/A';
+        const pName = product ? product.name : (fallbackName || 'Product');
+        const msg = 'You have successfully requested a quote for the <strong>' + pName + '</strong>.<br><br><strong>Variant:</strong> ' + vText + '<br><strong>Cycle:</strong> ' + cText;
+        document.getElementById('modalMessage').innerHTML = msg;
+        document.getElementById('quoteModal').classList.add('active');
+    };
+
+    window.closeModal = function() {
+        document.getElementById('quoteModal').classList.remove('active');
+    };
+
+    document.getElementById('quoteModal').addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+    });
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', populatePage);
+    } else {
+        populatePage();
+    }
+})();
+</script>
+</div><!-- end #product-page-content -->
+
+
+</body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Optilux - Eye Clinic Optometrist and Optical Store HTML Template</title>
+    <title>Amstar Pumps - Blog</title>
     <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
@@ -18,6 +18,469 @@
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
 
+<style>
+        * {
+            font-family: 'Alan Sans', sans-serif !important;
+        }
+
+        /* Section-specific variables and styles */
+        #pump-applications-section {
+            --primary-blue: #004a99;
+            --bg-light-blue: #ebfafd;
+            --heading-dark: #1a365d;
+            --text-muted: #5a7184;
+
+            padding: 100px 0;
+            background-color: var(--bg-light-blue);
+            font-family: 'Alan Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        #pump-applications-section .uptitle {
+            color: var(--primary-blue);
+            font-weight: 400;
+            font-size: 15px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        #pump-applications-section h2.main-title {
+            font-size: 48px;
+            font-weight: 400;
+            color: var(--heading-dark);
+            line-height: 1.2;
+            max-width: 600px;
+        }
+
+        /* Square Navigation Buttons */
+        #pump-applications-section .de-custom-nav {
+            gap: 10px;
+        }
+
+        #pump-applications-section .nav-square {
+            width: 45px;
+            height: 45px;
+            background-color: var(--primary-blue);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #pump-applications-section .nav-square:hover {
+            background-color: #003366;
+        }
+
+        #pump-applications-section .nav-square svg {
+            width: 20px;
+            height: 20px;
+            stroke: white;
+            stroke-width: 2.5;
+            fill: none;
+        }
+
+        /* Service Card Styles */
+        #pump-applications-section .item {
+            padding: 0;
+        }
+
+        #pump-applications-section .service-card {
+            position: relative;
+            height: 360px;
+            overflow: hidden;
+            background-color: #333;
+            border-radius: 12px;
+        }
+
+        #pump-applications-section .service-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+            transition: transform 0.6s ease;
+        }
+
+        #pump-applications-section .service-card:hover img {
+            transform: scale(1.05);
+        }
+
+        #pump-applications-section .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px;
+            background: linear-gradient(0deg, rgba(0, 74, 153, 0.95) 0%, rgba(0, 74, 153, 0.4) 40%, rgba(0, 0, 0, 0) 100%);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        #pump-applications-section .card-overlay .category {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 2px;
+            display: block;
+        }
+
+        #pump-applications-section .card-overlay h3 {
+            font-size: 16px;
+            font-weight: 400;
+            color: #ffffff;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        #pump-applications-section .owl-carousel .owl-stage,
+        #testimonials-section .owl-carousel .owl-stage {
+            display: flex;
+            align-items: stretch;
+        }
+
+        /* ---- Premium Navbar ---- */
+        .pm-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #fff;
+            box-shadow: 0 2px 16px rgba(15, 76, 151, 0.10);
+            padding: 0 0;
+        }
+
+        .pm-nav-inner {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+        }
+
+        .pm-nav-logo img {
+            height: 40px;
+            display: block;
+        }
+
+        .pm-nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .pm-nav-menu a {
+            font-family: 'Alan Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: #1a2e4a;
+            text-decoration: none;
+            letter-spacing: 0.01em;
+            transition: color .2s;
+        }
+
+        .pm-nav-menu a:hover {
+            color: #0f4c97;
+        }
+
+        .pm-nav-cta {
+            font-family: 'Alan Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #fff !important;
+            background: #0f4c97;
+            border: none;
+            padding: 11px 26px;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+            transition: background .2s, box-shadow .2s;
+            box-shadow: 0 2px 12px rgba(15, 76, 151, 0.18);
+        }
+
+        .pm-nav-cta:hover {
+            background: #0d3f82;
+            color: #fff !important;
+        }
+
+        /* ---- Premium Hero ---- */
+        .pm-hero {
+            position: relative;
+            min-height: 540px;
+            display: flex;
+            align-items: stretch;
+            overflow: hidden;
+        }
+
+        .pm-hero-bg {
+            --hero-bg-size: 85%;
+            --hero-bg-pos: right 0 top 0rem;
+            --hero-bg-repeat: no-repeat;
+            background-color: #0f4c97;
+            /* To fill empty space if any */
+
+            position: absolute;
+            inset: 0;
+            background-image: url('images/background/homepage-hero.jpeg');
+            background-size: var(--hero-bg-size);
+            background-position: var(--hero-bg-pos);
+            background-repeat: var(--hero-bg-repeat);
+            z-index: 0;
+        }
+
+        /* Left gradient: solid deep blue -> transparent over ~60% width */
+        .pm-hero-gradient {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to right,
+                    #0f4c97 0%,
+                    #0f4c97 12%,
+                    rgba(15, 76, 151, 0.95) 20%,
+                    rgba(15, 76, 151, 0.8) 32%,
+                    rgba(15, 76, 151, 0.4) 48%,
+                    rgba(15, 76, 151, 0.1) 62%,
+                    transparent 75%),
+                linear-gradient(to left,
+                    #0f4c97 0%,
+                    rgba(15, 76, 151, 0.5) 8%,
+                    transparent 20%);
+            z-index: 1;
+        }
+
+        .pm-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 100%;
+            margin: 0;
+            padding: 200px 148px;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .pm-hero-text {
+            max-width: 520px;
+        }
+
+        .pm-hero-tagline {
+            font-family: 'Alan Sans', sans-serif;
+            font-size: 13.5px;
+            font-weight: 400;
+            color: #eeeeee;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .pm-hero-headline {
+            font-family: 'Alan Sans', sans-serif;
+            font-size: clamp(2.4rem, 4.2vw, 5.4rem);
+            font-weight: 400;
+            width: 100%;
+            color: #E0FFFF;
+            line-height: 1.12;
+            letter-spacing: -0.01em;
+            margin-bottom: 22px;
+            min-width: 40rem;
+        }
+
+        .pm-hero-desc {
+            font-family: 'Alan Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.7;
+            color: #eeeeee;
+            margin-bottom: 20px;
+            max-width: 400px;
+        }
+
+        .pm-hero-btn {
+            display: inline-block;
+            font-family: 'Alan Sans', sans-serif;
+            font-size: 14.5px;
+            font-weight: 600;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            padding: 6px 30px;
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            transition: background .2s, color .2s, border-color .2s;
+            background: transparent;
+        }
+
+        .pm-hero-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: #fff;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .pm-nav-menu {
+                display: none;
+            }
+
+            .pm-hero-content {
+                padding: 60px 20px;
+            }
+
+            .pm-hero-gradient {
+                background: linear-gradient(to right, #0f4c97 0%, #0f4c97 60%, rgba(15, 76, 151, 0.10) 100%);
+            }
+        }
+
+        /* ---- Custom Card Styles ---- */
+        .card-container {
+            width: 100%;
+            height: 100%;
+            /* Stretch to grid track height */
+            position: relative;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-container:hover .image-section img {
+            transform: scale(1.05);
+        }
+
+        .card-container:hover .arrow-button {
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-container:hover .arrow-button svg {
+            transform: translate(2px, -2px);
+        }
+
+        .image-section {
+            border-radius: 0;
+            overflow: hidden;
+            height: 300px;
+            /* Reduced from 400px */
+            flex-shrink: 0;
+            /* Keep image fixed height */
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            z-index: 0;
+        }
+
+        .image-section::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+            mix-blend-mode: multiply;
+            z-index: 10;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.75);
+            transition: transform 0.7s ease-in-out;
+            z-index: 1;
+        }
+
+        .content-section {
+            background-color: #0f4c97;
+            color: white;
+            padding: 36px 32px;
+            width: 86%;
+            margin: -80px auto 0;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            box-sizing: border-box;
+            text-align: left;
+            z-index: 20;
+            flex-grow: 1;
+            /* Stretch remaining space to match tallest card */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .arrow-button {
+            position: absolute;
+            top: -28px;
+            right: 32px;
+            width: 56px;
+            height: 56px;
+            background-color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .arrow-button svg {
+            width: 24px;
+            height: 24px;
+            color: #0f4c97;
+            transition: transform 0.3s ease;
+        }
+
+        .content-section h2 {
+            margin: 0 0 16px 0;
+            font-size: 1.8rem;
+            font-family: 'Alan Sans', sans-serif;
+            font-weight: 500;
+            line-height: 1.15;
+            color: #fff;
+            letter-spacing: -0.02em;
+        }
+
+        .content-section p {
+            margin: 0;
+            font-family: 'Alan Sans', sans-serif;
+            font-size: 0.7rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+        }
+
+        /* Media queries cannot be applied via inline style attributes */
+        @media (max-width: 991px) {
+            #main-nav {
+                width: 95% !important;
+                padding: 15px 20px !important;
+                top: 20px !important;
+            }
+
+            .nav-links {
+                display: none !important;
+            }
+        }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+
+    <style>
+        /* 120% Zoom Layout Override */
+        @media (min-width: 1200px) {
+            .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+                max-width: 1368px !important;
+            }
+        }
+        @media (min-width: 1400px) {
+            .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+                max-width: 1584px !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -29,129 +492,8 @@
         <!-- page preloader close -->
 
         <!-- header begin -->
-        <header class="transparent header-light header-float">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="header-inner">
-                            <div class="de-flex">
-                                <div class="de-flex-col">
-                                    <!-- logo begin -->
-                                    <div id="logo">
-                                        <a href="index.html">
-                                            <img class="logo-main" src="images/logo-dark.webp" alt="" >
-                                            <img class="logo-scroll" src="images/logo-dark.webp" alt="" >
-                                            <img class="logo-mobile" src="images/logo-dark.webp" alt="" >
-                                        </a>
-                                    </div>
-                                    <!-- logo close -->
-                                </div>
-
-                                <div class="de-flex-col">
-                                    <div class="de-flex-col header-col-mid">
-                                        <ul id="mainmenu">
-                                            <li><a class="menu-item" href="index.html">Home</a>
-                                                <ul class="mega">
-                                                    <li>
-                                                        <div class="container">
-                                                            <div class="sb-menu p-4">
-                                                                <div class="row g-3">
-                                                                    <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                        <div class="relative hover text-center overflow-hidden rounded-1 shadow-soft">
-                                                                            <a class="p-0" href="index.html">
-                                                                                <img src="images/demo/homepage-1.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                            </a>
-                                                                        </div>
-                                                                        <h6 class="mt-3">Homepage 1</h6>
-                                                                    </div>
-
-                                                                    <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                        <div class="relative hover text-center overflow-hidden rounded-1 shadow-soft">
-                                                                            <a class="p-0" href="index-2.html">
-                                                                                <img src="images/demo/homepage-2.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                            </a>
-                                                                        </div>
-                                                                        <h6 class="mt-3">Homepage 2</h6>
-                                                                    </div>
-
-                                                                    <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                        <div class="relative hover text-center overflow-hidden rounded-1 shadow-soft">
-                                                                            <a class="p-0" href="index-3.html">
-                                                                                <img src="images/demo/homepage-3.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                            </a>
-                                                                        </div>
-                                                                        <h6 class="mt-3">Homepage 3</h6>
-                                                                    </div>
-
-                                                                    <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                        <div class="relative hover text-center overflow-hidden rounded-1 shadow-soft">
-                                                                            <a class="p-0" href="index-4.html">
-                                                                                <img src="images/demo/homepage-4.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                            </a>
-                                                                        </div>
-                                                                        <h6 class="mt-3">Homepage 4</h6>
-                                                                    </div>
-
-                                                                    <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                        <div class="relative hover text-center overflow-hidden rounded-1 shadow-soft">
-                                                                            <a class="p-0" href="index-5.html">
-                                                                                <img src="images/demo/homepage-5.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                            </a>
-                                                                        </div>
-                                                                        <h6 class="mt-3">Homepage 5</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="menu-item" href="services.html">Services</a>
-                                                <ul>
-                                                    <li><a href="services.html">Services</a></li>
-                                                    <li><a href="services-2.html">Services 2</a></li>
-                                                    <li><a href="service-single.html">Service Single</a></li>
-                                                    <li><a href="pricing.html">Pricing</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="menu-item" href="#">About Us</a>
-                                                <ul>
-                                                    <li><a href="about.html">About Us</a></li>
-                                                    <li><a href="our-doctors.html">Our Doctors</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="menu-item" href="#">Pages</a>
-                                                <ul>
-                                                    <li><a href="faq.html">FAQ</a></li>
-                                                    <li><a href="testimonials.html">Testimonials</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="menu-item" href="shop.html">Shop</a>
-                                                <ul>
-                                                    <li><a href="shop.html">Shop</a></li>
-                                                    <li><a href="shop-2.html">Shop 2</a></li>
-                                                    <li><a href="shop-product-single.html">Product Single</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="menu-item" href="blog.html">Blog</a></li>
-                                            <li><a class="menu-item" href="contact.html">Contact</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="de-flex-col">
-                                    <a class="btn-main fx-slide w-100" href="book-your-visit.html"><span>Book Your Visit</span></a>
-                                    <div class="menu_side_area">
-                                        <span id="menu-btn"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- header close -->
+        
+<!-- navbar close -->
         <!-- content begin -->
         <main>
 
@@ -243,7 +585,7 @@
                                   </li>
                                 </ol>
 
-                                <img src="images/blog/1.webp" class="w-100 rounded-1" alt="Eye exam image">
+                                <img src="images/blog/1.webp" class="w-100 " alt="Eye exam image">
 
                             </div>
 
@@ -487,90 +829,69 @@
         <!-- content close -->
         
         <!-- footer begin -->
-        <footer class="section-dark">
-            <div class="container">
-                <div class="row gx-5">
-                    <div class="col-lg-4 col-sm-6">
-                        <img src="images/logo-white.webp" class="logo-footer" alt="" >
-                        <div class="spacer-20"></div>
-                        <p>At Optilux, we’re dedicated to providing high-quality, personalized eye care for patients of all ages. Our skilled team uses the latest technology to ensure accurate exams, effective treatments, and clear, healthy vision for life.</p>
-
-                        <div class="social-icons mb-sm-30">
-                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-12 order-lg-1 order-sm-2">
-                        <div class="row">
-                            <div class="col-md-7">
-                                <div class="widget">
-                                    <h5>Services</h5>
-                                    <ul>
-                                        <li><a href="service-single.html">Comprehensive Eye Exams</a></li>
-                                        <li><a href="service-single.html">Glasses & Contact Lenses</a></li>
-                                        <li><a href="service-single.html">Pediatric Eye Care</a></li>
-                                        <li><a href="service-single.html">Cataract Surgery</a></li>
-                                        <li><a href="service-single.html">Refractive Surgery</a></li>
-                                        <li><a href="service-single.html">Glaucoma Care</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="widget">
-                                    <h5>About Us</h5>
-                                    <ul>                                        
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="services.html">Our Services</a></li>
-                                        <li><a href="our-doctors.html">Our Doctors</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 order-lg-2 order-sm-1">
-                        <div class="widget">
-                            <h5>Contact Us</h5>
-                            <div class="fw-bold text-white"><i class="icofont-location-pin me-2 id-color"></i>Clinic Location</div>
-                            100 S Main St, New York, NY
-
-                            <div class="spacer-20"></div>
-
-                            <div class="fw-bold text-white"><i class="icofont-phone me-2 id-color"></i>Call Us</div>
-                            +1 232 343 9296
-
-                            <div class="spacer-20"></div>
-
-                            <div class="fw-bold text-white"><i class="icofont-envelope me-2 id-color"></i>Send a Message</div>
-                            contact@optilux.com                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="subfooter">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="de-flex">
-                                <div class="de-flex-col">
-                                    Copyright 2025 - Optilux by Designesia
-                                </div>
-                                <ul class="menu-simple">
-                                    <li><a href="#">Terms &amp; Conditions</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- footer close -->
+        <footer id="main-footer" style="background-color: #004fb1; padding: 80px 0 30px 0; color: #ffffff; font-family: 'Alan Sans', sans-serif;">
+    <div class="container">
+     <div class="row">
+      <!-- Branding and Certifications -->
+      <div class="col-lg-5 mb-5 mb-lg-0">
+       <div style="margin-bottom: 30px;">
+        <img alt="Amstar Pumps" src="images /Footer/Asset 2.svg" style="height: 100px; width: auto;"/>
+       </div>
+       <div style="display: flex; align-items: center; gap: 20px;">
+        <img alt="Certifications" src="images /Footer/Certification logos.png" style="height: 45px; width: auto;"/>
+       </div>
+      </div>
+      <!-- Links Col 1 -->
+      <div class="col-lg-2 col-md-3 mb-4 mb-md-0">
+       <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
+        <li><a href="about.html" style="color: #ffffff; text-decoration: none;">About</a></li>
+        <li><a href="shop.html" style="color: #ffffff; text-decoration: none;">Products</a></li>
+        <li><a href="gallery.html" style="color: #ffffff; text-decoration: none;">Gallery</a></li>
+        <li><a href="blog.html" style="color: #ffffff; text-decoration: none;">Blogs</a></li>
+       </ul>
+      </div>
+      <!-- Links Col 2 -->
+      <div class="col-lg-2 col-md-3 mb-4 mb-md-0">
+       <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
+        <li><a href="contact.html" style="color: #ffffff; text-decoration: none;">Contact Us</a></li>
+        <li><a href="about.html#profile" style="color: #ffffff; text-decoration: none;">Company Profile</a></li>
+       </ul>
+      </div>
+      <!-- Contact Details -->
+      <div class="col-lg-3 col-md-6">
+       <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+        <img alt="Location" src="images /Footer/Location icon.svg" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);"/>
+        <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
+         Amstar Pumps<br/>
+         Door No. 214, Lenin Street, Vilankurichi,<br/>
+         Coimbatore, Tamil Nadu<br/>
+         641035, India
+        </p>
+       </div>
+       <div style="display: flex; gap: 15px; margin-bottom: 20px; align-items: center;">
+        <img alt="Phone" src="images /Footer/Phone Icon.svg" style="width: 18px; height: 18px; flex-shrink: 0; filter: brightness(0) invert(1);"/>
+        <p style="margin: 0; font-size: 14px; opacity: 0.9;">
+         +91 95001 84003 | +91 95001 36003
+        </p>
+       </div>
+       <div style="display: flex; gap: 15px; align-items: flex-start;">
+        <img alt="Mail" src="images /Footer/Mail Icon.svg" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);"/>
+        <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
+         amstarpumps@gmail.com<br/>
+         sales@amstar-pumps.com
+        </p>
+       </div>
+      </div>
+     </div>
+     
+     <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.3);">
+      <p style="margin: 0; font-size: 14px; opacity: 0.8;">
+       ©Amstar-2026 all rights reserved
+      </p>
+     </div>
+    </div>
+   </footer>
+   <!-- footer close -->
     </div>
 
 
@@ -580,6 +901,70 @@
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
 
+<script>
+    // Smooth navbar scroll behavior
+    (function () {
+        var navbar = document.getElementById("main-nav");
+        if (!navbar) return;
+
+        var lastScrollY = 0;
+        var ticking = false;
+        var isFullWidth = false;
+
+        function setNavbarStyle(scrollY, direction) {
+            if (scrollY < 60) {
+                // Top of page: floating pill
+                isFullWidth = false;
+                navbar.style.top = "40px";
+                navbar.style.left = "50%";
+                navbar.style.transform = "translateX(-50%)";
+                navbar.style.width = "90%";
+                navbar.style.maxWidth = "1560px";
+                navbar.style.borderRadius = "4px";
+                navbar.style.padding = "15px 40px";
+                navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.08)";
+                navbar.style.opacity = "1";
+                navbar.style.pointerEvents = "";
+            } else {
+                // Expand to full-width only once
+                if (!isFullWidth) {
+                    isFullWidth = true;
+                    navbar.style.left = "0";
+                    navbar.style.transform = "none";
+                    navbar.style.width = "100%";
+                    navbar.style.maxWidth = "100%";
+                    navbar.style.borderRadius = "0";
+                    navbar.style.padding = "12px 5%";
+                    navbar.style.boxShadow = "0 4px 20px rgba(0,0,0,0.12)";
+                }
+                if (direction === "down") {
+                    navbar.style.top = "-90px";
+                    navbar.style.opacity = "0";
+                    navbar.style.pointerEvents = "none";
+                } else {
+                    navbar.style.top = "0";
+                    navbar.style.opacity = "1";
+                    navbar.style.pointerEvents = "";
+                }
+            }
+        }
+
+        window.addEventListener("scroll", function () {
+            var currentScrollY = window.scrollY || window.pageYOffset;
+            var direction = currentScrollY > lastScrollY ? "down" : "up";
+            if (!ticking) {
+                window.requestAnimationFrame(function () {
+                    setNavbarStyle(currentScrollY, direction);
+                    lastScrollY = currentScrollY;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+
+        setNavbarStyle(0, "up");
+    })();
+</script>
 </body>
 
 </html>

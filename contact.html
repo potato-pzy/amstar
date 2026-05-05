@@ -161,6 +161,20 @@
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+
+    <style>
+        /* 120% Zoom Layout Override */
+        @media (min-width: 1200px) {
+            .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+                max-width: 1368px !important;
+            }
+        }
+        @media (min-width: 1400px) {
+            .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+                max-width: 1584px !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -168,43 +182,7 @@
     <!-- ============================================================ -->
     <!-- PREMIUM WHITE NAVBAR                                          -->
     <!-- ============================================================ -->
-    <nav id="main-nav"
-        style="position: fixed; top: 40px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1300px; background-color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; z-index: 1000; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border-radius: 4px;">
-        <!-- Logo -->
-        <a href="./master.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-            <svg viewBox="0 0 100 100" style="width: 45px; height: 45px; fill: #004fb1;">
-                <path d="M48,15 C45,25 45,35 55,42 C60,32 60,20 48,15 Z" />
-                <path d="M25,60 C32,55 42,55 48,65 C40,72 28,70 25,60 Z" />
-                <path d="M75,60 C68,55 58,55 52,65 C60,72 72,70 75,60 Z" />
-                <circle cx="50" cy="55" r="8" fill="#ffffff" />
-            </svg>
-            <div
-                style="font-size: 22px; font-weight: 800; color: #003366; line-height: 1.1; text-transform: capitalize; display: flex; flex-direction: column; font-family: 'Alan Sans', sans-serif;">
-                <span>Amstar</span>
-                <span>Pumps</span>
-            </div>
-        </a>
-
-        <!-- Links and Button -->
-        <div class="nav-links" style="display: flex; align-items: center; gap: 35px;">
-            <a href="./master.html"
-                style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15.5px; transition: color 0.3s ease; font-family: 'Alan Sans', sans-serif;"
-                onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Home</a>
-            <a href="products.html"
-                style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15.5px; transition: color 0.3s ease; font-family: 'Alan Sans', sans-serif;"
-                onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Products</a>
-            <a href="#"
-                style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15.5px; transition: color 0.3s ease; font-family: 'Alan Sans', sans-serif;"
-                onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Latest</a>
-            <a href="./contact.html"
-                style="text-decoration: none; color: #004fb1; font-weight: 400; font-size: 15.5px; transition: color 0.3s ease; font-family: 'Alan Sans', sans-serif;"
-                onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#004fb1'">Contact</a>
-            <a href="./contact.html"
-                style="background-color: #0f4c97; color: #ffffff; padding: 10px 24px; border-radius: 2px; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-family: 'Alan Sans', sans-serif;"
-                onmouseover="this.style.backgroundColor='#004fb1'"
-                onmouseout="this.style.backgroundColor='#0f4c97'">Book a Call</a>
-        </div>
-    </nav>
+    
     <!-- navbar close -->
 
     <!-- Contact Header Title Area -->
@@ -380,60 +358,8 @@
     <!-- footer close -->
 
     <!-- Navbar scroll JS -->
-    <script>
-        (function () {
-            var navbar = document.getElementById("main-nav");
-            if (!navbar) return;
-            var lastScrollY = 0;
-            var ticking = false;
-            function setNavbarStyle(scrollY, direction) {
-                if (scrollY < 5) {
-                    navbar.style.top = "40px";
-                    navbar.style.left = "50%";
-                    navbar.style.transform = "translateX(-50%)";
-                    navbar.style.width = "90%";
-                    navbar.style.maxWidth = "1300px";
-                    navbar.style.borderRadius = "4px";
-                    navbar.style.padding = "15px 40px";
-                    navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.08)";
-                    navbar.style.opacity = "1";
-                    navbar.style.pointerEvents = "";
-                } else {
-                    if (navbar.style.left !== "0px" && navbar.style.left !== "0") {
-                        navbar.style.left = "0";
-                        navbar.style.transform = "none";
-                        navbar.style.width = "100%";
-                        navbar.style.maxWidth = "100%";
-                        navbar.style.borderRadius = "0";
-                        navbar.style.padding = "12px 5%";
-                        navbar.style.boxShadow = "0 4px 15px rgba(0,0,0,0.1)";
-                    }
-                    if (direction === "down") {
-                        navbar.style.top = "-90px";
-                        navbar.style.opacity = "0";
-                        navbar.style.pointerEvents = "none";
-                    } else {
-                        navbar.style.top = "0";
-                        navbar.style.opacity = "1";
-                        navbar.style.pointerEvents = "";
-                    }
-                }
-            }
-            window.addEventListener("scroll", function () {
-                var currentScrollY = window.scrollY || window.pageYOffset;
-                var direction = currentScrollY > lastScrollY ? "down" : "up";
-                if (!ticking) {
-                    window.requestAnimationFrame(function () {
-                        setNavbarStyle(currentScrollY, direction);
-                        lastScrollY = currentScrollY;
-                        ticking = false;
-                    });
-                    ticking = true;
-                }
-            }, { passive: true });
-            setNavbarStyle(0, "up");
-        })();
-    </script>
+    
+
 </body>
 
 </html>

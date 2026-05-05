@@ -72,44 +72,32 @@
             left: 50%;
             transform: translateX(-50%);
             width: 90%;
-            max-width: 1300px;
+            max-width: 1560px;
             background-color: #ffffff;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 40px;
-            z-index: 1000;
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border-radius: 4px;
-        }
-
-        @media (max-width: 991px) {
-            #main-nav {
-                width: 95% !important;
-                padding: 15px 20px !important;
-                top: 20px !important;
-            }
-        }
-
-        @media (max-width: 991px) {
-            /* Navbar Overrides for Animation */
         #main-nav {
             position: fixed;
             top: 40px;
             left: 50%;
             transform: translateX(-50%);
             width: 90%;
-            max-width: 1300px;
+            max-width: 1560px;
             background-color: #ffffff;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 40px;
             z-index: 1000;
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition: top 0.45s cubic-bezier(0.4, 0, 0.2, 1), left 0.45s cubic-bezier(0.4, 0, 0.2, 1), width 0.45s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.45s cubic-bezier(0.4, 0, 0.2, 1), border-radius 0.45s cubic-bezier(0.4, 0, 0.2, 1), padding 0.45s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             border-radius: 4px;
+        }
+        
+        body {
+            height: auto !important;
         }
 
         @media (max-width: 991px) {
@@ -119,9 +107,22 @@
                 top: 20px !important;
             }
         }
-        }
   </style>
- </head>
+ 
+    <style>
+        /* 120% Zoom Layout Override */
+        @media (min-width: 1200px) {
+            .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+                max-width: 1368px !important;
+            }
+        }
+        @media (min-width: 1400px) {
+            .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+                max-width: 1584px !important;
+            }
+        }
+    </style>
+</head>
  <body>
   <div id="wrapper">
    <a href="#" id="back-to-top">
@@ -134,42 +135,13 @@
    <!-- ============================================================ -->
    <!-- PREMIUM WHITE NAVBAR                                          -->
    <!-- ============================================================ -->
-   <nav id="main-nav" style="position: fixed; top: 40px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1300px; background-color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; z-index: 1000; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border-radius: 4px;">
-    <!-- Logo -->
-    <a href="master.html" style="display: flex; align-items: center; text-decoration: none;">
-     <img alt="Amstar Pumps" src="images /Footer/Asset 2.svg" style="height: 55px; width: auto;"/>
-    </a>
-    <!-- Links and Button Group -->
-    <div style="display: flex; align-items: center; gap: 50px;">
-     <div class="nav-links" style="display: flex; align-items: center; gap: 30px;">
-      <a href="master.html" onmouseout="this.style.color='#1a2b4c'" onmouseover="this.style.color='#004fb1'" style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;">
-       Home
-      </a>
-      <a href="shop.html" onmouseout="this.style.color='#1a2b4c'" onmouseover="this.style.color='#004fb1'" style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;">
-       Products
-      </a>
-      <a href="#" onmouseout="this.style.color='#1a2b4c'" onmouseover="this.style.color='#004fb1'" style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;">
-       Latest
-      </a>
-     </div>
-     <a href="contact.html" onmouseout="this.style.backgroundColor='#003366'" onmouseover="this.style.backgroundColor='#004fb1'" style="background-color: #003366; color: #ffffff; padding: 12px 28px; border-radius: 0; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-size: 14.5px;">
-      Book a Call
-     </a>
-    </div>
-   </nav>
+   
    <!-- navbar close -->
    <!-- header close -->
    <!-- content begin -->
-   <main>
+   <main style="padding-top: 100px;">
     <div id="top">
     </div>
-    <section id="subheader">
-     <div class="container">
-      <h1 class="hero-title">
-       Our Product Portfolio
-      </h1>
-     </div>
-    </section>
     <section>
      <div class="container">
       <div class="row g-4">
@@ -282,11 +254,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="submersible_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=4%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F4%E2%80%9D+Submersible+Motor.jpg">
+            <a href="products.html?id=4-inch-submersible-motor&amp;name=4%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F4%E2%80%9D+Submersible+Motor.jpg">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/4” Submersible Motor.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=4%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F4%E2%80%9D+Submersible+Motor.jpg">
+             <a class="atr__quick-view" href="products.html?id=4-inch-submersible-motor&amp;name=4%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F4%E2%80%9D+Submersible+Motor.jpg">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -299,7 +271,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             4” Submersible Motor
            </h3>
-           <a class="btn-main w-100" href="products.html?name=4%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F4%E2%80%9D+Submersible+Motor.jpg" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=4-inch-submersible-motor&amp;name=4%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F4%E2%80%9D+Submersible+Motor.jpg" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -309,11 +281,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="submersible_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=4%E2%80%9D+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F4%E2%80%9D+Submersible+Pump.jpg">
+            <a href="products.html?id=4-inch-submersible-pump&amp;name=4%E2%80%9D+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F4%E2%80%9D+Submersible+Pump.jpg">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/4” Submersible Pump.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=4%E2%80%9D+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F4%E2%80%9D+Submersible+Pump.jpg">
+             <a class="atr__quick-view" href="products.html?id=4-inch-submersible-pump&amp;name=4%E2%80%9D+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F4%E2%80%9D+Submersible+Pump.jpg">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -326,7 +298,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             4” Submersible Pump
            </h3>
-           <a class="btn-main w-100" href="products.html?name=4%E2%80%9D+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F4%E2%80%9D+Submersible+Pump.jpg" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=4-inch-submersible-pump&amp;name=4%E2%80%9D+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F4%E2%80%9D+Submersible+Pump.jpg" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -336,11 +308,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="submersible_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=6%22+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6_+Submersible+Motor.jpg">
+            <a href="products.html?id=6-inch-submersible-motor&amp;name=6%22+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6_+Submersible+Motor.jpg">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/6_ Submersible Motor.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=6%22+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6_+Submersible+Motor.jpg">
+             <a class="atr__quick-view" href="products.html?id=6-inch-submersible-motor&amp;name=6%22+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6_+Submersible+Motor.jpg">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -353,7 +325,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             6" Submersible Motor
            </h3>
-           <a class="btn-main w-100" href="products.html?name=6%22+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6_+Submersible+Motor.jpg" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=6-inch-submersible-motor&amp;name=6%22+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6_+Submersible+Motor.jpg" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -363,11 +335,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="submersible_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=6%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Motor%281%29.jpg">
+            <a href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Motor%281%29.jpg">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/6” Submersible Motor(1).jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=6%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Motor%281%29.jpg">
+             <a class="atr__quick-view" href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Motor%281%29.jpg">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -380,7 +352,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             6” Submersible Motor
            </h3>
-           <a class="btn-main w-100" href="products.html?name=6%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Motor%281%29.jpg" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Motor%281%29.jpg" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -390,11 +362,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="submersible_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=6%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Motor.jpg">
+            <a href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Motor.jpg">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/6” Submersible Motor.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=6%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Motor.jpg">
+             <a class="atr__quick-view" href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Motor.jpg">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -407,7 +379,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             6” Submersible Motor
            </h3>
-           <a class="btn-main w-100" href="products.html?name=6%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Motor.jpg" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Motor.jpg" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -417,11 +389,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="submersible_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=6%E2%80%9D+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Pump.jpg">
+            <a href="products.html?id=6-inch-submersible-pump&amp;name=6%E2%80%9D+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Pump.jpg">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/6” Submersible Pump.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=6%E2%80%9D+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Pump.jpg">
+             <a class="atr__quick-view" href="products.html?id=6-inch-submersible-pump&amp;name=6%E2%80%9D+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Pump.jpg">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -434,7 +406,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             6” Submersible Pump
            </h3>
-           <a class="btn-main w-100" href="products.html?name=6%E2%80%9D+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Pump.jpg" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=6-inch-submersible-pump&amp;name=6%E2%80%9D+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F6%E2%80%9D+Submersible+Pump.jpg" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -444,11 +416,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="submersible_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=8%22+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F8_+Submersible+Pump.png">
+            <a href="products.html?id=8-inch-submersible-pump&amp;name=8%22+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F8_+Submersible+Pump.png">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/8_ Submersible Pump.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=8%22+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F8_+Submersible+Pump.png">
+             <a class="atr__quick-view" href="products.html?id=8-inch-submersible-pump&amp;name=8%22+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F8_+Submersible+Pump.png">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -461,7 +433,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             8" Submersible Pump
            </h3>
-           <a class="btn-main w-100" href="products.html?name=8%22+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F8_+Submersible+Pump.png" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=8-inch-submersible-pump&amp;name=8%22+Submersible+Pump&amp;img=drive-download-20260502T054600Z-3-001%2F8_+Submersible+Pump.png" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -471,11 +443,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="submersible_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=8%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F8%E2%80%9D+Submersible+Motor.jpg">
+            <a href="products.html?id=8-inch-submersible-motor&amp;name=8%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F8%E2%80%9D+Submersible+Motor.jpg">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/8” Submersible Motor.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=8%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F8%E2%80%9D+Submersible+Motor.jpg">
+             <a class="atr__quick-view" href="products.html?id=8-inch-submersible-motor&amp;name=8%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F8%E2%80%9D+Submersible+Motor.jpg">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -488,7 +460,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             8” Submersible Motor
            </h3>
-           <a class="btn-main w-100" href="products.html?name=8%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F8%E2%80%9D+Submersible+Motor.jpg" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=8-inch-submersible-motor&amp;name=8%E2%80%9D+Submersible+Motor&amp;img=drive-download-20260502T054600Z-3-001%2F8%E2%80%9D+Submersible+Motor.jpg" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -498,11 +470,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="other_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=Booster+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FBooster+Pump.png">
+            <a href="products.html?id=booster-pump&amp;name=Booster+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FBooster+Pump.png">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/Booster Pump.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=Booster+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FBooster+Pump.png">
+             <a class="atr__quick-view" href="products.html?id=booster-pump&amp;name=Booster+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FBooster+Pump.png">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -515,7 +487,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             Booster Pump
            </h3>
-           <a class="btn-main w-100" href="products.html?name=Booster+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FBooster+Pump.png" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=booster-pump&amp;name=Booster+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FBooster+Pump.png" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -525,11 +497,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="other_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=Cables&amp;img=drive-download-20260502T054600Z-3-001%2FCables.png">
+            <a href="products.html?id=cables&amp;name=Cables&amp;img=drive-download-20260502T054600Z-3-001%2FCables.png">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/Cables.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=Cables&amp;img=drive-download-20260502T054600Z-3-001%2FCables.png">
+             <a class="atr__quick-view" href="products.html?id=cables&amp;name=Cables&amp;img=drive-download-20260502T054600Z-3-001%2FCables.png">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -542,7 +514,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             Cables
            </h3>
-           <a class="btn-main w-100" href="products.html?name=Cables&amp;img=drive-download-20260502T054600Z-3-001%2FCables.png" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=cables&amp;name=Cables&amp;img=drive-download-20260502T054600Z-3-001%2FCables.png" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -552,11 +524,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="other_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=Centrifugal+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FCentrifugal+Pump.png">
+            <a href="products.html?id=centrifugal-pump&amp;name=Centrifugal+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FCentrifugal+Pump.png">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/Centrifugal Pump.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=Centrifugal+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FCentrifugal+Pump.png">
+             <a class="atr__quick-view" href="products.html?id=centrifugal-pump&amp;name=Centrifugal+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FCentrifugal+Pump.png">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -569,7 +541,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             Centrifugal Pump
            </h3>
-           <a class="btn-main w-100" href="products.html?name=Centrifugal+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FCentrifugal+Pump.png" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=centrifugal-pump&amp;name=Centrifugal+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FCentrifugal+Pump.png" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -579,11 +551,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="other_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=Circulatory+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FCirculatory+Pump.png">
+            <a href="products.html?id=circulatory-pump&amp;name=Circulatory+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FCirculatory+Pump.png">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/Circulatory Pump.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=Circulatory+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FCirculatory+Pump.png">
+             <a class="atr__quick-view" href="products.html?id=circulatory-pump&amp;name=Circulatory+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FCirculatory+Pump.png">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -596,7 +568,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             Circulatory Pump
            </h3>
-           <a class="btn-main w-100" href="products.html?name=Circulatory+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FCirculatory+Pump.png" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=circulatory-pump&amp;name=Circulatory+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FCirculatory+Pump.png" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -606,11 +578,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="control_panels">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=Control+Panel&amp;img=drive-download-20260502T054600Z-3-001%2FControl+Panel.png">
+            <a href="products.html?id=control-panel&amp;name=Control+Panel&amp;img=drive-download-20260502T054600Z-3-001%2FControl+Panel.png">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/Control Panel.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=Control+Panel&amp;img=drive-download-20260502T054600Z-3-001%2FControl+Panel.png">
+             <a class="atr__quick-view" href="products.html?id=control-panel&amp;name=Control+Panel&amp;img=drive-download-20260502T054600Z-3-001%2FControl+Panel.png">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -623,7 +595,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             Control Panel
            </h3>
-           <a class="btn-main w-100" href="products.html?name=Control+Panel&amp;img=drive-download-20260502T054600Z-3-001%2FControl+Panel.png" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=control-panel&amp;name=Control+Panel&amp;img=drive-download-20260502T054600Z-3-001%2FControl+Panel.png" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -633,11 +605,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="other_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=De+Water+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FDe+Water+Pump.png">
+            <a href="products.html?id=de-water-pump&amp;name=De+Water+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FDe+Water+Pump.png">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/De Water Pump.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=De+Water+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FDe+Water+Pump.png">
+             <a class="atr__quick-view" href="products.html?id=de-water-pump&amp;name=De+Water+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FDe+Water+Pump.png">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -650,7 +622,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             De Water Pump
            </h3>
-           <a class="btn-main w-100" href="products.html?name=De+Water+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FDe+Water+Pump.png" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=de-water-pump&amp;name=De+Water+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FDe+Water+Pump.png" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -660,11 +632,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="monoblock_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=Monoblock&amp;img=drive-download-20260502T054600Z-3-001%2FMonoblock%281%29.png">
+            <a href="products.html?id=monoblock&amp;name=Monoblock&amp;img=drive-download-20260502T054600Z-3-001%2FMonoblock%281%29.png">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/Monoblock(1).png" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=Monoblock&amp;img=drive-download-20260502T054600Z-3-001%2FMonoblock%281%29.png">
+             <a class="atr__quick-view" href="products.html?id=monoblock&amp;name=Monoblock&amp;img=drive-download-20260502T054600Z-3-001%2FMonoblock%281%29.png">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -677,7 +649,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             Monoblock
            </h3>
-           <a class="btn-main w-100" href="products.html?name=Monoblock&amp;img=drive-download-20260502T054600Z-3-001%2FMonoblock%281%29.png" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=monoblock&amp;name=Monoblock&amp;img=drive-download-20260502T054600Z-3-001%2FMonoblock%281%29.png" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -687,11 +659,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="monoblock_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=Monoblock&amp;img=drive-download-20260502T054600Z-3-001%2FMonoblock.png">
+            <a href="products.html?id=monoblock&amp;name=Monoblock&amp;img=drive-download-20260502T054600Z-3-001%2FMonoblock.png">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/Monoblock.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=Monoblock&amp;img=drive-download-20260502T054600Z-3-001%2FMonoblock.png">
+             <a class="atr__quick-view" href="products.html?id=monoblock&amp;name=Monoblock&amp;img=drive-download-20260502T054600Z-3-001%2FMonoblock.png">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -704,7 +676,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             Monoblock
            </h3>
-           <a class="btn-main w-100" href="products.html?name=Monoblock&amp;img=drive-download-20260502T054600Z-3-001%2FMonoblock.png" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=monoblock&amp;name=Monoblock&amp;img=drive-download-20260502T054600Z-3-001%2FMonoblock.png" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -714,11 +686,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="openwell_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=Openwell+Single+Phase&amp;img=drive-download-20260502T054600Z-3-001%2FOpenwell+Single+Phase.jpg">
+            <a href="products.html?id=openwell-single-phase&amp;name=Openwell+Single+Phase&amp;img=drive-download-20260502T054600Z-3-001%2FOpenwell+Single+Phase.jpg">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/Openwell Single Phase.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=Openwell+Single+Phase&amp;img=drive-download-20260502T054600Z-3-001%2FOpenwell+Single+Phase.jpg">
+             <a class="atr__quick-view" href="products.html?id=openwell-single-phase&amp;name=Openwell+Single+Phase&amp;img=drive-download-20260502T054600Z-3-001%2FOpenwell+Single+Phase.jpg">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -731,7 +703,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             Openwell Single Phase
            </h3>
-           <a class="btn-main w-100" href="products.html?name=Openwell+Single+Phase&amp;img=drive-download-20260502T054600Z-3-001%2FOpenwell+Single+Phase.jpg" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=openwell-single-phase&amp;name=Openwell+Single+Phase&amp;img=drive-download-20260502T054600Z-3-001%2FOpenwell+Single+Phase.jpg" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -741,11 +713,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="openwell_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=Openwell+Three+Phase&amp;img=drive-download-20260502T054600Z-3-001%2FOpenwell+Three+Phase.jpg">
+            <a href="products.html?id=openwell-three-phase&amp;name=Openwell+Three+Phase&amp;img=drive-download-20260502T054600Z-3-001%2FOpenwell+Three+Phase.jpg">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/Openwell Three Phase.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=Openwell+Three+Phase&amp;img=drive-download-20260502T054600Z-3-001%2FOpenwell+Three+Phase.jpg">
+             <a class="atr__quick-view" href="products.html?id=openwell-three-phase&amp;name=Openwell+Three+Phase&amp;img=drive-download-20260502T054600Z-3-001%2FOpenwell+Three+Phase.jpg">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -758,7 +730,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             Openwell Three Phase
            </h3>
-           <a class="btn-main w-100" href="products.html?name=Openwell+Three+Phase&amp;img=drive-download-20260502T054600Z-3-001%2FOpenwell+Three+Phase.jpg" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=openwell-three-phase&amp;name=Openwell+Three+Phase&amp;img=drive-download-20260502T054600Z-3-001%2FOpenwell+Three+Phase.jpg" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -768,11 +740,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="pipes">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=Pipe&amp;img=drive-download-20260502T054600Z-3-001%2FPipe.png">
+            <a href="products.html?id=pipe&amp;name=Pipe&amp;img=drive-download-20260502T054600Z-3-001%2FPipe.png">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/Pipe.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=Pipe&amp;img=drive-download-20260502T054600Z-3-001%2FPipe.png">
+             <a class="atr__quick-view" href="products.html?id=pipe&amp;name=Pipe&amp;img=drive-download-20260502T054600Z-3-001%2FPipe.png">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -785,7 +757,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             Pipe
            </h3>
-           <a class="btn-main w-100" href="products.html?name=Pipe&amp;img=drive-download-20260502T054600Z-3-001%2FPipe.png" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=pipe&amp;name=Pipe&amp;img=drive-download-20260502T054600Z-3-001%2FPipe.png" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -795,11 +767,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="self-priming_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=Self+Priming&amp;img=drive-download-20260502T054600Z-3-001%2FSelf+Priming.png">
+            <a href="products.html?id=self-priming&amp;name=Self+Priming&amp;img=drive-download-20260502T054600Z-3-001%2FSelf+Priming.png">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/Self Priming.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=Self+Priming&amp;img=drive-download-20260502T054600Z-3-001%2FSelf+Priming.png">
+             <a class="atr__quick-view" href="products.html?id=self-priming&amp;name=Self+Priming&amp;img=drive-download-20260502T054600Z-3-001%2FSelf+Priming.png">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -812,7 +784,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             Self Priming
            </h3>
-           <a class="btn-main w-100" href="products.html?name=Self+Priming&amp;img=drive-download-20260502T054600Z-3-001%2FSelf+Priming.png" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=self-priming&amp;name=Self+Priming&amp;img=drive-download-20260502T054600Z-3-001%2FSelf+Priming.png" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -822,11 +794,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="other_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=Sewage+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FSewage+Pump.png">
+            <a href="products.html?id=sewage-pump&amp;name=Sewage+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FSewage+Pump.png">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/Sewage Pump.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=Sewage+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FSewage+Pump.png">
+             <a class="atr__quick-view" href="products.html?id=sewage-pump&amp;name=Sewage+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FSewage+Pump.png">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -839,7 +811,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             Sewage Pump
            </h3>
-           <a class="btn-main w-100" href="products.html?name=Sewage+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FSewage+Pump.png" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=sewage-pump&amp;name=Sewage+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FSewage+Pump.png" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -849,11 +821,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="other_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=Splitcase+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FSplitcase+Pump.png">
+            <a href="products.html?id=splitcase-pump&amp;name=Splitcase+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FSplitcase+Pump.png">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/Splitcase Pump.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=Splitcase+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FSplitcase+Pump.png">
+             <a class="atr__quick-view" href="products.html?id=splitcase-pump&amp;name=Splitcase+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FSplitcase+Pump.png">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -866,7 +838,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             Splitcase Pump
            </h3>
-           <a class="btn-main w-100" href="products.html?name=Splitcase+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FSplitcase+Pump.png" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=splitcase-pump&amp;name=Splitcase+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FSplitcase+Pump.png" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -876,11 +848,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="other_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=Vertical+Multistage+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FVertical+Multistage+Pump.png">
+            <a href="products.html?id=vertical-multistage-pump&amp;name=Vertical+Multistage+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FVertical+Multistage+Pump.png">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/Vertical Multistage Pump.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=Vertical+Multistage+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FVertical+Multistage+Pump.png">
+             <a class="atr__quick-view" href="products.html?id=vertical-multistage-pump&amp;name=Vertical+Multistage+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FVertical+Multistage+Pump.png">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -893,7 +865,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             Vertical Multistage Pump
            </h3>
-           <a class="btn-main w-100" href="products.html?name=Vertical+Multistage+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FVertical+Multistage+Pump.png" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=vertical-multistage-pump&amp;name=Vertical+Multistage+Pump&amp;img=drive-download-20260502T054600Z-3-001%2FVertical+Multistage+Pump.png" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -903,11 +875,11 @@
          <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="openwell_pumps">
           <div class="de__pcard text-center">
            <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?name=Vertical+Openwell&amp;img=drive-download-20260502T054600Z-3-001%2FVertical+Openwell.png">
+            <a href="products.html?id=vertical-openwell&amp;name=Vertical+Openwell&amp;img=drive-download-20260502T054600Z-3-001%2FVertical+Openwell.png">
              <img class="atr__image-main" src="drive-download-20260502T054600Z-3-001/Vertical Openwell.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
             </a>
             <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?name=Vertical+Openwell&amp;img=drive-download-20260502T054600Z-3-001%2FVertical+Openwell.png">
+             <a class="atr__quick-view" href="products.html?id=vertical-openwell&amp;name=Vertical+Openwell&amp;img=drive-download-20260502T054600Z-3-001%2FVertical+Openwell.png">
               <i class="icon_zoom-in_alt">
               </i>
              </a>
@@ -920,7 +892,7 @@
            <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
             Vertical Openwell
            </h3>
-           <a class="btn-main w-100" href="products.html?name=Vertical+Openwell&amp;img=drive-download-20260502T054600Z-3-001%2FVertical+Openwell.png" style="padding: 10px; display: block; color: white;">
+           <a class="btn-main w-100" href="products.html?id=vertical-openwell&amp;name=Vertical+Openwell&amp;img=drive-download-20260502T054600Z-3-001%2FVertical+Openwell.png" style="padding: 10px; display: block; color: white;">
             View Details
            </a>
           </div>
@@ -952,87 +924,58 @@
      <div class="row">
       <!-- Branding and Certifications -->
       <div class="col-lg-5 mb-5 mb-lg-0">
-       <div style="margin-bottom: 40px; display: flex; align-items: center; gap: 15px;">
-        <img alt="Amstar Pumps" src="images /Footer/Asset 2.svg" style="height: 80px; width: auto;"/>
+       <div style="margin-bottom: 30px;">
+        <img alt="Amstar Pumps" src="images /Footer/Asset 2.svg" style="height: 100px; width: auto;"/>
        </div>
        <div style="display: flex; align-items: center; gap: 20px;">
-        <img alt="Certifications" src="images /Footer/Certification logos.png" style="height: 37px; width: auto; opacity: 0.9;"/>
+        <img alt="Certifications" src="images /Footer/Certification logos.png" style="height: 45px; width: auto;"/>
        </div>
       </div>
-      <!-- Quick Links -->
-      <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-       <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
-        <li>
-         <a href="about.html" style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">
-          About
-         </a>
-        </li>
-        <li>
-         <a href="shop.html" style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">
-          Products
-         </a>
-        </li>
-        <li>
-         <a href="gallery.html" style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">
-          Gallery
-         </a>
-        </li>
-        <li>
-         <a href="blog.html" style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">
-          Blogs
-         </a>
-        </li>
+      <!-- Links Col 1 -->
+      <div class="col-lg-2 col-md-3 mb-4 mb-md-0">
+       <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
+        <li><a href="about.html" style="color: #ffffff; text-decoration: none;">About</a></li>
+        <li><a href="shop.html" style="color: #ffffff; text-decoration: none;">Products</a></li>
+        <li><a href="gallery.html" style="color: #ffffff; text-decoration: none;">Gallery</a></li>
+        <li><a href="blog.html" style="color: #ffffff; text-decoration: none;">Blogs</a></li>
        </ul>
       </div>
-      <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-       <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
-        <li>
-         <a href="contact.html" style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">
-          Contact
-                                    Us
-         </a>
-        </li>
-        <li>
-         <a href="about.html" style="color: #ffffff; text-decoration: none; font-size: 16px; opacity: 0.8; font-family: inherit; font-weight: inherit;">
-          Company
-                                    Profile
-         </a>
-        </li>
+      <!-- Links Col 2 -->
+      <div class="col-lg-2 col-md-3 mb-4 mb-md-0">
+       <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
+        <li><a href="contact.html" style="color: #ffffff; text-decoration: none;">Contact Us</a></li>
+        <li><a href="about.html#profile" style="color: #ffffff; text-decoration: none;">Company Profile</a></li>
        </ul>
       </div>
       <!-- Contact Details -->
-      <div class="col-lg-3 col-md-4">
-       <div style="display: flex; gap: 12px; margin-bottom: 20px;">
-        <img alt="Location" src="images /Footer/Location icon.svg" style="width: 20px; height: 20px; flex-shrink: 0; margin-top: 4px;"/>
-        <p style="margin: 0; font-size: 14px; opacity: 0.8; line-height: 1.5; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
-         Amstar Pumps
-         <br/>
-         Door
-                                No. 214, Lenin Street, Vilankurichi,
-         <br/>
-         Coimbatore, Tamil Nadu
-         <br/>
+      <div class="col-lg-3 col-md-6">
+       <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+        <img alt="Location" src="images /Footer/Location icon.svg" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);"/>
+        <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
+         Amstar Pumps<br/>
+         Door No. 214, Lenin Street, Vilankurichi,<br/>
+         Coimbatore, Tamil Nadu<br/>
          641035, India
         </p>
        </div>
-       <div style="display: flex; gap: 12px; margin-bottom: 20px;">
-        <img alt="Phone" src="images /Footer/Phone Icon.svg" style="width: 20px; height: 20px; flex-shrink: 0;"/>
-        <p style="margin: 0; font-size: 14px; opacity: 0.8; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
+       <div style="display: flex; gap: 15px; margin-bottom: 20px; align-items: center;">
+        <img alt="Phone" src="images /Footer/Phone Icon.svg" style="width: 18px; height: 18px; flex-shrink: 0; filter: brightness(0) invert(1);"/>
+        <p style="margin: 0; font-size: 14px; opacity: 0.9;">
          +91 95001 84003 | +91 95001 36003
         </p>
        </div>
-       <div style="display: flex; gap: 12px;">
-        <img alt="Mail" src="images /Footer/Mail Icon.svg" style="width: 20px; height: 20px; flex-shrink: 0;"/>
-        <p style="margin: 0; font-size: 14px; opacity: 0.8; line-height: 1.5; font-family: 'Alan Sans', sans-serif; font-weight: 400;">
-         amstarpumps@gmail.com
-         <br/>
+       <div style="display: flex; gap: 15px; align-items: flex-start;">
+        <img alt="Mail" src="images /Footer/Mail Icon.svg" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);"/>
+        <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
+         amstarpumps@gmail.com<br/>
          sales@amstar-pumps.com
         </p>
        </div>
       </div>
      </div>
-     <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.2); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-      <p style="margin: 0; font-size: 13px; opacity: 0.6;">
+     
+     <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.3);">
+      <p style="margin: 0; font-size: 14px; opacity: 0.8;">
        ©Amstar-2026 all rights reserved
       </p>
      </div>
@@ -1093,9 +1036,15 @@
         
         renderPagination(page, totalPages);
         
+        // Reset body height and refresh scroll libraries to eliminate extra whitespace
+        document.body.style.height = 'auto';
+        if (window.s && typeof window.s.refresh === 'function') {
+            window.s.refresh();
+        }
+
         // Scroll to top of the page smoothly
         if(scroll) {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo(0, 0);
         }
     }
     
@@ -1158,69 +1107,11 @@
     updateFilters();
 });
   </script>
-  <script>
-   (function () {
-            const navbar = document.getElementById("main-nav");
-            if (!navbar) return;
-
-            let lastScrollY = 0;
-            let ticking = false;
-
-            function setNavbarStyle(scrollY, direction) {
-                if (scrollY < 5) {
-                    // Top of page: floating pill
-                    navbar.style.top = "40px";
-                    navbar.style.left = "50%";
-                    navbar.style.transform = "translateX(-50%)";
-                    navbar.style.width = "90%";
-                    navbar.style.maxWidth = "1300px";
-                    navbar.style.borderRadius = "4px";
-                    navbar.style.padding = "15px 40px";
-                    navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.08)";
-                    navbar.style.opacity = "1";
-                    navbar.style.pointerEvents = "";
-                } else {
-                    // Scrolled: full-width sticky
-                    if (navbar.style.left !== "0px" && navbar.style.left !== "0") {
-                        navbar.style.left = "0";
-                        navbar.style.transform = "none";
-                        navbar.style.width = "100%";
-                        navbar.style.maxWidth = "100%";
-                        navbar.style.borderRadius = "0";
-                        navbar.style.padding = "12px 5%";
-                        navbar.style.boxShadow = "0 4px 15px rgba(0,0,0,0.1)";
-                    }
-                    if (direction === "down") {
-                        navbar.style.top = "-90px";
-                        navbar.style.opacity = "0";
-                        navbar.style.pointerEvents = "none";
-                    } else {
-                        navbar.style.top = "0";
-                        navbar.style.opacity = "1";
-                        navbar.style.pointerEvents = "";
-                    }
-                }
-            }
-
-            window.addEventListener("scroll", function () {
-                const currentScrollY = window.scrollY || window.pageYOffset;
-                const direction = currentScrollY > lastScrollY ? "down" : "up";
-                if (!ticking) {
-                    window.requestAnimationFrame(function () {
-                        setNavbarStyle(currentScrollY, direction);
-                        lastScrollY = currentScrollY;
-                        ticking = false;
-                    });
-                    ticking = true;
-                }
-            }, { passive: true });
-
-            setNavbarStyle(0, "up");
-        })();
-  </script>
+  
   <script src="js/plugins.js">
   </script>
   <script src="js/designesia.js">
   </script>
- </body>
+ 
+</body>
 </html>
