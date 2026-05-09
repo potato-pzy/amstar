@@ -2,8 +2,8 @@
 
 <html lang="en">
 <head>
-<title>Optilux - Eye Clinic Optometrist and Optical Store</title>
-<link href="images/icon.webp" rel="icon" sizes="16x16" type="image/gif"/>
+<title>Amstar Pumps</title>
+<link href="images /favicon.svg" rel="icon" sizes="16x16" type="image/gif"/>
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Optilux - Eye Clinic Optometrist and Optical Store HTML Template" name="description"/>
@@ -18,6 +18,11 @@
 <!-- color scheme -->
 <link href="css/colors/scheme-01.css" id="colors" rel="stylesheet" type="text/css"/>
 <style>
+        html, body {
+            height: auto !important;
+            overflow: visible !important;
+        }
+
         * {
             font-family: 'Alan Sans', sans-serif !important;
         }
@@ -263,7 +268,7 @@
             margin: 0;
             padding: 200px 148px;
             width: 100%;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
         }
@@ -453,15 +458,102 @@
         }
 
         /* Media queries cannot be applied via inline style attributes */
+        /* Mobile Menu */
+        #mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #ffffff;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            transform: translateY(-100%);
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        #mobile-menu.active {
+            transform: translateY(0);
+        }
+
+        #mobile-menu a {
+            font-size: 24px;
+            color: #1a2b4c;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        #mobile-menu .close-btn {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            background: none;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #1a2b4c;
+        }
+
         @media (max-width: 991px) {
             #main-nav {
                 width: 95% !important;
-                padding: 15px 20px !important;
+                padding: 10px 20px !important;
                 top: 20px !important;
             }
 
-            .nav-links {
+            .nav-links, .nav-cta-btn {
                 display: none !important;
+            }
+
+            #mobile-menu-btn {
+                display: block !important;
+            }
+
+            .responsive-padding {
+                padding: 80px 30px !important;
+            }
+            
+            .pm-hero-content {
+                padding: 120px 30px !important;
+            }
+            
+            .stats-row {
+                flex-direction: column !important;
+                gap: 40px !important;
+                padding-top: 50px !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .responsive-padding {
+                padding: 60px 20px !important;
+            }
+            
+            .pm-hero-headline {
+                font-size: 2.8rem !important;
+                min-width: unset !important;
+            }
+
+            .stats-grid {
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
+            
+            .image-strip {
+                display: block !important;
+            }
+            
+            .image-strip > div {
+                width: 100% !important;
+            }
+            
+            .product-grid-row {
+                grid-template-columns: 1fr !important;
             }
         }
     </style>
@@ -491,7 +583,7 @@
             style="position: fixed; top: 40px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1300px; background-color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; z-index: 1000; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border-radius: 4px;">
             <!-- Logo -->
             <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-                <img src="images /Footer/Asset 2.svg" alt="Amstar Pumps" style="height: 55px; width: auto;">
+                <img src="images /navabr.svg" alt="Amstar Pumps" style="height: 55px; width: auto;">
             </a>
 
             <!-- Links and Button Group -->
@@ -507,12 +599,28 @@
                         style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;"
                         onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Shop</a>
                 </div>
-                <a href="contact.html"
+                <a href="contact.html" class="nav-cta-btn"
                     style="background-color: #003366; color: #ffffff; padding: 12px 28px; border-radius: 0; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-size: 14.5px;"
                     onmouseover="this.style.backgroundColor='#004fb1'"
                     onmouseout="this.style.backgroundColor='#003366'">Contact</a>
+                
+                <!-- Hamburger Button -->
+                <button id="mobile-menu-btn" style="display: none; background: none; border: none; cursor: pointer; padding: 5px;">
+                    <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2H26M2 10H26M2 18H26" stroke="#1a2b4c" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
             </div>
         </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu">
+            <button class="close-btn">&times;</button>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html" style="background: #003366; color: #fff; padding: 12px 40px; margin-top: 10px;">Contact</a>
+        </div>
 <!-- ============================================================ -->
 <!-- PREMIUM HERO SECTION                                          -->
 <!-- ============================================================ -->
@@ -538,66 +646,66 @@
 <!-- ============================================================ -->
 <!-- SECTION 3: About Us – Global Strength                        -->
 <!-- ============================================================ -->
-<section style="padding: 0; margin: 0;">
-<!-- Blue top panel -->
-<div style="background: #0f4c97; padding: 144px 148px;">
-<div style="display:flex; align-items:flex-start; gap:60px; flex-wrap:wrap;">
-<!-- Left -->
-<div style="flex:1 1 340px; min-width:260px;">
-<div style="font-family: 'Alan Sans', sans-serif; font-size:16px; font-weight:600; color:#9fe6ed; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:14px;">
-                                About Us</div>
-<h2 style="font-family: 'Alan Sans', sans-serif; font-size:clamp(1.8rem, 3.2vw, 3.6rem); font-weight:400; color:#fff; line-height:1.15; margin:0 0 20px; letter-spacing:-0.01em;">
-                                Global strength. Local trust.</h2>
-<p style="font-family: 'Alan Sans', sans-serif; font-size:1.1rem; line-height:1.75; color:#eeeeee; margin:0; max-width:724px; font-weight:300;">
-                                Founded in 2023, Amstar was built with a clear purpose, to deliver uncompromised pump
-                                quality at an accessible price point. Backed by years of industry experience, we design
-                                and manufacture a wide range of submersible, monoblock, open well and booster pumps
-                                using superior components and rigorous quality control.
-                            </p>
-</div>
-<!-- Right: stats -->
-<div style="flex:1 1 380px; display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:nowrap; padding-top:36px;">
-<div>
-<div style="font-family: 'Alan Sans', sans-serif; font-size:clamp(2.4rem, 7vw, 4.9rem); font-weight:400; color:#fff; line-height:1; margin-bottom:10px;">
-                                    2<span style="color: #9fe6ed;">+</span></div>
-<div style="font-family: 'Alan Sans', sans-serif; font-size:14.5px; color:#9fe6ed; line-height:1.45;">
-                                    Years of<br/>Manufacturing Excellence</div>
-</div>
-<div>
-<div style="font-family: 'Alan Sans', sans-serif; font-size:clamp(2.4rem, 7vw, 4.9rem); font-weight:400; color:#fff; line-height:1; margin-bottom:10px;">
-                                    20<span style="color: #9fe6ed;">+</span></div>
-<div style="font-family: 'Alan Sans', sans-serif; font-size:14.5px; color:#9fe6ed; line-height:1.45;">
-<br/>Countries
-                                </div>
-</div>
-<div>
-<div style="font-family: 'Alan Sans', sans-serif; font-size:clamp(2.4rem, 7vw, 4.9rem); font-weight:400; color:#fff; line-height:1; margin-bottom:10px;">
-                                    1000<span style="color: #9fe6ed;">+</span></div>
-<div style="font-family: 'Alan Sans', sans-serif; font-size:14.5px; color:#9fe6ed; line-height:1.45;">
-                                    Pumps &amp; Motors<br/>Installed</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Image strip -->
-<div style="display:flex; width:100%; overflow:hidden; line-height:0;">
-<div style="flex:1; overflow:hidden;">
-<img alt="Product 1" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.06)'" src="images /about /Asset 3.webp" style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"/>
-</div>
-<div style="flex:1; overflow:hidden;">
-<img alt="Product 2" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.06)'" src="images /about /Asset 4.webp" style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"/>
-</div>
-<div style="flex:1; overflow:hidden;">
-<img alt="Product 3" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.06)'" src="images /about /Asset 5.webp" style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"/>
-</div>
-<div style="flex:1; overflow:hidden;">
-<img alt="Product 4" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.06)'" src="images /about /Asset 6.webp" style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"/>
-</div>
-<div style="flex:1; overflow:hidden;">
-<img alt="Product 5" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.06)'" src="images /about /Asset 7.webp" style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"/>
-</div>
-</div>
-</section>
+        <section style="padding: 0; margin: 0;">
+            <!-- Blue top panel -->
+            <div class="responsive-padding" style="background: #0f4c97;">
+                <div style="display:flex; align-items:flex-start; gap:60px; flex-wrap:wrap;">
+                    <!-- Left -->
+                    <div style="flex:1 1 340px; min-width:260px;">
+                        <div style="font-family: 'Alan Sans', sans-serif; font-size:16px; font-weight:600; color:#9fe6ed; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:14px;">
+                            About Us</div>
+                        <h2 style="font-family: 'Alan Sans', sans-serif; font-size:clamp(1.8rem, 3.2vw, 3.6rem); font-weight:400; color:#fff; line-height:1.15; margin:0 0 20px; letter-spacing:-0.01em;">
+                            Global strength. Local trust.</h2>
+                        <p style="font-family: 'Alan Sans', sans-serif; font-size:1.1rem; line-height:1.75; color:#eeeeee; margin:0; max-width:724px; font-weight:300;">
+                            Founded in 2023, Amstar was built with a clear purpose, to deliver uncompromised pump
+                            quality at an accessible price point. Backed by years of industry experience, we design
+                            and manufacture a wide range of submersible, monoblock, open well and booster pumps
+                            using superior components and rigorous quality control.
+                        </p>
+                    </div>
+                    <!-- Right: stats -->
+                    <div class="stats-row" style="flex:1 1 380px; display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:nowrap; padding-top:36px;">
+                        <div>
+                            <div style="font-family: 'Alan Sans', sans-serif; font-size:clamp(2.4rem, 7vw, 4.9rem); font-weight:400; color:#fff; line-height:1; margin-bottom:10px;">
+                                <span class="counter" data-target="2">0</span><span style="color: #9fe6ed;">+</span></div>
+                            <div style="font-family: 'Alan Sans', sans-serif; font-size:14.5px; color:#9fe6ed; line-height:1.45;">
+                                Years of<br/>Manufacturing Excellence</div>
+                        </div>
+                        <div>
+                            <div style="font-family: 'Alan Sans', sans-serif; font-size:clamp(2.4rem, 7vw, 4.9rem); font-weight:400; color:#fff; line-height:1; margin-bottom:10px;">
+                                <span class="counter" data-target="20">0</span><span style="color: #9fe6ed;">+</span></div>
+                            <div style="font-family: 'Alan Sans', sans-serif; font-size:14.5px; color:#9fe6ed; line-height:1.45;">
+                                <br/>Countries
+                            </div>
+                        </div>
+                        <div>
+                            <div style="font-family: 'Alan Sans', sans-serif; font-size:clamp(2.4rem, 7vw, 4.9rem); font-weight:400; color:#fff; line-height:1; margin-bottom:10px;">
+                                <span class="counter" data-target="1000">0</span><span style="color: #9fe6ed;">+</span></div>
+                            <div style="font-family: 'Alan Sans', sans-serif; font-size:14.5px; color:#9fe6ed; line-height:1.45;">
+                                Pumps &amp; Motors<br/>Installed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Image strip -->
+            <div class="image-strip" style="display:flex; width:100%; overflow:hidden; line-height:0;">
+                <div style="flex:1; overflow:hidden;">
+                    <img alt="Product 1" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.06)'" src="images /about /Asset 3.webp" style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"/>
+                </div>
+                <div style="flex:1; overflow:hidden;">
+                    <img alt="Product 2" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.06)'" src="images /about /Asset 4.webp" style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"/>
+                </div>
+                <div style="flex:1; overflow:hidden;">
+                    <img alt="Product 3" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.06)'" src="images /about /Asset 5.webp" style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"/>
+                </div>
+                <div style="flex:1; overflow:hidden;">
+                    <img alt="Product 4" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.06)'" src="images /about /Asset 6.webp" style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"/>
+                </div>
+                <div style="flex:1; overflow:hidden;">
+                    <img alt="Product 5" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.06)'" src="images /about /Asset 7.webp" style="width:100%; height:420px; object-fit:cover; display:block; transition:transform .4s ease;"/>
+                </div>
+            </div>
+        </section>
 <!-- ============================================================ -->
 <!-- SECTION 3b: Our Services – Product Range                     -->
 <!-- ============================================================ -->
@@ -1216,7 +1324,7 @@
 <!-- Branding and Certifications -->
 <div class="col-lg-5 mb-5 mb-lg-0">
 <div style="margin-bottom: 40px; display: flex; align-items: center; gap: 15px;">
-<img alt="Amstar Pumps" src="images /Footer/Asset 2.svg" style="height: 80px; width: auto;"/>
+<img alt="Amstar Pumps" src="images /Footer/Asset 2(1).svg" style="height: 80px; width: auto;"/>
 </div>
 <div style="display: flex; align-items: center; gap: 20px;">
 <img alt="Certifications" src="images /Footer/Certification logos.png" style="height: 37px; width: auto; opacity: 0.9;"/>
@@ -1387,6 +1495,81 @@
 
             setNavbarStyle(window.scrollY, "up");
         })();
+    </script>
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const closeBtn = document.querySelector('#mobile-menu .close-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+
+            if (closeBtn && mobileMenu) {
+                closeBtn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+
+            // Close menu on link click
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+    </script>
+
+    <!-- Counter Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.counter');
+            const duration = 2000; // Animation duration in ms
+
+            const animateCounter = (counter) => {
+                const target = +counter.getAttribute('data-target');
+                const startTime = performance.now();
+
+                const updateCount = (currentTime) => {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const currentCount = Math.floor(progress * target);
+
+                    counter.innerText = currentCount;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                requestAnimationFrame(updateCount);
+            };
+
+            const observerOptions = {
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            counters.forEach(counter => observer.observe(counter));
+        });
     </script>
 </body>
 </html>

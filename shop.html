@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <title>
-   Optilux - Eye Clinic Optometrist and Optical Store HTML Template
-  </title>
-  <link href="images/icon.webp" rel="icon" sizes="16x16" type="image/gif"/>
+  <title>Amstar Pumps</title>
+  <link href="images /favicon.svg" rel="icon" sizes="16x16" type="image/gif"/>
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="Optilux - Eye Clinic Optometrist and Optical Store HTML Template" name="description"/>
@@ -20,6 +18,11 @@
   <!-- color scheme -->
   <link href="css/colors/scheme-01.css" id="colors" rel="stylesheet" type="text/css"/>
   <style>
+   html, body {
+            height: auto !important;
+            overflow: visible !important;
+        }
+
    * {
             font-family: 'Alan Sans', sans-serif !important;
             border-radius: 0 !important;
@@ -72,26 +75,22 @@
             left: 50%;
             transform: translateX(-50%);
             width: 90%;
-            max-width: 1560px;
-            background-color: #ffffff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 40px;
-        #main-nav {
-            position: fixed;
-            top: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 1560px;
+            max-width: 1300px;
             background-color: #ffffff;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 40px;
             z-index: 1000;
-            transition: top 0.45s cubic-bezier(0.4, 0, 0.2, 1), left 0.45s cubic-bezier(0.4, 0, 0.2, 1), width 0.45s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.45s cubic-bezier(0.4, 0, 0.2, 1), border-radius 0.45s cubic-bezier(0.4, 0, 0.2, 1), padding 0.45s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: top 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                        left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                        transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                        width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                        max-width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                        border-radius 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                        padding 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                        box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                        opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             border-radius: 4px;
         }
@@ -100,12 +99,181 @@
             height: auto !important;
         }
 
+        /* Mobile Menu */
+        #mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #ffffff;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            transform: translateY(-100%);
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        #mobile-menu.active {
+            transform: translateY(0);
+        }
+
+        #mobile-menu a {
+            font-size: 24px;
+            color: #1a2b4c;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        #mobile-menu .close-btn {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            background: none;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #1a2b4c;
+        }
+
         @media (max-width: 991px) {
             #main-nav {
                 width: 95% !important;
-                padding: 15px 20px !important;
+                padding: 10px 20px !important;
                 top: 20px !important;
             }
+
+            .nav-links, .nav-cta-btn {
+                display: none !important;
+            }
+
+            #mobile-menu-btn {
+                display: block !important;
+            }
+        }
+
+        #back-to-top {
+            background-color: #3ABEF9 !important;
+            border-radius: 4px;
+        }
+
+        #back-to-top:hover {
+            background-color: #00A9FF !important;
+        }
+
+        /* New Product Grid Design */
+        #product-list-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 48px 16px;
+            margin-top: 20px;
+            padding-right: 40px; /* Added breathing room on the right */
+        }
+
+        @media (min-width: 576px) {
+            #product-list-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 992px) {
+            #product-list-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .product-item {
+            display: block; /* Ensure JS show/hide works */
+        }
+
+        .product-card {
+            position: relative;
+            background: none;
+            border: none;
+        }
+
+        .product-image-box {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background-color: #f6f6f6;
+            padding: 32px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image-box a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .product-image-box img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+            transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .product-item:hover .product-image-box img {
+            transform: scale(1.08);
+        }
+
+        .product-details {
+            margin-top: 20px;
+        }
+
+        .product-title {
+            font-size: 15px !important;
+            font-weight: 500 !important;
+            color: #000 !important;
+            margin: 0 !important;
+            line-height: 1.4 !important;
+            text-decoration: none !important;
+            display: block;
+        }
+
+        .product-category {
+            font-size: 11px !important;
+            color: #6b7280 !important;
+            margin-top: 4px !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.1em !important;
+            font-weight: 400 !important;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 12px;
+        }
+
+        .add-to-cart-btn {
+            font-size: 14px !important;
+            font-weight: 500 !important;
+            color: #000 !important;
+            text-decoration: underline !important;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .product-item:hover .add-to-cart-btn {
+            opacity: 1;
         }
   </style>
  
@@ -135,7 +303,7 @@
             style="position: fixed; top: 40px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1300px; background-color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; z-index: 1000; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border-radius: 4px;">
             <!-- Logo -->
             <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-                <img src="images /Footer/Asset 2.svg" alt="Amstar Pumps" style="height: 55px; width: auto;">
+                <img src="images /navabr.svg" alt="Amstar Pumps" style="height: 55px; width: auto;">
             </a>
 
             <!-- Links and Button Group -->
@@ -151,12 +319,28 @@
                         style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;"
                         onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Shop</a>
                 </div>
-                <a href="contact.html"
+                <a href="contact.html" class="nav-cta-btn"
                     style="background-color: #003366; color: #ffffff; padding: 12px 28px; border-radius: 0; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-size: 14.5px;"
                     onmouseover="this.style.backgroundColor='#004fb1'"
                     onmouseout="this.style.backgroundColor='#003366'">Contact</a>
+
+                <!-- Hamburger Button -->
+                <button id="mobile-menu-btn" style="display: none; background: none; border: none; cursor: pointer; padding: 5px;">
+                    <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2H26M2 10H26M2 18H26" stroke="#1a2b4c" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
             </div>
         </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu">
+            <button class="close-btn">&times;</button>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html" style="background: #003366; color: #fff; padding: 12px 40px; margin-top: 10px;">Contact</a>
+        </div>
    <!-- content begin -->
    <main style="padding-top: 100px;">
     <div id="top">
@@ -165,33 +349,6 @@
      <div class="container">
       <div class="row g-4">
        <div class="col-lg-3">
-        <div class="item_filter_group">
-         <h4>
-          Price ($)
-         </h4>
-         <div class="price-input">
-          <div class="field">
-           <span>
-            Min
-           </span>
-           <input class="input-min" type="number" value="0"/>
-          </div>
-          <div class="field">
-           <span>
-            Max
-           </span>
-           <input class="input-max" type="number" value="1000"/>
-          </div>
-         </div>
-         <div class="slider">
-          <div class="progress">
-          </div>
-         </div>
-         <div class="range-input">
-          <input class="range-min" max="2000" min="0" step="1" type="range" value="0"/>
-          <input class="range-max" max="2000" min="0" step="1" type="range" value="2000"/>
-         </div>
-        </div>
         <div class="item_filter_group">
          <h4>
           Categories
@@ -268,655 +425,438 @@
         </div>
        </div>
        <div class="col-lg-9">
-        <div class="row g-4" id="product-list-container">
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="submersible_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=4-inch-submersible-motor&amp;name=4%E2%80%9D+Submersible+Motor&amp;img=product-images%2F4-submersible-motor.jpg">
-             <img class="atr__image-main" src="product-images/4-submersible-motor.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=4-inch-submersible-motor&amp;name=4%E2%80%9D+Submersible+Motor&amp;img=product-images%2F4-submersible-motor.jpg">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+        <div id="product-list-container">
+          <!-- 4” Submersible Motor -->
+          <div class="product-item" data-application="residential" data-category="submersible_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=4-inch-submersible-motor&amp;name=4%E2%80%9D+Submersible+Motor&amp;img=product-images%2F4-submersible-motor.jpg">
+                  <img src="product-images/4-submersible-motor.jpg" alt="4” Submersible Motor"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=4-inch-submersible-motor&amp;name=4%E2%80%9D+Submersible+Motor&amp;img=product-images%2F4-submersible-motor.jpg" class="product-title">4” Submersible Motor</a>
+                <p class="product-category">Submersible Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            4” Submersible Motor
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=4-inch-submersible-motor&amp;name=4%E2%80%9D+Submersible+Motor&amp;img=product-images%2F4-submersible-motor.jpg" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="submersible_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=4-inch-submersible-pump&amp;name=4%E2%80%9D+Submersible+Pump&amp;img=product-images%2F4-submersible-pump.jpg">
-             <img class="atr__image-main" src="product-images/4-submersible-pump.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=4-inch-submersible-pump&amp;name=4%E2%80%9D+Submersible+Pump&amp;img=product-images%2F4-submersible-pump.jpg">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- 4” Submersible Pump -->
+          <div class="product-item" data-application="agriculture" data-category="submersible_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=4-inch-submersible-pump&amp;name=4%E2%80%9D+Submersible+Pump&amp;img=product-images%2F4-submersible-pump.jpg">
+                  <img src="product-images/4-submersible-pump.jpg" alt="4” Submersible Pump"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=4-inch-submersible-pump&amp;name=4%E2%80%9D+Submersible+Pump&amp;img=product-images%2F4-submersible-pump.jpg" class="product-title">4” Submersible Pump</a>
+                <p class="product-category">Submersible Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            4” Submersible Pump
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=4-inch-submersible-pump&amp;name=4%E2%80%9D+Submersible+Pump&amp;img=product-images%2F4-submersible-pump.jpg" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="submersible_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=6-inch-submersible-motor&amp;name=6%22+Submersible+Motor&amp;img=product-images%2F6-submersible-motor.jpg">
-             <img class="atr__image-main" src="product-images/6-submersible-motor.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=6-inch-submersible-motor&amp;name=6%22+Submersible+Motor&amp;img=product-images%2F6-submersible-motor.jpg">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- 6" Submersible Motor -->
+          <div class="product-item" data-application="residential" data-category="submersible_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=6-inch-submersible-motor&amp;name=6%22+Submersible+Motor&amp;img=product-images%2F6-submersible-motor.jpg">
+                  <img src="product-images/6-submersible-motor.jpg" alt="6&quot; Submersible Motor"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=6-inch-submersible-motor&amp;name=6%22+Submersible+Motor&amp;img=product-images%2F6-submersible-motor.jpg" class="product-title">6" Submersible Motor</a>
+                <p class="product-category">Submersible Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            6" Submersible Motor
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=6-inch-submersible-motor&amp;name=6%22+Submersible+Motor&amp;img=product-images%2F6-submersible-motor.jpg" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="submersible_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=product-images%2F6-submersible-motor-1.jpg">
-             <img class="atr__image-main" src="product-images/6-submersible-motor-1.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=product-images%2F6-submersible-motor-1.jpg">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- 6” Submersible Motor -->
+          <div class="product-item" data-application="residential" data-category="submersible_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=product-images%2F6-submersible-motor-1.jpg">
+                  <img src="product-images/6-submersible-motor-1.jpg" alt="6” Submersible Motor"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=product-images%2F6-submersible-motor-1.jpg" class="product-title">6” Submersible Motor</a>
+                <p class="product-category">Submersible Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            6” Submersible Motor
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=product-images%2F6-submersible-motor-1.jpg" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="submersible_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=product-images%2F6-submersible-motor.jpg">
-             <img class="atr__image-main" src="product-images/6-submersible-motor.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=product-images%2F6-submersible-motor.jpg">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- 6” Submersible Motor -->
+          <div class="product-item" data-application="residential" data-category="submersible_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=product-images%2F6-submersible-motor.jpg">
+                  <img src="product-images/6-submersible-motor.jpg" alt="6” Submersible Motor"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=product-images%2F6-submersible-motor.jpg" class="product-title">6” Submersible Motor</a>
+                <p class="product-category">Submersible Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            6” Submersible Motor
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=product-images%2F6-submersible-motor.jpg" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="submersible_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=6-inch-submersible-pump&amp;name=6%E2%80%9D+Submersible+Pump&amp;img=product-images%2F6-submersible-pump.jpg">
-             <img class="atr__image-main" src="product-images/6-submersible-pump.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=6-inch-submersible-pump&amp;name=6%E2%80%9D+Submersible+Pump&amp;img=product-images%2F6-submersible-pump.jpg">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- 6” Submersible Pump -->
+          <div class="product-item" data-application="agriculture" data-category="submersible_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=6-inch-submersible-pump&amp;name=6%E2%80%9D+Submersible+Pump&amp;img=product-images%2F6-submersible-pump.jpg">
+                  <img src="product-images/6-submersible-pump.jpg" alt="6” Submersible Pump"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=6-inch-submersible-pump&amp;name=6%E2%80%9D+Submersible+Pump&amp;img=product-images%2F6-submersible-pump.jpg" class="product-title">6” Submersible Pump</a>
+                <p class="product-category">Submersible Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            6” Submersible Pump
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=6-inch-submersible-pump&amp;name=6%E2%80%9D+Submersible+Pump&amp;img=product-images%2F6-submersible-pump.jpg" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="submersible_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=8-inch-submersible-pump&amp;name=8%22+Submersible+Pump&amp;img=product-images%2F8-submersible-pump.png">
-             <img class="atr__image-main" src="product-images/8-submersible-pump.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=8-inch-submersible-pump&amp;name=8%22+Submersible+Pump&amp;img=product-images%2F8-submersible-pump.png">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- 8" Submersible Pump -->
+          <div class="product-item" data-application="agriculture" data-category="submersible_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=8-inch-submersible-pump&amp;name=8%22+Submersible+Pump&amp;img=product-images%2F8-submersible-pump.png">
+                  <img src="product-images/8-submersible-pump.png" alt="8&quot; Submersible Pump"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=8-inch-submersible-pump&amp;name=8%22+Submersible+Pump&amp;img=product-images%2F8-submersible-pump.png" class="product-title">8" Submersible Pump</a>
+                <p class="product-category">Submersible Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            8" Submersible Pump
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=8-inch-submersible-pump&amp;name=8%22+Submersible+Pump&amp;img=product-images%2F8-submersible-pump.png" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="submersible_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=8-inch-submersible-motor&amp;name=8%E2%80%9D+Submersible+Motor&amp;img=product-images%2F8-submersible-motor.jpg">
-             <img class="atr__image-main" src="product-images/8-submersible-motor.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=8-inch-submersible-motor&amp;name=8%E2%80%9D+Submersible+Motor&amp;img=product-images%2F8-submersible-motor.jpg">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- 8” Submersible Motor -->
+          <div class="product-item" data-application="residential" data-category="submersible_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=8-inch-submersible-motor&amp;name=8%E2%80%9D+Submersible+Motor&amp;img=product-images%2F8-submersible-motor.jpg">
+                  <img src="product-images/8-submersible-motor.jpg" alt="8” Submersible Motor"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=8-inch-submersible-motor&amp;name=8%E2%80%9D+Submersible+Motor&amp;img=product-images%2F8-submersible-motor.jpg" class="product-title">8” Submersible Motor</a>
+                <p class="product-category">Submersible Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            8” Submersible Motor
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=8-inch-submersible-motor&amp;name=8%E2%80%9D+Submersible+Motor&amp;img=product-images%2F8-submersible-motor.jpg" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="other_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=booster-pump&amp;name=Booster+Pump&amp;img=product-images%2Fbooster-pump.png">
-             <img class="atr__image-main" src="product-images/booster-pump.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=booster-pump&amp;name=Booster+Pump&amp;img=product-images%2Fbooster-pump.png">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- Booster Pump -->
+          <div class="product-item" data-application="residential" data-category="other_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=booster-pump&amp;name=Booster+Pump&amp;img=product-images%2Fbooster-pump.png">
+                  <img src="product-images/booster-pump.png" alt="Booster Pump"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=booster-pump&amp;name=Booster+Pump&amp;img=product-images%2Fbooster-pump.png" class="product-title">Booster Pump</a>
+                <p class="product-category">Other Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            Booster Pump
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=booster-pump&amp;name=Booster+Pump&amp;img=product-images%2Fbooster-pump.png" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="other_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=cables&amp;name=Cables&amp;img=product-images%2Fcables.png">
-             <img class="atr__image-main" src="product-images/cables.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=cables&amp;name=Cables&amp;img=product-images%2Fcables.png">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- Cables -->
+          <div class="product-item" data-application="residential" data-category="other_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=cables&amp;name=Cables&amp;img=product-images%2Fcables.png">
+                  <img src="product-images/cables.png" alt="Cables"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=cables&amp;name=Cables&amp;img=product-images%2Fcables.png" class="product-title">Cables</a>
+                <p class="product-category">Other Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            Cables
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=cables&amp;name=Cables&amp;img=product-images%2Fcables.png" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="other_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=centrifugal-pump&amp;name=Centrifugal+Pump&amp;img=product-images%2Fcentrifugal-pump.png">
-             <img class="atr__image-main" src="product-images/centrifugal-pump.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=centrifugal-pump&amp;name=Centrifugal+Pump&amp;img=product-images%2Fcentrifugal-pump.png">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- Centrifugal Pump -->
+          <div class="product-item" data-application="residential" data-category="other_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=centrifugal-pump&amp;name=Centrifugal+Pump&amp;img=product-images%2Fcentrifugal-pump.png">
+                  <img src="product-images/centrifugal-pump.png" alt="Centrifugal Pump"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=centrifugal-pump&amp;name=Centrifugal+Pump&amp;img=product-images%2Fcentrifugal-pump.png" class="product-title">Centrifugal Pump</a>
+                <p class="product-category">Other Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            Centrifugal Pump
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=centrifugal-pump&amp;name=Centrifugal+Pump&amp;img=product-images%2Fcentrifugal-pump.png" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="other_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=circulatory-pump&amp;name=Circulatory+Pump&amp;img=product-images%2Fcirculatory-pump.png">
-             <img class="atr__image-main" src="product-images/circulatory-pump.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=circulatory-pump&amp;name=Circulatory+Pump&amp;img=product-images%2Fcirculatory-pump.png">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- Circulatory Pump -->
+          <div class="product-item" data-application="residential" data-category="other_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=circulatory-pump&amp;name=Circulatory+Pump&amp;img=product-images%2Fcirculatory-pump.png">
+                  <img src="product-images/circulatory-pump.png" alt="Circulatory Pump"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=circulatory-pump&amp;name=Circulatory+Pump&amp;img=product-images%2Fcirculatory-pump.png" class="product-title">Circulatory Pump</a>
+                <p class="product-category">Other Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            Circulatory Pump
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=circulatory-pump&amp;name=Circulatory+Pump&amp;img=product-images%2Fcirculatory-pump.png" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="control_panels">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=control-panel&amp;name=Control+Panel&amp;img=product-images%2Fcontrol-panel.png">
-             <img class="atr__image-main" src="product-images/control-panel.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=control-panel&amp;name=Control+Panel&amp;img=product-images%2Fcontrol-panel.png">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- Control Panel -->
+          <div class="product-item" data-application="agriculture" data-category="control_panels">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=control-panel&amp;name=Control+Panel&amp;img=product-images%2Fcontrol-panel.png">
+                  <img src="product-images/control-panel.png" alt="Control Panel"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=control-panel&amp;name=Control+Panel&amp;img=product-images%2Fcontrol-panel.png" class="product-title">Control Panel</a>
+                <p class="product-category">Control Panels</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            Control Panel
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=control-panel&amp;name=Control+Panel&amp;img=product-images%2Fcontrol-panel.png" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="other_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=de-water-pump&amp;name=De+Water+Pump&amp;img=product-images%2Fde-water-pump.png">
-             <img class="atr__image-main" src="product-images/de-water-pump.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=de-water-pump&amp;name=De+Water+Pump&amp;img=product-images%2Fde-water-pump.png">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- De Water Pump -->
+          <div class="product-item" data-application="agriculture" data-category="other_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=de-water-pump&amp;name=De+Water+Pump&amp;img=product-images%2Fde-water-pump.png">
+                  <img src="product-images/de-water-pump.png" alt="De Water Pump"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=de-water-pump&amp;name=De+Water+Pump&amp;img=product-images%2Fde-water-pump.png" class="product-title">De Water Pump</a>
+                <p class="product-category">Other Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            De Water Pump
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=de-water-pump&amp;name=De+Water+Pump&amp;img=product-images%2Fde-water-pump.png" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="monoblock_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=monoblock&amp;name=Monoblock&amp;img=product-images%2Fmonoblock-1.png">
-             <img class="atr__image-main" src="product-images/monoblock-1.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=monoblock&amp;name=Monoblock&amp;img=product-images%2Fmonoblock-1.png">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- Monoblock -->
+          <div class="product-item" data-application="agriculture" data-category="monoblock_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=monoblock&amp;name=Monoblock&amp;img=product-images%2Fmonoblock-1.png">
+                  <img src="product-images/monoblock-1.png" alt="Monoblock"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=monoblock&amp;name=Monoblock&amp;img=product-images%2Fmonoblock-1.png" class="product-title">Monoblock</a>
+                <p class="product-category">Monoblock Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            Monoblock
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=monoblock&amp;name=Monoblock&amp;img=product-images%2Fmonoblock-1.png" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="monoblock_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=monoblock&amp;name=Monoblock&amp;img=product-images%2Fmonoblock.png">
-             <img class="atr__image-main" src="product-images/monoblock.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=monoblock&amp;name=Monoblock&amp;img=product-images%2Fmonoblock.png">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- Monoblock -->
+          <div class="product-item" data-application="agriculture" data-category="monoblock_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=monoblock&amp;name=Monoblock&amp;img=product-images%2Fmonoblock.png">
+                  <img src="product-images/monoblock.png" alt="Monoblock"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=monoblock&amp;name=Monoblock&amp;img=product-images%2Fmonoblock.png" class="product-title">Monoblock</a>
+                <p class="product-category">Monoblock Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            Monoblock
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=monoblock&amp;name=Monoblock&amp;img=product-images%2Fmonoblock.png" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="openwell_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=openwell-single-phase&amp;name=Openwell+Single+Phase&amp;img=product-images%2Fopenwell-single-phase.jpg">
-             <img class="atr__image-main" src="product-images/openwell-single-phase.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=openwell-single-phase&amp;name=Openwell+Single+Phase&amp;img=product-images%2Fopenwell-single-phase.jpg">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- Openwell Single Phase -->
+          <div class="product-item" data-application="agriculture" data-category="openwell_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=openwell-single-phase&amp;name=Openwell+Single+Phase&amp;img=product-images%2Fopenwell-single-phase.jpg">
+                  <img src="product-images/openwell-single-phase.jpg" alt="Openwell Single Phase"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=openwell-single-phase&amp;name=Openwell+Single+Phase&amp;img=product-images%2Fopenwell-single-phase.jpg" class="product-title">Openwell Single Phase</a>
+                <p class="product-category">Openwell Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            Openwell Single Phase
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=openwell-single-phase&amp;name=Openwell+Single+Phase&amp;img=product-images%2Fopenwell-single-phase.jpg" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="openwell_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=openwell-three-phase&amp;name=Openwell+Three+Phase&amp;img=product-images%2Fopenwell-three-phase.jpg">
-             <img class="atr__image-main" src="product-images/openwell-three-phase.jpg" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=openwell-three-phase&amp;name=Openwell+Three+Phase&amp;img=product-images%2Fopenwell-three-phase.jpg">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- Openwell Three Phase -->
+          <div class="product-item" data-application="residential" data-category="openwell_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=openwell-three-phase&amp;name=Openwell+Three+Phase&amp;img=product-images%2Fopenwell-three-phase.jpg">
+                  <img src="product-images/openwell-three-phase.jpg" alt="Openwell Three Phase"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=openwell-three-phase&amp;name=Openwell+Three+Phase&amp;img=product-images%2Fopenwell-three-phase.jpg" class="product-title">Openwell Three Phase</a>
+                <p class="product-category">Openwell Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            Openwell Three Phase
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=openwell-three-phase&amp;name=Openwell+Three+Phase&amp;img=product-images%2Fopenwell-three-phase.jpg" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="pipes">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=pipe&amp;name=Pipe&amp;img=product-images%2Fpipe.png">
-             <img class="atr__image-main" src="product-images/pipe.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=pipe&amp;name=Pipe&amp;img=product-images%2Fpipe.png">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- Pipe -->
+          <div class="product-item" data-application="residential" data-category="pipes">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=pipe&amp;name=Pipe&amp;img=product-images%2Fpipe.png">
+                  <img src="product-images/pipe.png" alt="Pipe"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=pipe&amp;name=Pipe&amp;img=product-images%2Fpipe.png" class="product-title">Pipe</a>
+                <p class="product-category">Pipes</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            Pipe
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=pipe&amp;name=Pipe&amp;img=product-images%2Fpipe.png" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="self-priming_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=self-priming&amp;name=Self+Priming&amp;img=product-images%2Fself-priming.png">
-             <img class="atr__image-main" src="product-images/self-priming.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=self-priming&amp;name=Self+Priming&amp;img=product-images%2Fself-priming.png">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- Self Priming -->
+          <div class="product-item" data-application="residential" data-category="self-priming_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=self-priming&amp;name=Self+Priming&amp;img=product-images%2Fself-priming.png">
+                  <img src="product-images/self-priming.png" alt="Self Priming"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=self-priming&amp;name=Self+Priming&amp;img=product-images%2Fself-priming.png" class="product-title">Self Priming</a>
+                <p class="product-category">Self Priming Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            Self Priming
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=self-priming&amp;name=Self+Priming&amp;img=product-images%2Fself-priming.png" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="other_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=sewage-pump&amp;name=Sewage+Pump&amp;img=product-images%2Fsewage-pump.png">
-             <img class="atr__image-main" src="product-images/sewage-pump.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=sewage-pump&amp;name=Sewage+Pump&amp;img=product-images%2Fsewage-pump.png">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- Sewage Pump -->
+          <div class="product-item" data-application="agriculture" data-category="other_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=sewage-pump&amp;name=Sewage+Pump&amp;img=product-images%2Fsewage-pump.png">
+                  <img src="product-images/sewage-pump.png" alt="Sewage Pump"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=sewage-pump&amp;name=Sewage+Pump&amp;img=product-images%2Fsewage-pump.png" class="product-title">Sewage Pump</a>
+                <p class="product-category">Other Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            Sewage Pump
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=sewage-pump&amp;name=Sewage+Pump&amp;img=product-images%2Fsewage-pump.png" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="other_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=splitcase-pump&amp;name=Splitcase+Pump&amp;img=product-images%2Fsplitcase-pump.png">
-             <img class="atr__image-main" src="product-images/splitcase-pump.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=splitcase-pump&amp;name=Splitcase+Pump&amp;img=product-images%2Fsplitcase-pump.png">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- Splitcase Pump -->
+          <div class="product-item" data-application="residential" data-category="other_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=splitcase-pump&amp;name=Splitcase+Pump&amp;img=product-images%2Fsplitcase-pump.png">
+                  <img src="product-images/splitcase-pump.png" alt="Splitcase Pump"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=splitcase-pump&amp;name=Splitcase+Pump&amp;img=product-images%2Fsplitcase-pump.png" class="product-title">Splitcase Pump</a>
+                <p class="product-category">Other Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            Splitcase Pump
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=splitcase-pump&amp;name=Splitcase+Pump&amp;img=product-images%2Fsplitcase-pump.png" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="residential" data-category="other_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=vertical-multistage-pump&amp;name=Vertical+Multistage+Pump&amp;img=product-images%2Fvertical-multistage-pump.png">
-             <img class="atr__image-main" src="product-images/vertical-multistage-pump.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=vertical-multistage-pump&amp;name=Vertical+Multistage+Pump&amp;img=product-images%2Fvertical-multistage-pump.png">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- Vertical Multistage Pump -->
+          <div class="product-item" data-application="residential" data-category="other_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=vertical-multistage-pump&amp;name=Vertical+Multistage+Pump&amp;img=product-images%2Fvertical-multistage-pump.png">
+                  <img src="product-images/vertical-multistage-pump.png" alt="Vertical Multistage Pump"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=vertical-multistage-pump&amp;name=Vertical+Multistage+Pump&amp;img=product-images%2Fvertical-multistage-pump.png" class="product-title">Vertical Multistage Pump</a>
+                <p class="product-category">Other Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            Vertical Multistage Pump
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=vertical-multistage-pump&amp;name=Vertical+Multistage+Pump&amp;img=product-images%2Fvertical-multistage-pump.png" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
-         <!-- product item begin -->
-         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-application="agriculture" data-category="openwell_pumps">
-          <div class="de__pcard text-center">
-           <div class="atr__images" style="height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
-            <a href="products.html?id=vertical-openwell&amp;name=Vertical+Openwell&amp;img=product-images%2Fvertical-openwell.png">
-             <img class="atr__image-main" src="product-images/vertical-openwell.png" style="max-height: 200px; width: auto; object-fit: contain;"/>
-            </a>
-            <div class="atr__extra-menu">
-             <a class="atr__quick-view" href="products.html?id=vertical-openwell&amp;name=Vertical+Openwell&amp;img=product-images%2Fvertical-openwell.png">
-              <i class="icon_zoom-in_alt">
-              </i>
-             </a>
-             <div class="atr__add-cart">
-              <i class="icon_cart_alt">
-              </i>
-             </div>
+
+          <!-- Vertical Openwell -->
+          <div class="product-item" data-application="agriculture" data-category="openwell_pumps">
+            <div class="product-card">
+              <div class="product-image-box">
+                <a href="products.html?id=vertical-openwell&amp;name=Vertical+Openwell&amp;img=product-images%2Fvertical-openwell.png">
+                  <img src="product-images/vertical-openwell.png" alt="Vertical Openwell"/>
+                </a>
+              </div>
+              <div class="product-details">
+                <a href="products.html?id=vertical-openwell&amp;name=Vertical+Openwell&amp;img=product-images%2Fvertical-openwell.png" class="product-title">Vertical Openwell</a>
+                <p class="product-category">Openwell Pumps</p>
+                <div class="product-footer">
+                  <button class="add-to-cart-btn">View more</button>
+                </div>
+              </div>
             </div>
-           </div>
-           <h3 style="font-size: 16px; margin-top: 15px; margin-bottom: 15px;">
-            Vertical Openwell
-           </h3>
-           <a class="btn-main w-100" href="products.html?id=vertical-openwell&amp;name=Vertical+Openwell&amp;img=product-images%2Fvertical-openwell.png" style="padding: 10px; display: block; color: white;">
-            View Details
-           </a>
           </div>
-         </div>
-         <!-- product item end -->
         </div>
         <!-- pagination begin -->
         <div class="col-lg-12 pt-5 text-center">
@@ -944,7 +884,7 @@
       <!-- Branding and Certifications -->
       <div class="col-lg-5 mb-5 mb-lg-0">
        <div style="margin-bottom: 30px;">
-        <img alt="Amstar Pumps" src="images /Footer/Asset 2.svg" style="height: 100px; width: auto;"/>
+        <img alt="Amstar Pumps" src="images /Footer/Asset 2(1).svg" style="height: 100px; width: auto;"/>
        </div>
        <div style="display: flex; align-items: center; gap: 20px;">
         <img alt="Certifications" src="images /Footer/Certification logos.png" style="height: 45px; width: auto;"/>
@@ -1132,6 +1072,37 @@
   <script src="js/designesia.js">
   </script>
  
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const closeBtn = document.querySelector('#mobile-menu .close-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+
+            if (closeBtn && mobileMenu) {
+                closeBtn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+
+            // Close menu on link click
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+    </script>
     <script>
         (function () {
             const navbar = document.getElementById("main-nav");
@@ -1141,15 +1112,15 @@
             let ticking = false;
 
             function setNavbarStyle(scrollY, direction) {
-                if (scrollY < 5) {
-                    // Top of page: floating pill
-                    navbar.style.top = "40px";
+                if (scrollY < 100) {
+                    // Initial: floating pill
                     navbar.style.left = "50%";
                     navbar.style.transform = "translateX(-50%)";
                     navbar.style.width = "90%";
                     navbar.style.maxWidth = "1300px";
                     navbar.style.borderRadius = "4px";
                     navbar.style.padding = "15px 40px";
+                    navbar.style.top = "40px";
                     navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.08)";
                     navbar.style.opacity = "1";
                     navbar.style.pointerEvents = "";
