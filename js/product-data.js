@@ -2,6 +2,7 @@
 window.PRODUCT_DATA = {
   "4-inch-submersible-motor": {
     "name": "4\" Submersible Motor",
+    "img": "images/Compressed 2/Compressed 2/4” Submersible Motor.webp",
     "category": "Submersible",
     "heroTitle": "Submersible System",
     "description": "The Amstar 4\" Water-Filled Submersible Motor is designed to deliver reliable, efficient, and long-lasting performance for borewell and submersible pump applications. Engineered for continuous operation, it provides stable output even under demanding working conditions.",
@@ -92,6 +93,7 @@ window.PRODUCT_DATA = {
   },
   "4-inch-submersible-pump": {
     "name": "4\" Submersible Pump",
+    "img": "images/Compressed 2/Compressed 2/4” Submersible Pump.webp",
     "category": "Submersible",
     "heroTitle": "Submersible System",
     "description": "The Amstar 4\" Submersible Pump is designed to deliver reliable, efficient, and long-lasting performance for borewell and submersible pump applications. Engineered for continuous operation, it provides stable output even under demanding working conditions.",
@@ -177,6 +179,7 @@ window.PRODUCT_DATA = {
   },
   "6-inch-submersible-motor": {
     "name": "6\" Submersible Motor",
+    "img": "images/Compressed 2/Compressed 2/6” Submersible Motor.webp",
     "category": "Submersible",
     "heroTitle": "Submersible System",
     "description": "The Amstar 6\" Water-Filled Submersible Motor is designed to deliver reliable, efficient, and long-lasting performance for borewell and submersible pump applications. Engineered for continuous operation, it provides stable output even under demanding working conditions.",
@@ -266,6 +269,7 @@ window.PRODUCT_DATA = {
   },
   "8-inch-submersible-motor": {
     "name": "8\" Submersible Motor",
+    "img": "images/Compressed 2/Compressed 2/8” Submersible Motor.webp",
     "category": "Submersible",
     "heroTitle": "Submersible System",
     "description": "The Amstar 8\" Water-Filled Submersible Motor is designed to deliver reliable, efficient, and long-lasting performance for borewell and submersible pump applications. Engineered for continuous operation, it provides stable output even under demanding working conditions.",
@@ -352,6 +356,7 @@ window.PRODUCT_DATA = {
   },
   "6-inch-submersible-pump": {
     "name": "6\" Submersible Pump",
+    "img": "images/Compressed 2/Compressed 2/6” Submersible Pump.webp",
     "category": "Submersible",
     "heroTitle": "Submersible System",
     "description": "The Amstar 6\" Submersible Pump is designed to deliver reliable, efficient, and long-lasting performance for borewell and submersible pump applications. Engineered for continuous operation, it provides stable output even under demanding working conditions.",
@@ -435,6 +440,7 @@ window.PRODUCT_DATA = {
   },
   "8-inch-submersible-pump": {
     "name": "8\" Submersible Pump",
+    "img": "images/Compressed 2/Compressed 2/8_ Submersible Pump.webp",
     "category": "Submersible",
     "heroTitle": "Submersible System",
     "description": "The Amstar 8\" Submersible Pump is designed to deliver reliable, efficient, and long-lasting performance for borewell and submersible pump applications. Engineered for continuous operation, it provides stable output even under demanding working conditions.",
@@ -513,6 +519,8 @@ window.PRODUCT_DATA = {
   },
   "openwell-single-phase": {
     "name": "Openwell Single Phase",
+    "img": "images/Compressed 2/Compressed 2/Openwell Single Phase.webp",
+    "img": "images/Compressed 2/Compressed 2/Openwell Single Phase.webp",
     "category": "Multi Surface",
     "heroTitle": "Multi Surface",
     "description": "Amstar Openwell Submersible Pumps are designed for efficient and reliable water transfer in domestic and agricultural applications. Manufactured with high-quality SS302 stainless steel, they offer excellent corrosion resistance and durability. Operating at 50Hz, these pumps deliver stable performance, energy efficiency, and long service life under standard operating conditions.",
@@ -562,6 +570,8 @@ window.PRODUCT_DATA = {
   },
   "openwell-three-phase": {
     "name": "Openwell Three Phase",
+    "img": "images/Compressed 2/Compressed 2/Openwell Three Phase.webp",
+    "img": "images/Compressed 2/Compressed 2/Openwell Three Phase.webp",
     "category": "Multi Surface",
     "heroTitle": "Multi Surface",
     "description": "Amstar Openwell Submersible Pumps are designed for efficient and reliable water transfer in domestic and agricultural applications. Manufactured with high-quality SS302 stainless steel, they offer excellent corrosion resistance and durability. Operating at 50Hz, these pumps deliver stable performance, energy efficiency, and long service life under standard operating conditions.",
@@ -611,6 +621,8 @@ window.PRODUCT_DATA = {
   },
   "vertical-multistage-pump": {
     "name": "Vertical Multistage Pump",
+    "img": "images/Compressed 2/Compressed 2/Vertical Multistage Pump.webp",
+    "img": "images/Compressed 2/Compressed 2/Vertical Multistage Pump.webp",
     "category": "Multi Surface",
     "heroTitle": "Multi Surface",
     "description": "Amstar Vertical Multistage Pumps are designed for efficient and reliable water transfer in domestic agricultural and industrial applications. Manufactured with high-quality SS302 stainless steel, they offer excellent corrosion resistance and durability. Operating at 50Hz, these pumps deliver stable performance, energy efficiency, and long service life under standard operating conditions.",
@@ -665,6 +677,7 @@ window.PRODUCT_DATA = {
   },
   "monoblock": {
     "name": "Monoblock Pump",
+    "img": "images/Compressed 2/Compressed 2/Monoblock.webp",
     "category": "Multi Surface",
     "heroTitle": "Multi Surface",
     "description": "Amstar Monoblock Pumps are compact, efficient water transfer solutions for domestic and agricultural use. Designed to suit standard Indian conditions, they operate at 50Hz for stable performance. Built with a durable SS302 stainless steel body, they offer excellent corrosion resistance, reliable operation, and low maintenance with easy installation.",
@@ -709,6 +722,7 @@ window.PRODUCT_DATA = {
   },
   "self-priming": {
     "name": "Self Priming Pump",
+    "img": "images/Compressed 2/Compressed 2/Self Priming.webp",
     "category": "Multi Surface",
     "heroTitle": "Multi Surface",
     "description": "Amstar Self Priming Pumps are compact, efficient water transfer solutions for domestic and agricultural use. Designed to suit standard Indian conditions, they operate at 50Hz for stable performance. Built with a durable Aluminum body, they offer excellent corrosion resistance, reliable operation, and low maintenance with easy installation.",
@@ -753,6 +767,8 @@ window.PRODUCT_DATA = {
   },
   "splitcase-pump": {
     "name": "Splitcase Pump",
+    "img": "images/Compressed 2/Compressed 2/Splitcase Pump.webp",
+    "img": "images/Compressed 2/Compressed 2/Splitcase Pump.webp",
     "category": "Multi Surface",
     "heroTitle": "Multi Surface",
     "description": "Amstar Split Case Pumps are designed for high-capacity water transfer in industrial, municipal, and commercial applications. Featuring a horizontally split casing for easy maintenance, these pumps deliver efficient and reliable performance. Built with a robust standard design, they ensure smooth operation, high flow rates, and long service life in demanding environments.",
@@ -830,6 +846,8 @@ window.PRODUCT_DATA = {
   },
   "booster-pump": {
     "name": "Booster Pump",
+    "img": "images/Compressed 2/Compressed 2/Booster Pump.webp",
+    "img": "images/Compressed 2/Compressed 2/Booster Pump.webp",
     "category": "Multi Surface",
     "heroTitle": "Multi Surface",
     "description": "Amstar Booster Pumps are designed to increase water pressure efficiently in residential and commercial applications. Built with a durable SS stainless steel body, they offer reliable performance and long service life. With a standard design and easy installation, Amstar booster pumps ensure consistent water flow and energy-efficient operation.",
@@ -875,6 +893,8 @@ window.PRODUCT_DATA = {
   },
   "centrifugal-pump": {
     "name": "Centrifugal Pump",
+    "img": "images/Compressed 2/Compressed 2/Centrifugal Pump.webp",
+    "img": "images/Compressed 2/Compressed 2/Centrifugal Pump.webp",
     "category": "Multi Surface",
     "heroTitle": "Multi Surface",
     "description": "Amstar Centrifugal monoblock pumps are compact pumping units where the pump and motor are directly coupled on a single shaft, ensuring efficient and smooth operation. They are widely used for water supply, irrigation, and light industrial applications. Their simple design offers reliable performance, easy installation, and low maintenance.",
@@ -923,6 +943,8 @@ window.PRODUCT_DATA = {
   },
   "sewage-pump": {
     "name": "Sewage Pump",
+    "img": "images/Compressed 2/Compressed 2/Sewage Pump.webp",
+    "img": "images/Compressed 2/Compressed 2/Sewage Pump.webp",
     "category": "Multi Surface",
     "heroTitle": "Multi Surface",
     "description": "Amstar Household Sewage Pumps are compact and reliable units designed for efficient wastewater removal in homes and small residential complexes. Built with a robust SS or cast iron body, they handle solids and effluents smoothly. Easy to install and maintain, these pumps ensure dependable operation, preventing blockages and maintaining hygienic water flow.",
@@ -970,6 +992,8 @@ window.PRODUCT_DATA = {
   },
   "de-water-pump": {
     "name": "De Water Pump",
+    "img": "images/Compressed 2/Compressed 2/De Water Pump.webp",
+    "img": "images/Compressed 2/Compressed 2/De Water Pump.webp",
     "category": "Multi Surface",
     "heroTitle": "Multi Surface",
     "description": "Amstar Dewatering Pumps are designed for efficient removal of water from construction sites, basements, pits, and flooded areas. Built with a robust and reliable design, these pumps deliver strong performance and durability. Operating at 50 Hz, they ensure dependable water transfer for construction, industrial, and drainage applications.",
@@ -1019,6 +1043,8 @@ window.PRODUCT_DATA = {
   },
   "circulatory-pump": {
     "name": "Circulatory Pump",
+    "img": "images/Compressed 2/Compressed 2/Circulatory Pump.webp",
+    "img": "images/Compressed 2/Compressed 2/Circulatory Pump.webp",
     "category": "Multi Surface",
     "heroTitle": "Multi Surface",
     "description": "Amstar Household Circulatory Pumps are designed for efficient water circulation in homes and small residential complexes. With a robust SS or cast iron body, they ensure reliable performance, energy-efficient operation, and long service life. Ideal for domestic hot water loops and small circulation systems, these pumps are compact, easy to install, and low maintenance.",
@@ -1064,6 +1090,8 @@ window.PRODUCT_DATA = {
   },
   "cables": {
     "name": "Cables",
+    "img": "images/Compressed 2/Compressed 2/Cables.webp",
+    "img": "images/Compressed 2/Compressed 2/Cables.webp",
     "category": "Accessories",
     "heroTitle": "Accessories",
     "description": "Amstar Cables are high-quality electrical cables designed for reliability and safety across residential, commercial, and industrial applications. Our range includes Round, Flat, Ply-Wrapped, XLPE, and PE2PA cables, offering excellent insulation, durability, and superior electrical performance. Engineered to meet standard specifications, Amstar Cables ensure safe and efficient power transmission in all environments.",
@@ -1105,6 +1133,8 @@ window.PRODUCT_DATA = {
   },
   "control-panel": {
     "name": "Control Panel",
+    "img": "images/Compressed 2/Compressed 2/Control Panel.webp",
+    "img": "images/Compressed 2/Compressed 2/Control Panel.webp",
     "category": "Accessories",
     "heroTitle": "Accessories",
     "description": "Amstar Control Panels are engineered for safe and efficient motor and process control across industrial and commercial applications. Our range includes DOL, Star/Delta, VFD, Soft Starter, and custom-made panels, offering reliable operation, easy integration, and robust protection. Designed with high-quality components, Amstar panels ensure consistent performance and long service life for diverse automation and power control needs.",
@@ -1172,6 +1202,7 @@ window.PRODUCT_DATA = {
   },
   "pipe": {
     "name": "Pipes",
+    "img": "images/Compressed 2/Compressed 2/Pipe.webp",
     "category": "Accessories",
     "heroTitle": "Accessories",
     "description": "Amstar Pipes are durable and reliable piping solutions designed for residential, commercial, and industrial applications. Our product range includes UPVC and casing pipes, engineered for excellent corrosion resistance, high pressure tolerance, and long service life. Amstar Pipes ensure safe and efficient fluid conveyance in water supply, irrigation, and industrial systems.",
@@ -1210,6 +1241,8 @@ window.PRODUCT_DATA = {
   },
   "vertical-openwell": {
     "name": "Vertical Openwell",
+    "img": "images/Compressed 2/Compressed 2/Vertical Openwell.webp",
+    "img": "images/Compressed 2/Compressed 2/Vertical Openwell.webp",
     "category": "Multi Surface",
     "heroTitle": "Multi Surface",
     "description": "Amstar Vertical Openwell Pumps are designed for efficient and reliable water transfer in domestic agricultural and industrial applications. Manufactured with high-quality SS302 stainless steel, they offer excellent corrosion resistance and durability. Operating at 50Hz, these pumps deliver stable performance, energy efficiency, and long service life under standard operating conditions.",
