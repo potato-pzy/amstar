@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Amstar Pumps</title>
+<link href="images /favicon.svg" rel="icon" sizes="16x16" type="image/gif"/>
     <style>
         * {
             margin: 0;
@@ -224,7 +225,6 @@
             border-radius: 0;
             cursor: pointer;
             transition: background-color 0.2s;
-            margin-top: 16px;
         }
 
         .quote-button:hover {
@@ -547,6 +547,143 @@
         .modal-submit-btn:active {
             transform: translateY(0);
         }
+
+        /* High-Precision Industrial Catalogue Modal Styles */
+        #catalogueModal .modal-content {
+            background: #ffffff;
+            border-radius: 0;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
+            border: 1px solid #000000;
+        }
+
+        .catalogue-header {
+            background: #1a3968;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #000000;
+        }
+
+        .catalogue-header-info h3 {
+            margin: 0;
+            color: #ffffff !important;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .catalogue-header-info p {
+            margin: 2px 0 0;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .catalogue-body {
+            padding: 0;
+            background: #ffffff;
+        }
+
+        .catalogue-item {
+            display: flex;
+            align-items: center;
+            padding: 25px 30px;
+            background: #ffffff;
+            border-bottom: 1px solid #eeeeee;
+            transition: all 0.2s ease;
+        }
+
+        .catalogue-item:last-child {
+            border-bottom: none;
+        }
+
+        .catalogue-item:hover {
+            background: #f9f9f9;
+        }
+
+        .catalogue-info {
+            flex: 1;
+        }
+
+        .catalogue-name {
+            display: block;
+            font-weight: 700;
+            color: #000000;
+            font-size: 16px;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .catalogue-type {
+            font-size: 12px;
+            color: #1a3968;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .catalogue-type::before {
+            content: 'DOC TYPE:';
+            color: #999;
+            font-weight: 400;
+        }
+
+        .catalogue-download-btn {
+            background: #1a3968;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all 0.2s ease;
+        }
+
+        .catalogue-download-btn:hover {
+            background: #000000 !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        #catalogueModal .modal-close-x {
+            position: static;
+            color: #ffffff;
+            font-size: 24px;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+        #catalogueModal .modal-close-x:hover {
+            opacity: 1;
+        }
+    </style>
+
+        #catalogueModal .modal-close-x {
+            position: static;
+            color: #ffffff;
+            font-size: 24px;
+            cursor: pointer;
+            opacity: 0.8;
+            line-height: 1;
+        }
+
+        #catalogueModal .modal-close-x:hover {
+            opacity: 1;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet" />
@@ -862,7 +999,7 @@
                         onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Blog</a>
                     <a href="shop.html"
                         style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;"
-                        onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Shop</a>
+                        onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Products</a>
                 </div>
                 <a href="contact.html" class="nav-cta-btn"
                     style="background-color: #003366; color: #ffffff; padding: 12px 28px; border-radius: 0; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-size: 14.5px;"
@@ -884,7 +1021,7 @@
             <button class="close-btn">&times;</button>
             <a href="index.html">Home</a>
             <a href="blog.html">Blog</a>
-            <a href="shop.html">Shop</a>
+            <a href="shop.html">Products</a>
             <a href="contact.html"
                 style="background: #003366; color: #fff; padding: 12px 40px; margin-top: 10px;">Contact</a>
         </div>
@@ -925,7 +1062,13 @@
                             <div class="cycle-container" id="cycle-container"></div>
                         </div>
                         <!-- Request for Quote Button -->
-                        <button class="quote-button" onclick="requestQuote()">Request for Quote</button>
+                        <div style="display: flex; gap: 10px; margin-top: 24px;">
+                            <button class="quote-button" style="flex: 1;" onclick="requestQuote()">Request for Quote</button>
+                            <button class="quote-button" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px;" onclick="openCatalogueModal()">
+                                <i class="fa-solid fa-download"></i>
+                                Product Catalogue
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -962,6 +1105,25 @@
                 <div class="related-grid" id="related-products-grid"></div>
             </div>
         </div>
+        
+        <!-- Catalogue Modal -->
+        <div class="modal-overlay" id="catalogueModal">
+            <div class="modal-content" style="max-width: 650px;">
+                <div class="catalogue-header">
+                    <div class="catalogue-header-info">
+                        <h3>Technical Documentation</h3>
+                        <p>Authorized Product Resources</p>
+                    </div>
+                    <span class="modal-close-x" onclick="closeCatalogueModal()">&times;</span>
+                </div>
+                <div class="catalogue-body">
+                    <div id="catalogue-list">
+                        <!-- Items will be injected here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Custom Modal for Alerts -->
         <div class="modal-overlay" id="quoteModal">
             <div class="modal-content">
@@ -1325,6 +1487,70 @@
                         this.classList.add('active');
                         document.getElementById(this.dataset.tab).classList.add('active');
                     });
+                });
+
+                // Catalogue Modal
+                window.openCatalogueModal = function () {
+                    const list = document.getElementById('catalogue-list');
+                    list.innerHTML = '';
+
+                    const docs = [
+                        { name: 'Amstar 50Hz Catalogue.pdf', type: 'Catalogue' }
+                    ];
+
+                    // Check if current product is a Submersible Pump or Motor
+                    // Category "Submersible" covers both based on PRODUCT_DATA
+                    if (product && product.category === 'Submersible') {
+                        docs.push({ name: 'Amstar 60Hz Catalogue.pdf', type: 'Catalogue' });
+                        docs.push({ name: 'Amstar 60Hz TDS.pdf', type: 'TDS' });
+                    }
+
+                    docs.forEach(doc => {
+                        const div = document.createElement('div');
+                        div.className = 'catalogue-item';
+                        const displayName = doc.name.replace(/\.pdf$/i, '');
+                        const filePath = `images/documents/${doc.name}`;
+                        div.innerHTML = `
+                            <div class="catalogue-info">
+                                <span class="catalogue-name">${displayName}</span>
+                                <span class="catalogue-type">${doc.type}</span>
+                            </div>
+                            <button onclick="forceDownload('${filePath}', '${doc.name}')" class="catalogue-download-btn">
+                                <span>Download</span>
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        `;
+                        list.appendChild(div);
+                    });
+
+                    document.getElementById('catalogueModal').classList.add('active');
+                };
+
+                window.forceDownload = function(url, filename) {
+                    fetch(url)
+                        .then(response => response.blob())
+                        .then(blob => {
+                            const link = document.createElement('a');
+                            link.href = window.URL.createObjectURL(blob);
+                            link.download = filename;
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        })
+                        .catch(err => {
+                            console.error('Download failed:', err);
+                            // Fallback to direct link if fetch fails
+                            window.open(url, '_blank');
+                        });
+                };
+
+                window.closeCatalogueModal = function () {
+                    document.getElementById('catalogueModal').classList.remove('active');
+                };
+
+                // Close modal when clicking outside content
+                document.getElementById('catalogueModal').addEventListener('click', function (e) {
+                    if (e.target === this) closeCatalogueModal();
                 });
 
                 // Quote modal
