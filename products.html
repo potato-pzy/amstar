@@ -221,14 +221,25 @@
             padding: 16px;
             font-size: 1rem;
             font-weight: 600;
-            border: none;
+            border: 1px solid #004a99;
             border-radius: 0;
             cursor: pointer;
-            transition: background-color 0.2s;
+            transition: all 0.2s ease;
         }
 
         .quote-button:hover {
             background-color: #003d7a;
+            border-color: #003d7a;
+        }
+
+        .catalogue-btn {
+            background-color: transparent !important;
+            color: #004a99 !important;
+        }
+
+        .catalogue-btn:hover {
+            background-color: #004a99 !important;
+            color: white !important;
         }
 
         /* Tabs Section */
@@ -445,6 +456,28 @@
             color: #4b5563;
         }
 
+        .view-more-btn {
+            font-size: 14px;
+            font-weight: 500;
+            color: #000;
+            text-decoration: underline;
+            opacity: 0 !important;
+            transform: translateY(10px) !important;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            margin-top: 8px;
+            pointer-events: none;
+        }
+
+        .related-product:hover .view-more-btn {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            pointer-events: auto;
+        }
+
         /* Custom Modal Styles */
         .modal-overlay {
             position: fixed;
@@ -555,23 +588,21 @@
             padding: 0;
             overflow: hidden;
             box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
-            border: 1px solid #000000;
         }
 
         .catalogue-header {
-            background: #1a3968;
+            background: #004fb1;
             padding: 20px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid #000000;
         }
 
         .catalogue-header-info h3 {
             margin: 0;
             color: #ffffff !important;
             font-size: 18px;
-            font-weight: 700;
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
@@ -612,7 +643,7 @@
 
         .catalogue-name {
             display: block;
-            font-weight: 700;
+            font-weight: 400;
             color: #000000;
             font-size: 16px;
             margin-bottom: 4px;
@@ -622,8 +653,8 @@
 
         .catalogue-type {
             font-size: 12px;
-            color: #1a3968;
-            font-weight: 600;
+            color: #004fb1;
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 1px;
             display: flex;
@@ -638,26 +669,28 @@
         }
 
         .catalogue-download-btn {
-            background: #1a3968;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 0;
+            background: transparent;
+            color: #004fb1;
+            padding: 10px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            gap: 12px;
+            justify-content: center;
             border: none;
             cursor: pointer;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
             transition: all 0.2s ease;
         }
 
         .catalogue-download-btn:hover {
-            background: #000000 !important;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            background: rgba(26, 57, 104, 0.05) !important;
+            transform: scale(1.1);
         }
+
+        #main-footer, #main-footer * {
+            font-weight: 400 !important;
+        }
+
+
 
         #catalogueModal .modal-close-x {
             position: static;
@@ -670,6 +703,7 @@
         #catalogueModal .modal-close-x:hover {
             opacity: 1;
         }
+        #main-footer, #main-footer * { font-weight: 400 !important; }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet" />
@@ -740,6 +774,7 @@
                 padding: 0 24px !important;
             }
         }
+        #main-footer, #main-footer * { font-weight: 400 !important; }
     </style>
     <style>
         .cta-banner {
@@ -822,7 +857,7 @@
         .cta-heading h2 {
             font-size: clamp(2.2rem, 4.5vw, 3.2rem);
             font-weight: 500;
-            color: #1a3968;
+            color: #004fb1;
             line-height: 1.1;
             margin: 0;
             letter-spacing: -0.02em;
@@ -836,7 +871,7 @@
         }
 
         .cta-details p {
-            color: #1a3968;
+            color: #004fb1;
             font-size: 17px;
             line-height: 1.5;
             margin-bottom: 25px;
@@ -864,6 +899,7 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(21, 66, 110, 0.15);
         }
+        #main-footer, #main-footer * { font-weight: 400 !important; }
     </style>
     <style>
         #de-loader {
@@ -922,6 +958,7 @@
         #product-page-content {
             visibility: hidden;
         }
+        #main-footer, #main-footer * { font-weight: 400 !important; }
     </style>
     <style>
         /* 120% Zoom Layout Override */
@@ -948,6 +985,7 @@
                 max-width: 1584px !important;
             }
         }
+        #main-footer, #main-footer * { font-weight: 400 !important; }
     </style>
 </head>
 
@@ -988,9 +1026,9 @@
                         onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Products</a>
                 </div>
                 <a href="contact.html" class="nav-cta-btn"
-                    style="background-color: #003366; color: #ffffff; padding: 12px 28px; border-radius: 0; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-size: 14.5px;"
-                    onmouseover="this.style.backgroundColor='#004fb1'"
-                    onmouseout="this.style.backgroundColor='#003366'">Contact</a>
+                    style="background-color: #004fb1; color: #ffffff; padding: 12px 28px; border-radius: 0; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-size: 14.5px;"
+                    onmouseover="this.style.backgroundColor='#0059c9'"
+                    onmouseout="this.style.backgroundColor='#004fb1'">Contact</a>
 
                 <!-- Hamburger Button -->
                 <button id="mobile-menu-btn"
@@ -1009,7 +1047,7 @@
             <a href="blog.html">Blog</a>
             <a href="shop.html">Products</a>
             <a href="contact.html"
-                style="background: #003366; color: #fff; padding: 12px 40px; margin-top: 10px;">Contact</a>
+                style="background: #004fb1; color: #fff; padding: 12px 40px; margin-top: 10px;">Contact</a>
         </div>
         <!-- Hero Header Section -->
 
@@ -1049,11 +1087,11 @@
                         </div>
                         <!-- Request for Quote Button -->
                         <div style="display: flex; gap: 10px; margin-top: 24px;">
-                            <button class="quote-button" style="flex: 1;" onclick="requestQuote()">Request for Quote</button>
-                            <button class="quote-button" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px;" onclick="openCatalogueModal()">
+                            <button class="quote-button catalogue-btn" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px;" onclick="openCatalogueModal()">
                                 <i class="fa-solid fa-download"></i>
                                 Product Catalogue
                             </button>
+                            <button class="quote-button" style="flex: 1;" onclick="requestQuote()">Request for Quote</button>
                         </div>
                     </div>
                 </div>
@@ -1242,6 +1280,7 @@
                         width: 100% !important;
                     }
                 }
+        #main-footer, #main-footer * { font-weight: 400 !important; }
             </style>
         </footer>
         <!-- footer close -->
@@ -1424,7 +1463,13 @@
                         div.className = 'related-product';
                         div.onclick = () => window.location.href = 'products.html?id=' + key;
                         const imgSrc = p.img || '';
-                        div.innerHTML = '<div class="related-product-image-container"><img alt="' + p.name + '" class="related-product-image" src="' + imgSrc + '"/></div><h3 class="related-product-title">' + p.name + '</h3>';
+                        div.innerHTML = `
+                            <div class="related-product-image-container">
+                                <img alt="${p.name}" class="related-product-image" src="${imgSrc}"/>
+                            </div>
+                            <h3 class="related-product-title">${p.name}</h3>
+                            <button class="view-more-btn">View more</button>
+                        `;
                         grid.appendChild(div);
                     });
                 }
@@ -1501,9 +1546,8 @@
                                 <span class="catalogue-name">${displayName}</span>
                                 <span class="catalogue-type">${doc.type}</span>
                             </div>
-                            <button onclick="forceDownload('${filePath}', '${doc.name}')" class="catalogue-download-btn">
-                                <span>Download</span>
-                                <i class="fa-solid fa-download"></i>
+                            <button onclick="forceDownload('${filePath}', '${doc.name}')" class="catalogue-download-btn" title="Download">
+                                <img src="images/Download Button.svg" alt="Download" style="width: 32px; height: 32px;">
                             </button>
                         `;
                         list.appendChild(div);
