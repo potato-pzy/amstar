@@ -1,9 +1,8 @@
-// Auto-generated product data from PDF
 window.PRODUCT_DATA = {
   "4-inch-submersible-motor": {
     "name": "4\" Submersible Motor",
-    "img": "images/Compressed 2/Compressed 2/4” Submersible Motor.webp",
-    "category": "Submersible",
+    "img": "images/Compressed 2/Compressed 2/4\u201d Submersible Motor.webp",
+    "category": "Submersibles",
     "heroTitle": "Submersible System",
     "description": "The Amstar 4\" Water-Filled Submersible Motor is designed to deliver reliable, efficient, and long-lasting performance for borewell and submersible pump applications. Engineered for continuous operation, it provides stable output even under demanding working conditions.",
     "cycles": [
@@ -68,7 +67,7 @@ window.PRODUCT_DATA = {
         "4\" Water lubricated rewindable motor",
         "Coupling dimension as per NEMA standard",
         "Winding wire: polywrapped-signature",
-        "Max water temperature: 35° C",
+        "Max water temperature: 35\u00b0 C",
         "Degree of protection: IP 68",
         "Max start 30-35 time/hour",
         "Motor shaft: SS 400",
@@ -85,16 +84,15 @@ window.PRODUCT_DATA = {
     "shipping": "India - All products in stock can be shipped same day for next day delivery.\nAll products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us for lead time information.",
     "warranty": "All Amstar products include a standard 12-month warranty. For information on our extended warranty options, please get in touch with our team.",
     "applications": [
-      "Home",
-      "Farms",
-      "Residential Building",
-      "Factory"
+      "industrial",
+      "residential",
+      "agriculture"
     ]
   },
   "4-inch-submersible-pump": {
     "name": "4\" Submersible Pump",
-    "img": "images/Compressed 2/Compressed 2/4” Submersible Pump.webp",
-    "category": "Submersible",
+    "img": "images/Compressed 2/Compressed 2/4\u201d Submersible Pump.webp",
+    "category": "Submersibles",
     "heroTitle": "Submersible System",
     "description": "The Amstar 4\" Submersible Pump is designed to deliver reliable, efficient, and long-lasting performance for borewell and submersible pump applications. Engineered for continuous operation, it provides stable output even under demanding working conditions.",
     "cycles": [
@@ -171,16 +169,15 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us for lead time information.",
     "warranty": "All Amstar products include a standard 12-month warranty. For information on our extended warranty options, please get in touch with our team.",
     "applications": [
-      "Home",
-      "Farms",
-      "Residential Building",
-      "Factory"
+      "industrial",
+      "residential",
+      "agriculture"
     ]
   },
   "6-inch-submersible-motor": {
     "name": "6\" Submersible Motor",
-    "img": "images/Compressed 2/Compressed 2/6” Submersible Motor.webp",
-    "category": "Submersible",
+    "img": "images/Compressed 2/Compressed 2/6\u201d Submersible Motor.webp",
+    "category": "Submersibles",
     "heroTitle": "Submersible System",
     "description": "The Amstar 6\" Water-Filled Submersible Motor is designed to deliver reliable, efficient, and long-lasting performance for borewell and submersible pump applications. Engineered for continuous operation, it provides stable output even under demanding working conditions.",
     "cycles": [
@@ -244,7 +241,7 @@ window.PRODUCT_DATA = {
         "6\" Water lubricated rewindable motor",
         "Coupling dimension as per NEMA standard",
         "Winding wire: polywrapped-signature",
-        "Max water temperature: 35° C",
+        "Max water temperature: 35\u00b0 C",
         "Degree of protection: IP 68",
         "Max start 30-35 time/hour",
         "Motor shaft: SS 400",
@@ -261,16 +258,15 @@ window.PRODUCT_DATA = {
     "shipping": "India - All products in stock can be shipped same day for next day delivery.\nAll products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us for lead time information.",
     "warranty": "All Amstar products include a standard 12-month warranty. For information on our extended warranty options, please get in touch with our team.",
     "applications": [
-      "Home",
-      "Farms",
-      "Residential Building",
-      "Factory"
+      "industrial",
+      "residential",
+      "agriculture"
     ]
   },
   "8-inch-submersible-motor": {
     "name": "8\" Submersible Motor",
-    "img": "images/Compressed 2/Compressed 2/8” Submersible Motor.webp",
-    "category": "Submersible",
+    "img": "images/Compressed 2/Compressed 2/8\u201d Submersible Motor.webp",
+    "category": "Submersibles",
     "heroTitle": "Submersible System",
     "description": "The Amstar 8\" Water-Filled Submersible Motor is designed to deliver reliable, efficient, and long-lasting performance for borewell and submersible pump applications. Engineered for continuous operation, it provides stable output even under demanding working conditions.",
     "cycles": [
@@ -302,7 +298,7 @@ window.PRODUCT_DATA = {
         "Material": "SS302 / SS&CI",
         "Voltage Range": "380 - 415V",
         "Coolant": "Water Filled",
-        "Flow Range (m³/h)": "30-280",
+        "Flow Range (m\u00b3/h)": "30-280",
         "Insulation Class": "Class F"
       },
       "60Hz": {
@@ -331,7 +327,7 @@ window.PRODUCT_DATA = {
         "8\" Water lubricated rewindable motor",
         "Coupling dimension as per NEMA standard",
         "Winding wire: polywrapped-signature",
-        "Max water temperature: 35° C",
+        "Max water temperature: 35\u00b0 C",
         "Degree of protection: IP68",
         "Max start 30-35 time/hour",
         "Motor shaft: SS 400",
@@ -348,16 +344,15 @@ window.PRODUCT_DATA = {
     "shipping": "India - All products in stock can be shipped same day for next day delivery.\nAll products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us for lead time information.",
     "warranty": "All Amstar products include a standard 12-month warranty. For information on our extended warranty options, please get in touch with our team.",
     "applications": [
-      "Residential Building",
-      "Mining",
-      "Farms",
-      "Factory"
+      "industrial",
+      "residential",
+      "agriculture"
     ]
   },
   "6-inch-submersible-pump": {
     "name": "6\" Submersible Pump",
-    "img": "images/Compressed 2/Compressed 2/6” Submersible Pump.webp",
-    "category": "Submersible",
+    "img": "images/Compressed 2/Compressed 2/6\u201d Submersible Pump.webp",
+    "category": "Submersibles",
     "heroTitle": "Submersible System",
     "description": "The Amstar 6\" Submersible Pump is designed to deliver reliable, efficient, and long-lasting performance for borewell and submersible pump applications. Engineered for continuous operation, it provides stable output even under demanding working conditions.",
     "cycles": [
@@ -432,16 +427,15 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "All Amstar products include a standard 12-month warranty. For information on our extended warranty options, please get in touch with our team.",
     "applications": [
-      "Home",
-      "Farms",
-      "Residential Building",
-      "Factory"
+      "industrial",
+      "residential",
+      "agriculture"
     ]
   },
   "8-inch-submersible-pump": {
     "name": "8\" Submersible Pump",
     "img": "images/Compressed 2/Compressed 2/8_ Submersible Pump.webp",
-    "category": "Submersible",
+    "category": "Submersibles",
     "heroTitle": "Submersible System",
     "description": "The Amstar 8\" Submersible Pump is designed to deliver reliable, efficient, and long-lasting performance for borewell and submersible pump applications. Engineered for continuous operation, it provides stable output even under demanding working conditions.",
     "cycles": [
@@ -473,7 +467,7 @@ window.PRODUCT_DATA = {
         "Head": "60-500",
         "Material": "SS302 / SS&CI",
         "Coolant": "Water Filled",
-        "Flow Range (m³/h)": "30-280",
+        "Flow Range (m\u00b3/h)": "30-280",
         "Insulation Class": "Class F",
         "Pump Size": "3-5\""
       },
@@ -482,7 +476,7 @@ window.PRODUCT_DATA = {
         "Head": "60-500",
         "Material": "SS302 / SS&CI",
         "Coolant": "Water Filled",
-        "Flow Range (m³/h)": "30-280",
+        "Flow Range (m\u00b3/h)": "30-280",
         "Insulation Class": "Class F"
       }
     },
@@ -511,17 +505,15 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "All Amstar products include a standard 12-month warranty. For information on our extended warranty options, please get in touch with our team.",
     "applications": [
-      "Residential Building",
-      "Mining",
-      "Farms",
-      "Factory"
+      "industrial",
+      "residential",
+      "agriculture"
     ]
   },
   "openwell-single-phase": {
     "name": "Openwell Single Phase",
     "img": "images/Compressed 2/Compressed 2/Openwell Single Phase.webp",
-    "img": "images/Compressed 2/Compressed 2/Openwell Single Phase.webp",
-    "category": "Multi Surface",
+    "category": "Openwell Pump",
     "heroTitle": "Multi Surface",
     "description": "Amstar Openwell Submersible Pumps are designed for efficient and reliable water transfer in domestic and agricultural applications. Manufactured with high-quality SS302 stainless steel, they offer excellent corrosion resistance and durability. Operating at 50Hz, these pumps deliver stable performance, energy efficiency, and long service life under standard operating conditions.",
     "cycles": [
@@ -562,17 +554,14 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "Our products come with a standard 12 Month warranty. Please contact us to discuss the extended warranty program we offer.",
     "applications": [
-      "Home",
-      "Farms",
-      "Residential Building",
-      "Irrigation"
+      "residential",
+      "agriculture"
     ]
   },
   "openwell-three-phase": {
     "name": "Openwell Three Phase",
     "img": "images/Compressed 2/Compressed 2/Openwell Three Phase.webp",
-    "img": "images/Compressed 2/Compressed 2/Openwell Three Phase.webp",
-    "category": "Multi Surface",
+    "category": "Openwell Pump",
     "heroTitle": "Multi Surface",
     "description": "Amstar Openwell Submersible Pumps are designed for efficient and reliable water transfer in domestic and agricultural applications. Manufactured with high-quality SS302 stainless steel, they offer excellent corrosion resistance and durability. Operating at 50Hz, these pumps deliver stable performance, energy efficiency, and long service life under standard operating conditions.",
     "cycles": [
@@ -613,17 +602,14 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "Our products come with a standard 12 Month warranty. Please contact us to discuss the extended warranty program we offer.",
     "applications": [
-      "Home",
-      "Farms",
-      "Residential Building",
-      "Irrigation"
+      "residential",
+      "agriculture"
     ]
   },
   "vertical-multistage-pump": {
     "name": "Vertical Multistage Pump",
     "img": "images/Compressed 2/Compressed 2/Vertical Multistage Pump.webp",
-    "img": "images/Compressed 2/Compressed 2/Vertical Multistage Pump.webp",
-    "category": "Multi Surface",
+    "category": "Other Pump",
     "heroTitle": "Multi Surface",
     "description": "Amstar Vertical Multistage Pumps are designed for efficient and reliable water transfer in domestic agricultural and industrial applications. Manufactured with high-quality SS302 stainless steel, they offer excellent corrosion resistance and durability. Operating at 50Hz, these pumps deliver stable performance, energy efficiency, and long service life under standard operating conditions.",
     "cycles": [
@@ -649,7 +635,7 @@ window.PRODUCT_DATA = {
         "Voltage": "220 / 380-415 V",
         "Head": "Upto 270m",
         "RPM": "2900",
-        "Max Flow Rate": "Upto 190 m³/h",
+        "Max Flow Rate": "Upto 190 m\u00b3/h",
         "Protection Standard": "IP68"
       }
     },
@@ -669,16 +655,14 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "Our products come with a standard 12 Month warranty. Please contact us to discuss the extended warranty program we offer.",
     "applications": [
-      "Home",
-      "Farms",
-      "Residential Building",
-      "Irrigation"
+      "residential",
+      "agriculture"
     ]
   },
   "monoblock": {
     "name": "Monoblock Pump",
     "img": "images/Compressed 2/Compressed 2/Monoblock.webp",
-    "category": "Multi Surface",
+    "category": "Monoblock Pump",
     "heroTitle": "Multi Surface",
     "description": "Amstar Monoblock Pumps are compact, efficient water transfer solutions for domestic and agricultural use. Designed to suit standard Indian conditions, they operate at 50Hz for stable performance. Built with a durable SS302 stainless steel body, they offer excellent corrosion resistance, reliable operation, and low maintenance with easy installation.",
     "cycles": [
@@ -714,16 +698,14 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "Our products come with a standard 12 Month warranty. Please contact us to discuss the extended warranty program we offer.",
     "applications": [
-      "Home",
-      "Farms",
-      "Residential Building",
-      "Irrigation"
+      "residential",
+      "agriculture"
     ]
   },
   "self-priming": {
     "name": "Self Priming Pump",
     "img": "images/Compressed 2/Compressed 2/Self Priming.webp",
-    "category": "Multi Surface",
+    "category": "Self-Priming Pump",
     "heroTitle": "Multi Surface",
     "description": "Amstar Self Priming Pumps are compact, efficient water transfer solutions for domestic and agricultural use. Designed to suit standard Indian conditions, they operate at 50Hz for stable performance. Built with a durable Aluminum body, they offer excellent corrosion resistance, reliable operation, and low maintenance with easy installation.",
     "cycles": [
@@ -759,17 +741,14 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "Our products come with a standard 12 Month warranty. Please contact us to discuss the extended warranty program we offer.",
     "applications": [
-      "Home",
-      "Farms",
-      "Garden",
-      "Irrigation"
+      "residential",
+      "agriculture"
     ]
   },
   "splitcase-pump": {
     "name": "Splitcase Pump",
     "img": "images/Compressed 2/Compressed 2/Splitcase Pump.webp",
-    "img": "images/Compressed 2/Compressed 2/Splitcase Pump.webp",
-    "category": "Multi Surface",
+    "category": "Other Pump",
     "heroTitle": "Multi Surface",
     "description": "Amstar Split Case Pumps are designed for high-capacity water transfer in industrial, municipal, and commercial applications. Featuring a horizontally split casing for easy maintenance, these pumps deliver efficient and reliable performance. Built with a robust standard design, they ensure smooth operation, high flow rates, and long service life in demanding environments.",
     "cycles": [
@@ -815,7 +794,7 @@ window.PRODUCT_DATA = {
         "Body Material": "CI & SS302",
         "RPM": "1750 / 3500",
         "Head": "15-220m",
-        "Flow Range": "120-6000³/h",
+        "Flow Range": "120-6000\u00b3/h",
         "Delivery": "80-700mm"
       }
     },
@@ -838,17 +817,14 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "Our products come with a standard 12 Month warranty. Please contact us to discuss the extended warranty program we offer.",
     "applications": [
-      "City/Municipal Water system",
-      "Fire Fighting",
-      "Heating and Water cooler",
-      "Factory"
+      "industrial",
+      "commercial"
     ]
   },
   "booster-pump": {
     "name": "Booster Pump",
     "img": "images/Compressed 2/Compressed 2/Booster Pump.webp",
-    "img": "images/Compressed 2/Compressed 2/Booster Pump.webp",
-    "category": "Multi Surface",
+    "category": "Booster Pumps",
     "heroTitle": "Multi Surface",
     "description": "Amstar Booster Pumps are designed to increase water pressure efficiently in residential and commercial applications. Built with a durable SS stainless steel body, they offer reliable performance and long service life. With a standard design and easy installation, Amstar booster pumps ensure consistent water flow and energy-efficient operation.",
     "cycles": [
@@ -885,17 +861,14 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "Our products come with a standard 12 Month warranty. Please contact us to discuss the extended warranty program we offer.",
     "applications": [
-      "Home",
-      "Residential Buildings",
-      "Shower system",
-      "Irrigation"
+      "residential",
+      "agriculture"
     ]
   },
   "centrifugal-pump": {
     "name": "Centrifugal Pump",
     "img": "images/Compressed 2/Compressed 2/Centrifugal Pump.webp",
-    "img": "images/Compressed 2/Compressed 2/Centrifugal Pump.webp",
-    "category": "Multi Surface",
+    "category": "Other Pump",
     "heroTitle": "Multi Surface",
     "description": "Amstar Centrifugal monoblock pumps are compact pumping units where the pump and motor are directly coupled on a single shaft, ensuring efficient and smooth operation. They are widely used for water supply, irrigation, and light industrial applications. Their simple design offers reliable performance, easy installation, and low maintenance.",
     "cycles": [
@@ -920,7 +893,7 @@ window.PRODUCT_DATA = {
         "Body": "CI & SS302",
         "Head": "15-100mm",
         "RPM": "2800",
-        "Max Flow Range": "Upto 100³/h"
+        "Max Flow Range": "Upto 100\u00b3/h"
       }
     },
     "features": {
@@ -935,17 +908,14 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "Our products come with a standard 12 Month warranty. Please contact us to discuss the extended warranty program we offer.",
     "applications": [
-      "Home",
-      "Farms",
-      "Garden",
-      "Irrigation"
+      "residential",
+      "agriculture"
     ]
   },
   "sewage-pump": {
     "name": "Sewage Pump",
     "img": "images/Compressed 2/Compressed 2/Sewage Pump.webp",
-    "img": "images/Compressed 2/Compressed 2/Sewage Pump.webp",
-    "category": "Multi Surface",
+    "category": "Other Pump",
     "heroTitle": "Multi Surface",
     "description": "Amstar Household Sewage Pumps are compact and reliable units designed for efficient wastewater removal in homes and small residential complexes. Built with a robust SS or cast iron body, they handle solids and effluents smoothly. Easy to install and maintain, these pumps ensure dependable operation, preventing blockages and maintaining hygienic water flow.",
     "cycles": [
@@ -967,7 +937,7 @@ window.PRODUCT_DATA = {
         "Body": "SS302 / CI",
         "Voltage": "220-240 V / 380-415 V",
         "Head": "5-25m",
-        "Delivery": "5-50m³/h",
+        "Delivery": "5-50m\u00b3/h",
         "Solid Handling": "30-50 mm diameter",
         "Pump Size": "10-50"
       }
@@ -984,17 +954,15 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "Our products come with a standard 12 Month warranty. Please contact us to discuss the extended warranty program we offer.",
     "applications": [
-      "Home",
-      "Farms",
-      "Residential Building",
-      "Factory"
+      "industrial",
+      "residential",
+      "agriculture"
     ]
   },
   "de-water-pump": {
     "name": "De Water Pump",
     "img": "images/Compressed 2/Compressed 2/De Water Pump.webp",
-    "img": "images/Compressed 2/Compressed 2/De Water Pump.webp",
-    "category": "Multi Surface",
+    "category": "Other Pump",
     "heroTitle": "Multi Surface",
     "description": "Amstar Dewatering Pumps are designed for efficient removal of water from construction sites, basements, pits, and flooded areas. Built with a robust and reliable design, these pumps deliver strong performance and durability. Operating at 50 Hz, they ensure dependable water transfer for construction, industrial, and drainage applications.",
     "cycles": [
@@ -1019,7 +987,7 @@ window.PRODUCT_DATA = {
         "Phase": "Single Phase / Three Phase",
         "Body": "SS302 / CI",
         "Voltage": "220-240 V / 380-415 V",
-        "Delivery": "5-120m³/h",
+        "Delivery": "5-120m\u00b3/h",
         "Solids Handling": "10-20mm*"
       }
     },
@@ -1035,17 +1003,15 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "Our products come with a standard 12 Month warranty. Please contact us to discuss the extended warranty program we offer.",
     "applications": [
-      "Restaurants",
-      "Sewage Pipes",
-      "Residential Building",
-      "Factory"
+      "commercial",
+      "residential",
+      "industrial"
     ]
   },
   "circulatory-pump": {
     "name": "Circulatory Pump",
     "img": "images/Compressed 2/Compressed 2/Circulatory Pump.webp",
-    "img": "images/Compressed 2/Compressed 2/Circulatory Pump.webp",
-    "category": "Multi Surface",
+    "category": "Booster Pumps",
     "heroTitle": "Multi Surface",
     "description": "Amstar Household Circulatory Pumps are designed for efficient water circulation in homes and small residential complexes. With a robust SS or cast iron body, they ensure reliable performance, energy-efficient operation, and long service life. Ideal for domestic hot water loops and small circulation systems, these pumps are compact, easy to install, and low maintenance.",
     "cycles": [
@@ -1067,7 +1033,7 @@ window.PRODUCT_DATA = {
         "Voltage": "220-240 V",
         "Body": "SS / CI",
         "Head": "5-25m",
-        "Flow Range": "1-15m³/h"
+        "Flow Range": "1-15m\u00b3/h"
       }
     },
     "features": {
@@ -1082,17 +1048,14 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "Our products come with a standard 12 Month warranty. Please contact us to discuss the extended warranty program we offer.",
     "applications": [
-      "City/Municipal Water system",
-      "Fire Fighting",
-      "Heating and Water cooler",
-      "Factory"
+      "industrial",
+      "commercial"
     ]
   },
   "cables": {
     "name": "Cables",
     "img": "images/Compressed 2/Compressed 2/Cables.webp",
-    "img": "images/Compressed 2/Compressed 2/Cables.webp",
-    "category": "Accessories",
+    "category": "Wires",
     "heroTitle": "Accessories",
     "description": "Amstar Cables are high-quality electrical cables designed for reliability and safety across residential, commercial, and industrial applications. Our range includes Round, Flat, Ply-Wrapped, XLPE, and PE2PA cables, offering excellent insulation, durability, and superior electrical performance. Engineered to meet standard specifications, Amstar Cables ensure safe and efficient power transmission in all environments.",
     "cycles": [],
@@ -1110,7 +1073,7 @@ window.PRODUCT_DATA = {
         "Voltage": "110-1100 V",
         "Conductor Material": "Copper / Aluminum",
         "Insulation Material": "XLPE, PVC or PE2PA",
-        "Temperature Range": "-10°C to +90°C"
+        "Temperature Range": "-10\u00b0C to +90\u00b0C"
       }
     },
     "features": {
@@ -1125,17 +1088,14 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "Our products come with a standard 12 Month warranty. Please contact us to discuss the extended warranty program we offer.",
     "applications": [
-      "City/Municipal Water system",
-      "Appliances",
-      "Home",
-      "Factory"
+      "industrial",
+      "residential"
     ]
   },
   "control-panel": {
     "name": "Control Panel",
     "img": "images/Compressed 2/Compressed 2/Control Panel.webp",
-    "img": "images/Compressed 2/Compressed 2/Control Panel.webp",
-    "category": "Accessories",
+    "category": "Control Panels",
     "heroTitle": "Accessories",
     "description": "Amstar Control Panels are engineered for safe and efficient motor and process control across industrial and commercial applications. Our range includes DOL, Star/Delta, VFD, Soft Starter, and custom-made panels, offering reliable operation, easy integration, and robust protection. Designed with high-quality components, Amstar panels ensure consistent performance and long service life for diverse automation and power control needs.",
     "cycles": [
@@ -1194,16 +1154,13 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "Our products come with a standard 12 Month warranty. Please contact us to discuss the extended warranty program we offer.",
     "applications": [
-      "City/Municipal Water system",
-      "Fire Fighting",
-      "Manufacturing",
-      "Factory"
+      "industrial"
     ]
   },
   "pipe": {
     "name": "Pipes",
     "img": "images/Compressed 2/Compressed 2/Pipe.webp",
-    "category": "Accessories",
+    "category": "Pipes",
     "heroTitle": "Accessories",
     "description": "Amstar Pipes are durable and reliable piping solutions designed for residential, commercial, and industrial applications. Our product range includes UPVC and casing pipes, engineered for excellent corrosion resistance, high pressure tolerance, and long service life. Amstar Pipes ensure safe and efficient fluid conveyance in water supply, irrigation, and industrial systems.",
     "cycles": [],
@@ -1218,7 +1175,8 @@ window.PRODUCT_DATA = {
       "default": {
         "Size": "25mm - 300mm",
         "Pressure Rating": "PN 6 - PN 16 (Standard)",
-        "Temperature Range": "-10°C to +60°C"
+        "Temperature Range": "-10\u00b0C to +60\u00b0C",
+        "Models": "Standard \u2013 Upto 210m Depth, Heavy Duty \u2013 Upto 350m Depth"
       }
     },
     "features": {
@@ -1233,17 +1191,15 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "Our products come with a standard 12 Month warranty. Please contact us to discuss the extended warranty program we offer.",
     "applications": [
-      "City/Municipal Water system",
-      "Restaurants",
-      "Home",
-      "Factory"
+      "industrial",
+      "residential",
+      "commercial"
     ]
   },
   "vertical-openwell": {
     "name": "Vertical Openwell",
     "img": "images/Compressed 2/Compressed 2/Vertical Openwell.webp",
-    "img": "images/Compressed 2/Compressed 2/Vertical Openwell.webp",
-    "category": "Multi Surface",
+    "category": "Openwell Pump",
     "heroTitle": "Multi Surface",
     "description": "Amstar Vertical Openwell Pumps are designed for efficient and reliable water transfer in domestic agricultural and industrial applications. Manufactured with high-quality SS302 stainless steel, they offer excellent corrosion resistance and durability. Operating at 50Hz, these pumps deliver stable performance, energy efficiency, and long service life under standard operating conditions.",
     "cycles": [
@@ -1269,7 +1225,7 @@ window.PRODUCT_DATA = {
         "Voltage": "220 / 380-415 V",
         "Head": "Upto 270m",
         "RPM": "2900",
-        "Max Flow Rate": "Upto 190 m³/h",
+        "Max Flow Rate": "Upto 190 m\u00b3/h",
         "Protection Standard": "IP68"
       }
     },
@@ -1289,10 +1245,8 @@ window.PRODUCT_DATA = {
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "Our products come with a standard 12 Month warranty. Please contact us to discuss the extended warranty program we offer.",
     "applications": [
-      "Home",
-      "Farms",
-      "Residential Building",
-      "Irrigation"
+      "residential",
+      "agriculture"
     ]
   }
 };

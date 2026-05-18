@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-<title>Amstar Pumps</title>
-<link href="images /favicon.svg" rel="icon" sizes="16x16" type="image/gif"/>
-<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Optilux - Eye Clinic Optometrist and Optical Store HTML Template" name="description"/>
-<meta content="" name="keywords"/>
-<meta content="" name="author"/>
-<link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<!-- CSS Files
+    <title>Amstar Pumps</title>
+    <link href="images /favicon.svg" rel="icon" sizes="16x16" type="image/gif" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Optilux - Eye Clinic Optometrist and Optical Store HTML Template" name="description" />
+    <meta content="" name="keywords" />
+    <meta content="" name="author" />
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <!-- CSS Files
     ================================================== -->
-<link href="css/bootstrap.min.css" id="bootstrap" rel="stylesheet" type="text/css"/>
-<link href="css/plugins.css" rel="stylesheet" type="text/css"/>
-<link href="css/style.css" rel="stylesheet" type="text/css"/>
-<link href="css/coloring.css" rel="stylesheet" type="text/css"/>
-<!-- color scheme -->
-<link href="css/colors/scheme-01.css" id="colors" rel="stylesheet" type="text/css"/>
-<style>
-   html, body {
+    <link href="css/bootstrap.min.css" id="bootstrap" rel="stylesheet" type="text/css" />
+    <link href="css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/coloring.css" rel="stylesheet" type="text/css" />
+    <!-- color scheme -->
+    <link href="css/colors/scheme-01.css" id="colors" rel="stylesheet" type="text/css" />
+    <style>
+        html,
+        body {
             height: auto !important;
             overflow: visible !important;
         }
 
-   * {
+        * {
             font-family: 'Alan Sans', sans-serif !important;
             border-radius: 0 !important;
         }
@@ -34,11 +37,16 @@
             --primary-color-2: #004fb1;
         }
 
-        .id-color, .btn-main, .atr__promo, .atr__add-cart, .pagination .page-item.active .page-link {
+        .id-color,
+        .btn-main,
+        .atr__promo,
+        .atr__add-cart,
+        .pagination .page-item.active .page-link {
             background-color: var(--primary-color) !important;
         }
 
-        .atr__main-price, a:hover {
+        .atr__main-price,
+        a:hover {
             color: var(--primary-color) !important;
         }
 
@@ -60,7 +68,7 @@
             color: white !important;
             font-size: 3.5rem !important;
             font-weight: 500 !important;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             margin: 0;
         }
 
@@ -83,19 +91,19 @@
             align-items: center;
             padding: 15px 40px;
             z-index: 1000;
-            transition: top 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
-                        left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
-                        transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
-                        width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
-                        max-width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
-                        border-radius 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
-                        padding 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
-                        box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
-                        opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition: top 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                max-width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                border-radius 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                padding 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             border-radius: 4px;
         }
-        
+
         body {
             height: auto !important;
         }
@@ -147,7 +155,8 @@
                 top: 20px !important;
             }
 
-            .nav-links, .nav-cta-btn {
+            .nav-links,
+            .nav-cta-btn {
                 display: none !important;
             }
 
@@ -171,7 +180,8 @@
             grid-template-columns: repeat(1, 1fr);
             gap: 48px 16px;
             margin-top: 20px;
-            padding-right: 40px; /* Added breathing room on the right */
+            padding-right: 40px;
+            /* Added breathing room on the right */
         }
 
         @media (min-width: 576px) {
@@ -187,7 +197,8 @@
         }
 
         .product-item {
-            display: block; /* Ensure JS show/hide works */
+            display: block;
+            /* Ensure JS show/hide works */
         }
 
         .product-card {
@@ -277,770 +288,1512 @@
             opacity: 1;
         }
 
-        #main-footer, #main-footer *, .pagination .page-link {
+        #main-footer,
+        #main-footer *,
+        .pagination .page-link {
             font-weight: 400 !important;
         }
-        #main-footer, #main-footer * { font-weight: 400 !important; }
-  </style>
-<style>
+
+        #main-footer,
+        #main-footer * {
+            font-weight: 400 !important;
+        }
+    </style>
+    <style>
         /* 120% Zoom Layout Override */
         @media (min-width: 1200px) {
-            .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl,
+            .container-xxl {
                 max-width: 1368px !important;
             }
         }
-        @media (min-width: 1400px) {
-            .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+
+        s @media (min-width: 1400px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl,
+            .container-xxl {
                 max-width: 1584px !important;
             }
         }
-        #main-footer, #main-footer * { font-weight: 400 !important; }
+
+        #main-footer,
+        #main-footer * {
+            font-weight: 400 !important;
+        }
     </style>
 </head>
-<body>
-<div id="wrapper">
-<a href="#" id="back-to-top">
-</a>
-<!-- page preloader begin -->
-<div id="de-loader">
-</div>
-<!-- page preloader close -->
-<nav id="main-nav" style="position: fixed; top: 40px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1300px; background-color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; z-index: 1000; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border-radius: 4px;">
-<!-- Logo -->
-<a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-<img alt="Amstar Pumps" src="images /navabr.svg" style="height: 55px; width: auto;"/>
-</a>
-<!-- Links and Button Group -->
-<div style="display: flex; align-items: center; gap: 50px;">
-<div class="nav-links" style="display: flex; align-items: center; gap: 30px;">
-<a href="index.html" onmouseout="this.style.color='#1a2b4c'" onmouseover="this.style.color='#004fb1'" style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;">Home</a>
-<a href="blog.html" onmouseout="this.style.color='#1a2b4c'" onmouseover="this.style.color='#004fb1'" style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;">Blog</a>
-<a href="shop.html" onmouseout="this.style.color='#1a2b4c'" onmouseover="this.style.color='#004fb1'" style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;">Products</a>
-</div>
-<a class="nav-cta-btn" href="contact.html" onmouseout="this.style.backgroundColor='#004fb1'" onmouseover="this.style.backgroundColor='#0059c9'" style="background-color: #004fb1; color: #ffffff; padding: 12px 28px; border-radius: 0; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-size: 14.5px;">Contact</a>
-<!-- Hamburger Button -->
-<button id="mobile-menu-btn" style="display: none; background: none; border: none; cursor: pointer; padding: 5px;">
-<svg fill="none" height="20" viewbox="0 0 28 20" width="28" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 2H26M2 10H26M2 18H26" stroke="#1a2b4c" stroke-linecap="round" stroke-width="2.5"></path>
-</svg>
-</button>
-</div>
-</nav>
-<!-- Mobile Menu Overlay -->
-<div id="mobile-menu">
-<button class="close-btn">×</button>
-<a href="index.html">Home</a>
-<a href="blog.html">Blog</a>
-<a href="shop.html">Products</a>
-<a href="contact.html" style="background: #004fb1; color: #fff; padding: 12px 40px; margin-top: 10px;">Contact</a>
-</div>
-<!-- content begin -->
-<main style="padding-top: 100px;">
-<div id="top">
-</div>
-<section>
-<div class="container">
-<div class="row g-4">
-<div class="col-lg-3">
-<div class="item_filter_group">
-<h4>
-          Categories
-         </h4>
-<div class="de_form">
-<div class="de_checkbox">
-<input id="cat_1" name="cat_1" type="checkbox" value="submersible_pumps"/>
-<label for="cat_1">
-            Submersible Pumps
-           </label>
-</div>
-<div class="de_checkbox">
-<input id="cat_2" name="cat_2" type="checkbox" value="monoblock_pumps"/>
-<label for="cat_2">
-            Monoblock Pumps
-           </label>
-</div>
-<div class="de_checkbox">
-<input id="cat_3" name="cat_3" type="checkbox" value="openwell_pumps"/>
-<label for="cat_3">
-            Openwell Pumps
-           </label>
-</div>
-<div class="de_checkbox">
-<input id="cat_4" name="cat_4" type="checkbox" value="self-priming_pumps"/>
-<label for="cat_4">
-            Self-Priming Pumps
-           </label>
-</div>
-<div class="de_checkbox">
-<input id="cat_5" name="cat_5" type="checkbox" value="pipes"/>
-<label for="cat_5">
-            Pipes
-           </label>
-</div>
-<div class="de_checkbox">
-<input id="cat_6" name="cat_6" type="checkbox" value="control_panels"/>
-<label for="cat_6">
-            Control Panels
-           </label>
-</div>
-</div>
-</div>
-<div class="item_filter_group">
-<h4>
-          Application
-         </h4>
-<div class="de_form">
-<div class="de_checkbox">
-<input id="app_1" name="app_1" type="checkbox" value="agriculture"/>
-<label for="app_1">
-            Agriculture
-           </label>
-</div>
-<div class="de_checkbox">
-<input id="app_2" name="app_2" type="checkbox" value="residential"/>
-<label for="app_2">
-            Residential
-           </label>
-</div>
-<div class="de_checkbox">
-<input id="app_3" name="app_3" type="checkbox" value="industrial"/>
-<label for="app_3">
-            Industrial
-           </label>
-</div>
-<div class="de_checkbox">
-<input id="app_4" name="app_4" type="checkbox" value="commercial"/>
-<label for="app_4">
-            Commercial
-           </label>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-9">
-<div id="product-list-container">
-<!-- 4” Submersible Motor -->
-<div class="product-item" data-application="residential" data-category="submersible_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=4-inch-submersible-motor&amp;name=4%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/4%E2%80%9D%20Submersible%20Motor.webp">
-<img alt="4” Submersible Motor" src="images/Compressed 2/Compressed 2/4” Submersible Motor.webp">
-</img></a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=4-inch-submersible-motor&amp;name=4%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/4%E2%80%9D%20Submersible%20Motor.webp">4” Submersible Motor</a>
-<p class="product-category">Submersible Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=4-inch-submersible-motor&amp;name=4%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/4%E2%80%9D%20Submersible%20Motor.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- 4” Submersible Pump -->
-<div class="product-item" data-application="agriculture" data-category="submersible_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=4-inch-submersible-pump&amp;name=4%E2%80%9D+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/4%E2%80%9D%20Submersible%20Pump.webp">
-<img alt="4” Submersible Pump" src="images/Compressed 2/Compressed 2/4” Submersible Pump.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=4-inch-submersible-pump&amp;name=4%E2%80%9D+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/4%E2%80%9D%20Submersible%20Pump.webp">4” Submersible Pump</a>
-<p class="product-category">Submersible Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=4-inch-submersible-pump&amp;name=4%E2%80%9D+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/4%E2%80%9D%20Submersible%20Pump.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- 6" Submersible Motor -->
-<div class="product-item" data-application="residential" data-category="submersible_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=6-inch-submersible-motor&amp;name=6%22+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Motor.webp">
-<img alt='6" Submersible Motor' src="images/Compressed 2/Compressed 2/6” Submersible Motor.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=6-inch-submersible-motor&amp;name=6%22+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Motor.webp">6" Submersible Motor</a>
-<p class="product-category">Submersible Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=6-inch-submersible-motor&amp;name=6%22+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Motor.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- 6” Submersible Motor -->
-<div class="product-item" data-application="residential" data-category="submersible_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Motor%281%29.webp">
-<img alt="6” Submersible Motor" src="images/Compressed 2/Compressed 2/6” Submersible Motor(1).webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Motor%281%29.webp">6” Submersible Motor</a>
-<p class="product-category">Submersible Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Motor%281%29.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- 6” Submersible Motor -->
-<div class="product-item" data-application="residential" data-category="submersible_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Motor.webp">
-<img alt="6” Submersible Motor" src="images/Compressed 2/Compressed 2/6” Submersible Motor.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Motor.webp">6” Submersible Motor</a>
-<p class="product-category">Submersible Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Motor.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- 6” Submersible Pump -->
-<div class="product-item" data-application="agriculture" data-category="submersible_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=6-inch-submersible-pump&amp;name=6%E2%80%9D+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Pump.webp">
-<img alt="6” Submersible Pump" src="images/Compressed 2/Compressed 2/6” Submersible Pump.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=6-inch-submersible-pump&amp;name=6%E2%80%9D+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Pump.webp">6” Submersible Pump</a>
-<p class="product-category">Submersible Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=6-inch-submersible-pump&amp;name=6%E2%80%9D+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Pump.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- 8" Submersible Pump -->
-<div class="product-item" data-application="agriculture" data-category="submersible_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=8-inch-submersible-pump&amp;name=8%22+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/8_%20Submersible%20Pump.webp">
-<img alt='8" Submersible Pump' src="images/Compressed 2/Compressed 2/8_ Submersible Pump.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=8-inch-submersible-pump&amp;name=8%22+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/8_%20Submersible%20Pump.webp">8" Submersible Pump</a>
-<p class="product-category">Submersible Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=8-inch-submersible-pump&amp;name=8%22+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/8_%20Submersible%20Pump.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- 8” Submersible Motor -->
-<div class="product-item" data-application="residential" data-category="submersible_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=8-inch-submersible-motor&amp;name=8%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/8%E2%80%9D%20Submersible%20Motor.webp">
-<img alt="8” Submersible Motor" src="images/Compressed 2/Compressed 2/8” Submersible Motor.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=8-inch-submersible-motor&amp;name=8%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/8%E2%80%9D%20Submersible%20Motor.webp">8” Submersible Motor</a>
-<p class="product-category">Submersible Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=8-inch-submersible-motor&amp;name=8%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/8%E2%80%9D%20Submersible%20Motor.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Booster Pump -->
-<div class="product-item" data-application="residential" data-category="other_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=booster-pump&amp;name=Booster+Pump&amp;img=images/Compressed%202/Compressed%202/Booster%20Pump.webp">
-<img alt="Booster Pump" src="images/Compressed 2/Compressed 2/Booster Pump.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=booster-pump&amp;name=Booster+Pump&amp;img=images/Compressed%202/Compressed%202/Booster%20Pump.webp">Booster Pump</a>
-<p class="product-category">Other Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=booster-pump&amp;name=Booster+Pump&amp;img=images/Compressed%202/Compressed%202/Booster%20Pump.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Cables -->
-<div class="product-item" data-application="residential" data-category="other_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=cables&amp;name=Cables&amp;img=images/Compressed%202/Compressed%202/Cables.webp">
-<img alt="Cables" src="images/Compressed 2/Compressed 2/Cables.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=cables&amp;name=Cables&amp;img=images/Compressed%202/Compressed%202/Cables.webp">Cables</a>
-<p class="product-category">Other Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=cables&amp;name=Cables&amp;img=images/Compressed%202/Compressed%202/Cables.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Centrifugal Pump -->
-<div class="product-item" data-application="residential" data-category="other_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=centrifugal-pump&amp;name=Centrifugal+Pump&amp;img=images/Compressed%202/Compressed%202/Centrifugal%20Pump.webp">
-<img alt="Centrifugal Pump" src="images/Compressed 2/Compressed 2/Centrifugal Pump.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=centrifugal-pump&amp;name=Centrifugal+Pump&amp;img=images/Compressed%202/Compressed%202/Centrifugal%20Pump.webp">Centrifugal Pump</a>
-<p class="product-category">Other Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=centrifugal-pump&amp;name=Centrifugal+Pump&amp;img=images/Compressed%202/Compressed%202/Centrifugal%20Pump.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Circulatory Pump -->
-<div class="product-item" data-application="residential" data-category="other_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=circulatory-pump&amp;name=Circulatory+Pump&amp;img=images/Compressed%202/Compressed%202/Circulatory%20Pump.webp">
-<img alt="Circulatory Pump" src="images/Compressed 2/Compressed 2/Circulatory Pump.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=circulatory-pump&amp;name=Circulatory+Pump&amp;img=images/Compressed%202/Compressed%202/Circulatory%20Pump.webp">Circulatory Pump</a>
-<p class="product-category">Other Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=circulatory-pump&amp;name=Circulatory+Pump&amp;img=images/Compressed%202/Compressed%202/Circulatory%20Pump.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Control Panel -->
-<div class="product-item" data-application="agriculture" data-category="control_panels">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=control-panel&amp;name=Control+Panel&amp;img=images/Compressed%202/Compressed%202/Control%20Panel.webp">
-<img alt="Control Panel" src="images/Compressed 2/Compressed 2/Control Panel.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=control-panel&amp;name=Control+Panel&amp;img=images/Compressed%202/Compressed%202/Control%20Panel.webp">Control Panel</a>
-<p class="product-category">Control Panels</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=control-panel&amp;name=Control+Panel&amp;img=images/Compressed%202/Compressed%202/Control%20Panel.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- De Water Pump -->
-<div class="product-item" data-application="agriculture" data-category="other_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=de-water-pump&amp;name=De+Water+Pump&amp;img=images/Compressed%202/Compressed%202/De%20Water%20Pump.webp">
-<img alt="De Water Pump" src="images/Compressed 2/Compressed 2/De Water Pump.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=de-water-pump&amp;name=De+Water+Pump&amp;img=images/Compressed%202/Compressed%202/De%20Water%20Pump.webp">De Water Pump</a>
-<p class="product-category">Other Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=de-water-pump&amp;name=De+Water+Pump&amp;img=images/Compressed%202/Compressed%202/De%20Water%20Pump.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Monoblock -->
-<div class="product-item" data-application="agriculture" data-category="monoblock_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=monoblock&amp;name=Monoblock&amp;img=images/Compressed%202/Compressed%202/Monoblock%281%29.webp">
-<img alt="Monoblock" src="images/Compressed 2/Compressed 2/Monoblock(1).webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=monoblock&amp;name=Monoblock&amp;img=images/Compressed%202/Compressed%202/Monoblock%281%29.webp">Monoblock</a>
-<p class="product-category">Monoblock Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=monoblock&amp;name=Monoblock&amp;img=images/Compressed%202/Compressed%202/Monoblock%281%29.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Monoblock -->
-<div class="product-item" data-application="agriculture" data-category="monoblock_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=monoblock&amp;name=Monoblock&amp;img=images/Compressed%202/Compressed%202/Monoblock.webp">
-<img alt="Monoblock" src="images/Compressed 2/Compressed 2/Monoblock.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=monoblock&amp;name=Monoblock&amp;img=images/Compressed%202/Compressed%202/Monoblock.webp">Monoblock</a>
-<p class="product-category">Monoblock Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=monoblock&amp;name=Monoblock&amp;img=images/Compressed%202/Compressed%202/Monoblock.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Openwell Single Phase -->
-<div class="product-item" data-application="agriculture" data-category="openwell_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=openwell-single-phase&amp;name=Openwell+Single+Phase&amp;img=images/Compressed%202/Compressed%202/Openwell%20Single%20Phase.webp">
-<img alt="Openwell Single Phase" src="images/Compressed 2/Compressed 2/Openwell Single Phase.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=openwell-single-phase&amp;name=Openwell+Single+Phase&amp;img=images/Compressed%202/Compressed%202/Openwell%20Single%20Phase.webp">Openwell Single Phase</a>
-<p class="product-category">Openwell Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=openwell-single-phase&amp;name=Openwell+Single+Phase&amp;img=images/Compressed%202/Compressed%202/Openwell%20Single%20Phase.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Openwell Three Phase -->
-<div class="product-item" data-application="residential" data-category="openwell_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=openwell-three-phase&amp;name=Openwell+Three+Phase&amp;img=images/Compressed%202/Compressed%202/Openwell%20Three%20Phase.webp">
-<img alt="Openwell Three Phase" src="images/Compressed 2/Compressed 2/Openwell Three Phase.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=openwell-three-phase&amp;name=Openwell+Three+Phase&amp;img=images/Compressed%202/Compressed%202/Openwell%20Three%20Phase.webp">Openwell Three Phase</a>
-<p class="product-category">Openwell Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=openwell-three-phase&amp;name=Openwell+Three+Phase&amp;img=images/Compressed%202/Compressed%202/Openwell%20Three%20Phase.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Pipe -->
-<div class="product-item" data-application="residential" data-category="pipes">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=pipe&amp;name=Pipe&amp;img=images/Compressed%202/Compressed%202/Pipe.webp">
-<img alt="Pipe" src="images/Compressed 2/Compressed 2/Pipe.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=pipe&amp;name=Pipe&amp;img=images/Compressed%202/Compressed%202/Pipe.webp">Pipe</a>
-<p class="product-category">Pipes</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=pipe&amp;name=Pipe&amp;img=images/Compressed%202/Compressed%202/Pipe.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Self Priming -->
-<div class="product-item" data-application="residential" data-category="self-priming_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=self-priming&amp;name=Self+Priming&amp;img=images/Compressed%202/Compressed%202/Self%20Priming.webp">
-<img alt="Self Priming" src="images/Compressed 2/Compressed 2/Self Priming.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=self-priming&amp;name=Self+Priming&amp;img=images/Compressed%202/Compressed%202/Self%20Priming.webp">Self Priming</a>
-<p class="product-category">Self Priming Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=self-priming&amp;name=Self+Priming&amp;img=images/Compressed%202/Compressed%202/Self%20Priming.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Sewage Pump -->
-<div class="product-item" data-application="agriculture" data-category="other_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=sewage-pump&amp;name=Sewage+Pump&amp;img=images/Compressed%202/Compressed%202/Sewage%20Pump.webp">
-<img alt="Sewage Pump" src="images/Compressed 2/Compressed 2/Sewage Pump.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=sewage-pump&amp;name=Sewage+Pump&amp;img=images/Compressed%202/Compressed%202/Sewage%20Pump.webp">Sewage Pump</a>
-<p class="product-category">Other Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=sewage-pump&amp;name=Sewage+Pump&amp;img=images/Compressed%202/Compressed%202/Sewage%20Pump.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Splitcase Pump -->
-<div class="product-item" data-application="residential" data-category="other_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=splitcase-pump&amp;name=Splitcase+Pump&amp;img=images/Compressed%202/Compressed%202/Splitcase%20Pump.webp">
-<img alt="Splitcase Pump" src="images/Compressed 2/Compressed 2/Splitcase Pump.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=splitcase-pump&amp;name=Splitcase+Pump&amp;img=images/Compressed%202/Compressed%202/Splitcase%20Pump.webp">Splitcase Pump</a>
-<p class="product-category">Other Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=splitcase-pump&amp;name=Splitcase+Pump&amp;img=images/Compressed%202/Compressed%202/Splitcase%20Pump.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Vertical Multistage Pump -->
-<div class="product-item" data-application="residential" data-category="other_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=vertical-multistage-pump&amp;name=Vertical+Multistage+Pump&amp;img=images/Compressed%202/Compressed%202/Vertical%20Multistage%20Pump.webp">
-<img alt="Vertical Multistage Pump" src="images/Compressed 2/Compressed 2/Vertical Multistage Pump.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=vertical-multistage-pump&amp;name=Vertical+Multistage+Pump&amp;img=images/Compressed%202/Compressed%202/Vertical%20Multistage%20Pump.webp">Vertical Multistage Pump</a>
-<p class="product-category">Other Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=vertical-multistage-pump&amp;name=Vertical+Multistage+Pump&amp;img=images/Compressed%202/Compressed%202/Vertical%20Multistage%20Pump.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Vertical Openwell -->
-<div class="product-item" data-application="agriculture" data-category="openwell_pumps">
-<div class="product-card">
-<div class="product-image-box">
-<a href="products.html?id=vertical-openwell&amp;name=Vertical+Openwell&amp;img=images/Compressed%202/Compressed%202/Vertical%20Openwell.webp">
-<img alt="Vertical Openwell" src="images/Compressed 2/Compressed 2/Vertical Openwell.webp"/>
-</a>
-</div>
-<div class="product-details">
-<a class="product-title" href="products.html?id=vertical-openwell&amp;name=Vertical+Openwell&amp;img=images/Compressed%202/Compressed%202/Vertical%20Openwell.webp">Vertical Openwell</a>
-<p class="product-category">Openwell Pumps</p>
-<div class="product-footer">
-<a class="add-to-cart-btn" href="products.html?id=vertical-openwell&amp;name=Vertical+Openwell&amp;img=images/Compressed%202/Compressed%202/Vertical%20Openwell.webp">View more</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- pagination begin -->
-<div class="col-lg-12 pt-5 text-center">
-<div class="d-inline-block">
-<nav aria-label="Page navigation example">
-<ul class="pagination" id="dynamic-pagination" style="display: flex; gap: 8px; justify-content: center; list-style: none; padding-top: 20px;">
-</ul>
-</nav>
-</div>
-</div>
-<!-- pagination end -->
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- content close -->
-<!-- footer begin -->
-<!-- ============================================================ -->
-<!-- CUSTOM FOOTER                                                 -->
-<!-- ============================================================ -->
-<footer id="main-footer" style="background-color: #004fb1; padding: 80px 0 30px 0; color: #ffffff; font-family: 'Alan Sans', sans-serif;">
-<div class="container">
-<div class="row">
-<!-- Branding and Certifications -->
-<div class="col-lg-5 mb-5 mb-lg-0">
-<div style="margin-bottom: 30px;">
-<img alt="Amstar Pumps" src="images /Footer/Asset 2(1).svg" style="height: 100px; width: auto;"/>
-</div>
-<div style="display: flex; align-items: center; gap: 20px;">
-<img alt="Certifications" src="images /Footer/Certification logos.png" style="height: 45px; width: auto;"/>
-</div>
-</div>
-<!-- Links Col 1 -->
-<div class="col-lg-2 col-md-3 mb-4 mb-md-0">
-<ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
-<li><a href="about.html" style="color: #ffffff; text-decoration: none;">About</a></li>
-<li><a href="shop.html" style="color: #ffffff; text-decoration: none;">Products</a></li>
-<li><a href="gallery.html" style="color: #ffffff; text-decoration: none;">Gallery</a></li>
-<li><a href="blog.html" style="color: #ffffff; text-decoration: none;">Blogs</a></li>
-</ul>
-</div>
-<!-- Links Col 2 -->
-<div class="col-lg-2 col-md-3 mb-4 mb-md-0">
-<ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
-<li><a href="contact.html" style="color: #ffffff; text-decoration: none;">Contact Us</a></li>
-<li><a href="about.html#profile" style="color: #ffffff; text-decoration: none;">Company Profile</a></li>
-</ul>
-</div>
-<!-- Contact Details -->
-<div class="col-lg-3 col-md-6">
-<div style="display: flex; gap: 15px; margin-bottom: 20px;">
-<img alt="Location" src="images /Footer/Location icon.svg" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);"/>
-<p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
-         Amstar Pumps<br/>
-         Door No. 214, Lenin Street, Vilankurichi,<br/>
-         Coimbatore, Tamil Nadu<br/>
-         641035, India
-        </p>
-</div>
-<div style="display: flex; gap: 15px; margin-bottom: 20px; align-items: center;">
-<img alt="Phone" src="images /Footer/Phone Icon.svg" style="width: 18px; height: 18px; flex-shrink: 0; filter: brightness(0) invert(1);"/>
-<p style="margin: 0; font-size: 14px; opacity: 0.9;">
-         +91 95001 84003 | +91 95001 36003
-        </p>
-</div>
-<div style="display: flex; gap: 15px; align-items: flex-start;">
-<img alt="Mail" src="images /Footer/Mail Icon.svg" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);"/>
-<p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
-         amstarpumps@gmail.com<br/>
-         sales@amstar-pumps.com
-        </p>
-</div>
-</div>
-</div>
-<div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.3);">
-<p style="margin: 0; font-size: 14px; opacity: 0.8;">
-       ©Amstar-2026 all rights reserved
-      </p>
-</div>
-</div>
-</footer>
-<!-- footer close -->
-</div>
-<!-- Javascript Files
-    ================================================== -->
-<script>
-   document.addEventListener("DOMContentLoaded", function() {
-    const itemsPerPage = 15;
-    const allProducts = Array.from(document.querySelectorAll('.product-item'));
-    const paginationContainer = document.getElementById('dynamic-pagination');
-    let filteredProducts = [...allProducts];
-    
-    // Checkboxes
-    const catCheckboxes = document.querySelectorAll('input[id^="cat_"]');
-    const appCheckboxes = document.querySelectorAll('input[id^="app_"]');
-    
-    function updateFilters() {
-        const activeCats = Array.from(catCheckboxes).filter(cb => cb.checked).map(cb => cb.value);
-        const activeApps = Array.from(appCheckboxes).filter(cb => cb.checked).map(cb => cb.value);
-        
-        filteredProducts = allProducts.filter(item => {
-            const itemCat = item.getAttribute('data-category');
-            const itemApp = item.getAttribute('data-application');
-            
-            const catMatch = activeCats.length === 0 || activeCats.includes(itemCat);
-            const appMatch = activeApps.length === 0 || activeApps.includes(itemApp);
-            
-            return catMatch && appMatch;
-        });
-        
-        showPage(1, false);
-    }
-    
-    // Attach event listeners
-    catCheckboxes.forEach(cb => cb.addEventListener('change', updateFilters));
-    appCheckboxes.forEach(cb => cb.addEventListener('change', updateFilters));
-    
-    function showPage(page, scroll = true) {
-        // Hide all original products
-        allProducts.forEach(item => item.style.display = 'none');
-        
-        const totalPages = Math.ceil(filteredProducts.length / itemsPerPage) || 1;
-        // Enforce bounds
-        page = Math.max(1, Math.min(page, totalPages));
-        
-        // Calculate start and end
-        const start = (page - 1) * itemsPerPage;
-        const end = start + itemsPerPage;
-        
-        // Show current page items
-        for(let i = start; i < end && i < filteredProducts.length; i++) {
-            filteredProducts[i].style.display = 'block';
-        }
-        
-        renderPagination(page, totalPages);
-        
-        // Reset body height and refresh scroll libraries to eliminate extra whitespace
-        document.body.style.height = 'auto';
-        if (window.s && typeof window.s.refresh === 'function') {
-            window.s.refresh();
-        }
 
-        // Scroll to top of the page smoothly
-        if(scroll) {
-            window.scrollTo(0, 0);
-        }
-    }
-    
-    function renderPagination(currentPage, totalPages) {
-        if (!paginationContainer) return;
-        paginationContainer.innerHTML = '';
-        
-        if (totalPages <= 1 && filteredProducts.length === 0) return; // Hide if nothing
-        
-        // Previous Button
-        const prevLi = document.createElement('li');
-        prevLi.className = `page-item ${currentPage === 1 ? 'disabled' : ''}`;
-        prevLi.style.margin = '0 10px';
-        const prevA = document.createElement('a');
-        prevA.className = 'page-link';
-        prevA.href = 'javascript:void(0)';
-        prevA.innerText = 'Prev';
-        prevA.style.padding = '8px 16px';
-        prevA.style.borderRadius = '0';
-        if (currentPage > 1) {
-            prevA.onclick = (e) => { e.preventDefault(); showPage(currentPage - 1); };
-        }
-        prevLi.appendChild(prevA);
-        paginationContainer.appendChild(prevLi);
-        
-        // Page Numbers
-        for(let i = 1; i <= totalPages; i++) {
-            const li = document.createElement('li');
-            li.className = `page-item ${i === currentPage ? 'active' : ''}`;
-            li.style.margin = '0 5px';
-            const a = document.createElement('a');
-            a.className = 'page-link';
-            a.href = 'javascript:void(0)';
-            a.innerText = i;
-            a.style.padding = '8px 16px';
-            a.style.borderRadius = '0';
-            a.onclick = (e) => { e.preventDefault(); showPage(i); };
-            li.appendChild(a);
-            paginationContainer.appendChild(li);
-        }
-        
-        // Next Button
-        const nextLi = document.createElement('li');
-        nextLi.className = `page-item ${currentPage === totalPages ? 'disabled' : ''}`;
-        nextLi.style.margin = '0 10px';
-        const nextA = document.createElement('a');
-        nextA.className = 'page-link';
-        nextA.href = 'javascript:void(0)';
-        nextA.innerText = 'Next';
-        nextA.style.padding = '8px 16px';
-        nextA.style.borderRadius = '0';
-        if (currentPage < totalPages) {
-            nextA.onclick = (e) => { e.preventDefault(); showPage(currentPage + 1); };
-        }
-        nextLi.appendChild(nextA);
-        paginationContainer.appendChild(nextLi);
-    }
-    
-    // Initialize
-    updateFilters();
-});
-  </script>
-<script src="js/plugins.js">
-</script>
-<script src="js/designesia.js">
-</script>
-<!-- Mobile Menu Toggle Script -->
-<script>
+<body>
+    <div id="wrapper">
+        <a href="#" id="back-to-top">
+        </a>
+        <!-- page preloader begin -->
+        <div id="de-loader">
+        </div>
+        <!-- page preloader close -->
+        <nav id="main-nav"
+            style="position: fixed; top: 40px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1300px; background-color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; z-index: 1000; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border-radius: 4px;">
+            <!-- Logo -->
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                <img alt="Amstar Pumps" src="images /navabr.svg" style="height: 55px; width: auto;" />
+            </a>
+            <!-- Links and Button Group -->
+            <div style="display: flex; align-items: center; gap: 50px;">
+                <div class="nav-links" style="display: flex; align-items: center; gap: 30px;">
+                    <a href="index.html" onmouseout="this.style.color='#1a2b4c'"
+                        onmouseover="this.style.color='#004fb1'"
+                        style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;">Home</a>
+                    <a href="blog.html" onmouseout="this.style.color='#1a2b4c'" onmouseover="this.style.color='#004fb1'"
+                        style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;">Blog</a>
+                    <a href="shop.html" onmouseout="this.style.color='#1a2b4c'" onmouseover="this.style.color='#004fb1'"
+                        style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;">Products</a>
+                </div>
+                <a class="nav-cta-btn" href="contact.html" onmouseout="this.style.backgroundColor='#004fb1'"
+                    onmouseover="this.style.backgroundColor='#0059c9'"
+                    style="background-color: #004fb1; color: #ffffff; padding: 12px 28px; border-radius: 0; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-size: 14.5px;">Contact</a>
+                <!-- Hamburger Button -->
+                <button id="mobile-menu-btn"
+                    style="display: none; background: none; border: none; cursor: pointer; padding: 5px;">
+                    <svg fill="none" height="20" viewbox="0 0 28 20" width="28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2H26M2 10H26M2 18H26" stroke="#1a2b4c" stroke-linecap="round" stroke-width="2.5">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu">
+            <button class="close-btn">×</button>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="shop.html">Products</a>
+            <a href="contact.html"
+                style="background: #004fb1; color: #fff; padding: 12px 40px; margin-top: 10px;">Contact</a>
+        </div>
+        <!-- content begin -->
+        <main style="padding-top: 100px;">
+            <div id="top">
+            </div>
+            <section>
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-3">
+                            <style>
+                                /* Premium Filter Sidebar Styling */
+                                .filter-sidebar {
+                                    background: #ffffff;
+                                    border-radius: 12px;
+                                    padding: 30px 24px;
+                                    box-shadow: 0 10px 40px rgba(15, 76, 151, 0.06);
+                                    border: 1px solid rgba(15, 76, 151, 0.08);
+                                    position: sticky;
+                                    top: 90px;
+                                }
+
+                                .filter-sidebar h4.sidebar-group-toggle {
+                                      font-family: 'Alan Sans', sans-serif;
+                                      font-size: 15px !important;
+                                      font-weight: 600 !important;
+                                      color: #1a2b4c !important;
+                                      margin: 0 !important;
+                                      padding: 12px 0 10px 0 !important;
+                                      background: transparent !important;
+                                      border: none !important;
+                                      border-bottom: 1px solid #f0f0f0 !important;
+                                      display: flex;
+                                      justify-content: space-between;
+                                      align-items: center;
+                                      cursor: pointer;
+                                      user-select: none;
+                                      text-transform: uppercase;
+                                      letter-spacing: 0.08em;
+                                      transition: color 0.2s ease;
+                                  }
+
+                                  .filter-sidebar h4.sidebar-group-toggle:hover,
+                                  .filter-sidebar h4.sidebar-group-toggle.active {
+                                      color: #0f4c97 !important;
+                                      background: transparent !important;
+                                      border-color: #f0f0f0 !important;
+                                  }
+
+                                  .filter-sidebar h4.sidebar-group-toggle svg {
+                                      color: #999;
+                                      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+                                  }
+
+                                  .filter-sidebar h4.sidebar-group-toggle:hover svg,
+                                  .filter-sidebar h4.sidebar-group-toggle.active svg {
+                                      color: #0f4c97;
+                                  }
+
+                                  /* Spacing dynamically applied inside forms when open */
+                                  .item_filter_group .de_form {
+                                      margin-top: 10px !important;
+                                      margin-bottom: 10px !important;
+                                      padding: 0 !important;
+                                  }
+
+                                .item_filter_group {
+                                    margin-bottom: 12px !important;
+                                    padding: 0px !important;
+                                    background: none !important;
+                                    box-shadow: none !important;
+                                    border: none !important;
+                                }
+
+                                .item_filter_group label {
+                                    font-weight: normal !important;
+                                    font-size: 15px !important;
+                                    color: #1a2b4c !important;
+                                }
+
+                                .category-group {
+                                    margin-bottom: 0px !important;
+                                    transition: all 0.3s ease;
+                                }
+
+                                .de_checkbox {
+                                    display: flex;
+                                    align-items: center;
+                                    margin-bottom: 0px;
+                                    cursor: pointer;
+                                    transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+                                }
+
+                                .de_checkbox:hover {
+                                    transform: translateX(4px);
+                                }
+
+                                /* Standard Checkbox styling */
+                                .de_checkbox input[type="checkbox"] {
+                                    width: 15px;
+                                    height: 15px;
+                                    margin-right: 8px;
+                                    cursor: pointer;
+                                    accent-color: var(--primary-color);
+                                 }
+
+                                 .de_checkbox input[type="checkbox"] + label:before {
+                                     border-radius: 4px !important;
+                                 }
+
+                                 .de_checkbox input[type="checkbox"]:checked + label:before {
+                                     background: var(--primary-color) !important;
+                                     border-color: var(--primary-color) !important;
+                                }
+
+                                /* Labels */
+                                .de_checkbox label {
+                                    font-family: 'Alan Sans', sans-serif;
+                                    cursor: pointer;
+                                    margin: 0;
+                                    padding-top: 1px;
+                                    line-height: 1.3;
+                                    transition: color 0.2s ease;
+                                }
+
+                                .category-group>.de_checkbox>label {
+                                    font-weight: normal !important;
+                                    font-size: 15px !important;
+                                    color: #1a2b4c !important;
+                                }
+
+                                .category-group>.de_checkbox:hover>label,
+                                 .de_checkbox input[type="checkbox"]:checked + label {
+                                     color: #0f4c97 !important;
+                                 }
+
+                                /* Sub-categories Tree Structure */
+                                .sub-categories {
+                                    position: relative;
+                                    padding-left: 28px !important;
+                                    margin-top: 2px !important;
+                                    margin-bottom: 2px !important;
+                                    gap: 2px !important;
+                                }
+
+                                .sub-categories::before {
+                                    content: '';
+                                    position: absolute;
+                                    left: 8px;
+                                    top: -6px;
+                                    bottom: 12px;
+                                    width: 2px;
+                                    background: #e1e8f0;
+                                    border-radius: 2px;
+                                }
+
+                                .sub-categories .de_checkbox {
+                                    position: relative;
+                                }
+
+                                .sub-categories .de_checkbox::before {
+                                    content: '';
+                                    position: absolute;
+                                    left: -20px;
+                                    top: 50%;
+                                    width: 12px;
+                                    height: 2px;
+                                    background: #e1e8f0;
+                                    border-radius: 2px;
+                                }
+
+                                .sub-categories .de_checkbox label {
+                                    font-size: 15px !important;
+                                     font-weight: normal !important;
+                                     color: #1a2b4c !important;
+                                }
+
+                                 .sub-categories .de_checkbox:hover label,
+                                 .sub-categories .de_checkbox input[type="checkbox"]:checked + label {
+                                     color: #0f4c97 !important;
+                                 }
+
+                                /* Sidebar Accordion Categories */
+                                .category-group {
+                                    border-bottom: none;
+                                    padding: 0;
+                                    margin-bottom: 0px;
+                                }
+
+                                .category-group:last-child {
+                                    border-bottom: none;
+                                }
+
+                                .category-header {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    padding: 4px 0;
+                                    cursor: pointer;
+                                }
+
+                                .category-header-left {
+                                    display: flex;
+                                    align-items: center;
+                                    flex-grow: 1;
+                                }
+
+                                .category-toggle-btn {
+                                    background: none;
+                                    border: none;
+                                    padding: 6px;
+                                    cursor: pointer;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: #5a7184;
+                                    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+                                    outline: none;
+                                }
+
+                                .category-toggle-btn:hover {
+                                    color: #0f4c97;
+                                }
+
+                                .category-toggle-btn svg {
+                                    stroke-width: 3.5px;
+                                    width: 10px;
+                                    height: 10px;
+                                }
+
+                                .category-group.expanded .category-toggle-btn {
+                                    transform: rotate(180deg);
+                                    color: #0f4c97;
+                                }
+
+                                /* Collapsible sub-categories container */
+                                .category-group .sub-categories {
+                                    max-height: 0;
+                                    overflow: hidden;
+                                    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), margin 0.35s ease;
+                                    padding-left: 28px !important;
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 6px;
+                                    margin-top: 0;
+                                    margin-bottom: 0;
+                                }
+
+                                .category-group.expanded .sub-categories {
+                                    max-height: 350px; /* Big enough for subcategory lists */
+                                    margin-top: 8px;
+                                    margin-bottom: 8px;
+                                }
+
+                                .sub-categories .de_checkbox {
+                                    margin-bottom: 4px;
+                                }
+                            </style>
+                            <div class="filter-sidebar">
+                                <div class="item_filter_group">
+                                    <h4 class="sidebar-group-toggle">Categories <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease; transform: rotate(-90deg);"><polyline points="6 9 12 15 18 9"></polyline></svg></h4>
+                                    <div class="de_form" id="categories-accordion" style="display: none;">
+                                        <!-- Submersibles -->
+                                        <div class="category-group" id="group_cat_1">
+                                            <div class="category-header">
+                                                <div class="category-header-left">
+                                                    <div class="de_checkbox">
+                                                        <input id="cat_1" name="cat_1" type="checkbox" value="Submersibles" />
+                                                        <label for="cat_1" >Submersibles</label>
+                                                    </div>
+                                                </div>
+                                                <button class="category-toggle-btn" type="button" aria-label="Toggle Submersibles">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                                </button>
+                                            </div>
+                                            <div class="sub-categories">
+                                                <div class="de_checkbox">
+                                                    <input id="subcat_1_1" name="subcat_1_1" class="subcat-checkbox"
+                                                        data-parent="cat_1" type="checkbox"
+                                                        value="4” Submersible Pump" />
+                                                    <label for="subcat_1_1" style="font-size: 13px; color: #555;">4”
+                                                        Submersible Pump</label>
+                                                </div>
+                                                <div class="de_checkbox">
+                                                    <input id="subcat_1_2" name="subcat_1_2" class="subcat-checkbox"
+                                                        data-parent="cat_1" type="checkbox"
+                                                        value="6” Submersible Pump" />
+                                                    <label for="subcat_1_2" style="font-size: 13px; color: #555;">6”
+                                                        Submersible Pump</label>
+                                                </div>
+                                                <div class="de_checkbox">
+                                                    <input id="subcat_1_3" name="subcat_1_3" class="subcat-checkbox"
+                                                        data-parent="cat_1" type="checkbox"
+                                                        value="8” Submersible Pump" />
+                                                    <label for="subcat_1_3" style="font-size: 13px; color: #555;">8”
+                                                        Submersible Pump</label>
+                                                </div>
+                                                <div class="de_checkbox">
+                                                    <input id="subcat_1_4" name="subcat_1_4" class="subcat-checkbox"
+                                                        data-parent="cat_1" type="checkbox"
+                                                        value="4” Submersible Motor" />
+                                                    <label for="subcat_1_4" style="font-size: 13px; color: #555;">4”
+                                                        Submersible Motor</label>
+                                                </div>
+                                                <div class="de_checkbox">
+                                                    <input id="subcat_1_5" name="subcat_1_5" class="subcat-checkbox"
+                                                        data-parent="cat_1" type="checkbox"
+                                                        value="6” Submersible Motor" />
+                                                    <label for="subcat_1_5" style="font-size: 13px; color: #555;">6”
+                                                        Submersible Motor</label>
+                                                </div>
+                                                <div class="de_checkbox">
+                                                    <input id="subcat_1_6" name="subcat_1_6" class="subcat-checkbox"
+                                                        data-parent="cat_1" type="checkbox"
+                                                        value="8” Submersible Motor" />
+                                                    <label for="subcat_1_6" style="font-size: 13px; color: #555;">8”
+                                                        Submersible Motor</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Openwell Pump -->
+                                        <div class="category-group" id="group_cat_2">
+                                            <div class="category-header">
+                                                <div class="category-header-left">
+                                                    <div class="de_checkbox">
+                                                        <input id="cat_2" name="cat_2" type="checkbox" value="Openwell Pump" />
+                                                        <label for="cat_2" >Openwell Pump</label>
+                                                    </div>
+                                                </div>
+                                                <button class="category-toggle-btn" type="button" aria-label="Toggle Openwell Pump">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                                </button>
+                                            </div>
+                                            <div class="sub-categories">
+                                                <div class="de_checkbox">
+                                                    <input id="subcat_2_1" name="subcat_2_1" class="subcat-checkbox"
+                                                        data-parent="cat_2" type="checkbox"
+                                                        value="Single Phase Openwell" />
+                                                    <label for="subcat_2_1" style="font-size: 13px; color: #555;">Single
+                                                        Phase Openwell</label>
+                                                </div>
+                                                <div class="de_checkbox">
+                                                    <input id="subcat_2_2" name="subcat_2_2" class="subcat-checkbox"
+                                                        data-parent="cat_2" type="checkbox"
+                                                        value="Three Phase Openwell" />
+                                                    <label for="subcat_2_2" style="font-size: 13px; color: #555;">Three
+                                                        Phase Openwell</label>
+                                                </div>
+                                                <div class="de_checkbox">
+                                                    <input id="subcat_2_3" name="subcat_2_3" class="subcat-checkbox"
+                                                        data-parent="cat_2" type="checkbox" value="Vertical Openwell" />
+                                                    <label for="subcat_2_3"
+                                                        style="font-size: 13px; color: #555;">Vertical Openwell</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Monoblock Pump -->
+                                        <div class="category-group" id="group_cat_3">
+                                            <div class="category-header">
+                                                <div class="category-header-left">
+                                                    <div class="de_checkbox">
+                                                        <input id="cat_3" name="cat_3" type="checkbox" value="Monoblock Pump" />
+                                                        <label for="cat_3" >Monoblock Pump</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Self-Priming Pump -->
+                                        <div class="category-group" id="group_cat_4">
+                                            <div class="category-header">
+                                                <div class="category-header-left">
+                                                    <div class="de_checkbox">
+                                                        <input id="cat_4" name="cat_4" type="checkbox" value="Self-Priming Pump" />
+                                                        <label for="cat_4" >Self-Priming Pump</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Booster Pumps -->
+                                        <div class="category-group" id="group_cat_5">
+                                            <div class="category-header">
+                                                <div class="category-header-left">
+                                                    <div class="de_checkbox">
+                                                        <input id="cat_5" name="cat_5" type="checkbox" value="Booster Pumps" />
+                                                        <label for="cat_5" >Booster Pumps</label>
+                                                    </div>
+                                                </div>
+                                                <button class="category-toggle-btn" type="button" aria-label="Toggle Booster Pumps">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                                </button>
+                                            </div>
+                                            <div class="sub-categories">
+                                                <div class="de_checkbox">
+                                                    <input id="subcat_5_1" name="subcat_5_1" class="subcat-checkbox"
+                                                        data-parent="cat_5" type="checkbox" value="Booster Pump" />
+                                                    <label for="subcat_5_1"
+                                                        style="font-size: 13px; color: #555;">Booster Pump</label>
+                                                </div>
+                                                <div class="de_checkbox">
+                                                    <input id="subcat_5_2" name="subcat_5_2" class="subcat-checkbox"
+                                                        data-parent="cat_5" type="checkbox" value="Circulatory Pump" />
+                                                    <label for="subcat_5_2"
+                                                        style="font-size: 13px; color: #555;">Circulatory Pump</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Other Pump -->
+                                        <div class="category-group" id="group_cat_6">
+                                            <div class="category-header">
+                                                <div class="category-header-left">
+                                                    <div class="de_checkbox">
+                                                        <input id="cat_6" name="cat_6" type="checkbox" value="Other Pump" />
+                                                        <label for="cat_6" >Other Pump</label>
+                                                    </div>
+                                                </div>
+                                                <button class="category-toggle-btn" type="button" aria-label="Toggle Other Pump">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                                </button>
+                                            </div>
+                                            <div class="sub-categories">
+                                                <div class="de_checkbox">
+                                                    <input id="subcat_6_1" name="subcat_6_1" class="subcat-checkbox"
+                                                        data-parent="cat_6" type="checkbox" value="Sewage Pump" />
+                                                    <label for="subcat_6_1" style="font-size: 13px; color: #555;">Sewage
+                                                        Pump</label>
+                                                </div>
+                                                <div class="de_checkbox">
+                                                    <input id="subcat_6_2" name="subcat_6_2" class="subcat-checkbox"
+                                                        data-parent="cat_6" type="checkbox" value="Splitcase Pump" />
+                                                    <label for="subcat_6_2"
+                                                        style="font-size: 13px; color: #555;">Splitcase Pump</label>
+                                                </div>
+                                                <div class="de_checkbox">
+                                                    <input id="subcat_6_3" name="subcat_6_3" class="subcat-checkbox"
+                                                        data-parent="cat_6" type="checkbox"
+                                                        value="Vertical Multistage Pump" />
+                                                    <label for="subcat_6_3"
+                                                        style="font-size: 13px; color: #555;">Vertical Multistage
+                                                        Pump</label>
+                                                </div>
+                                                <div class="de_checkbox">
+                                                    <input id="subcat_6_4" name="subcat_6_4" class="subcat-checkbox"
+                                                        data-parent="cat_6" type="checkbox" value="Centrifugal Pump" />
+                                                    <label for="subcat_6_4"
+                                                        style="font-size: 13px; color: #555;">Centrifugal Pump</label>
+                                                </div>
+                                                <div class="de_checkbox">
+                                                    <input id="subcat_6_5" name="subcat_6_5" class="subcat-checkbox"
+                                                        data-parent="cat_6" type="checkbox" value="Dewater Pump" />
+                                                    <label for="subcat_6_5"
+                                                        style="font-size: 13px; color: #555;">Dewater Pump</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Control Panels -->
+                                        <div class="category-group" id="group_cat_7">
+                                            <div class="category-header">
+                                                <div class="category-header-left">
+                                                    <div class="de_checkbox">
+                                                        <input id="cat_7" name="cat_7" type="checkbox" value="Control Panels" />
+                                                        <label for="cat_7" >Control Panels</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Pipes -->
+                                        <div class="category-group" id="group_cat_8">
+                                            <div class="category-header">
+                                                <div class="category-header-left">
+                                                    <div class="de_checkbox">
+                                                        <input id="cat_8" name="cat_8" type="checkbox" value="Pipes" />
+                                                        <label for="cat_8" >Pipes</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Wires -->
+                                        <div class="category-group" id="group_cat_9">
+                                            <div class="category-header">
+                                                <div class="category-header-left">
+                                                    <div class="de_checkbox">
+                                                        <input id="cat_9" name="cat_9" type="checkbox" value="Wires" />
+                                                        <label for="cat_9" >Wires</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_filter_group">
+                                    <h4 class="sidebar-group-toggle">Application <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease; transform: rotate(-90deg);"><polyline points="6 9 12 15 18 9"></polyline></svg></h4>
+                                    <div class="de_form" style="display: none;">
+                                        <!-- Agriculture -->
+                                        <div class="category-group">
+                                            <div class="category-header">
+                                                <div class="category-header-left">
+                                                    <div class="de_checkbox">
+                                                        <input id="app_1" name="app_1" type="checkbox" value="agriculture" />
+                                                        <label for="app_1">Agriculture</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Residential -->
+                                        <div class="category-group">
+                                            <div class="category-header">
+                                                <div class="category-header-left">
+                                                    <div class="de_checkbox">
+                                                        <input id="app_2" name="app_2" type="checkbox" value="residential" />
+                                                        <label for="app_2">Residential</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Industrial -->
+                                        <div class="category-group">
+                                            <div class="category-header">
+                                                <div class="category-header-left">
+                                                    <div class="de_checkbox">
+                                                        <input id="app_3" name="app_3" type="checkbox" value="industrial" />
+                                                        <label for="app_3">Industrial</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Commercial -->
+                                        <div class="category-group">
+                                            <div class="category-header">
+                                                <div class="category-header-left">
+                                                    <div class="de_checkbox">
+                                                        <input id="app_4" name="app_4" type="checkbox" value="commercial" />
+                                                        <label for="app_4">Commercial</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- End filter-sidebar -->
+                        </div> <!-- End col-lg-3 -->
+                        <div class="col-lg-9">
+                            <div id="product-list-container">
+                                <!-- 4” Submersible Motor -->
+                                <div class="product-item" data-application="industrial,residential,agriculture"
+                                    data-category="Submersibles">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=4-inch-submersible-motor&amp;name=4%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/4%E2%80%9D%20Submersible%20Motor.webp">
+                                                <img alt="4” Submersible Motor"
+                                                    src="images/Compressed 2/Compressed 2/4” Submersible Motor.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=4-inch-submersible-motor&amp;name=4%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/4%E2%80%9D%20Submersible%20Motor.webp">4”
+                                                Submersible Motor</a>
+                                            <p class="product-category">Submersibles</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=4-inch-submersible-motor&amp;name=4%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/4%E2%80%9D%20Submersible%20Motor.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 4” Submersible Pump -->
+                                <div class="product-item" data-application="industrial,residential,agriculture"
+                                    data-category="Submersibles">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=4-inch-submersible-pump&amp;name=4%E2%80%9D+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/4%E2%80%9D%20Submersible%20Pump.webp">
+                                                <img alt="4” Submersible Pump"
+                                                    src="images/Compressed 2/Compressed 2/4” Submersible Pump.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=4-inch-submersible-pump&amp;name=4%E2%80%9D+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/4%E2%80%9D%20Submersible%20Pump.webp">4”
+                                                Submersible Pump</a>
+                                            <p class="product-category">Submersibles</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=4-inch-submersible-pump&amp;name=4%E2%80%9D+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/4%E2%80%9D%20Submersible%20Pump.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 6” Submersible Motor -->
+                                <div class="product-item" data-application="industrial,residential,agriculture"
+                                    data-category="Submersibles">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Motor.webp">
+                                                <img alt="6” Submersible Motor"
+                                                    src="images/Compressed 2/Compressed 2/6” Submersible Motor.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Motor.webp">6”
+                                                Submersible Motor</a>
+                                            <p class="product-category">Submersibles</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=6-inch-submersible-motor&amp;name=6%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Motor.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 6” Submersible Pump -->
+                                <div class="product-item" data-application="industrial,residential,agriculture"
+                                    data-category="Submersibles">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=6-inch-submersible-pump&amp;name=6%E2%80%9D+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Pump.webp">
+                                                <img alt="6” Submersible Pump"
+                                                    src="images/Compressed 2/Compressed 2/6” Submersible Pump.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=6-inch-submersible-pump&amp;name=6%E2%80%9D+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Pump.webp">6”
+                                                Submersible Pump</a>
+                                            <p class="product-category">Submersibles</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=6-inch-submersible-pump&amp;name=6%E2%80%9D+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/6%E2%80%9D%20Submersible%20Pump.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 8" Submersible Pump -->
+                                <div class="product-item" data-application="industrial,residential,agriculture"
+                                    data-category="Submersibles">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=8-inch-submersible-pump&amp;name=8%22+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/8_%20Submersible%20Pump.webp">
+                                                <img alt='8" Submersible Pump'
+                                                    src="images/Compressed 2/Compressed 2/8_ Submersible Pump.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=8-inch-submersible-pump&amp;name=8%22+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/8_%20Submersible%20Pump.webp">8"
+                                                Submersible Pump</a>
+                                            <p class="product-category">Submersibles</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=8-inch-submersible-pump&amp;name=8%22+Submersible+Pump&amp;img=images/Compressed%202/Compressed%202/8_%20Submersible%20Pump.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 8” Submersible Motor -->
+                                <div class="product-item" data-application="industrial,residential,agriculture"
+                                    data-category="Submersibles">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=8-inch-submersible-motor&amp;name=8%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/8%E2%80%9D%20Submersible%20Motor.webp">
+                                                <img alt="8” Submersible Motor"
+                                                    src="images/Compressed 2/Compressed 2/8” Submersible Motor.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=8-inch-submersible-motor&amp;name=8%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/8%E2%80%9D%20Submersible%20Motor.webp">8”
+                                                Submersible Motor</a>
+                                            <p class="product-category">Submersibles</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=8-inch-submersible-motor&amp;name=8%E2%80%9D+Submersible+Motor&amp;img=images/Compressed%202/Compressed%202/8%E2%80%9D%20Submersible%20Motor.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Booster Pump -->
+                                <div class="product-item" data-application="residential,agriculture"
+                                    data-category="Booster Pumps">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=booster-pump&amp;name=Booster+Pump&amp;img=images/Compressed%202/Compressed%202/Booster%20Pump.webp">
+                                                <img alt="Booster Pump"
+                                                    src="images/Compressed 2/Compressed 2/Booster Pump.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=booster-pump&amp;name=Booster+Pump&amp;img=images/Compressed%202/Compressed%202/Booster%20Pump.webp">Booster
+                                                Pump</a>
+                                            <p class="product-category">Booster Pumps</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=booster-pump&amp;name=Booster+Pump&amp;img=images/Compressed%202/Compressed%202/Booster%20Pump.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Cables -->
+                                <div class="product-item" data-application="industrial,residential"
+                                    data-category="Wires">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=cables&amp;name=Cables&amp;img=images/Compressed%202/Compressed%202/Cables.webp">
+                                                <img alt="Cables" src="images/Compressed 2/Compressed 2/Cables.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=cables&amp;name=Cables&amp;img=images/Compressed%202/Compressed%202/Cables.webp">Cables</a>
+                                            <p class="product-category">Wires</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=cables&amp;name=Cables&amp;img=images/Compressed%202/Compressed%202/Cables.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Centrifugal Pump -->
+                                <div class="product-item" data-application="residential,agriculture"
+                                    data-category="Other Pump">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=centrifugal-pump&amp;name=Centrifugal+Pump&amp;img=images/Compressed%202/Compressed%202/Centrifugal%20Pump.webp">
+                                                <img alt="Centrifugal Pump"
+                                                    src="images/Compressed 2/Compressed 2/Centrifugal Pump.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=centrifugal-pump&amp;name=Centrifugal+Pump&amp;img=images/Compressed%202/Compressed%202/Centrifugal%20Pump.webp">Centrifugal
+                                                Pump</a>
+                                            <p class="product-category">Other Pump</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=centrifugal-pump&amp;name=Centrifugal+Pump&amp;img=images/Compressed%202/Compressed%202/Centrifugal%20Pump.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Circulatory Pump -->
+                                <div class="product-item" data-application="industrial,commercial"
+                                    data-category="Booster Pumps">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=circulatory-pump&amp;name=Circulatory+Pump&amp;img=images/Compressed%202/Compressed%202/Circulatory%20Pump.webp">
+                                                <img alt="Circulatory Pump"
+                                                    src="images/Compressed 2/Compressed 2/Circulatory Pump.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=circulatory-pump&amp;name=Circulatory+Pump&amp;img=images/Compressed%202/Compressed%202/Circulatory%20Pump.webp">Circulatory
+                                                Pump</a>
+                                            <p class="product-category">Booster Pumps</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=circulatory-pump&amp;name=Circulatory+Pump&amp;img=images/Compressed%202/Compressed%202/Circulatory%20Pump.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Control Panel -->
+                                <div class="product-item" data-application="industrial" data-category="Control Panels">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=control-panel&amp;name=Control+Panel&amp;img=images/Compressed%202/Compressed%202/Control%20Panel.webp">
+                                                <img alt="Control Panel"
+                                                    src="images/Compressed 2/Compressed 2/Control Panel.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=control-panel&amp;name=Control+Panel&amp;img=images/Compressed%202/Compressed%202/Control%20Panel.webp">Control
+                                                Panel</a>
+                                            <p class="product-category">Control Panels</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=control-panel&amp;name=Control+Panel&amp;img=images/Compressed%202/Compressed%202/Control%20Panel.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- De Water Pump -->
+                                <div class="product-item" data-application="commercial,residential,industrial"
+                                    data-category="Other Pump">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=de-water-pump&amp;name=De+Water+Pump&amp;img=images/Compressed%202/Compressed%202/De%20Water%20Pump.webp">
+                                                <img alt="De Water Pump"
+                                                    src="images/Compressed 2/Compressed 2/De Water Pump.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=de-water-pump&amp;name=De+Water+Pump&amp;img=images/Compressed%202/Compressed%202/De%20Water%20Pump.webp">De
+                                                Water Pump</a>
+                                            <p class="product-category">Other Pump</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=de-water-pump&amp;name=De+Water+Pump&amp;img=images/Compressed%202/Compressed%202/De%20Water%20Pump.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Monoblock -->
+                                <div class="product-item" data-application="residential,agriculture"
+                                    data-category="Monoblock Pump">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=monoblock&amp;name=Monoblock&amp;img=images/Compressed%202/Compressed%202/Monoblock.webp">
+                                                <img alt="Monoblock"
+                                                    src="images/Compressed 2/Compressed 2/Monoblock.webp"
+                                                    style="max-width: 65%;" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=monoblock&amp;name=Monoblock&amp;img=images/Compressed%202/Compressed%202/Monoblock.webp">Monoblock</a>
+                                            <p class="product-category">Monoblock Pump</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=monoblock&amp;name=Monoblock&amp;img=images/Compressed%202/Compressed%202/Monoblock.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Openwell Single Phase -->
+                                <div class="product-item" data-application="residential,agriculture"
+                                    data-category="Openwell Pump">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=openwell-single-phase&amp;name=Openwell+Single+Phase&amp;img=images/Compressed%202/Compressed%202/Openwell%20Single%20Phase.webp">
+                                                <img alt="Openwell Single Phase"
+                                                    src="images/Compressed 2/Compressed 2/Openwell Single Phase.webp">
+                                                </img></a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=openwell-single-phase&amp;name=Openwell+Single+Phase&amp;img=images/Compressed%202/Compressed%202/Openwell%20Single%20Phase.webp">Openwell
+                                                Single Phase</a>
+                                            <p class="product-category">Openwell Pump</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=openwell-single-phase&amp;name=Openwell+Single+Phase&amp;img=images/Compressed%202/Compressed%202/Openwell%20Single%20Phase.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Openwell Three Phase -->
+                                <div class="product-item" data-application="residential,agriculture"
+                                    data-category="Openwell Pump">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=openwell-three-phase&amp;name=Openwell+Three+Phase&amp;img=images/Compressed%202/Compressed%202/Openwell%20Three%20Phase.webp">
+                                                <img alt="Openwell Three Phase"
+                                                    src="images/Compressed 2/Compressed 2/Openwell Three Phase.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=openwell-three-phase&amp;name=Openwell+Three+Phase&amp;img=images/Compressed%202/Compressed%202/Openwell%20Three%20Phase.webp">Openwell
+                                                Three Phase</a>
+                                            <p class="product-category">Openwell Pump</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=openwell-three-phase&amp;name=Openwell+Three+Phase&amp;img=images/Compressed%202/Compressed%202/Openwell%20Three%20Phase.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Pipe -->
+                                <div class="product-item" data-application="industrial,residential,commercial"
+                                    data-category="Pipes">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=pipe&amp;name=Pipe&amp;img=images/Compressed%202/Compressed%202/Pipe.webp">
+                                                <img alt="Pipe" src="images/Compressed 2/Compressed 2/Pipe.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=pipe&amp;name=Pipe&amp;img=images/Compressed%202/Compressed%202/Pipe.webp">Pipe</a>
+                                            <p class="product-category">Pipes</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=pipe&amp;name=Pipe&amp;img=images/Compressed%202/Compressed%202/Pipe.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Self Priming -->
+                                <div class="product-item" data-application="residential,agriculture"
+                                    data-category="Self-Priming Pump">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=self-priming&amp;name=Self+Priming&amp;img=images/Compressed%202/Compressed%202/Self%20Priming.webp">
+                                                <img alt="Self Priming"
+                                                    src="images/Compressed 2/Compressed 2/Self Priming.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=self-priming&amp;name=Self+Priming&amp;img=images/Compressed%202/Compressed%202/Self%20Priming.webp">Self
+                                                Priming</a>
+                                            <p class="product-category">Self-Priming Pump</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=self-priming&amp;name=Self+Priming&amp;img=images/Compressed%202/Compressed%202/Self%20Priming.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Sewage Pump -->
+                                <div class="product-item" data-application="industrial,residential,agriculture"
+                                    data-category="Other Pump">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=sewage-pump&amp;name=Sewage+Pump&amp;img=images/Compressed%202/Compressed%202/Sewage%20Pump.webp">
+                                                <img alt="Sewage Pump"
+                                                    src="images/Compressed 2/Compressed 2/Sewage Pump.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=sewage-pump&amp;name=Sewage+Pump&amp;img=images/Compressed%202/Compressed%202/Sewage%20Pump.webp">Sewage
+                                                Pump</a>
+                                            <p class="product-category">Other Pump</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=sewage-pump&amp;name=Sewage+Pump&amp;img=images/Compressed%202/Compressed%202/Sewage%20Pump.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Splitcase Pump -->
+                                <div class="product-item" data-application="industrial,commercial"
+                                    data-category="Other Pump">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=splitcase-pump&amp;name=Splitcase+Pump&amp;img=images/Compressed%202/Compressed%202/Splitcase%20Pump.webp">
+                                                <img alt="Splitcase Pump"
+                                                    src="images/Compressed 2/Compressed 2/Splitcase Pump.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=splitcase-pump&amp;name=Splitcase+Pump&amp;img=images/Compressed%202/Compressed%202/Splitcase%20Pump.webp">Splitcase
+                                                Pump</a>
+                                            <p class="product-category">Other Pump</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=splitcase-pump&amp;name=Splitcase+Pump&amp;img=images/Compressed%202/Compressed%202/Splitcase%20Pump.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Vertical Multistage Pump -->
+                                <div class="product-item" data-application="residential,agriculture"
+                                    data-category="Other Pump">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=vertical-multistage-pump&amp;name=Vertical+Multistage+Pump&amp;img=images/Compressed%202/Compressed%202/Vertical%20Multistage%20Pump.webp">
+                                                <img alt="Vertical Multistage Pump"
+                                                    src="images/Compressed 2/Compressed 2/Vertical Multistage Pump.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=vertical-multistage-pump&amp;name=Vertical+Multistage+Pump&amp;img=images/Compressed%202/Compressed%202/Vertical%20Multistage%20Pump.webp">Vertical
+                                                Multistage Pump</a>
+                                            <p class="product-category">Other Pump</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=vertical-multistage-pump&amp;name=Vertical+Multistage+Pump&amp;img=images/Compressed%202/Compressed%202/Vertical%20Multistage%20Pump.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Vertical Openwell -->
+                                <div class="product-item" data-application="residential,agriculture"
+                                    data-category="Openwell Pump">
+                                    <div class="product-card">
+                                        <div class="product-image-box">
+                                            <a
+                                                href="products.html?id=vertical-openwell&amp;name=Vertical+Openwell&amp;img=images/Compressed%202/Compressed%202/Vertical%20Openwell.webp">
+                                                <img alt="Vertical Openwell"
+                                                    src="images/Compressed 2/Compressed 2/Vertical Openwell.webp" />
+                                            </a>
+                                        </div>
+                                        <div class="product-details">
+                                            <a class="product-title"
+                                                href="products.html?id=vertical-openwell&amp;name=Vertical+Openwell&amp;img=images/Compressed%202/Compressed%202/Vertical%20Openwell.webp">Vertical
+                                                Openwell</a>
+                                            <p class="product-category">Openwell Pump</p>
+                                            <div class="product-footer">
+                                                <a class="add-to-cart-btn"
+                                                    href="products.html?id=vertical-openwell&amp;name=Vertical+Openwell&amp;img=images/Compressed%202/Compressed%202/Vertical%20Openwell.webp">View
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- pagination begin -->
+                            <div class="col-lg-12 pt-5 text-center">
+                                <div class="d-inline-block">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination" id="dynamic-pagination"
+                                            style="display: flex; gap: 8px; justify-content: center; list-style: none; padding-top: 20px;">
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <!-- pagination end -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- content close -->
+        <!-- footer begin -->
+        <!-- ============================================================ -->
+        <!-- CUSTOM FOOTER                                                 -->
+        <!-- ============================================================ -->
+        <footer id="main-footer"
+            style="background-color: #004fb1; padding: 80px 0 30px 0; color: #ffffff; font-family: 'Alan Sans', sans-serif;">
+            <div class="container">
+                <div class="row">
+                    <!-- Branding and Certifications -->
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <div style="margin-bottom: 30px;">
+                            <img alt="Amstar Pumps" src="images /Footer/Asset 2(1).svg"
+                                style="height: 100px; width: auto;" />
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                            <img alt="Certifications" src="images /Footer/Certification logos.png"
+                                style="height: 45px; width: auto;" />
+                        </div>
+                    </div>
+                    <!-- Links Col 1 -->
+                    <div class="col-lg-2 col-md-3 mb-4 mb-md-0">
+                        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
+                            <li><a href="about.html" style="color: #ffffff; text-decoration: none;">About</a></li>
+                            <li><a href="shop.html" style="color: #ffffff; text-decoration: none;">Products</a></li>
+                            <li><a href="gallery.html" style="color: #ffffff; text-decoration: none;">Gallery</a></li>
+                            <li><a href="blog.html" style="color: #ffffff; text-decoration: none;">Blogs</a></li>
+                        </ul>
+                    </div>
+                    <!-- Links Col 2 -->
+                    <div class="col-lg-2 col-md-3 mb-4 mb-md-0">
+                        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
+                            <li><a href="contact.html" style="color: #ffffff; text-decoration: none;">Contact Us</a>
+                            </li>
+                            <li><a href="about.html#profile" style="color: #ffffff; text-decoration: none;">Company
+                                    Profile</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Details -->
+                    <div class="col-lg-3 col-md-6">
+                        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                            <img alt="Location" src="images /Footer/Location icon.svg"
+                                style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);" />
+                            <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
+                                Amstar Pumps<br />
+                                Door No. 214, Lenin Street, Vilankurichi,<br />
+                                Coimbatore, Tamil Nadu<br />
+                                641035, India
+                            </p>
+                        </div>
+                        <div style="display: flex; gap: 15px; margin-bottom: 20px; align-items: center;">
+                            <img alt="Phone" src="images /Footer/Phone Icon.svg"
+                                style="width: 18px; height: 18px; flex-shrink: 0; filter: brightness(0) invert(1);" />
+                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">
+                                +91 95001 84003 | +91 95001 36003
+                            </p>
+                        </div>
+                        <div style="display: flex; gap: 15px; align-items: flex-start;">
+                            <img alt="Mail" src="images /Footer/Mail Icon.svg"
+                                style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);" />
+                            <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
+                                info@amstarpumps.com<br />
+                                export@amstarpumps.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.3);">
+                    <p style="margin: 0; font-size: 14px; opacity: 0.8;">
+                        ©Amstar-2026 all rights reserved
+                    </p>
+                    <div style="display: flex; gap: 20px;">
+                        <a href="#"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 13px;">LinkedIn</a>
+                        <a href="#"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 13px;">Facebook</a>
+                        <a href="#"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 13px;">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer close -->
+    </div>
+    <!-- Javascript Files
+    ================================================== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const itemsPerPage = 15;
+            const allProducts = Array.from(document.querySelectorAll('.product-item'));
+            const paginationContainer = document.getElementById('dynamic-pagination');
+            let filteredProducts = [...allProducts];
+
+            // Sidebar Accordion Collapsible Logic
+            const categoryGroups = document.querySelectorAll('#categories-accordion .category-group');
+
+            categoryGroups.forEach(group => {
+                const header = group.querySelector('.category-header');
+                const subcats = group.querySelector('.sub-categories');
+
+                if (header && subcats) {
+                    header.addEventListener('click', function (e) {
+                        // Prevent collapse/expand toggle when clicking on the checkbox or label itself
+                        if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'label' || e.target.closest('.de_checkbox')) {
+                            return;
+                        }
+                        
+                        const isExpanded = group.classList.contains('expanded');
+                        
+                        // Accordion Collapse All Other Groups
+                        categoryGroups.forEach(otherGroup => {
+                            if (otherGroup !== group) {
+                                otherGroup.classList.remove('expanded');
+                            }
+                        });
+                        
+                        // Toggle current group
+                        if (isExpanded) {
+                            group.classList.remove('expanded');
+                        } else {
+                            group.classList.add('expanded');
+                        }
+                    });
+                }
+            });
+
+            // Toggle Main Filter Groups (Categories & Application)
+            document.querySelectorAll('.sidebar-group-toggle').forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const deForm = this.nextElementSibling;
+                    const chevron = this.querySelector('svg');
+                    
+                    const isHidden = deForm.style.display === 'none';
+                    deForm.style.display = isHidden ? 'block' : 'none';
+                    if (isHidden) {
+                        this.classList.add('active');
+                        if (chevron) chevron.style.transform = 'rotate(0deg)';
+                    } else {
+                        this.classList.remove('active');
+                        if (chevron) chevron.style.transform = 'rotate(-90deg)';
+                    }
+                });
+            });
+
+            // Checkboxes
+            const catCheckboxes = document.querySelectorAll('input[id^="cat_"]');
+            const subcatCheckboxes = document.querySelectorAll('.subcat-checkbox');
+            const appCheckboxes = document.querySelectorAll('input[id^="app_"]');
+
+            // Parent-child checkbox linkage
+            catCheckboxes.forEach(parentCb => {
+                const parentId = parentCb.id;
+                const children = document.querySelectorAll(`.subcat-checkbox[data-parent="${parentId}"]`);
+
+                parentCb.addEventListener('change', () => {
+                    children.forEach(child => {
+                        child.checked = parentCb.checked;
+                    });
+                    
+                    // If checking a category with subcategories, auto expand it and collapse others
+                    if (parentCb.checked) {
+                        const group = parentCb.closest('.category-group');
+                        const subcats = group ? group.querySelector('.sub-categories') : null;
+                        if (group && subcats) {
+                            categoryGroups.forEach(otherGroup => {
+                                if (otherGroup !== group) {
+                                    otherGroup.classList.remove('expanded');
+                                }
+                            });
+                            group.classList.add('expanded');
+                        }
+                    }
+                    
+                    updateFilters();
+                });
+            });
+
+            subcatCheckboxes.forEach(childCb => {
+                childCb.addEventListener('change', () => {
+                    const parentId = childCb.getAttribute('data-parent');
+                    const parentCb = document.getElementById(parentId);
+                    const children = Array.from(document.querySelectorAll(`.subcat-checkbox[data-parent="${parentId}"]`));
+
+                    const checkedCount = children.filter(c => c.checked).length;
+
+                    if (checkedCount === 0) {
+                        parentCb.checked = false;
+                        parentCb.indeterminate = false;
+                    } else if (checkedCount === children.length) {
+                        parentCb.checked = true;
+                        parentCb.indeterminate = false;
+                    } else {
+                        parentCb.checked = false;
+                        parentCb.indeterminate = true;
+                    }
+                    updateFilters();
+                });
+            });
+
+            function matchSubcategory(productTitle, subcatValue) {
+                const t = productTitle.replace(/[\u201C\u201D""]/g, '"').toLowerCase().trim();
+                const s = subcatValue.replace(/[\u201C\u201D""]/g, '"').toLowerCase().trim();
+
+                if (t === s) return true;
+
+                // Custom name normalization rules
+                if (s === 'single phase openwell' && t === 'openwell single phase') return true;
+                if (s === 'three phase openwell' && t === 'openwell three phase') return true;
+                if (s === 'dewater pump' && (t === 'dewater pump' || t === 'de water pump')) return true;
+                if (s === 'wires' && (t === 'wires' || t === 'cables')) return true;
+                if (s === 'pipes' && (t === 'pipes' || t === 'pipe')) return true;
+                if (s === 'control panels' && (t === 'control panels' || t === 'control panel')) return true;
+
+                return false;
+            }
+
+            function updateFilters() {
+                const activeCats = Array.from(catCheckboxes).filter(cb => cb.checked).map(cb => cb.value);
+                const activeSubCats = Array.from(subcatCheckboxes).filter(cb => cb.checked).map(cb => cb.value);
+                const activeApps = Array.from(appCheckboxes).filter(cb => cb.checked).map(cb => cb.value);
+
+                const isCatFilterActive = activeCats.length > 0 || activeSubCats.length > 0;
+                const isAppFilterActive = activeApps.length > 0;
+
+                filteredProducts = allProducts.filter(item => {
+                    const itemCat = item.getAttribute('data-category');
+                    const titleEl = item.querySelector('.product-title');
+                    const itemTitle = titleEl ? titleEl.textContent : '';
+                    const itemApps = (item.getAttribute('data-application') || '').split(/[,\s]+/);
+
+                    // Category Match logic
+                    let catMatch = !isCatFilterActive;
+                    if (isCatFilterActive) {
+                        // Matches if parent category is checked
+                        if (activeCats.includes(itemCat)) {
+                            catMatch = true;
+                        }
+                        // Matches if specific subcategory is checked
+                        if (!catMatch && activeSubCats.some(subVal => matchSubcategory(itemTitle, subVal))) {
+                            catMatch = true;
+                        }
+                    }
+
+                    // Application Match logic
+                    const appMatch = activeApps.length === 0 || activeApps.some(app => itemApps.includes(app));
+
+                    return catMatch && appMatch;
+                });
+
+                showPage(1, false);
+            }
+
+            // Attach event listeners
+            appCheckboxes.forEach(cb => cb.addEventListener('change', updateFilters));
+
+            function showPage(page, scroll = true) {
+                // Hide all original products
+                allProducts.forEach(item => item.style.display = 'none');
+
+                const totalPages = Math.ceil(filteredProducts.length / itemsPerPage) || 1;
+                // Enforce bounds
+                page = Math.max(1, Math.min(page, totalPages));
+
+                // Calculate start and end
+                const start = (page - 1) * itemsPerPage;
+                const end = start + itemsPerPage;
+
+                // Show current page items
+                for (let i = start; i < end && i < filteredProducts.length; i++) {
+                    filteredProducts[i].style.display = 'block';
+                }
+
+                renderPagination(page, totalPages);
+
+                // Reset body height and refresh scroll libraries to eliminate extra whitespace
+                document.body.style.height = 'auto';
+                if (window.s && typeof window.s.refresh === 'function') {
+                    window.s.refresh();
+                }
+
+                // Scroll to top of the page smoothly
+                if (scroll) {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }
+
+            function renderPagination(currentPage, totalPages) {
+                if (!paginationContainer) return;
+                paginationContainer.innerHTML = '';
+
+                if (totalPages <= 1 && filteredProducts.length === 0) return; // Hide if nothing
+
+                // Previous Button
+                const prevLi = document.createElement('li');
+                prevLi.className = `page-item ${currentPage === 1 ? 'disabled' : ''}`;
+                prevLi.style.margin = '0 10px';
+                const prevA = document.createElement('a');
+                prevA.className = 'page-link';
+                prevA.href = 'javascript:void(0)';
+                prevA.innerText = 'Prev';
+                prevA.style.padding = '8px 16px';
+                prevA.style.borderRadius = '0';
+                if (currentPage > 1) {
+                    prevA.onclick = (e) => { e.preventDefault(); showPage(currentPage - 1); };
+                }
+                prevLi.appendChild(prevA);
+                paginationContainer.appendChild(prevLi);
+
+                // Page Numbers
+                for (let i = 1; i <= totalPages; i++) {
+                    const li = document.createElement('li');
+                    li.className = `page-item ${i === currentPage ? 'active' : ''}`;
+                    li.style.margin = '0 5px';
+                    const a = document.createElement('a');
+                    a.className = 'page-link';
+                    a.href = 'javascript:void(0)';
+                    a.innerText = i;
+                    a.style.padding = '8px 16px';
+                    a.style.borderRadius = '0';
+                    a.onclick = (e) => { e.preventDefault(); showPage(i); };
+                    li.appendChild(a);
+                    paginationContainer.appendChild(li);
+                }
+
+                // Next Button
+                const nextLi = document.createElement('li');
+                nextLi.className = `page-item ${currentPage === totalPages ? 'disabled' : ''}`;
+                nextLi.style.margin = '0 10px';
+                const nextA = document.createElement('a');
+                nextA.className = 'page-link';
+                nextA.href = 'javascript:void(0)';
+                nextA.innerText = 'Next';
+                nextA.style.padding = '8px 16px';
+                nextA.style.borderRadius = '0';
+                if (currentPage < totalPages) {
+                    nextA.onclick = (e) => { e.preventDefault(); showPage(currentPage + 1); };
+                }
+                nextLi.appendChild(nextA);
+                paginationContainer.appendChild(nextLi);
+            }
+
+            // Initialize
+            updateFilters();
+        });
+    </script>
+    <script src="js/plugins.js">
+    </script>
+    <script src="js/designesia.js">
+    </script>
+    <!-- Mobile Menu Toggle Script -->
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
             const menuBtn = document.getElementById('mobile-menu-btn');
             const closeBtn = document.querySelector('#mobile-menu .close-btn');
@@ -1070,7 +1823,7 @@
             });
         });
     </script>
-<script>
+    <script>
         (function () {
             const navbar = document.getElementById("main-nav");
             if (!navbar) return;
@@ -1131,4 +1884,5 @@
         })();
     </script>
 </body>
+
 </html>

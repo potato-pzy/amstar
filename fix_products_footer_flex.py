@@ -55,8 +55,8 @@ flex_footer = """<!-- ==========================================================
                 <div style="display: flex; gap: 15px; align-items: flex-start;">
                     <img alt="Mail" src="images /Footer/Mail Icon.svg" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);"/>
                     <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
-                        amstarpumps@gmail.com<br/>
-                        sales@amstar-pumps.com
+                        info@amstarpumps.com<br/>
+                        export@amstarpumps.com
                     </p>
                 </div>
             </div>

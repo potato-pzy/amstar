@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Amstar Pumps</title>
-<link href="images /favicon.svg" rel="icon" sizes="16x16" type="image/gif"/>
+    <link href="images /favicon.svg" rel="icon" sizes="16x16" type="image/gif" />
     <style>
         * {
             margin: 0;
@@ -686,7 +686,8 @@
             transform: scale(1.1);
         }
 
-        #main-footer, #main-footer * {
+        #main-footer,
+        #main-footer * {
             font-weight: 400 !important;
         }
 
@@ -703,7 +704,11 @@
         #catalogueModal .modal-close-x:hover {
             opacity: 1;
         }
-        #main-footer, #main-footer * { font-weight: 400 !important; }
+
+        #main-footer,
+        #main-footer * {
+            font-weight: 400 !important;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet" />
@@ -774,7 +779,11 @@
                 padding: 0 24px !important;
             }
         }
-        #main-footer, #main-footer * { font-weight: 400 !important; }
+
+        #main-footer,
+        #main-footer * {
+            font-weight: 400 !important;
+        }
     </style>
     <style>
         .cta-banner {
@@ -899,7 +908,11 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(21, 66, 110, 0.15);
         }
-        #main-footer, #main-footer * { font-weight: 400 !important; }
+
+        #main-footer,
+        #main-footer * {
+            font-weight: 400 !important;
+        }
     </style>
     <style>
         #de-loader {
@@ -958,7 +971,11 @@
         #product-page-content {
             visibility: hidden;
         }
-        #main-footer, #main-footer * { font-weight: 400 !important; }
+
+        #main-footer,
+        #main-footer * {
+            font-weight: 400 !important;
+        }
     </style>
     <style>
         /* 120% Zoom Layout Override */
@@ -985,7 +1002,11 @@
                 max-width: 1584px !important;
             }
         }
-        #main-footer, #main-footer * { font-weight: 400 !important; }
+
+        #main-footer,
+        #main-footer * {
+            font-weight: 400 !important;
+        }
     </style>
 </head>
 
@@ -1087,11 +1108,14 @@
                         </div>
                         <!-- Request for Quote Button -->
                         <div style="display: flex; gap: 10px; margin-top: 24px;">
-                            <button class="quote-button catalogue-btn" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px;" onclick="openCatalogueModal()">
+                            <button class="quote-button catalogue-btn"
+                                style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px;"
+                                onclick="openCatalogueModal()">
                                 <i class="fa-solid fa-download"></i>
                                 Product Catalogue
                             </button>
-                            <button class="quote-button" style="flex: 1;" onclick="requestQuote()">Request for Quote</button>
+                            <button class="quote-button" style="flex: 1;" onclick="requestQuote()">Request for
+                                Quote</button>
                         </div>
                     </div>
                 </div>
@@ -1129,7 +1153,7 @@
                 <div class="related-grid" id="related-products-grid"></div>
             </div>
         </div>
-        
+
         <!-- Catalogue Modal -->
         <div class="modal-overlay" id="catalogueModal">
             <div class="modal-content" style="max-width: 650px;">
@@ -1258,8 +1282,8 @@
                             <img alt="Mail" src="images /Footer/Mail Icon.svg"
                                 style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);" />
                             <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
-                                amstarpumps@gmail.com<br />
-                                sales@amstar-pumps.com
+                                info@amstarpumps.com<br />
+                                export@amstarpumps.com
                             </p>
                         </div>
                     </div>
@@ -1270,6 +1294,14 @@
                     <p style="margin: 0; font-size: 14px; opacity: 0.8;">
                         ©Amstar-2026 all rights reserved
                     </p>
+                    <div style="display: flex; gap: 20px;">
+                        <a href="#"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 13px;">LinkedIn</a>
+                        <a href="#"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 13px;">Facebook</a>
+                        <a href="#"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 13px;">Instagram</a>
+                    </div>
                 </div>
             </div>
 
@@ -1280,7 +1312,11 @@
                         width: 100% !important;
                     }
                 }
-        #main-footer, #main-footer * { font-weight: 400 !important; }
+
+                #main-footer,
+                #main-footer * {
+                    font-weight: 400 !important;
+                }
             </style>
         </footer>
         <!-- footer close -->
@@ -1292,15 +1328,11 @@
         <script>
             (function () {
                 const APP_ICONS = {
-                    "Home": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>',
-                    "Factory": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>',
-                    "Farms": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>',
-                    "Residential Building": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>',
-                    "Irrigation": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>',
-                    "Mining": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>',
-                    "Garden": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>',
-                    "Residential Buildings": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>',
-                    "default": '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>'
+                    "residential": '<img src="images /images/Residential.svg" style="width: 28px; height: 28px;" alt="Residential">',
+                    "industrial": '<img src="images /images/Factory.svg" style="width: 28px; height: 28px;" alt="Industrial">',
+                    "agriculture": '<img src="images /images/Farms.svg" style="width: 28px; height: 28px;" alt="Agriculture">',
+                    "commercial": '<img src="images /images/Constuction.svg" style="width: 28px; height: 28px;" alt="Commercial">',
+                    "default": '<img src="images /images/Factory.svg" style="width: 28px; height: 28px;" alt="Application">'
                 };
 
                 function getIcon(appName) {
@@ -1420,7 +1452,7 @@
 
                     // Get current product ID from URL to exclude it
                     const currentId = new URLSearchParams(window.location.search).get('id');
-                    
+
                     // 1. Get all other products
                     let pool = Object.entries(window.PRODUCT_DATA).filter(([key, p]) => key !== currentId);
 
@@ -1437,14 +1469,14 @@
                     // 4. Take up to 2 from same category and 1 from others, or fill up to 3
                     // This ensures variety even if the category is small
                     let finalSelection = [];
-                    
+
                     // Add up to 2 random products from same category
                     finalSelection.push(...sameCategory.slice(0, 2));
-                    
+
                     // Fill the rest (up to 3 total) from other categories
                     const remainingNeeded = 3 - finalSelection.length;
                     finalSelection.push(...otherCategories.slice(0, remainingNeeded));
-                    
+
                     // If we still don't have 3 (e.g. sameCategory was empty), take more from pool
                     if (finalSelection.length < 3) {
                         const alreadyPicked = new Set(finalSelection.map(item => item[0]));
@@ -1463,9 +1495,10 @@
                         div.className = 'related-product';
                         div.onclick = () => window.location.href = 'products.html?id=' + key;
                         const imgSrc = p.img || '';
+                        const imgStyle = key === 'monoblock' ? ' style="transform: scale(0.85);"' : '';
                         div.innerHTML = `
                             <div class="related-product-image-container">
-                                <img alt="${p.name}" class="related-product-image" src="${imgSrc}"/>
+                                <img alt="${p.name}" class="related-product-image" src="${imgSrc}"${imgStyle}/>
                             </div>
                             <h3 class="related-product-title">${p.name}</h3>
                             <button class="view-more-btn">View more</button>
@@ -1530,8 +1563,8 @@
                     ];
 
                     // Check if current product is a Submersible Pump or Motor
-                    // Category "Submersible" covers both based on PRODUCT_DATA
-                    if (product && product.category === 'Submersible') {
+                    // Category "Submersibles" covers both based on PRODUCT_DATA
+                    if (product && product.category === 'Submersibles') {
                         docs.push({ name: 'Amstar 60Hz Catalogue.pdf', type: 'Catalogue' });
                         docs.push({ name: 'Amstar 60Hz TDS.pdf', type: 'TDS' });
                     }
@@ -1556,7 +1589,7 @@
                     document.getElementById('catalogueModal').classList.add('active');
                 };
 
-                window.forceDownload = function(url, filename) {
+                window.forceDownload = function (url, filename) {
                     fetch(url)
                         .then(response => response.blob())
                         .then(blob => {
