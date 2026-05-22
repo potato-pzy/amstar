@@ -23,9 +23,32 @@
             font-family: 'Alan Sans', sans-serif !important;
         }
 
+        * {
+            font-weight: 400 !important;
+        }
+        h1 {
+            font-weight: 400 !important;
+        }
+        #back-to-top {
+            background-color: #004fb1 !important;
+            border-radius: 4px;
+        }
+
+        #back-to-top:hover {
+            background-color: #0059c9 !important;
+        }
+        .blog-read p[style*="font-weight: 700"] {
+            color: #004fb1 !important;
+            font-weight: 600 !important;
+            font-size: 1.05rem !important;
+            line-height: 1.35 !important;
+            border-left: 0 !important;
+            padding-left: 0 !important;
+        }
+
         /* Section-specific variables and styles */
         #pump-applications-section {
-            --primary-blue: #004a99;
+            --primary-blue: #004fb1;
             --bg-light-blue: #ebfafd;
             --heading-dark: #1a365d;
             --text-muted: #5a7184;
@@ -112,7 +135,7 @@
             left: 0;
             width: 100%;
             padding: 40px;
-            background: linear-gradient(0deg, rgba(0, 74, 153, 0.95) 0%, rgba(0, 74, 153, 0.4) 40%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(0deg, rgba(0, 79, 177, 0.95) 0%, rgba(0, 79, 177, 0.4) 40%, rgba(0, 0, 0, 0) 100%);
             z-index: 3;
             display: flex;
             flex-direction: column;
@@ -309,7 +332,7 @@
             display: inline-block;
             font-family: 'Alan Sans', sans-serif;
             font-size: 14.5px;
-            font-weight: 600;
+            font-weight: 400;
             color: #fff;
             border: 2px solid rgba(255, 255, 255, 0.85);
             padding: 6px 30px;
@@ -438,7 +461,7 @@
             margin: 0 0 16px 0;
             font-size: 1.8rem;
             font-family: 'Alan Sans', sans-serif;
-            font-weight: 500;
+            font-weight: 400;
             line-height: 1.15;
             color: #fff;
             letter-spacing: -0.02em;
@@ -464,11 +487,54 @@
             .nav-links {
                 display: none !important;
             }
+
+            #mobile-menu-btn {
+                display: block !important;
+            }
         }
 
         #main-footer,
         #main-footer * {
             font-weight: 400 !important;
+        }
+
+        #mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #ffffff;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            transform: translateY(-100%);
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        #mobile-menu.active {
+            transform: translateY(0);
+        }
+
+        #mobile-menu a {
+            font-size: 24px;
+            color: #1a2b4c;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        #mobile-menu .close-btn {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            background: none;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #1a2b4c;
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
@@ -516,8 +582,58 @@
         <!-- page preloader close -->
 
         <!-- header begin -->
+                <nav id="main-nav"
+            style="position: fixed; top: 40px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1300px; background-color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; z-index: 1000; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border-radius: 4px;">
+            <!-- Logo -->
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="images /navabr.svg" alt="Amstar Pumps" style="height: 55px; width: auto;">
+            </a>
 
-        <!-- navbar close -->
+            <!-- Links and Button Group -->
+            <div style="display: flex; align-items: center; gap: 50px;">
+                <div class="nav-links" style="display: flex; align-items: center; gap: 30px;">
+                    <a href="index.html"
+                        style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Home</a>
+                    <a href="blog.html"
+                        style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Blog</a>
+                    <a href="shop.html"
+                        style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Products</a>
+                </div>
+                <a href="contact.html"
+                    style="background-color: #004fb1; color: #ffffff; padding: 12px 28px; border-radius: 0; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-size: 14.5px;"
+                    onmouseover="this.style.backgroundColor='#0059c9'"
+                    onmouseout="this.style.backgroundColor='#004fb1'">Contact</a>
+
+                <!-- Hamburger Button -->
+                <button id="mobile-menu-btn"
+                    style="display: none; background: none; border: none; cursor: pointer; padding: 5px;">
+                    <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2H26M2 10H26M2 18H26" stroke="#1a2b4c" stroke-width="2.5" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu">
+            <button class="close-btn">&times;</button>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="shop.html">Products</a>
+            <a href="contact.html"
+                style="background: #004fb1; color: #fff; padding: 12px 40px; margin-top: 10px;">Contact</a>
+        </div>
+<div id="mobile-menu">
+            <button class="close-btn">&times;</button>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="shop.html">Products</a>
+            <a href="contact.html"
+                style="background: #004fb1; color: #fff; padding: 12px 40px; margin-top: 10px;">Contact</a>
+        </div>
         <!-- content begin -->
         <main>
 
@@ -547,9 +663,9 @@
                                 <img src="images /images/Blog 3.webp" class="w-100 mb-5"
                                     alt="Solar Water Pumps and Sustainable Agriculture"
                                     style="border-radius: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    The Rise of Solar Pumps: Growth, Benefits, and the Road Ahead</h4>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444; font-weight: 700;">
+                                    The Rise of Solar Pumps: Growth, Benefits, and the Road Ahead</p>
                                 <p
                                     style="font-family: 'Alan Sans', sans-serif; margin-bottom: 20px; line-height: 1.8; color: #444;">
                                     Over the past decade, solar-powered water pumps have seen rapid adoption across
@@ -560,9 +676,9 @@
                                     style="font-family: 'Alan Sans', sans-serif; margin-bottom: 20px; line-height: 1.8; color: #444;">
                                     What began as a niche solution has now become a key part of India’ s push toward
                                     sustainable water management.</p>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    Why Solar Pumps Gained Momentum</h4>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444; font-weight: 700;">
+                                    Why Solar Pumps Gained Momentum</p>
                                 <p
                                     style="font-family: 'Alan Sans', sans-serif; margin-bottom: 20px; line-height: 1.8; color: #444;">
                                     The primary driver behind the growth of solar pumps is energy independence. In areas
@@ -571,71 +687,71 @@
                                 <p
                                     style="font-family: 'Alan Sans', sans-serif; margin-bottom: 20px; line-height: 1.8; color: #444;">
                                     Other factors contributing to their rise include:</p>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    ● Government incentives and subsidy programmes</h4>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    ● Reduced reliance on diesel fuel</h4>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    ● Lower long-term operating costs</h4>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    ● Minimal recurring energy expenses</h4>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444;">
+                                    <span style="font-size: 11px; line-height: 1; display: inline-block; margin-right: 4px;">●</span> Government incentives and subsidy programmes</p>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444;">
+                                    <span style="font-size: 11px; line-height: 1; display: inline-block; margin-right: 4px;">●</span> Reduced reliance on diesel fuel</p>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444;">
+                                    <span style="font-size: 11px; line-height: 1; display: inline-block; margin-right: 4px;">●</span> Lower long-term operating costs</p>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444;">
+                                    <span style="font-size: 11px; line-height: 1; display: inline-block; margin-right: 4px;">●</span> Minimal recurring energy expenses</p>
                                 <p
                                     style="font-family: 'Alan Sans', sans-serif; margin-bottom: 20px; line-height: 1.8; color: #444;">
                                     For farmers and rural users, solar pumps offer predictable operation without
                                     exposure to fluctuating electricity tariffs or fuel availability.</p>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    Key Advantages of Solar Pump Systems</h4>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444; font-weight: 700;">
+                                    Key Advantages of Solar Pump Systems</p>
                                 <p
                                     style="font-family: 'Alan Sans', sans-serif; margin-bottom: 20px; line-height: 1.8; color: #444;">
                                     Solar pumps bring several clear benefits when applied correctly:</p>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    ● Low operating cost: Once installed, energy costs are nearly zero</h4>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    ● Environmentally friendly: No emissions during operation</h4>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    ● Suitable for remote locations: Ideal where grid power is unavailable</h4>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    ● Low maintenance: Fewer moving parts compared to diesel engines</h4>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444;">
+                                    <span style="font-size: 11px; line-height: 1; display: inline-block; margin-right: 4px;">●</span> Low operating cost: Once installed, energy costs are nearly zero</p>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444;">
+                                    <span style="font-size: 11px; line-height: 1; display: inline-block; margin-right: 4px;">●</span> Environmentally friendly: No emissions during operation</p>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444;">
+                                    <span style="font-size: 11px; line-height: 1; display: inline-block; margin-right: 4px;">●</span> Suitable for remote locations: Ideal where grid power is unavailable</p>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444;">
+                                    <span style="font-size: 11px; line-height: 1; display: inline-block; margin-right: 4px;">●</span> Low maintenance: Fewer moving parts compared to diesel engines</p>
                                 <p
                                     style="font-family: 'Alan Sans', sans-serif; margin-bottom: 20px; line-height: 1.8; color: #444;">
                                     These advantages make solar pumps particularly attractive for irrigation, livestock
                                     watering, and small-scale water supply systems.</p>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    Challenges and Limitations</h4>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444; font-weight: 700;">
+                                    Challenges and Limitations</p>
                                 <p
                                     style="font-family: 'Alan Sans', sans-serif; margin-bottom: 20px; line-height: 1.8; color: #444;">
                                     Despite their benefits, solar pumps are not without limitations. Understanding these
                                     challenges is essential for realistic expectations and proper system selection.</p>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    ● High initial investment: Solar panels and controllers increase upfront cost</h4>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    ● Weather dependency: Performance varies with sunlight availability</h4>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    ● Energy storage constraints: Battery systems add complexity and cost</h4>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    ● Sizing and design sensitivity: Incorrect system design can lead to
-                                    underperformance</h4>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444;">
+                                    <span style="font-size: 11px; line-height: 1; display: inline-block; margin-right: 4px;">●</span> High initial investment: Solar panels and controllers increase upfront cost</p>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444;">
+                                    <span style="font-size: 11px; line-height: 1; display: inline-block; margin-right: 4px;">●</span> Weather dependency: Performance varies with sunlight availability</p>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444;">
+                                    <span style="font-size: 11px; line-height: 1; display: inline-block; margin-right: 4px;">●</span> Energy storage constraints: Battery systems add complexity and cost</p>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444;">
+                                    <span style="font-size: 11px; line-height: 1; display: inline-block; margin-right: 4px;">●</span> Sizing and design sensitivity: Incorrect system design can lead to
+                                    underperformance</p>
                                 <p
                                     style="font-family: 'Alan Sans', sans-serif; margin-bottom: 20px; line-height: 1.8; color: #444;">
                                     In some applications, especially those requiring continuous or high-power operation,
                                     conventional electric pumps may still be more suitable.</p>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    How Solar Pump Technology Is Evolving</h4>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444; font-weight: 700;">
+                                    How Solar Pump Technology Is Evolving</p>
                                 <p
                                     style="font-family: 'Alan Sans', sans-serif; margin-bottom: 20px; line-height: 1.8; color: #444;">
                                     Advancements in solar technology are gradually addressing many of these challenges.
@@ -644,25 +760,25 @@
                                 <p
                                     style="font-family: 'Alan Sans', sans-serif; margin-bottom: 20px; line-height: 1.8; color: #444;">
                                     Emerging trends include:</p>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    ● More efficient DC and hybrid pump systems</h4>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    ● Improved electronic controllers for variable sunlight conditions</h4>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    ● Integration with grid or backup power sources</h4>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    ● Better system monitoring and protection features</h4>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444;">
+                                    <span style="font-size: 11px; line-height: 1; display: inline-block; margin-right: 4px;">●</span> More efficient DC and hybrid pump systems</p>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444;">
+                                    <span style="font-size: 11px; line-height: 1; display: inline-block; margin-right: 4px;">●</span> Improved electronic controllers for variable sunlight conditions</p>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444;">
+                                    <span style="font-size: 11px; line-height: 1; display: inline-block; margin-right: 4px;">●</span> Integration with grid or backup power sources</p>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444;">
+                                    <span style="font-size: 11px; line-height: 1; display: inline-block; margin-right: 4px;">●</span> Better system monitoring and protection features</p>
                                 <p
                                     style="font-family: 'Alan Sans', sans-serif; margin-bottom: 20px; line-height: 1.8; color: #444;">
                                     These developments are expanding the range of applications where solar pumps can
                                     operate effectively.</p>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    The Future of Solar Pumps</h4>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444; font-weight: 700;">
+                                    The Future of Solar Pumps</p>
                                 <p
                                     style="font-family: 'Alan Sans', sans-serif; margin-bottom: 20px; line-height: 1.8; color: #444;">
                                     Looking ahead, solar pumps are expected to play an increasingly important role in
@@ -673,9 +789,9 @@
                                     style="font-family: 'Alan Sans', sans-serif; margin-bottom: 20px; line-height: 1.8; color: #444;">
                                     The future lies in balanced system design—where solar pumps are engineered to match
                                     real-world demand rather than replacing conventional solutions indiscriminately.</p>
-                                <h4
-                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; font-weight: 600; color: #1a2b4c;">
-                                    A Balanced Approach to Sustainable Pumping</h4>
+                                <p
+                                    style="font-family: 'Alan Sans', sans-serif; margin-top: 30px; margin-bottom: 20px; line-height: 1.8; color: #444; font-weight: 700;">
+                                    A Balanced Approach to Sustainable Pumping</p>
                                 <p
                                     style="font-family: 'Alan Sans', sans-serif; margin-bottom: 20px; line-height: 1.8; color: #444;">
                                     Solar pumps represent a powerful step toward energy-ef ficient and environmentally
@@ -697,81 +813,86 @@
     <!-- content close -->
 
     <!-- footer begin -->
-    <footer id="main-footer"
-        style="background-color: #004fb1; padding: 80px 0 30px 0; color: #ffffff; font-family: 'Alan Sans', sans-serif;">
-        <div class="container">
-            <div class="row">
-                <!-- Branding and Certifications -->
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                    <div style="margin-bottom: 30px;">
-                        <img alt="Amstar Pumps" src="images /Footer/Asset 2(1).svg"
-                            style="height: 100px; width: auto;" />
+        <footer id="main-footer"
+            style="background-color: #004fb1; padding: 80px 0 30px 0; color: #ffffff; font-family: 'Alan Sans', sans-serif;">
+            <div class="container">
+                <div class="row">
+                    <!-- Branding and Certifications -->
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <div style="margin-bottom: 30px;">
+                            <img alt="Amstar Pumps" src="images/footer/footer-logo.svg"
+                                style="height: 100px; width: auto;" />
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                            <img alt="Certifications" src="images/footer/footer-certifications.png"
+                                style="height: 45px; width: auto;" />
+                        </div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 20px;">
-                        <img alt="Certifications" src="images /Footer/Certification logos.png"
-                            style="height: 45px; width: auto;" />
+                    <!-- Links Col 1 -->
+                    <div class="col-lg-2 col-md-3 mb-4 mb-md-0">
+                        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
+                            <li><a href="about.html" style="color: #ffffff; text-decoration: none;">About</a></li>
+                            <li><a href="shop.html" style="color: #ffffff; text-decoration: none;">Products</a></li>
+                            
+                            <li><a href="blog.html" style="color: #ffffff; text-decoration: none;">Blogs</a></li>
+                        </ul>
+                    </div>
+                    <!-- Links Col 2 -->
+                    <div class="col-lg-2 col-md-3 mb-4 mb-md-0">
+                        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
+                            <li><a href="contact.html" style="color: #ffffff; text-decoration: none;">Contact Us</a>
+                            </li>
+                            <li><a href="about.html#profile" style="color: #ffffff; text-decoration: none;">Company
+                                    Profile</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Details -->
+                    <div class="col-lg-3 col-md-6">
+                        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                            <img alt="Location" src="images/footer/footer-location.svg"
+                                style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);" />
+                            <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
+                                Amstar Pumps<br />
+                                Door No. 214, Lenin Street, Vilankurichi,<br />
+                                Coimbatore, Tamil Nadu<br />
+                                641035, India
+                            </p>
+                        </div>
+                        <div style="display: flex; gap: 15px; margin-bottom: 20px; align-items: center;">
+                            <img alt="Phone" src="images/footer/footer-phone.svg"
+                                style="width: 18px; height: 18px; flex-shrink: 0; filter: brightness(0) invert(1);" />
+                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">
+                                <a href="tel:+919500184003" style="color: inherit; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">+91 95001 84003</a> | <a href="tel:+919500136003" style="color: inherit; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">+91 95001 36003</a>
+                            </p>
+                        </div>
+                        <div style="display: flex; gap: 15px; align-items: flex-start;">
+                            <img alt="Mail" src="images/footer/footer-mail.svg"
+                                style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);" />
+                            <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
+                                <a href="mailto:info@amstarpumps.com" style="color: inherit; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">info@amstarpumps.com</a><br /><a href="mailto:export@amstarpumps.com" style="color: inherit; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">export@amstarpumps.com</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <!-- Links Col 1 -->
-                <div class="col-lg-2 col-md-3 mb-4 mb-md-0">
-                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
-                        <li><a href="about.html" style="color: #ffffff; text-decoration: none;">About</a></li>
-                        <li><a href="shop.html" style="color: #ffffff; text-decoration: none;">Products</a></li>
-                        <li><a href="gallery.html" style="color: #ffffff; text-decoration: none;">Gallery</a></li>
-                        <li><a href="blog.html" style="color: #ffffff; text-decoration: none;">Blogs</a></li>
-                    </ul>
-                </div>
-                <!-- Links Col 2 -->
-                <div class="col-lg-2 col-md-3 mb-4 mb-md-0">
-                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
-                        <li><a href="contact.html" style="color: #ffffff; text-decoration: none;">Contact Us</a></li>
-                        <li><a href="about.html#profile" style="color: #ffffff; text-decoration: none;">Company
-                                Profile</a></li>
-                    </ul>
-                </div>
-                <!-- Contact Details -->
-                <div class="col-lg-3 col-md-6">
-                    <div style="display: flex; gap: 15px; margin-bottom: 20px;">
-                        <img alt="Location" src="images /Footer/Location icon.svg"
-                            style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);" />
-                        <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
-                            Amstar Pumps<br />
-                            Door No. 214, Lenin Street, Vilankurichi,<br />
-                            Coimbatore, Tamil Nadu<br />
-                            641035, India
-                        </p>
-                    </div>
-                    <div style="display: flex; gap: 15px; margin-bottom: 20px; align-items: center;">
-                        <img alt="Phone" src="images /Footer/Phone Icon.svg"
-                            style="width: 18px; height: 18px; flex-shrink: 0; filter: brightness(0) invert(1);" />
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">
-                            +91 95001 84003 | +91 95001 36003
-                        </p>
-                    </div>
-                    <div style="display: flex; gap: 15px; align-items: flex-start;">
-                        <img alt="Mail" src="images /Footer/Mail Icon.svg"
-                            style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);" />
-                        <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
-                            info@amstarpumps.com<br />
-                            export@amstarpumps.com
-                        </p>
+
+                <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.3);">
+                    <p style="margin: 0; font-size: 14px; opacity: 0.8;">
+                        ©Amstar-2026 all rights reserved
+                    </p>
+    <div style="display: flex; gap: 20px; align-items: center;">
+                        <a href="https://www.linkedin.com/company/amstar-pumps/" target="_blank" rel="noopener"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 16px; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61589595945932" target="_blank" rel="noopener"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 16px; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/amstarpumps" target="_blank" rel="noopener"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 16px; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/AmstarPumps" target="_blank" rel="noopener"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 16px; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
             </div>
-
-            <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.3);">
-                <p style="margin: 0; font-size: 14px; opacity: 0.8;">
-                    ©Amstar-2026 all rights reserved
-                </p>
-    <div style="display: flex; gap: 20px;">
-                        <a href="#" style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 13px;">LinkedIn</a>
-                        <a href="#" style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 13px;">Facebook</a>
-                        <a href="#" style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 13px;">Instagram</a>
-                    </div>
-                </div>
-        </div>
-    </footer>
-    <!-- footer close -->
+        </footer>
+        <!-- footer close -->
     </div>
 
 
@@ -780,9 +901,94 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
+    <script>
+        (function () {
+            const navbar = document.getElementById("main-nav");
+            if (!navbar) return;
 
+            let lastScrollY = 0;
+            let ticking = false;
 
+            function setNavbarStyle(scrollY, direction) {
+                if (scrollY < 5) {
+                    navbar.style.top = "40px";
+                    navbar.style.left = "50%";
+                    navbar.style.transform = "translateX(-50%)";
+                    navbar.style.width = "90%";
+                    navbar.style.maxWidth = "1300px";
+                    navbar.style.borderRadius = "4px";
+                    navbar.style.padding = "15px 40px";
+                    navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.08)";
+                    navbar.style.opacity = "1";
+                    navbar.style.pointerEvents = "";
+                } else {
+                    if (navbar.style.left !== "0px" && navbar.style.left !== "0") {
+                        navbar.style.left = "0";
+                        navbar.style.transform = "none";
+                        navbar.style.width = "100%";
+                        navbar.style.maxWidth = "100%";
+                        navbar.style.borderRadius = "0";
+                        navbar.style.padding = "12px 5%";
+                        navbar.style.boxShadow = "0 4px 15px rgba(0,0,0,0.1)";
+                    }
+                    if (direction === "down") {
+                        navbar.style.top = "-90px";
+                        navbar.style.opacity = "0";
+                        navbar.style.pointerEvents = "none";
+                    } else {
+                        navbar.style.top = "0";
+                        navbar.style.opacity = "1";
+                        navbar.style.pointerEvents = "";
+                    }
+                }
+            }
 
+            window.addEventListener("scroll", function () {
+                const currentScrollY = window.scrollY || window.pageYOffset;
+                const direction = currentScrollY > lastScrollY ? "down" : "up";
+                if (!ticking) {
+                    window.requestAnimationFrame(function () {
+                        setNavbarStyle(currentScrollY, direction);
+                        lastScrollY = currentScrollY;
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            setNavbarStyle(window.scrollY || window.pageYOffset, "up");
+        })();
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const closeBtn = document.querySelector('#mobile-menu .close-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+
+            if (closeBtn && mobileMenu) {
+                closeBtn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+
+            const menuLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+    </script>
+    <script src="js/shared-navbar.js"></script>
 </body>
 
 </html>

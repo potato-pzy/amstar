@@ -17,7 +17,7 @@
         html,
         body {
             height: auto !important;
-            overflow: visible !important;
+            overflow-x: hidden !important;
             font-family: 'Alan Sans', sans-serif;
             background-color: white;
             color: #374151;
@@ -147,7 +147,7 @@
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background-color: #004a99;
+            background-color: #004fb1;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -182,9 +182,9 @@
         }
 
         .variant-button.active {
-            background-color: #004a99;
+            background-color: #004fb1;
             color: white;
-            border-color: #004a99;
+            border-color: #004fb1;
         }
 
         .cycle-container {
@@ -209,19 +209,19 @@
         }
 
         .cycle-button.active {
-            background-color: #004a99;
+            background-color: #004fb1;
             color: white;
-            border-color: #004a99;
+            border-color: #004fb1;
         }
 
         .quote-button {
             width: 100%;
-            background-color: #004a99;
+            background-color: #004fb1;
             color: white;
             padding: 16px;
             font-size: 1rem;
             font-weight: 600;
-            border: 1px solid #004a99;
+            border: 1px solid #004fb1;
             border-radius: 0;
             cursor: pointer;
             transition: all 0.2s ease;
@@ -234,11 +234,11 @@
 
         .catalogue-btn {
             background-color: transparent !important;
-            color: #004a99 !important;
+            color: #004fb1 !important;
         }
 
         .catalogue-btn:hover {
-            background-color: #004a99 !important;
+            background-color: #004fb1 !important;
             color: white !important;
         }
 
@@ -248,7 +248,7 @@
         }
 
         .tabs-header {
-            border-top: 2px solid #004a99;
+            border-top: 2px solid #004fb1;
             display: flex;
             overflow-x: auto;
             background-color: #f4f5f7;
@@ -278,7 +278,7 @@
             transform: translateX(-50%);
             border-left: 6px solid transparent;
             border-right: 6px solid transparent;
-            border-top: 6px solid #004a99;
+            border-top: 6px solid #004fb1;
         }
 
         .tab-button:hover {
@@ -948,7 +948,7 @@
             width: 44px;
             height: 44px;
             border: 3px solid #e5e7eb;
-            border-top-color: #004a99;
+            border-top-color: #004fb1;
             border-radius: 50%;
             animation: spin 0.75s linear infinite;
         }
@@ -1015,7 +1015,7 @@
 
     <!-- Product page loading overlay -->
     <div id="product-page-loader">
-        <img alt="Amstar Pumps" class="loader-logo" src="images /Footer/Asset 2(1).svg" />
+        <img alt="Amstar Pumps" class="loader-logo" src="images/footer/footer-logo.svg" />
         <div class="loader-spinner"></div>
         <span class="loader-text">Loading product&hellip;</span>
     </div>
@@ -1026,7 +1026,7 @@
 
     <div id="product-page-content">
 
-        <nav id="main-nav"
+                <nav id="main-nav"
             style="position: fixed; top: 40px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1300px; background-color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; z-index: 1000; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border-radius: 4px;">
             <!-- Logo -->
             <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
@@ -1046,7 +1046,7 @@
                         style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;"
                         onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Products</a>
                 </div>
-                <a href="contact.html" class="nav-cta-btn"
+                <a href="contact.html"
                     style="background-color: #004fb1; color: #ffffff; padding: 12px 28px; border-radius: 0; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-size: 14.5px;"
                     onmouseover="this.style.backgroundColor='#0059c9'"
                     onmouseout="this.style.backgroundColor='#004fb1'">Contact</a>
@@ -1070,7 +1070,7 @@
             <a href="contact.html"
                 style="background: #004fb1; color: #fff; padding: 12px 40px; margin-top: 10px;">Contact</a>
         </div>
-        <!-- Hero Header Section -->
+<!-- Hero Header Section -->
 
         <div class="container" style="margin-top: 100px;">
             <!-- Product Detail Section -->
@@ -1222,35 +1222,33 @@
         <!-- ============================================================ -->
         <!-- CUSTOM FOOTER (FLEXBOX)                                       -->
         <!-- ============================================================ -->
+        <!-- footer begin -->
         <footer id="main-footer"
-            style="background-color: #004fb1; padding: 80px 0 30px 0; color: #ffffff; font-family: 'Alan Sans', sans-serif; overflow: hidden;">
-            <div style="max-width: 1560px; margin: 0 auto; padding: 0 15px; width: 100%;">
-                <div style="display: flex; flex-wrap: wrap; margin: 0 -15px;">
-
+            style="background-color: #004fb1; padding: 80px 0 30px 0; color: #ffffff; font-family: 'Alan Sans', sans-serif;">
+            <div class="container">
+                <div class="row">
                     <!-- Branding and Certifications -->
-                    <div style="flex: 0 0 auto; width: 41.66666667%; padding: 0 15px; margin-bottom: 3rem;">
+                    <div class="col-lg-5 mb-5 mb-lg-0">
                         <div style="margin-bottom: 30px;">
-                            <img alt="Amstar Pumps" src="images /Footer/Asset 2(1).svg"
+                            <img alt="Amstar Pumps" src="images/footer/footer-logo.svg"
                                 style="height: 100px; width: auto;" />
                         </div>
                         <div style="display: flex; align-items: center; gap: 20px;">
-                            <img alt="Certifications" src="images /Footer/Certification logos.png"
+                            <img alt="Certifications" src="images/footer/footer-certifications.png"
                                 style="height: 45px; width: auto;" />
                         </div>
                     </div>
-
                     <!-- Links Col 1 -->
-                    <div style="flex: 0 0 auto; width: 16.66666667%; padding: 0 15px; margin-bottom: 1.5rem;">
+                    <div class="col-lg-2 col-md-3 mb-4 mb-md-0">
                         <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
                             <li><a href="about.html" style="color: #ffffff; text-decoration: none;">About</a></li>
                             <li><a href="shop.html" style="color: #ffffff; text-decoration: none;">Products</a></li>
-                            <li><a href="gallery.html" style="color: #ffffff; text-decoration: none;">Gallery</a></li>
+                            
                             <li><a href="blog.html" style="color: #ffffff; text-decoration: none;">Blogs</a></li>
                         </ul>
                     </div>
-
                     <!-- Links Col 2 -->
-                    <div style="flex: 0 0 auto; width: 16.66666667%; padding: 0 15px; margin-bottom: 1.5rem;">
+                    <div class="col-lg-2 col-md-3 mb-4 mb-md-0">
                         <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
                             <li><a href="contact.html" style="color: #ffffff; text-decoration: none;">Contact Us</a>
                             </li>
@@ -1258,11 +1256,10 @@
                                     Profile</a></li>
                         </ul>
                     </div>
-
                     <!-- Contact Details -->
-                    <div style="flex: 0 0 auto; width: 25%; padding: 0 15px;">
+                    <div class="col-lg-3 col-md-6">
                         <div style="display: flex; gap: 15px; margin-bottom: 20px;">
-                            <img alt="Location" src="images /Footer/Location icon.svg"
+                            <img alt="Location" src="images/footer/footer-location.svg"
                                 style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);" />
                             <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
                                 Amstar Pumps<br />
@@ -1272,53 +1269,40 @@
                             </p>
                         </div>
                         <div style="display: flex; gap: 15px; margin-bottom: 20px; align-items: center;">
-                            <img alt="Phone" src="images /Footer/Phone Icon.svg"
+                            <img alt="Phone" src="images/footer/footer-phone.svg"
                                 style="width: 18px; height: 18px; flex-shrink: 0; filter: brightness(0) invert(1);" />
                             <p style="margin: 0; font-size: 14px; opacity: 0.9;">
-                                +91 95001 84003 | +91 95001 36003
+                                <a href="tel:+919500184003" style="color: inherit; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">+91 95001 84003</a> | <a href="tel:+919500136003" style="color: inherit; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">+91 95001 36003</a>
                             </p>
                         </div>
                         <div style="display: flex; gap: 15px; align-items: flex-start;">
-                            <img alt="Mail" src="images /Footer/Mail Icon.svg"
+                            <img alt="Mail" src="images/footer/footer-mail.svg"
                                 style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);" />
                             <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
-                                info@amstarpumps.com<br />
-                                export@amstarpumps.com
+                                <a href="mailto:info@amstarpumps.com" style="color: inherit; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">info@amstarpumps.com</a><br /><a href="mailto:export@amstarpumps.com" style="color: inherit; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">export@amstarpumps.com</a>
                             </p>
                         </div>
                     </div>
-
                 </div>
 
                 <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.3);">
                     <p style="margin: 0; font-size: 14px; opacity: 0.8;">
                         ©Amstar-2026 all rights reserved
                     </p>
-                    <div style="display: flex; gap: 20px;">
-                        <a href="#"
-                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 13px;">LinkedIn</a>
-                        <a href="#"
-                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 13px;">Facebook</a>
-                        <a href="#"
-                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 13px;">Instagram</a>
+    <div style="display: flex; gap: 20px; align-items: center;">
+                        <a href="https://www.linkedin.com/company/amstar-pumps/" target="_blank" rel="noopener"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 16px; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61589595945932" target="_blank" rel="noopener"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 16px; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/amstarpumps" target="_blank" rel="noopener"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 16px; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/AmstarPumps" target="_blank" rel="noopener"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 16px; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
             </div>
-
-            <!-- Mobile responsiveness style -->
-            <style>
-                @media (max-width: 991px) {
-                    #main-footer>div>div>div {
-                        width: 100% !important;
-                    }
-                }
-
-                #main-footer,
-                #main-footer * {
-                    font-weight: 400 !important;
-                }
-            </style>
         </footer>
+        <!-- footer close -->
         <!-- footer close -->
         <!-- JavaScript Files ================================================== -->
         <script src="js/product-data.js"></script>
@@ -1753,6 +1737,7 @@
             setNavbarStyle(window.scrollY, "up");
         })();
     </script>
+    <script src="js/shared-navbar.js"></script>
 </body>
 
 </html>
