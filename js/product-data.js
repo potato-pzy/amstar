@@ -1201,21 +1201,19 @@ window.PRODUCT_DATA = {
     "img": "images/Compressed 2/Compressed 2/Vertical Openwell.webp",
     "category": "Openwell Pump",
     "heroTitle": "Multi Surface",
-    "description": "Amstar Vertical Openwell Pumps are designed for efficient and reliable water transfer in domestic agricultural and industrial applications. Manufactured with high-quality SS302 stainless steel, they offer excellent corrosion resistance and durability. Operating at 50Hz, these pumps deliver stable performance, energy efficiency, and long service life under standard operating conditions.",
+    "description": "Amstar Vertical Openwell Pumps are designed for efficient water lifting and circulation in domestic, agricultural, and light commercial applications. Built with a robust vertical construction and high-quality materials, these pumps deliver reliable performance, smooth operation, and long service life. Operating at 50Hz, they are ideal for open wells, water tanks, irrigation systems, and small commercial water supply applications.",
     "cycles": [
       "50Hz"
     ],
     "variantLabel": "Variants Available (HP):",
     "variants": {
       "50Hz": [
+        "0.5",
         "1.0",
         "1.5",
+        "2.0",
         "3.0",
-        "5.0",
-        "7.5",
-        "10",
-        "20",
-        "30"
+        "5.0"
       ]
     },
     "specifications": {
@@ -1231,22 +1229,19 @@ window.PRODUCT_DATA = {
     },
     "features": {
       "50Hz": [
-        "All rotating components are dynamically balanced to ensure long bearing life and vibration free smooth operation.",
-        "Manufactured with high-quality SS302 stainless steel for superior corrosion resistance.",
-        "Multi-stage impellers provide high head and steady discharge.",
-        "IP68-rated motor allows safe and reliable underwater operation.",
-        "Designed for continuous duty operation with stable 50Hz performance.",
-        "Compact and robust construction for easy installation in open wells.",
-        "Energy-efficient motor ensuring reliable and consistent water discharge.",
-        "Low maintenance design with durable components for extended service life.",
-        "Easy C.I. parts are in C.E.D. Coated."
+        "Vertical compact design for easy installation in open wells.",
+        "Reliable 50Hz performance for household and light commercial use.",
+        "Efficient water delivery with smooth and stable operation.",
+        "Durable SS or cast iron construction for long service life.",
+        "Low maintenance design with energy-efficient operation."
       ]
     },
     "shipping": "All products for International Shipments are either in stock at our Middle East Distribution Centre or at our main facility in India. Please contact us to know more about Lead time.",
     "warranty": "Our products come with a standard 12 Month warranty. Please contact us to discuss the extended warranty program we offer.",
     "applications": [
-      "residential",
-      "agriculture"
+      "agriculture",
+      "irrigation",
+      "residential"
     ]
   }
 };

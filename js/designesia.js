@@ -553,21 +553,25 @@
 
 
     /* Lenis begin */
-    const lenis = new Lenis()
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+    
+    if (!isMobile) {
+        const lenis = new Lenis()
 
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-    requestAnimationFrame(raf)
+        function raf(time) {
+          lenis.raf(time)
+          requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
 
-    const extraContent = document.querySelector('#extra-content');
-    if (extraContent) {
-      const modalLenis = new Lenis({
-        wrapper: extraContent,   // the overlay wrapper
-        content: extraContent,   // the scrolled content inside it
-        autoRaf: true
-      });
+        const extraContent = document.querySelector('#extra-content');
+        if (extraContent) {
+          const modalLenis = new Lenis({
+            wrapper: extraContent,   // the overlay wrapper
+            content: extraContent,   // the scrolled content inside it
+            autoRaf: true
+          });
+        }
     }
     /* Lenis end */
 
