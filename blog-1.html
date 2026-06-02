@@ -797,9 +797,66 @@
         <!-- content close -->
         
         <!-- footer begin -->
+        <style>
+            .footer-wa-card {
+                display: inline-flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 10px;
+                background-color: #f4f7fb;
+                color: #004fb1;
+                padding: 10px 16px;
+                border-radius: 4px;
+                text-decoration: none;
+                font-family: 'Alan Sans', sans-serif;
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 25px;
+                transition: transform 0.2s, box-shadow 0.2s;
+                width: fit-content;
+            }
+            .footer-wa-card i {
+                font-size: 23px;
+            }
+            .footer-wa-card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+                color: #004fb1;
+                text-decoration: none;
+            }
+            .footer-wa-mobile-container {
+                display: none;
+            }
+            .footer-wa-desktop-container {
+                display: block;
+            }
+            @media (max-width: 768px) {
+                .footer-wa-mobile-container {
+                    display: block !important;
+                    margin-bottom: 30px !important;
+                    width: 100%;
+                }
+                .footer-wa-desktop-container {
+                    display: none !important;
+                }
+                .footer-wa-card {
+                    font-size: 13px !important;
+                    padding: 8px 12px !important;
+                    margin-bottom: 0 !important;
+                }
+                .footer-wa-card i {
+                    font-size: 17px !important;
+                }
+            }
+        </style>
         <footer id="main-footer"
             style="background-color: #004fb1; padding: 80px 0 30px 0; color: #ffffff; font-family: 'Alan Sans', sans-serif;">
             <div class="container">
+                <div class="footer-wa-mobile-container">
+                    <a href="https://wa.me/919500184003" target="_blank" rel="noopener" class="footer-wa-card">
+                        <i class="fa-brands fa-whatsapp"></i> Ask your queries on WhatsApp
+                    </a>
+                </div>
                 <div class="row">
                     <!-- Branding and Certifications -->
                     <div class="col-lg-5 mb-5 mb-lg-0">
@@ -813,34 +870,39 @@
                         </div>
                     </div>
                     <!-- Links Col 1 -->
-                    <div class="col-lg-2 col-md-3 mb-4 mb-md-0">
+                    <div class="col-lg-2 col-md-3 mb-md-0">
                         <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
-                            <li><a href="about.html" style="color: #ffffff; text-decoration: none;">About</a></li>
+                            
                             <li><a href="shop.html" style="color: #ffffff; text-decoration: none;">Products</a></li>
 
                             <li><a href="blog.html" style="color: #ffffff; text-decoration: none;">Blogs</a></li>
                         </ul>
                     </div>
                     <!-- Links Col 2 -->
-                    <div class="col-lg-2 col-md-3 mb-4 mb-md-0">
+                    <div class="col-lg-2 col-md-3 mb-md-0">
                         <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
                             <li><a href="contact.html" style="color: #ffffff; text-decoration: none;">Contact Us</a>
                             </li>
-                            <li><a href="about.html#profile" style="color: #ffffff; text-decoration: none;">Company
+                            <li><a href="Company_Profile.pdf" target="_blank" style="color: #ffffff; text-decoration: none;">Company
                                     Profile</a></li>
                         </ul>
                     </div>
                     <!-- Contact Details -->
                     <div class="col-lg-3 col-md-6">
+                        <div class="footer-wa-desktop-container">
+                            <a href="https://wa.me/919500184003" target="_blank" rel="noopener" class="footer-wa-card">
+                                <i class="fa-brands fa-whatsapp"></i> Ask your queries on WhatsApp
+                            </a>
+                        </div>
                         <div style="display: flex; gap: 15px; margin-bottom: 20px;">
                             <img alt="Location" src="images/footer/footer-location.svg"
                                 style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);" />
-                            <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
+                            <a href="https://maps.app.goo.gl/vSdu47g5WeV7BXuX9?g_st=iw" target="_blank" rel="noopener" style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9; color: inherit; text-decoration: none; display: block; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='0.9'">
                                 Amstar Pumps<br />
                                 Door No. 214, Lenin Street, Vilankurichi,<br />
                                 Coimbatore, Tamil Nadu<br />
                                 641035, India
-                            </p>
+                            </a>
                         </div>
                         <div style="display: flex; gap: 15px; margin-bottom: 20px; align-items: center;">
                             <img alt="Phone" src="images/footer/footer-phone.svg"
@@ -877,7 +939,7 @@
                         ©Amstar-2026 all rights reserved
                     </p>
                     <div class="footer-social-links"
-                        style="display: flex; gap: 20px; align-items: center; margin-bottom: 8rem;">
+                        style="display: flex; gap: 20px; align-items: center;">
                         <a href="https://www.linkedin.com/company/amstar-pumps/" target="_blank" rel="noopener"
                             style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 16px; transition: opacity 0.2s;"
                             onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i
