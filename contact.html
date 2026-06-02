@@ -41,25 +41,28 @@
 
         .contact-kicker {
             color: #004fb1;
-            font-size: 18px;
+            font-size: 14px;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
             margin-bottom: 10px;
         }
 
         .contact-page-header h1 {
-            color: #0f2c63;
-            font-size: clamp(34px, 4vw, 54px);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin: 0 0 10px;
+            color: #004fb1;
+            font-size: clamp(32px, 3.5vw, 48px);
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            margin: 0 0 12px;
         }
 
         .contact-page-header p {
-            color: #6b768c;
-            font-size: 22px;
-            line-height: 1.5;
+            color: #004fb1;
+            font-size: 17px;
+            line-height: 1.6;
             margin: 0 auto;
-            max-width: 980px;
+            max-width: 720px;
+            font-weight: 400;
         }
 
         /* Main Contact Content Area */
@@ -76,32 +79,34 @@
         .contact-form-card {
             background: #ffffff;
             border: 1px solid rgba(15, 44, 99, 0.08);
-            border-radius: 10px;
-            box-shadow: 0 8px 24px rgba(15, 44, 99, 0.06);
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
         .contact-info-card {
-            padding: 30px 28px;
-            margin-bottom: 12px;
+            padding: 24px 24px;
+            margin-bottom: 20px;
         }
 
         .contact-info-heading {
             display: flex;
             align-items: center;
-            gap: 18px;
-            margin-bottom: 14px;
+            gap: 14px;
+            margin-bottom: 12px;
         }
 
         .contact-info-heading h4 {
-            color: #1452c0;
-            font-size: 22px;
+            color: #1a2b4c;
+            font-size: 16px;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             margin: 0;
         }
 
         .contact-info-icon {
-            width: 46px;
-            height: 46px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background: #004fb1;
             color: #ffffff;
@@ -109,14 +114,14 @@
             align-items: center;
             justify-content: center;
             flex: 0 0 auto;
-            font-size: 20px;
+            font-size: 16px;
         }
 
         .contact-info-card p,
         .contact-info-card a {
             color: #596377;
-            font-size: 18px;
-            line-height: 1.55;
+            font-size: 15px;
+            line-height: 1.6;
             margin: 0;
             text-decoration: none;
             display: block;
@@ -126,12 +131,17 @@
             color: #004fb1;
         }
 
-        #globe-canvas {
+        .globe-wrapper {
+            position: relative;
             width: 100%;
-            height: 100%;
             max-width: 640px;
             aspect-ratio: 1 / 1;
             margin: 0 auto;
+        }
+
+        #globe-canvas {
+            width: 100%;
+            height: 100%;
             cursor: grab;
             opacity: 0;
             transition: opacity 1.2s ease;
@@ -161,23 +171,36 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0.3rem 0.5rem;
-            background: #1a2b4c;
-            color: #fff;
-            border-radius: 3px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            padding: 0;
+            background: none;
+            color: #1a2b4c;
+            border-radius: 0;
+            box-shadow: none;
             opacity: 0;
-            transition: opacity 0.4s, filter 0.4s, transform 0.2s, padding 0.2s;
-            pointer-events: auto;
-            transform: translate(-50%, -100%);
+            transition: opacity 0.4s;
+            pointer-events: none;
+            transform: translate(-50%, 35px);
+            white-space: nowrap;
+            text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .globe-marker::before {
+            content: '';
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            width: 1px;
+            height: 35px;
+            border-left: 1.5px dashed #004fb1;
+            opacity: 0.7;
         }
 
         .globe-marker span:first-child {
-            font-family: monospace;
-            font-size: 0.6rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 700;
+            color: #004fb1;
         }
 
         @keyframes fade-slide-in {
@@ -189,29 +212,30 @@
         .contact-form .form-control {
             background-color: #ffffff;
             border: 1px solid #d7e0ec;
-            border-radius: 10px;
-            padding: 16px 20px 16px 56px;
-            font-size: 16px;
-            margin-bottom: 24px;
-            color: #30415f;
-            height: 60px;
+            border-radius: 4px;
+            padding: 12px 16px 12px 48px;
+            font-size: 15px;
+            margin-bottom: 18px;
+            color: #1a2b4c;
+            height: 50px;
             box-shadow: none;
+            transition: border-color 0.3s ease;
         }
 
         .contact-form .form-control::placeholder {
-            color: #7d8798;
+            color: #8a93a6;
         }
 
         .contact-form .form-control:focus {
             box-shadow: none;
             background-color: #ffffff;
-            border-color: #b9c9e4;
+            border-color: #004fb1;
         }
 
         textarea.form-control {
-            min-height: 180px;
+            min-height: 140px;
             resize: none;
-            padding-top: 18px;
+            padding-top: 14px;
         }
 
         .input-wrap {
@@ -220,11 +244,11 @@
 
         .input-wrap i {
             position: absolute;
-            left: 18px;
-            top: 50%;
+            left: 16px;
+            top: 25px;
             transform: translateY(-50%);
             color: #8a93a6;
-            font-size: 18px;
+            font-size: 16px;
             pointer-events: none;
         }
 
@@ -234,45 +258,43 @@
         }
 
         .contact-form-card {
-            padding: 30px 30px 34px;
+            padding: 30px 24px;
         }
 
         .contact-form-card h3 {
-            color: #1452c0;
-            font-size: 26px;
-            font-weight: 700;
-            margin-bottom: 10px;
+            color: #1a2b4c;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
         }
 
         .contact-form-card p {
-            color: #667287;
-            font-size: 18px;
-            line-height: 1.55;
-            margin-bottom: 28px;
-            max-width: 320px;
+            color: #596377;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            max-width: 100%;
         }
 
         .btn-submit {
-            background: linear-gradient(90deg, #004fb1 0%, #0b57c7 100%);
+            background-color: #004fb1;
             color: #ffffff;
             border: none;
             width: 100%;
-            padding: 18px;
-            font-weight: 600;
-            font-size: 18px;
-            border-radius: 8px;
-            transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.3s ease;
-            box-shadow: 0 12px 28px rgba(0, 79, 177, 0.22);
+            padding: 16px;
+            font-weight: 500;
+            font-size: 16px;
+            border-radius: 0;
+            transition: background-color 0.3s ease;
         }
 
         .btn-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 16px 34px rgba(0, 79, 177, 0.28);
+            background-color: #0059c9;
             color: #ffffff;
         }
 
         @media (max-width: 991px) {
-            #globe-canvas {
+            .globe-wrapper {
                 max-width: 100%;
             }
 
@@ -281,7 +303,7 @@
             }
 
             .contact-page-header p {
-                font-size: 18px;
+                font-size: 15px;
             }
 
             .contact-form-card {
@@ -450,7 +472,7 @@
     <section class="contact-page-header" style="padding-top: 160px;">
         <div class="container">
             <div class="contact-kicker">Get In Touch</div>
-            <h1>We’d Love to Hear From You</h1>
+            <h1>We’d love to hear from you</h1>
             <p>Reach out to us for any inquiries, support, or business opportunities.</p>
         </div>
     </section>
@@ -496,8 +518,10 @@
                 <!-- Middle Column: Globe -->
                 <div class="col-lg-6 col-md-6">
                     <div class="globe-stage">
-                        <canvas id="globe-canvas"></canvas>
-                        <div id="markers-container"></div>
+                        <div class="globe-wrapper">
+                            <canvas id="globe-canvas"></canvas>
+                            <div id="markers-container"></div>
+                        </div>
                     </div>
                 </div>
 
@@ -644,38 +668,28 @@
         import createGlobe from 'https://esm.sh/cobe';
 
         const markers = [
-            { id: 'hq', location: [11.05, 76.95], name: 'HQ', users: 1 },
-            { id: 'eu', location: [52.52, 13.41], name: 'EU', users: 892 },
-            { id: 'latam', location: [-23.55, -46.63], name: 'LATAM', users: 567 },
-            { id: 'mena', location: [25.2, 55.27], name: 'MENA', users: 734 },
+            { id: 'hq', location: [11.0168, 76.9558], name: 'Amstar Pumps HQ', info: 'Coimbatore, India' }
         ];
 
         const canvas = document.getElementById('globe-canvas');
         const markersContainer = document.getElementById('markers-container');
-        let expanded = null;
 
         if (canvas && markersContainer) {
             markers.forEach((m) => {
                 const el = document.createElement('div');
                 el.id = `marker-${m.id}`;
                 el.className = 'globe-marker';
-                el.addEventListener('click', () => {
-                    expanded = expanded === m.id ? null : m.id;
-                    renderMarkers();
-                });
                 markersContainer.appendChild(el);
             });
 
+            // Always display label directly
             function renderMarkers() {
                 markers.forEach((m) => {
                     const el = document.getElementById(`marker-${m.id}`);
                     if (!el) return;
-                    const isExpanded = expanded === m.id;
-                    el.style.padding = isExpanded ? '0.4rem 0.6rem' : '0.3rem 0.5rem';
-                    el.style.zoom = isExpanded ? '1.05' : '1';
                     el.innerHTML = `
                         <span>${m.name}</span>
-                        ${isExpanded ? `<span style="font-family: system-ui, sans-serif; font-size: 0.55rem; opacity: 0.8; margin-top: 0.15rem; animation: fade-slide-in 0.2s ease-out;">${m.users.toLocaleString()} users</span>` : ''}
+                        <span style="font-size: 11px; opacity: 0.8; margin-top: 0.15rem;">${m.info}</span>
                     `;
                 });
             }
@@ -685,15 +699,15 @@
             let dragOffset = { phi: 0, theta: 0 };
             let phiOffset = 0;
             let thetaOffset = 0;
-            let isPaused = false;
             let globe = null;
-            let phi = 0;
-            const speed = 0.003;
+
+            // Center on Coimbatore, India ([11.0168, 76.9558]) initially
+            const initialPhi = Math.PI * 1.5 - (76.9558 * Math.PI / 180);
+            const initialTheta = 11.0168 * Math.PI / 180;
 
             function handlePointerDown(e) {
                 pointerInteracting = { x: e.clientX, y: e.clientY };
                 canvas.style.cursor = 'grabbing';
-                isPaused = true;
             }
 
             function handlePointerUp() {
@@ -704,7 +718,6 @@
                 }
                 pointerInteracting = null;
                 canvas.style.cursor = 'grab';
-                isPaused = false;
             }
 
             function handlePointerMove(e) {
@@ -728,8 +741,8 @@
                     devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
                     width,
                     height: width,
-                    phi: 0,
-                    theta: 0.2,
+                    phi: initialPhi,
+                    theta: initialTheta,
                     dark: 0,
                     diffuse: 1.5,
                     mapSamples: 16000,
@@ -747,39 +760,46 @@
                 });
 
                 function animate() {
-                    if (!isPaused) phi += speed;
+                    // Update camera location only based on drag/interaction (no automatic revolving)
                     if (globe) {
                         globe.update({
-                            phi: phi + phiOffset + dragOffset.phi,
-                            theta: 0.2 + thetaOffset + dragOffset.theta,
+                            phi: initialPhi + phiOffset + dragOffset.phi,
+                            theta: initialTheta + thetaOffset + dragOffset.theta,
                         });
                     }
 
                     const R = canvas.offsetWidth / 2;
-                    const currentPhi = phi + phiOffset + dragOffset.phi;
-                    const currentTheta = 0.2 + thetaOffset + dragOffset.theta;
+                    const currentPhi = initialPhi + phiOffset + dragOffset.phi;
+                    const currentTheta = initialTheta + thetaOffset + dragOffset.theta;
 
                     markers.forEach((m) => {
-                        const latRad = m.location[0] * (Math.PI / 180);
-                        const pLon = m.location[1] * (Math.PI / 180) + currentPhi - Math.PI / 2;
-                        const px = Math.cos(latRad) * Math.sin(pLon);
-                        const py = Math.sin(latRad);
-                        const pz = Math.cos(latRad) * Math.cos(pLon);
+                        const latRad = m.location[0] * Math.PI / 180;
+                        const lonRad = m.location[1] * Math.PI / 180 - Math.PI;
 
-                        const fX = px;
-                        const fY = py * Math.cos(currentTheta) - pz * Math.sin(currentTheta);
-                        const fZ = py * Math.sin(currentTheta) + pz * Math.cos(currentTheta);
+                        const r = [
+                            -Math.cos(latRad) * Math.cos(lonRad),
+                            Math.sin(latRad),
+                            Math.cos(latRad) * Math.sin(lonRad)
+                        ];
 
-                        const screenX = R + fX * R;
-                        const screenY = R - fY * R;
-                        const visible = fZ > -0.2 ? 1 : 0;
+                        const cosTheta = Math.cos(currentTheta);
+                        const cosPhi = Math.cos(currentPhi);
+                        const sinTheta = Math.sin(currentTheta);
+                        const sinPhi = Math.sin(currentPhi);
+
+                        const C = cosPhi * r[0] + sinPhi * r[2];
+                        const F = sinPhi * sinTheta * r[0] + cosTheta * r[1] - cosPhi * sinTheta * r[2];
+                        const zCam = -sinPhi * cosTheta * r[0] + sinTheta * r[1] + cosPhi * cosTheta * r[2];
+
+                        const screenX = R + C * R;
+                        const screenY = R - F * R;
+                        const visible = zCam >= 0 ? 1 : 0;
 
                         const el = document.getElementById(`marker-${m.id}`);
                         if (el) {
                             el.style.left = `${screenX}px`;
                             el.style.top = `${screenY}px`;
                             el.style.opacity = visible.toString();
-                            el.style.pointerEvents = visible ? 'auto' : 'none';
                         }
                     });
 

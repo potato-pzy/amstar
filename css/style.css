@@ -15927,3 +15927,9 @@ img {
     width: auto;
   }
 }
+
+@media (min-width: 992px) {
+  .footer-social-links {
+    margin-bottom: 0 !important;
+  }
+}
