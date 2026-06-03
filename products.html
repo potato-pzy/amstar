@@ -497,6 +497,7 @@
             align-items: center;
             justify-content: center;
             opacity: 0;
+            visibility: hidden;
             pointer-events: none;
             transition: all 0.3s ease;
             z-index: 10000;
@@ -504,6 +505,7 @@
 
         .modal-overlay.active {
             opacity: 1;
+            visibility: visible;
             pointer-events: auto;
         }
 
@@ -537,7 +539,7 @@
             color: #1a2b4c;
         }
 
-        .quote-form-group {
+        .quote-field-wrapper {
             margin-bottom: 20px;
         }
 
@@ -1275,16 +1277,16 @@
             <div class="modal-content">
                 <span class="modal-close-x" onclick="closeModal()">&times;</span>
                 <form id="quoteForm" onsubmit="event.preventDefault(); submitQuote();">
-                    <div class="quote-form-group">
+                    <div class="quote-field-wrapper">
                         <input type="text" class="quote-input" placeholder="Your Name / Company Name" required>
                     </div>
-                    <div class="quote-form-group">
+                    <div class="quote-field-wrapper">
                         <input type="email" class="quote-input" placeholder="Your Email" required>
                     </div>
-                    <div class="quote-form-group">
+                    <div class="quote-field-wrapper">
                         <input type="tel" class="quote-input" placeholder="Your Phone" required>
                     </div>
-                    <div class="quote-form-group">
+                    <div class="quote-field-wrapper">
                         <textarea class="quote-input quote-textarea" id="modalMessage"
                             placeholder="I would like to get a quote for..."></textarea>
                     </div>
@@ -1397,6 +1399,7 @@
                     <div class="col-lg-2 col-md-3 mb-md-0">
                         <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
                             
+                            <li><a href="index.html" style="color: #ffffff; text-decoration: none;">Home</a></li>
                             <li><a href="shop.html" style="color: #ffffff; text-decoration: none;">Products</a></li>
 
                             <li><a href="blog.html" style="color: #ffffff; text-decoration: none;">Blogs</a></li>
@@ -1490,7 +1493,6 @@
         <script src="js/product-data.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/designesia.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             (function () {
                 const APP_ICONS = {
@@ -1512,6 +1514,7 @@
 
                 let product = null;
                 let currentCycleKey = null;
+                let currentVariant = null;
 
                 // Try to find product by ID first, then by name match
                 if (productId && window.PRODUCT_DATA[productId]) {
@@ -1560,14 +1563,24 @@
                     const variants = product.variants[key] || product.variants['default'] || [];
                     const container = document.getElementById('variants-container');
                     container.innerHTML = '';
-                    variants.forEach((v, i) => {
+                    
+                    if (variants.length > 0) {
+                        if (!variants.includes(currentVariant)) {
+                            currentVariant = variants[0];
+                        }
+                    } else {
+                        currentVariant = null;
+                    }
+
+                    variants.forEach((v) => {
                         const btn = document.createElement('button');
-                        btn.className = 'variant-button' + (i === 0 ? ' active' : '');
+                        btn.className = 'variant-button' + (v === currentVariant ? ' active' : '');
                         btn.dataset.variant = v;
                         btn.textContent = v;
                         btn.addEventListener('click', function () {
                             container.querySelectorAll('.variant-button').forEach(b => b.classList.remove('active'));
                             this.classList.add('active');
+                            currentVariant = v;
                         });
                         container.appendChild(btn);
                     });
@@ -1657,19 +1670,20 @@
                     }
 
                     finalSelection.forEach(([key, p]) => {
-                        const div = document.createElement('div');
-                        div.className = 'related-product';
-                        div.onclick = () => window.location.href = 'products.html?id=' + key;
+                        const card = document.createElement('a');
+                        card.className = 'related-product';
+                        card.href = 'products.html?id=' + key;
+                        card.style.textDecoration = 'none';
                         const imgSrc = p.img || '';
                         const imgStyle = key === 'monoblock' ? ' style="transform: scale(0.85);"' : '';
-                        div.innerHTML = `
+                        card.innerHTML = `
                             <div class="related-product-image-container">
                                 <img alt="${p.name}" class="related-product-image" src="${imgSrc}"${imgStyle}/>
                             </div>
                             <h3 class="related-product-title">${p.name}</h3>
-                            <button class="view-more-btn">View more</button>
+                            <span class="view-more-btn">View more</span>
                         `;
-                        grid.appendChild(div);
+                        grid.appendChild(card);
                     });
                 }
 
@@ -1686,6 +1700,18 @@
                     const heroTitle = document.querySelector('.hero-title');
                     if (heroTitle) heroTitle.textContent = product.heroTitle || product.name;
                     document.getElementById('product-description-text').textContent = product.description;
+                    
+                    // Product code
+                    const codeEl = document.getElementById('product-code-text');
+                    if (codeEl) {
+                        if (product.code) {
+                            codeEl.textContent = product.code;
+                            codeEl.parentElement.style.display = 'block';
+                        } else {
+                            codeEl.parentElement.style.display = 'none';
+                        }
+                    }
+
                     document.getElementById('variants-label').textContent = product.variantLabel || 'Variants Available (HP):';
                     // Image
                     document.getElementById('main-product-image').src = fallbackImg || product.img || '';
@@ -1787,7 +1813,16 @@
                     const pName = product ? product.name : (fallbackName || 'Product');
                     const messageField = document.getElementById('modalMessage');
                     if (messageField) {
-                        messageField.value = 'I would like to get a quote for ' + pName;
+                        let options = [];
+                        if (currentCycleKey && currentCycleKey !== 'default') {
+                            options.push(currentCycleKey);
+                        }
+                        if (currentVariant) {
+                            const isHP = (product.variantLabel || '').includes('HP') || !product.variantLabel;
+                            options.push(currentVariant + (isHP ? ' HP' : ''));
+                        }
+                        const optionsStr = options.length > 0 ? ' (' + options.join(', ') + ')' : '';
+                        messageField.value = 'I would like to get a quote for ' + pName + optionsStr;
                     }
 
                     // Reset form fields
