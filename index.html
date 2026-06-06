@@ -367,43 +367,93 @@
                 height: auto !important;
             }
 
-            .pm-hero-content {
-                padding: 80px 20px !important;
+            /* --- Mobile Hero: full-screen image with bottom-up gradient --- */
+            .pm-hero {
+                min-height: 100svh !important;
+                align-items: flex-end !important;
             }
 
             .pm-hero-bg {
-                background-image: url('images /image.png') !important;
-                background-position: -31% center !important;
+                background-image: url('images /images/Image for Phine.webp') !important;
+                background-position: 60% 40% !important;
                 background-size: cover !important;
                 top: 0 !important;
+                inset: 0 !important;
             }
 
+            /* Override desktop left-right gradient: bottom-to-top, very soft feather */
             .pm-hero-gradient {
-                /* background: linear-gradient(to right, #0f4c97 1%, rgba(15, 76, 151, 0.9) 0%, rgba(15, 76, 151, 0) 60%, rgba(15, 76, 151, 0.5) 100%) !important; */
+                background: linear-gradient(
+                    to top,
+                    #0f4c97 0%,
+                    #0f4c97 6%,
+                    rgba(15, 76, 151, 0.88) 14%,
+                    rgba(15, 76, 151, 0.65) 24%,
+                    rgba(15, 76, 151, 0.38) 36%,
+                    rgba(15, 76, 151, 0.15) 50%,
+                    rgba(15, 76, 151, 0.04) 62%,
+                    transparent 72%
+                ) !important;
+            }
+
+            /* Pin text to the bottom of the hero */
+            .pm-hero-content {
+                padding: 0 22px 36px !important;
+                min-height: unset !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                align-items: flex-end !important;
+                justify-content: flex-end !important;
             }
 
             .pm-hero-text {
-                max-width: 290px !important;
-                margin-left: 0 !important;
-                margin-right: auto !important;
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 !important;
                 text-align: left !important;
-                margin-top: 8rem !important;
+            }
+
+            .pm-hero-tagline {
+                font-size: 13px !important;
+                letter-spacing: 0.02em !important;
+                text-transform: none !important;
+                color: rgba(255,255,255,0.88) !important;
+                margin-bottom: 6px !important;
+            }
+
+            .pm-hero-headline {
+                font-size: clamp(2.6rem, 11vw, 3.4rem) !important;
+                font-weight: 400 !important;
+                line-height: 1.08 !important;
+                min-width: unset !important;
+                width: 100% !important;
+                color: #ffffff !important;
+                margin-bottom: 14px !important;
+            }
+
+            .pm-hero-desc {
+                font-size: 13px !important;
+                line-height: 1.6 !important;
+                max-width: 100% !important;
+                color: rgba(255,255,255,0.88) !important;
+                margin-bottom: 22px !important;
             }
 
             .pm-hero-btns {
-                display: inline-flex !important;
-                flex-direction: column !important;
-                align-items: stretch !important;
-                gap: 10px !important;
+                display: flex !important;
+                flex-direction: row !important;
+                gap: 12px !important;
                 width: auto !important;
             }
 
             .pm-hero-btns .pm-hero-btn {
-                display: block !important;
+                display: inline-block !important;
                 text-align: center !important;
-                box-sizing: border-box !important;
-                font-size: 11px !important;
-                padding: 8px 12px !important;
+                font-size: 13px !important;
+                font-weight: 500 !important;
+                padding: 10px 20px !important;
+                white-space: nowrap !important;
             }
         }
 
@@ -628,7 +678,7 @@
             }
 
             .pm-hero-content {
-                padding: 120px 30px !important;
+                /* handled by 768px block below */
             }
 
             .stats-container {
@@ -661,10 +711,7 @@
             }
 
             .pm-hero-headline {
-                font-size: 2.2rem !important;
-                line-height: 1.2 !important;
-                min-width: unset !important;
-
+                /* font-size handled in mobile hero block above */
             }
 
             h2,
@@ -792,10 +839,9 @@
                 <div class="pm-hero-text">
                     <p class="pm-hero-tagline">Engineered in India. Trusted Worldwide.</p>
                     <h1 class="pm-hero-headline">Powering<br />water solutions<br />worldwide</h1>
-                    <p class="pm-hero-desc">We design and manufacture high-performance pump solutions that deliver
-                        reliability, efficiency and long-lasting value across applications.</p>
+                    <p class="pm-hero-desc">AM Star designs and manufactures high-performance pump solutions that deliver reliability, efficiency and long-lasting value across applications.</p>
                     <div class="pm-hero-btns">
-                        <a class="pm-hero-btn pm-btn-outline" href="shop.html">Product Range</a>
+                        <a class="pm-hero-btn pm-btn-outline" href="shop.html">Products List</a>
                         <a class="pm-hero-btn pm-btn-primary" href="contact.html">Book a Call</a>
                     </div>
                 </div>
