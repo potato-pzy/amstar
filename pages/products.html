@@ -1714,7 +1714,7 @@
 
                     document.getElementById('variants-label').textContent = product.variantLabel || 'Variants Available (HP):';
                     // Image
-                    document.getElementById('main-product-image').src = fallbackImg || product.img || '';
+                    document.getElementById('main-product-image').src = product.img || fallbackImg || '';
                     // Shipping & Warranty
                     document.getElementById('shipping-text').textContent = product.shipping;
                     document.getElementById('warranty-text').textContent = product.warranty;
