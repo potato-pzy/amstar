@@ -1496,11 +1496,11 @@
         <script>
             (function () {
                 const APP_ICONS = {
-                    "residential": '<img src="../images/sectors/Residential.webp" style="width: 28px; height: 28px;" alt="Residential">',
-                    "industrial": '<img src="../images/sectors/Industrial.webp" style="width: 28px; height: 28px;" alt="Industrial">',
-                    "agriculture": '<img src="../images/sectors/Agriculture.webp" style="width: 28px; height: 28px;" alt="Agriculture">',
-                    "commercial": '<img src="../images/sectors/Construction.webp" style="width: 28px; height: 28px;" alt="Commercial">',
-                    "default": '<img src="../images/sectors/Industrial.webp" style="width: 28px; height: 28px;" alt="Application">'
+                    "residential": '<img src="../images/sectors/Residential.svg" style="width: 28px; height: 28px;" alt="Residential">',
+                    "industrial": '<img src="../images/sectors/Factory.svg" style="width: 28px; height: 28px;" alt="Industrial">',
+                    "agriculture": '<img src="../images/sectors/Farms.svg" style="width: 28px; height: 28px;" alt="Agriculture">',
+                    "commercial": '<img src="../images/sectors/Construction.svg" style="width: 28px; height: 28px;" alt="Commercial">',
+                    "default": '<img src="../images/sectors/Factory.svg" style="width: 28px; height: 28px;" alt="Application">'
                 };
 
                 function getIcon(appName) {
@@ -1772,7 +1772,7 @@
                                 <span class="catalogue-type">${doc.type}</span>
                             </div>
                             <button onclick="forceDownload('${filePath}', '${doc.name}')" class="catalogue-download-btn" title="Download">
-                                <i class="fa-solid fa-download" style="font-size: 24px; color: #004fb1;"></i>
+                                <img src="../images/ui/Download Button.svg" alt="Download" style="width: 32px; height: 32px;">
                             </button>
                         `;
                         list.appendChild(div);
