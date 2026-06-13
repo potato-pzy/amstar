@@ -5,8 +5,25 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Amstar Pumps</title>
+    <title>Product Details | Amstar Pumps</title>
     <link href="../images/logo/favicon.svg" rel="icon" sizes="16x16" type="image/gif" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="View detailed specifications, variants, applications and technical data sheets for Amstar Pumps products. Request a quote directly from the product page." />
+    <meta name="keywords" content="Amstar pump specifications, submersible pump datasheet, pump technical details, pump catalogue download, pump quote India" />
+    <meta name="author" content="Amstar Pumps" />
+    <link rel="canonical" href="https://amstarpumps.com/pages/products.html" />
+    <!-- Open Graph (updated dynamically by JS) -->
+    <meta property="og:type" content="product" />
+    <meta property="og:site_name" content="Amstar Pumps" />
+    <meta property="og:title" content="Product Details | Amstar Pumps" />
+    <meta property="og:description" content="View specifications, variants and applications for Amstar Pumps products. Request a quote or download the product catalogue." />
+    <meta property="og:url" content="https://amstarpumps.com/pages/products.html" />
+    <meta property="og:image" content="https://amstarpumps.com/images/logo/footer-logo.svg" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Product Details | Amstar Pumps" />
+    <meta name="twitter:description" content="Specifications, variants and applications for Amstar Pumps products." />
+    <meta name="twitter:image" content="https://amstarpumps.com/images/logo/footer-logo.svg" />
     <!-- CSS Files ================================================== -->
     <link href="../css/bootstrap.min.css" id="bootstrap" rel="stylesheet" type="text/css" />
     <link href="../css/plugins.css" rel="stylesheet" type="text/css" />
@@ -1511,16 +1528,17 @@
                 const productId = params.get('id');
                 const fallbackName = params.get('name');
                 const fallbackImg = params.get('img');
+                const productData = window.PRODUCT_DATA || {};
 
                 let product = null;
                 let currentCycleKey = null;
                 let currentVariant = null;
 
                 // Try to find product by ID first, then by name match
-                if (productId && window.PRODUCT_DATA[productId]) {
-                    product = window.PRODUCT_DATA[productId];
+                if (productId && productData[productId]) {
+                    product = productData[productId];
                 } else if (fallbackName) {
-                    for (const [key, p] of Object.entries(window.PRODUCT_DATA)) {
+                    for (const [key, p] of Object.entries(productData)) {
                         if (p.name === fallbackName || p.name.replace(/[\u201C\u201D""]/g, '"') === fallbackName.replace(/[\u201C\u201D""]/g, '"')) {
                             product = p;
                             break;
@@ -1633,7 +1651,7 @@
                     const currentId = new URLSearchParams(window.location.search).get('id');
 
                     // 1. Get all other products
-                    let pool = Object.entries(window.PRODUCT_DATA).filter(([key, p]) => key !== currentId);
+                    let pool = Object.entries(productData).filter(([key, p]) => key !== currentId);
 
                     // 2. High-performance Fisher-Yates Shuffle of the entire pool
                     for (let i = pool.length - 1; i > 0; i--) {
@@ -1688,51 +1706,70 @@
                 }
 
                 function populatePage() {
-                    if (!product) {
-                        document.getElementById('product-title-text').textContent = fallbackName || 'Product Not Found';
-                        document.getElementById('main-product-image').src = fallbackImg || '';
-                        return;
-                    }
-                    currentCycleKey = product.cycles && product.cycles.length > 0 ? product.cycles[0] : 'default';
-                    // Basic info
-                    document.querySelector('title').textContent = product.name + ' - Product Details';
-                    document.getElementById('product-title-text').textContent = product.name;
-                    const heroTitle = document.querySelector('.hero-title');
-                    if (heroTitle) heroTitle.textContent = product.heroTitle || product.name;
-                    document.getElementById('product-description-text').textContent = product.description;
-                    
-                    // Product code
-                    const codeEl = document.getElementById('product-code-text');
-                    if (codeEl) {
-                        if (product.code) {
-                            codeEl.textContent = product.code;
-                            codeEl.parentElement.style.display = 'block';
-                        } else {
-                            codeEl.parentElement.style.display = 'none';
-                        }
-                    }
-
-                    document.getElementById('variants-label').textContent = product.variantLabel || 'Variants Available (HP):';
-                    // Image
-                    document.getElementById('main-product-image').src = product.img || fallbackImg || '';
-                    // Shipping & Warranty
-                    document.getElementById('shipping-text').textContent = product.shipping;
-                    document.getElementById('warranty-text').textContent = product.warranty;
-                    // Dynamic sections
-                    renderCycles();
-                    renderVariants();
-                    renderSpecs();
-                    renderFeatures();
-                    renderApplications();
-                    renderRelatedProducts();
-                    // Reveal content and hide loader
                     const loader = document.getElementById('product-page-loader');
                     const content = document.getElementById('product-page-content');
-                    setTimeout(() => {
-                        content.style.visibility = 'visible';
-                        loader.classList.add('hidden');
-                        setTimeout(() => { loader.style.display = 'none'; }, 420);
-                    }, 80);
+
+                    function revealPage() {
+                        if (!loader || !content) return;
+                        setTimeout(() => {
+                            content.style.visibility = 'visible';
+                            loader.classList.add('hidden');
+                            setTimeout(() => { loader.style.display = 'none'; }, 420);
+                        }, 80);
+                    }
+
+                    try {
+                        if (!product) {
+                            document.querySelector('title').textContent = 'Product Not Found | Amstar Pumps';
+                            document.getElementById('product-title-text').textContent = fallbackName || 'Product Not Found';
+                            document.getElementById('product-description-text').textContent = 'The requested product could not be found. Please return to the shop page and open a valid product link.';
+                            document.getElementById('main-product-image').src = fallbackImg || '';
+                            document.getElementById('shipping-text').textContent = '';
+                            document.getElementById('warranty-text').textContent = '';
+                            revealPage();
+                            return;
+                        }
+
+                        currentCycleKey = product.cycles && product.cycles.length > 0 ? product.cycles[0] : 'default';
+                        // Basic info
+                        document.querySelector('title').textContent = product.name + ' - Product Details';
+                        document.getElementById('product-title-text').textContent = product.name;
+                        const heroTitle = document.querySelector('.hero-title');
+                        if (heroTitle) heroTitle.textContent = product.heroTitle || product.name;
+                        document.getElementById('product-description-text').textContent = product.description;
+                        
+                        // Product code
+                        const codeEl = document.getElementById('product-code-text');
+                        if (codeEl) {
+                            if (product.code) {
+                                codeEl.textContent = product.code;
+                                codeEl.parentElement.style.display = 'block';
+                            } else {
+                                codeEl.parentElement.style.display = 'none';
+                            }
+                        }
+
+                        document.getElementById('variants-label').textContent = product.variantLabel || 'Variants Available (HP):';
+                        // Image
+                        document.getElementById('main-product-image').src = product.img || fallbackImg || '';
+                        // Shipping & Warranty
+                        document.getElementById('shipping-text').textContent = product.shipping;
+                        document.getElementById('warranty-text').textContent = product.warranty;
+                        // Dynamic sections
+                        renderCycles();
+                        renderVariants();
+                        renderSpecs();
+                        renderFeatures();
+                        renderApplications();
+                        renderRelatedProducts();
+                    } catch (err) {
+                        console.error('Failed to populate product page:', err);
+                        document.querySelector('title').textContent = 'Product Details | Amstar Pumps';
+                        document.getElementById('product-title-text').textContent = 'Product Details';
+                        document.getElementById('product-description-text').textContent = 'There was a problem loading this product.';
+                    } finally {
+                        revealPage();
+                    }
                 }
 
                 // Tab navigation
