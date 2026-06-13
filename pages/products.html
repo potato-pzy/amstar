@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Amstar Pumps</title>
+    <link href="../images/logo/favicon.svg" rel="icon" sizes="16x16" type="image/gif" />
+    <!-- CSS Files ================================================== -->
+    <link href="../css/bootstrap.min.css" id="bootstrap" rel="stylesheet" type="text/css" />
+    <link href="../css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/coloring.css" rel="stylesheet" type="text/css" />
+    <!-- color scheme -->
+    <link href="../css/colors/scheme-01.css" id="colors" rel="stylesheet" type="text/css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: auto !important;
+            overflow-x: hidden !important;
+            font-family: 'Alan Sans', sans-serif;
+            background-color: white;
+            color: #374151;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1152px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Hero Header Section */
+        .hero-header {
+            background-color: #0b4c93;
+            /* Keep machinery visible while preserving Amstar blue look */
+            background-image: linear-gradient(rgba(11, 76, 147, 0.48), rgba(11, 76, 147, 0.72)), url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 300px;
+            padding: 120px 16px 72px 16px;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .hero-header .container {
+            width: 100%;
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        .hero-title {
+            color: white;
+            font-size: 2.75rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Product Detail Section */
+        .product-section {
+            padding: 64px 32px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 64px;
+        }
+
+        @media (min-width: 1024px) {
+            .product-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-header {
+                padding: 16px 16px 48px 16px;
+            }
+        }
+
+        .product-image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image-border {
+            border: 2px solid #d1d5db;
+            border-radius: 8px;
+            padding: 32px;
+            background-color: white;
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            max-width: 384px;
+        }
+
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .product-title {
+            font-size: 2.25rem;
+            color: #003d7a;
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .product-code {
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+
+        .product-code-value {
+            font-weight: 600;
+        }
+
+        .product-description {
+            color: #374151;
+            line-height: 1.625;
+        }
+
+        .section-label {
+            font-size: 0.875rem;
+            color: #111827;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .applications-container {
+            display: flex;
+            gap: 12px;
+        }
+
+        .application-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: #004fb1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .application-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .variants-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .variant-button {
+            padding: 8px 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            background-color: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+            border-radius: 0;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .variant-button:hover {
+            background-color: #e5e7eb;
+        }
+
+        .variant-button.active {
+            background-color: #004fb1;
+            color: white;
+            border-color: #004fb1;
+        }
+
+        .cycle-container {
+            display: flex;
+            gap: 8px;
+        }
+
+        .cycle-button {
+            padding: 8px 24px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            background-color: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+            border-radius: 0;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .cycle-button:hover {
+            background-color: #e5e7eb;
+        }
+
+        .cycle-button.active {
+            background-color: #004fb1;
+            color: white;
+            border-color: #004fb1;
+        }
+
+        .quote-button {
+            width: 100%;
+            background-color: #004fb1;
+            color: white;
+            padding: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 1px solid #004fb1;
+            border-radius: 0;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .quote-button:hover {
+            background-color: #003d7a;
+            border-color: #003d7a;
+        }
+
+        .catalogue-btn {
+            background-color: transparent !important;
+            color: #004fb1 !important;
+        }
+
+        .catalogue-btn:hover {
+            background-color: #004fb1 !important;
+            color: white !important;
+        }
+
+        /* Tabs Section */
+        .tabs-section {
+            padding: 64px 32px;
+        }
+
+        .tabs-header {
+            border-top: 2px solid #004fb1;
+            display: flex;
+            overflow-x: auto;
+            background-color: #f4f5f7;
+        }
+
+        .tab-button {
+            flex: 1;
+            min-width: 120px;
+            padding: 16px;
+            text-align: center;
+            background-color: transparent;
+            border: none;
+            color: #003d7a;
+            font-weight: 500;
+            font-size: 1.05rem;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.2s;
+            border-radius: 0;
+        }
+
+        .tab-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid #004fb1;
+        }
+
+        .tab-button:hover {
+            background-color: #e5e7eb;
+        }
+
+        .tab-button.active {
+            background-color: white;
+        }
+
+        .tab-content {
+            margin-top: 32px;
+        }
+
+        .tab-panel {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .spec-table {
+            max-width: 600px;
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .spec-table tr {
+            border-bottom: 1px solid #d1d5db;
+        }
+
+        .spec-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .spec-table td {
+            padding: 14px 20px;
+            color: #374151;
+        }
+
+        .spec-table td:first-child {
+            border-right: 1px solid #d1d5db;
+            background-color: #f9fafb;
+            font-weight: 600;
+            width: 40%;
+        }
+
+        .features-list {
+            list-style: disc;
+            padding-left: 20px;
+            color: #374151;
+        }
+
+        .features-list li {
+            margin-bottom: 12px;
+        }
+
+        .info-text {
+            color: #374151;
+            margin-bottom: 16px;
+        }
+
+        .info-list {
+            list-style: disc;
+            padding-left: 20px;
+            color: #374151;
+        }
+
+        .info-list li {
+            margin-bottom: 12px;
+        }
+
+        /* Related Products Section */
+        .related-section {
+            padding: 64px 32px;
+            border-top: 1px solid #e5e7eb;
+
+        }
+
+        .related-title {
+            font-size: 1.875rem;
+            color: #003d7a;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .related-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .related-product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .related-product:hover {
+            transform: translateY(-5px);
+        }
+
+        .related-product-image-container {
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+            padding: 32px;
+            background-color: #f6f6f6;
+            margin-bottom: 16px;
+            width: 100%;
+            aspect-ratio: 2 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .related-product:hover .related-product-image-container {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            border-color: #d1d5db;
+        }
+
+        .related-product-image {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+            transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .related-product:hover .related-product-image {
+            transform: scale(1.08);
+        }
+
+        .related-product-title {
+            font-size: 15px;
+            color: #000;
+            margin-top: 15px;
+            margin-bottom: 4px;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .related-product-code {
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+
+        .view-more-btn {
+            font-size: 14px;
+            font-weight: 500;
+            color: #000;
+            text-decoration: underline;
+            opacity: 0 !important;
+            transform: translateY(10px) !important;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            margin-top: 8px;
+            pointer-events: none;
+        }
+
+        .related-product:hover .view-more-btn {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            pointer-events: auto;
+        }
+
+        /* Custom Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            z-index: 10000;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 40px;
+            width: 90%;
+            max-width: 550px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            transform: translateY(30px);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-close-x {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            color: #9ca3af;
+            cursor: pointer;
+            transition: color 0.2s;
+            line-height: 1;
+        }
+
+        .modal-close-x:hover {
+            color: #1a2b4c;
+        }
+
+        .quote-field-wrapper {
+            margin-bottom: 20px;
+        }
+
+        .quote-input {
+            width: 100%;
+            padding: 18px 20px;
+            background-color: #f8f9fa;
+            border: 1px solid transparent;
+            font-family: 'Alan Sans', sans-serif;
+            font-size: 16px;
+            color: #374151;
+            box-sizing: border-box;
+            transition: all 0.2s;
+        }
+
+        .quote-input:focus {
+            outline: none;
+            background-color: #ffffff;
+            border-color: #004fb1;
+            box-shadow: 0 0 0 4px rgba(0, 79, 177, 0.05);
+        }
+
+        .quote-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .modal-submit-btn {
+            width: 100%;
+            background-color: #004fb1;
+            color: white;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+            margin-top: 10px;
+            font-family: 'Alan Sans', sans-serif;
+        }
+
+        .modal-submit-btn:hover {
+            background-color: #003d8a;
+            transform: translateY(-1px);
+        }
+
+        .modal-submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* High-Precision Industrial Catalogue Modal Styles */
+        #catalogueModal .modal-content {
+            background: #ffffff;
+            border-radius: 0;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
+        }
+
+        .catalogue-header {
+            background: #004fb1;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .catalogue-header-info h3 {
+            margin: 0;
+            color: #ffffff !important;
+            font-size: 18px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .catalogue-header-info p {
+            margin: 2px 0 0;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .catalogue-body {
+            padding: 0;
+            background: #ffffff;
+        }
+
+        .catalogue-item {
+            display: flex;
+            align-items: center;
+            padding: 25px 30px;
+            background: #ffffff;
+            border-bottom: 1px solid #eeeeee;
+            transition: all 0.2s ease;
+        }
+
+        .catalogue-item:last-child {
+            border-bottom: none;
+        }
+
+        .catalogue-item:hover {
+            background: #f9f9f9;
+        }
+
+        .catalogue-info {
+            flex: 1;
+        }
+
+        .catalogue-name {
+            display: block;
+            font-weight: 400;
+            color: #000000;
+            font-size: 16px;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .catalogue-type {
+            font-size: 12px;
+            color: #004fb1;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .catalogue-type::before {
+            content: 'DOC TYPE:';
+            color: #999;
+            font-weight: 400;
+        }
+
+        .catalogue-download-btn {
+            background: transparent;
+            color: #004fb1;
+            padding: 10px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .catalogue-download-btn:hover {
+            background: rgba(26, 57, 104, 0.05) !important;
+            transform: scale(1.1);
+        }
+
+        #main-footer,
+        #main-footer * {
+            font-weight: 400 !important;
+        }
+
+
+
+        #catalogueModal .modal-close-x {
+            position: static;
+            color: #ffffff;
+            font-size: 24px;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+        #catalogueModal .modal-close-x:hover {
+            opacity: 1;
+        }
+
+        #main-footer,
+        #main-footer * {
+            font-weight: 400 !important;
+        }
+    
+    /* Consistently Synced Core Styles */
+    *:not(i):not([class*="fa-"]) {
+        font-family: 'Alan Sans', sans-serif !important;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 3rem;
+        }
+    }
+
+    #main-footer,
+    #main-footer * {
+        font-weight: 400 !important;
+    }
+
+    /* Mobile Menu */
+    #mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #ffffff;
+        z-index: 2000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transform: translateY(-100%);
+        transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    #mobile-menu.active {
+        transform: translateY(0);
+    }
+
+    #mobile-menu a {
+        font-size: 24px;
+        color: #1a2b4c;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    #mobile-menu .close-btn {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        background: none;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        color: #1a2b4c;
+    }
+
+    @media (max-width: 991px) {
+        #main-nav {
+            width: 95% !important;
+            padding: 10px 20px !important;
+            top: 20px !important;
+            height: auto !important;
+        }
+
+        .nav-links,
+        .nav-cta-btn {
+            display: none !important;
+        }
+
+        #mobile-menu-btn {
+            display: block !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        #main-nav {
+            width: 92% !important;
+            max-width: 92% !important;
+            top: 15px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            border-radius: 4px !important;
+            padding: 14px 20px !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+            height: auto !important;
+        }
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        /* Mobile Menu */
+        #mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #ffffff;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            transform: translateY(-100%);
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        #mobile-menu.active {
+            transform: translateY(0);
+        }
+
+        #mobile-menu a {
+            font-size: 24px;
+            color: #1a2b4c;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        #mobile-menu .close-btn {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            background: none;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #1a2b4c;
+        }
+
+        @media (max-width: 991px) {
+            #main-nav {
+                width: 95% !important;
+                padding: 10px 20px !important;
+                top: 20px !important;
+            }
+
+            .nav-links,
+            .nav-cta-btn {
+                display: none !important;
+            }
+
+            #mobile-menu-btn {
+                display: block !important;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr !important;
+                gap: 40px !important;
+            }
+
+            .cta-content {
+                gap: 40px !important;
+                padding: 0 24px !important;
+            }
+        }
+
+        #main-footer,
+        #main-footer * {
+            font-weight: 400 !important;
+        }
+    </style>
+    <style>
+        .cta-banner {
+            position: relative;
+            width: 100%;
+            background-color: #eef8f9;
+            padding: 100px 0;
+            overflow: hidden;
+            font-family: 'Alan Sans', sans-serif;
+        }
+
+        .cta-watermark {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            pointer-events: none;
+            user-select: none;
+            overflow: hidden;
+        }
+
+        .cta-watermark-row {
+
+            display: flex;
+            white-space: nowrap;
+            color: #e4f4f6;
+            font-size: clamp(4rem, 8vw, 10rem);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            line-height: 0.8;
+        }
+
+        .cta-watermark-row.row-1 {
+            margin-left: -5%;
+            margin-bottom: 40px;
+        }
+
+        .cta-watermark-row.row-2 {
+            margin-left: -15%;
+            margin-top: 40px;
+        }
+
+        .cta-watermark-row span {
+            margin-right: 60px;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 1560px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        @media (min-width: 992px) {
+            .cta-content {
+                flex-direction: row;
+                align-items: center;
+                gap: 150px;
+                padding: 0 100px;
+            }
+
+            .cta-banner {
+                padding: 100px 0;
+            }
+        }
+
+        .cta-heading {
+            flex: 1.2;
+        }
+
+        .cta-heading h2 {
+            font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+            font-weight: 500;
+            color: #004fb1;
+            line-height: 1.1;
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .cta-details p {
+            color: #004fb1;
+            font-size: 17px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+            max-width: 480px;
+            font-weight: 500;
+        }
+
+        .cta-button {
+            border: 1.5px solid #15426e;
+            color: #15426e;
+            background-color: transparent;
+            padding: 12px 15px;
+            font-size: 20px;
+            font-weight: 400;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border-radius: 0;
+            font-family: 'Alan Sans', sans-serif;
+        }
+
+        .cta-button:hover {
+            background-color: #15426e;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(21, 66, 110, 0.15);
+        }
+
+        #main-footer,
+        #main-footer * {
+            font-weight: 400 !important;
+        }
+    </style>
+    <style>
+        #de-loader {
+            background-color: #ffffff;
+        }
+
+        /* Product page loading overlay */
+        #product-page-loader {
+            position: fixed;
+            inset: 0;
+            background: #ffffff;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            transition: opacity 0.4s ease;
+        }
+
+        #product-page-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #product-page-loader .loader-logo {
+            height: 52px;
+            width: auto;
+            opacity: 0.85;
+        }
+
+        #product-page-loader .loader-spinner {
+            width: 44px;
+            height: 44px;
+            border: 3px solid #e5e7eb;
+            border-top-color: #004fb1;
+            border-radius: 50%;
+            animation: spin 0.75s linear infinite;
+        }
+
+        #product-page-loader .loader-text {
+            font-size: 13px;
+            color: #9ca3af;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-family: 'Alan Sans', sans-serif;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Hide main content until loader is done */
+        #product-page-content {
+            visibility: hidden;
+        }
+
+        #main-footer,
+        #main-footer * {
+            font-weight: 400 !important;
+        }
+    </style>
+    <style>
+        /* 120% Zoom Layout Override */
+        @media (min-width: 1200px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl,
+            .container-xxl {
+                max-width: 1368px !important;
+            }
+        }
+
+        @media (min-width: 1400px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl,
+            .container-xxl {
+                max-width: 1584px !important;
+            }
+        }
+
+        #main-footer,
+        #main-footer * {
+            font-weight: 400 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" id="back-to-top"></a>
+    <div id="de-loader"></div>
+
+    <!-- Product page loading overlay -->
+    <div id="product-page-loader">
+        <img alt="Amstar Pumps" class="loader-logo" src="../images/footer/footer-logo.svg" />
+        <div class="loader-spinner"></div>
+        <span class="loader-text">Loading product&hellip;</span>
+    </div>
+
+
+
+
+
+    <div id="product-page-content">
+
+                <nav id="main-nav"
+            style="position: fixed; top: 40px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1300px; background-color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; z-index: 1000; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border-radius: 4px;">
+            <!-- Logo -->
+            <a href="../index.html" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="../images/logo/navbar-logo.svg" alt="Amstar Pumps" style="height: 55px; width: auto;">
+            </a>
+
+            <!-- Links and Button Group -->
+            <div style="display: flex; align-items: center; gap: 50px;">
+                <div class="nav-links" style="display: flex; align-items: center; gap: 30px;">
+                    <a href="../index.html"
+                        style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Home</a>
+                    <a href="blog.html"
+                        style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Blog</a>
+                    <a href="shop.html"
+                        style="text-decoration: none; color: #1a2b4c; font-weight: 400; font-size: 15px; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='#004fb1'" onmouseout="this.style.color='#1a2b4c'">Products</a>
+                </div>
+                <a href="contact.html" class="nav-cta-btn"
+                    style="background-color: #004fb1; color: #ffffff; padding: 12px 28px; border-radius: 0; font-weight: 400; transition: background-color 0.3s ease; text-decoration: none; font-size: 14.5px;"
+                    onmouseover="this.style.backgroundColor='#0059c9'"
+                    onmouseout="this.style.backgroundColor='#004fb1'">Contact</a>
+
+                <!-- Hamburger Button -->
+                <button id="mobile-menu-btn"
+                    style="display: none; background: none; border: none; cursor: pointer; padding: 5px;">
+                    <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2H26M2 10H26M2 18H26" stroke="#1a2b4c" stroke-width="2.5" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu">
+            <button class="close-btn">&times;</button>
+            <a href="../index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="shop.html">Products</a>
+            <a href="contact.html"
+                style="background: #004fb1; color: #fff; padding: 12px 40px; margin-top: 10px;">Contact</a>
+        </div>
+<!-- Hero Header Section -->
+
+        <div class="container" style="margin-top: 100px;">
+            <!-- Product Detail Section -->
+            <div class="product-section">
+                <div class="product-grid">
+                    <!-- Left side - Product Image -->
+                    <div class="product-image-container">
+                        <div class="product-image-border">
+                            <img alt="Product" class="product-image" id="main-product-image" src="" />
+                        </div>
+                    </div>
+                    <!-- Right side - Product Details -->
+                    <div class="product-details">
+                        <div>
+                            <h1 class="product-title" id="product-title-text"></h1>
+                            <p class="product-code">
+                                Product: <span class="product-code-value" id="product-code-text"></span>
+                            </p>
+                        </div>
+                        <p class="product-description" id="product-description-text"></p>
+                        <!-- Applications -->
+                        <div>
+                            <p class="section-label">Applications:</p>
+                            <div class="applications-container" id="applications-container"></div>
+                        </div>
+                        <!-- Variants Available -->
+                        <div id="variants-section">
+                            <p class="section-label" id="variants-label">Variants Available (HP):</p>
+                            <div class="variants-container" id="variants-container"></div>
+                        </div>
+                        <!-- Choose Cycle -->
+                        <div id="cycle-section">
+                            <p class="section-label">Choose Cycle</p>
+                            <div class="cycle-container" id="cycle-container"></div>
+                        </div>
+                        <!-- Request for Quote Button -->
+                        <div style="display: flex; gap: 10px; margin-top: 24px;">
+                            <button class="quote-button catalogue-btn"
+                                style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px;"
+                                onclick="openCatalogueModal()">
+                                <i class="fa-solid fa-download"></i>
+                                Product Catalogue
+                            </button>
+                            <button class="quote-button" style="flex: 1;" onclick="requestQuote()">Request for
+                                Quote</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tabs Section -->
+            <div class="tabs-section">
+                <!-- Tab Headers -->
+                <div class="tabs-header">
+                    <button class="tab-button active" data-tab="specification">Specification</button>
+                    <button class="tab-button" data-tab="features">Features</button>
+                    <button class="tab-button" data-tab="shipping">Shipping</button>
+                    <button class="tab-button" data-tab="warranty">Warranty</button>
+                </div>
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <div class="tab-panel active" id="specification">
+                        <table class="spec-table" id="spec-table-body">
+                            <tbody id="spec-tbody"></tbody>
+                        </table>
+                    </div>
+                    <div class="tab-panel" id="features">
+                        <ul class="features-list" id="features-list"></ul>
+                    </div>
+                    <div class="tab-panel" id="shipping">
+                        <p class="info-text" id="shipping-text"></p>
+                    </div>
+                    <div class="tab-panel" id="warranty">
+                        <p class="info-text" id="warranty-text"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Related Products Section -->
+            <div class="related-section">
+                <h2 class="related-title">Recommended Products</h2>
+                <div class="related-grid" id="related-products-grid"></div>
+            </div>
+        </div>
+
+        <!-- Catalogue Modal -->
+        <div class="modal-overlay" id="catalogueModal">
+            <div class="modal-content" style="max-width: 650px;">
+                <div class="catalogue-header">
+                    <div class="catalogue-header-info">
+                        <h3>Technical Documentation</h3>
+                        <p>Authorized Product Resources</p>
+                    </div>
+                    <span class="modal-close-x" onclick="closeCatalogueModal()">&times;</span>
+                </div>
+                <div class="catalogue-body">
+                    <div id="catalogue-list">
+                        <!-- Items will be injected here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom Modal for Alerts -->
+        <div class="modal-overlay" id="quoteModal">
+            <div class="modal-content">
+                <span class="modal-close-x" onclick="closeModal()">&times;</span>
+                <form id="quoteForm" onsubmit="event.preventDefault(); submitQuote();">
+                    <div class="quote-field-wrapper">
+                        <input type="text" class="quote-input" placeholder="Your Name / Company Name" required>
+                    </div>
+                    <div class="quote-field-wrapper">
+                        <input type="email" class="quote-input" placeholder="Your Email" required>
+                    </div>
+                    <div class="quote-field-wrapper">
+                        <input type="tel" class="quote-input" placeholder="Your Phone" required>
+                    </div>
+                    <div class="quote-field-wrapper">
+                        <textarea class="quote-input quote-textarea" id="modalMessage"
+                            placeholder="I would like to get a quote for..."></textarea>
+                    </div>
+                    <button type="submit" class="modal-submit-btn">Request for Quote</button>
+                </form>
+            </div>
+        </div>
+        <section class="cta-banner">
+            <!-- Background Watermark -->
+            <div aria-hidden="true" class="cta-watermark">
+                <div class="cta-watermark-row row-1">
+                    <span>AMSTAR</span><span>AMSTAR</span><span>AMSTAR</span><span>AMSTAR</span>
+                </div>
+                <div class="cta-watermark-row row-2">
+                    <span>AMSTAR</span><span>AMSTAR</span><span>AMSTAR</span><span>AMSTAR</span>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="cta-content">
+                <div class="cta-heading">
+                    <h2>Looking for reliable<br />pump solutions?</h2>
+                </div>
+                <div class="cta-details">
+                    <p>Get in touch with our team to find the right pump for your application or to discuss
+                        distribution and export opportunities.</p>
+                    <a class="cta-button" href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </section>
+        <!-- ============================================================ -->
+        <!-- CUSTOM FOOTER                                                 -->
+        <!-- ============================================================ -->
+        <!-- ============================================================ -->
+        <!-- CUSTOM FOOTER (FLEXBOX)                                       -->
+        <!-- ============================================================ -->
+        <!-- footer begin -->
+        <style>
+            .footer-wa-card {
+                display: inline-flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 10px;
+                background-color: #f4f7fb;
+                color: #004fb1;
+                padding: 10px 16px;
+                border-radius: 4px;
+                text-decoration: none;
+                font-family: 'Alan Sans', sans-serif;
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 25px;
+                transition: transform 0.2s, box-shadow 0.2s;
+                width: fit-content;
+            }
+            .footer-wa-card i {
+                font-size: 23px;
+            }
+            .footer-wa-card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+                color: #004fb1;
+                text-decoration: none;
+            }
+            .footer-wa-mobile-container {
+                display: none;
+            }
+            .footer-wa-desktop-container {
+                display: block;
+            }
+            @media (max-width: 768px) {
+                .footer-wa-mobile-container {
+                    display: block !important;
+                    margin-bottom: 30px !important;
+                    width: 100%;
+                }
+                .footer-wa-desktop-container {
+                    display: none !important;
+                }
+                .footer-wa-card {
+                    font-size: 13px !important;
+                    padding: 8px 12px !important;
+                    margin-bottom: 0 !important;
+                }
+                .footer-wa-card i {
+                    font-size: 17px !important;
+                }
+            }
+        </style>
+        <footer id="main-footer"
+            style="background-color: #004fb1; padding: 80px 0 30px 0; color: #ffffff; font-family: 'Alan Sans', sans-serif;">
+            <div class="container">
+                <div class="footer-wa-mobile-container">
+                    <a href="https://wa.me/919500184003" target="_blank" rel="noopener" class="footer-wa-card">
+                        <i class="fa-brands fa-whatsapp"></i> Ask your queries on WhatsApp
+                    </a>
+                </div>
+                <div class="row">
+                    <!-- Branding and Certifications -->
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <div style="margin-bottom: 30px;">
+                            <img alt="Amstar Pumps" src="../images/footer/footer-logo.svg"
+                                style="height: 100px; width: auto;" />
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                            <img alt="Certifications" src="../images/footer/footer-certifications.png"
+                                style="height: 45px; width: auto;" />
+                        </div>
+                    </div>
+                    <!-- Links Col 1 -->
+                    <div class="col-lg-2 col-md-3 mb-md-0">
+                        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
+                            
+                            <li><a href="../index.html" style="color: #ffffff; text-decoration: none;">Home</a></li>
+                            <li><a href="shop.html" style="color: #ffffff; text-decoration: none;">Products</a></li>
+
+                            <li><a href="blog.html" style="color: #ffffff; text-decoration: none;">Blogs</a></li>
+                        </ul>
+                    </div>
+                    <!-- Links Col 2 -->
+                    <div class="col-lg-2 col-md-3 mb-md-0">
+                        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 16px;">
+                            <li><a href="contact.html" style="color: #ffffff; text-decoration: none;">Contact Us</a>
+                            </li>
+                            <li><a href="../documents/Company_Profile.pdf" target="_blank" style="color: #ffffff; text-decoration: none;">Company
+                                    Profile</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Details -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-wa-desktop-container">
+                            <a href="https://wa.me/919500184003" target="_blank" rel="noopener" class="footer-wa-card">
+                                <i class="fa-brands fa-whatsapp"></i> Ask your queries on WhatsApp
+                            </a>
+                        </div>
+                        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                            <img alt="Location" src="../images/footer/footer-location.svg"
+                                style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);" />
+                            <a href="https://maps.app.goo.gl/vSdu47g5WeV7BXuX9?g_st=iw" target="_blank" rel="noopener" style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9; color: inherit; text-decoration: none; display: block; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='0.9'">
+                                Amstar Pumps<br />
+                                Door No. 214, Lenin Street, Vilankurichi,<br />
+                                Coimbatore, Tamil Nadu<br />
+                                641035, India
+                            </a>
+                        </div>
+                        <div style="display: flex; gap: 15px; margin-bottom: 20px; align-items: center;">
+                            <img alt="Phone" src="../images/footer/footer-phone.svg"
+                                style="width: 18px; height: 18px; flex-shrink: 0; filter: brightness(0) invert(1);" />
+                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">
+                                <a href="tel:+919500184003"
+                                    style="color: inherit; text-decoration: none; transition: opacity 0.2s;"
+                                    onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">+91 95001
+                                    84003</a> | <a href="tel:+919500136003"
+                                    style="color: inherit; text-decoration: none; transition: opacity 0.2s;"
+                                    onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">+91 95001
+                                    36003</a>
+                            </p>
+                        </div>
+                        <div style="display: flex; gap: 15px; align-items: flex-start;">
+                            <img alt="Mail" src="../images/footer/footer-mail.svg"
+                                style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 4px; filter: brightness(0) invert(1);" />
+                            <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.9;">
+                                <a href="mailto:info@amstarpumps.com"
+                                    style="color: inherit; text-decoration: none; transition: opacity 0.2s;"
+                                    onmouseover="this.style.opacity='0.7'"
+                                    onmouseout="this.style.opacity='1'">info@amstarpumps.com</a><br /><a
+                                    href="mailto:export@amstarpumps.com"
+                                    style="color: inherit; text-decoration: none; transition: opacity 0.2s;"
+                                    onmouseover="this.style.opacity='0.7'"
+                                    onmouseout="this.style.opacity='1'">export@amstarpumps.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.3);">
+                    <p style="margin: 0; font-size: 14px; opacity: 0.8; margin-bottom: 15px;">
+                        ©Amstar-2026 all rights reserved
+                    </p>
+                    <div class="footer-social-links"
+                        style="display: flex; gap: 20px; align-items: center;">
+                        <a href="https://www.linkedin.com/company/amstar-pumps/" target="_blank" rel="noopener"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 16px; transition: opacity 0.2s;"
+                            onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61589595945932" target="_blank" rel="noopener"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 16px; transition: opacity 0.2s;"
+                            onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/amstarpumps" target="_blank" rel="noopener"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 16px; transition: opacity 0.2s;"
+                            onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/AmstarPumps" target="_blank" rel="noopener"
+                            style="color: #ffffff; opacity: 0.6; text-decoration: none; font-size: 16px; transition: opacity 0.2s;"
+                            onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer close -->
+        <!-- footer close -->
+        <!-- JavaScript Files ================================================== -->
+        <script src="../js/product-data.js"></script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/designesia.js"></script>
+        <script>
+            (function () {
+                const APP_ICONS = {
+                    "residential": '<img src="../images/sectors/Residential.webp" style="width: 28px; height: 28px;" alt="Residential">',
+                    "industrial": '<img src="../images/sectors/Industrial.webp" style="width: 28px; height: 28px;" alt="Industrial">',
+                    "agriculture": '<img src="../images/sectors/Agriculture.webp" style="width: 28px; height: 28px;" alt="Agriculture">',
+                    "commercial": '<img src="../images/sectors/Construction.webp" style="width: 28px; height: 28px;" alt="Commercial">',
+                    "default": '<img src="../images/sectors/Industrial.webp" style="width: 28px; height: 28px;" alt="Application">'
+                };
+
+                function getIcon(appName) {
+                    return APP_ICONS[appName] || APP_ICONS["default"];
+                }
+
+                const params = new URLSearchParams(window.location.search);
+                const productId = params.get('id');
+                const fallbackName = params.get('name');
+                const fallbackImg = params.get('img');
+
+                let product = null;
+                let currentCycleKey = null;
+                let currentVariant = null;
+
+                // Try to find product by ID first, then by name match
+                if (productId && window.PRODUCT_DATA[productId]) {
+                    product = window.PRODUCT_DATA[productId];
+                } else if (fallbackName) {
+                    for (const [key, p] of Object.entries(window.PRODUCT_DATA)) {
+                        if (p.name === fallbackName || p.name.replace(/[\u201C\u201D""]/g, '"') === fallbackName.replace(/[\u201C\u201D""]/g, '"')) {
+                            product = p;
+                            break;
+                        }
+                    }
+                }
+
+                function getActiveCycleKey() {
+                    if (!product) return 'default';
+                    if (product.cycles && product.cycles.length > 0) return currentCycleKey || product.cycles[0];
+                    return 'default';
+                }
+
+                function renderSpecs() {
+                    const key = getActiveCycleKey();
+                    const specs = product.specifications[key] || product.specifications['default'] || {};
+                    const tbody = document.getElementById('spec-tbody');
+                    tbody.innerHTML = '';
+                    for (const [label, value] of Object.entries(specs)) {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = '<td>' + label + '</td><td>' + value + '</td>';
+                        tbody.appendChild(tr);
+                    }
+                }
+
+                function renderFeatures() {
+                    const key = getActiveCycleKey();
+                    const features = product.features[key] || product.features['default'] || [];
+                    const list = document.getElementById('features-list');
+                    list.innerHTML = '';
+                    features.forEach(f => {
+                        const li = document.createElement('li');
+                        li.textContent = f;
+                        list.appendChild(li);
+                    });
+                }
+
+                function renderVariants() {
+                    const key = getActiveCycleKey();
+                    const variants = product.variants[key] || product.variants['default'] || [];
+                    const container = document.getElementById('variants-container');
+                    container.innerHTML = '';
+                    
+                    if (variants.length > 0) {
+                        if (!variants.includes(currentVariant)) {
+                            currentVariant = variants[0];
+                        }
+                    } else {
+                        currentVariant = null;
+                    }
+
+                    variants.forEach((v) => {
+                        const btn = document.createElement('button');
+                        btn.className = 'variant-button' + (v === currentVariant ? ' active' : '');
+                        btn.dataset.variant = v;
+                        btn.textContent = v;
+                        btn.addEventListener('click', function () {
+                            container.querySelectorAll('.variant-button').forEach(b => b.classList.remove('active'));
+                            this.classList.add('active');
+                            currentVariant = v;
+                        });
+                        container.appendChild(btn);
+                    });
+                }
+
+                function renderCycles() {
+                    const cycleContainer = document.getElementById('cycle-container');
+                    const cycleSection = document.getElementById('cycle-section');
+                    cycleContainer.innerHTML = '';
+                    if (!product.cycles || product.cycles.length === 0) {
+                        cycleSection.style.display = 'none';
+                        return;
+                    }
+                    cycleSection.style.display = 'block';
+                    product.cycles.forEach((c, i) => {
+                        const btn = document.createElement('button');
+                        btn.className = 'cycle-button' + (i === 0 ? ' active' : '');
+                        btn.dataset.cycle = c;
+                        btn.textContent = c;
+                        btn.addEventListener('click', function () {
+                            cycleContainer.querySelectorAll('.cycle-button').forEach(b => b.classList.remove('active'));
+                            this.classList.add('active');
+                            currentCycleKey = c;
+                            renderSpecs();
+                            renderFeatures();
+                            renderVariants();
+                        });
+                        cycleContainer.appendChild(btn);
+                    });
+                }
+
+                function renderApplications() {
+                    const container = document.getElementById('applications-container');
+                    container.innerHTML = '';
+                    (product.applications || []).forEach(app => {
+                        const div = document.createElement('div');
+                        div.className = 'application-icon';
+                        div.title = app;
+                        div.innerHTML = getIcon(app);
+                        container.appendChild(div);
+                    });
+                }
+
+                function renderRelatedProducts() {
+                    const grid = document.getElementById('related-products-grid');
+                    if (!grid) return;
+                    grid.innerHTML = '';
+
+                    // Get current product ID from URL to exclude it
+                    const currentId = new URLSearchParams(window.location.search).get('id');
+
+                    // 1. Get all other products
+                    let pool = Object.entries(window.PRODUCT_DATA).filter(([key, p]) => key !== currentId);
+
+                    // 2. High-performance Fisher-Yates Shuffle of the entire pool
+                    for (let i = pool.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [pool[i], pool[j]] = [pool[j], pool[i]];
+                    }
+
+                    // 3. Separate into same-category and others (both are now pre-shuffled)
+                    const sameCategory = pool.filter(([key, p]) => product && p.category === product.category);
+                    const otherCategories = pool.filter(([key, p]) => !product || p.category !== product.category);
+
+                    // 4. Take up to 2 from same category and 1 from others, or fill up to 3
+                    // This ensures variety even if the category is small
+                    let finalSelection = [];
+
+                    // Add up to 2 random products from same category
+                    finalSelection.push(...sameCategory.slice(0, 2));
+
+                    // Fill the rest (up to 3 total) from other categories
+                    const remainingNeeded = 3 - finalSelection.length;
+                    finalSelection.push(...otherCategories.slice(0, remainingNeeded));
+
+                    // If we still don't have 3 (e.g. sameCategory was empty), take more from pool
+                    if (finalSelection.length < 3) {
+                        const alreadyPicked = new Set(finalSelection.map(item => item[0]));
+                        const fallback = pool.filter(([key, p]) => !alreadyPicked.has(key));
+                        finalSelection.push(...fallback.slice(0, 3 - finalSelection.length));
+                    }
+
+                    // 5. Final shuffle of the selection for position variety
+                    for (let i = finalSelection.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [finalSelection[i], finalSelection[j]] = [finalSelection[j], finalSelection[i]];
+                    }
+
+                    finalSelection.forEach(([key, p]) => {
+                        const card = document.createElement('a');
+                        card.className = 'related-product';
+                        card.href = 'products.html?id=' + key;
+                        card.style.textDecoration = 'none';
+                        const imgSrc = p.img || '';
+                        const imgStyle = key === 'monoblock' ? ' style="transform: scale(0.85);"' : '';
+                        card.innerHTML = `
+                            <div class="related-product-image-container">
+                                <img alt="${p.name}" class="related-product-image" src="${imgSrc}"${imgStyle}/>
+                            </div>
+                            <h3 class="related-product-title">${p.name}</h3>
+                            <span class="view-more-btn">View more</span>
+                        `;
+                        grid.appendChild(card);
+                    });
+                }
+
+                function populatePage() {
+                    if (!product) {
+                        document.getElementById('product-title-text').textContent = fallbackName || 'Product Not Found';
+                        document.getElementById('main-product-image').src = fallbackImg || '';
+                        return;
+                    }
+                    currentCycleKey = product.cycles && product.cycles.length > 0 ? product.cycles[0] : 'default';
+                    // Basic info
+                    document.querySelector('title').textContent = product.name + ' - Product Details';
+                    document.getElementById('product-title-text').textContent = product.name;
+                    const heroTitle = document.querySelector('.hero-title');
+                    if (heroTitle) heroTitle.textContent = product.heroTitle || product.name;
+                    document.getElementById('product-description-text').textContent = product.description;
+                    
+                    // Product code
+                    const codeEl = document.getElementById('product-code-text');
+                    if (codeEl) {
+                        if (product.code) {
+                            codeEl.textContent = product.code;
+                            codeEl.parentElement.style.display = 'block';
+                        } else {
+                            codeEl.parentElement.style.display = 'none';
+                        }
+                    }
+
+                    document.getElementById('variants-label').textContent = product.variantLabel || 'Variants Available (HP):';
+                    // Image
+                    document.getElementById('main-product-image').src = fallbackImg || product.img || '';
+                    // Shipping & Warranty
+                    document.getElementById('shipping-text').textContent = product.shipping;
+                    document.getElementById('warranty-text').textContent = product.warranty;
+                    // Dynamic sections
+                    renderCycles();
+                    renderVariants();
+                    renderSpecs();
+                    renderFeatures();
+                    renderApplications();
+                    renderRelatedProducts();
+                    // Reveal content and hide loader
+                    const loader = document.getElementById('product-page-loader');
+                    const content = document.getElementById('product-page-content');
+                    setTimeout(() => {
+                        content.style.visibility = 'visible';
+                        loader.classList.add('hidden');
+                        setTimeout(() => { loader.style.display = 'none'; }, 420);
+                    }, 80);
+                }
+
+                // Tab navigation
+                document.querySelectorAll('.tab-button').forEach(button => {
+                    button.addEventListener('click', function () {
+                        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+                        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                        this.classList.add('active');
+                        document.getElementById(this.dataset.tab).classList.add('active');
+                    });
+                });
+
+                // Catalogue Modal
+                window.openCatalogueModal = function () {
+                    const list = document.getElementById('catalogue-list');
+                    list.innerHTML = '';
+
+                    const docs = [
+                        { name: 'Amstar 50Hz Catalogue.pdf', type: 'Catalogue' }
+                    ];
+
+                    // Check if current product is a Submersible Pump or Motor
+                    // Category "Submersibles" covers both based on PRODUCT_DATA
+                    if (product && product.category === 'Submersibles') {
+                        docs.push({ name: 'Amstar 60Hz Catalogue.pdf', type: 'Catalogue' });
+                        docs.push({ name: 'Amstar 60Hz TDS.pdf', type: 'TDS' });
+                    }
+
+                    docs.forEach(doc => {
+                        const div = document.createElement('div');
+                        div.className = 'catalogue-item';
+                        const displayName = doc.name.replace(/\.pdf$/i, '');
+                        const filePath = `images/documents/${doc.name}`;
+                        div.innerHTML = `
+                            <div class="catalogue-info">
+                                <span class="catalogue-name">${displayName}</span>
+                                <span class="catalogue-type">${doc.type}</span>
+                            </div>
+                            <button onclick="forceDownload('${filePath}', '${doc.name}')" class="catalogue-download-btn" title="Download">
+                                <i class="fa-solid fa-download" style="font-size: 24px; color: #004fb1;"></i>
+                            </button>
+                        `;
+                        list.appendChild(div);
+                    });
+
+                    document.getElementById('catalogueModal').classList.add('active');
+                };
+
+                window.forceDownload = function (url, filename) {
+                    fetch(url)
+                        .then(response => response.blob())
+                        .then(blob => {
+                            const link = document.createElement('a');
+                            link.href = window.URL.createObjectURL(blob);
+                            link.download = filename;
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        })
+                        .catch(err => {
+                            console.error('Download failed:', err);
+                            // Fallback to direct link if fetch fails
+                            window.open(url, '_blank');
+                        });
+                };
+
+                window.closeCatalogueModal = function () {
+                    document.getElementById('catalogueModal').classList.remove('active');
+                };
+
+                // Close modal when clicking outside content
+                document.getElementById('catalogueModal').addEventListener('click', function (e) {
+                    if (e.target === this) closeCatalogueModal();
+                });
+
+                // Quote modal
+                window.requestQuote = function () {
+                    const pName = product ? product.name : (fallbackName || 'Product');
+                    const messageField = document.getElementById('modalMessage');
+                    if (messageField) {
+                        let options = [];
+                        if (currentCycleKey && currentCycleKey !== 'default') {
+                            options.push(currentCycleKey);
+                        }
+                        if (currentVariant) {
+                            const isHP = (product.variantLabel || '').includes('HP') || !product.variantLabel;
+                            options.push(currentVariant + (isHP ? ' HP' : ''));
+                        }
+                        const optionsStr = options.length > 0 ? ' (' + options.join(', ') + ')' : '';
+                        messageField.value = 'I would like to get a quote for ' + pName + optionsStr;
+                    }
+
+                    // Reset form fields
+                    const form = document.getElementById('quoteForm');
+                    if (form) {
+                        const inputs = form.querySelectorAll('input');
+                        inputs.forEach(input => input.value = '');
+                    }
+
+                    document.getElementById('quoteModal').classList.add('active');
+                };
+
+                window.submitQuote = function () {
+                    const form = document.getElementById('quoteForm');
+                    const pName = product ? product.name : (fallbackName || 'Product');
+
+                    // Here you would typically send the data to a server
+                    // For now, we'll just show a success alert and close the modal
+                    alert('Thank you for your interest in ' + pName + '. Our team will contact you shortly!');
+                    closeModal();
+                };
+
+                window.closeModal = function () {
+                    document.getElementById('quoteModal').classList.remove('active');
+                };
+
+                document.getElementById('quoteModal').addEventListener('click', function (e) {
+                    if (e.target === this) closeModal();
+                });
+
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', populatePage);
+                } else {
+                    populatePage();
+                }
+            })();
+        </script>
+    </div><!-- end #product-page-content -->
+
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const closeBtn = document.querySelector('#mobile-menu .close-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+
+            if (closeBtn && mobileMenu) {
+                closeBtn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+
+            // Close menu on link click
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+    </script>
+    
+    <script src="../js/shared-navbar.js"></script>
+</body>
+
+</html>

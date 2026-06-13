@@ -47,7 +47,7 @@ html, body {
   top: 24px !important;
 }
 
-#main-nav a[href="index.html"] img { filter: brightness(0) invert(1); }
+#main-nav a[href="index.html"] img, #main-nav a[href="../index.html"] img { filter: brightness(0) invert(1); }
 
 #main-nav .nav-links a {
   color: var(--text-light) !important;
@@ -128,7 +128,7 @@ html, body {
   position: absolute !important;
   inset: 0 !important;
   background-color: transparent !important;
-  background-image: url('images/backgrounds/homepage-hero.jpeg') !important;
+  background-image: url('../images/backgrounds/homepage-hero.jpeg') !important;
   background-size: 55% !important;
   background-position: right 0 top 0 !important;
   background-repeat: no-repeat !important;
