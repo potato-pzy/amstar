@@ -1808,9 +1808,9 @@
                                 <span class="catalogue-name">${displayName}</span>
                                 <span class="catalogue-type">${doc.type}</span>
                             </div>
-                            <button onclick="forceDownload('${filePath}', '${doc.name}')" class="catalogue-download-btn" title="Download">
+                            <a href="${filePath}" download="${doc.name}" class="catalogue-download-btn" title="Download" style="display: flex; align-items: center; justify-content: center; text-decoration: none;">
                                 <img src="../images/ui/Download Button.svg" alt="Download" style="width: 32px; height: 32px;">
-                            </button>
+                            </a>
                         `;
                         list.appendChild(div);
                     });
@@ -1818,22 +1818,14 @@
                     document.getElementById('catalogueModal').classList.add('active');
                 };
 
+                // forceDownload is no longer needed since we use native <a download> attributes
                 window.forceDownload = function (url, filename) {
-                    fetch(url)
-                        .then(response => response.blob())
-                        .then(blob => {
-                            const link = document.createElement('a');
-                            link.href = window.URL.createObjectURL(blob);
-                            link.download = filename;
-                            document.body.appendChild(link);
-                            link.click();
-                            document.body.removeChild(link);
-                        })
-                        .catch(err => {
-                            console.error('Download failed:', err);
-                            // Fallback to direct link if fetch fails
-                            window.open(url, '_blank');
-                        });
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = filename;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
                 };
 
                 window.closeCatalogueModal = function () {
